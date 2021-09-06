@@ -1,0 +1,120 @@
+22:12:12,563 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+22:12:12,630 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+22:12:13,424 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+22:12:13,489 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+22:12:13,490 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+22:12:13,492 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+22:12:13,529 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+22:12:14,221 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+22:22:50,349 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+22:22:50,413 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+22:22:51,182 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+22:22:51,247 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+22:22:51,249 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+22:22:51,251 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+22:22:51,288 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+22:22:51,988 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+22:23:02,363 ERROR NAEast     Client          Error when handling packet '{CharId: 13, IsFromArena: False, ID: LOAD, Owner: }'...
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at common.Utils.ResizeArray[T](T[] array, Int32 newSize) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\common\Utils.cs:line 61
+   at wServer.realm.BaseStatManager..ctor(StatsManager parent) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BaseStatManager.cs:line 14
+   at wServer.realm.StatsManager..ctor(Player owner) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\StatsManager.cs:line 30
+   at wServer.realm.entities.Player..ctor(Client client, Boolean saveInventory) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 467
+   at wServer.networking.handlers.LoadHandler.Handle(Client client, Load packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\LoadHandler.cs:line 35
+   at wServer.networking.handlers.LoadHandler.HandlePacket(Client client, Load packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\LoadHandler.cs:line 17
+   at wServer.networking.PacketHandlerBase`1.Handle(Client client, IncomingMessage packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\IPacketHandler.cs:line 27
+   at wServer.networking.Client.ProcessPacket(Packet pkt) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 166
+22:23:05,320 ERROR NAEast     Client          Error when handling packet '{CharId: 13, IsFromArena: False, ID: LOAD, Owner: }'...
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at common.Utils.ResizeArray[T](T[] array, Int32 newSize) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\common\Utils.cs:line 61
+   at wServer.realm.BaseStatManager..ctor(StatsManager parent) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BaseStatManager.cs:line 14
+   at wServer.realm.StatsManager..ctor(Player owner) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\StatsManager.cs:line 30
+   at wServer.realm.entities.Player..ctor(Client client, Boolean saveInventory) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 467
+   at wServer.networking.handlers.LoadHandler.Handle(Client client, Load packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\LoadHandler.cs:line 35
+   at wServer.networking.handlers.LoadHandler.HandlePacket(Client client, Load packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\LoadHandler.cs:line 17
+   at wServer.networking.PacketHandlerBase`1.Handle(Client client, IncomingMessage packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\IPacketHandler.cs:line 27
+   at wServer.networking.Client.ProcessPacket(Packet pkt) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 166
+22:28:37,853 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+22:28:37,947 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+22:28:38,764 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+22:28:38,840 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+22:28:38,843 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+22:28:38,844 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+22:28:38,881 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+22:28:39,623 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+22:28:47,094 ERROR NAEast     Client          Error when handling packet '{ClassType: 21601, SkinType: 0, ID: CREATE, Owner: }'...
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at wServer.realm.BaseStatManager.get_Item(Int32 index) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BaseStatManager.cs:line 28
+   at wServer.realm.BoostStatManager.IncrementBoost(StatsType stat, Int32 amount) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BoostStatManager.cs:line 200
+   at wServer.realm.BoostStatManager.ApplyEquipBonus(InventoryChangedEventArgs e) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BoostStatManager.cs:line 89
+   at wServer.realm.BoostStatManager.ReCalculateValues(InventoryChangedEventArgs e) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BoostStatManager.cs:line 42
+   at wServer.realm.BoostStatManager..ctor(StatsManager parent) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BoostStatManager.cs:line 31
+   at wServer.realm.StatsManager..ctor(Player owner) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\StatsManager.cs:line 31
+   at wServer.realm.entities.Player..ctor(Client client, Boolean saveInventory) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 467
+   at wServer.networking.handlers.CreateHandler.CreatePlayer(Client client, DbChar character) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\CreateHandler.cs:line 60
+   at wServer.networking.handlers.CreateHandler.Handle(Client client, Create packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\CreateHandler.cs:line 51
+   at wServer.networking.handlers.CreateHandler.HandlePacket(Client client, Create packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\CreateHandler.cs:line 18
+   at wServer.networking.PacketHandlerBase`1.Handle(Client client, IncomingMessage packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\IPacketHandler.cs:line 27
+   at wServer.networking.Client.ProcessPacket(Packet pkt) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 166
+22:28:50,037 ERROR NAEast     Client          Error when handling packet '{ClassType: 21601, SkinType: 0, ID: CREATE, Owner: }'...
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at wServer.realm.BaseStatManager.get_Item(Int32 index) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BaseStatManager.cs:line 28
+   at wServer.realm.BoostStatManager.IncrementBoost(StatsType stat, Int32 amount) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BoostStatManager.cs:line 200
+   at wServer.realm.BoostStatManager.ApplyEquipBonus(InventoryChangedEventArgs e) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BoostStatManager.cs:line 89
+   at wServer.realm.BoostStatManager.ReCalculateValues(InventoryChangedEventArgs e) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BoostStatManager.cs:line 42
+   at wServer.realm.BoostStatManager..ctor(StatsManager parent) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\BoostStatManager.cs:line 31
+   at wServer.realm.StatsManager..ctor(Player owner) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\StatsManager.cs:line 31
+   at wServer.realm.entities.Player..ctor(Client client, Boolean saveInventory) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 467
+   at wServer.networking.handlers.CreateHandler.CreatePlayer(Client client, DbChar character) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\CreateHandler.cs:line 60
+   at wServer.networking.handlers.CreateHandler.Handle(Client client, Create packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\CreateHandler.cs:line 51
+   at wServer.networking.handlers.CreateHandler.HandlePacket(Client client, Create packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\CreateHandler.cs:line 18
+   at wServer.networking.PacketHandlerBase`1.Handle(Client client, IncomingMessage packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\IPacketHandler.cs:line 27
+   at wServer.networking.Client.ProcessPacket(Packet pkt) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 166
+22:31:08,403 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+22:31:08,471 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+22:31:09,338 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+22:31:09,404 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+22:31:09,406 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+22:31:09,408 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+22:31:09,446 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+22:31:10,185 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+22:31:55,756 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+22:31:55,830 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+22:31:56,703 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+22:31:56,782 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+22:31:56,783 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+22:31:56,786 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+22:31:56,823 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+22:31:57,539 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+22:34:08,777 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+22:34:08,841 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+22:34:09,828 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+22:34:09,906 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+22:34:09,907 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+22:34:09,909 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+22:34:09,950 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+22:34:10,769 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+22:48:44,126 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+22:48:44,187 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+22:48:44,988 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+22:48:45,057 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+22:48:45,058 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+22:48:45,060 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+22:48:45,099 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+22:48:45,805 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+23:14:41,764 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+23:16:08,177 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+23:44:18,167 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+23:56:03,073 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140

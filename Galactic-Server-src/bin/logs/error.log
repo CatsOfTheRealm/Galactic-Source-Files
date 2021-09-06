@@ -1,0 +1,42 @@
+16:28:26,233 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+16:28:26,292 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+16:28:27,090 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+16:28:27,171 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+16:28:27,172 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+16:28:27,176 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+16:28:27,220 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+16:28:27,930 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+16:50:02,288 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+16:50:02,766 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+16:50:05,618 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+16:50:05,708 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+16:50:05,710 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+16:50:05,713 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+16:50:05,764 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+16:50:07,129 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+21:06:53,782 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+21:06:53,898 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+21:06:55,388 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+21:06:55,512 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+21:06:55,521 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+21:06:55,526 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+21:06:55,594 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+21:06:56,901 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+21:06:57,924 FATAL NAEast     wServer         System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at common.Utils.PickRandom[T](IEnumerable`1 source) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\common\Utils.cs:line 33
+   at wServer.realm.worlds.World.GetRegionPosition(TileRegion region) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 638
+   at wServer.realm.PortalMonitor.AddPortal(Int32 worldId, Portal portal, Nullable`1 position, Boolean announce) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\PortalMonitor.cs:line 77
+   at wServer.realm.worlds.logic.Nexus.Init() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\logic\Nexus.cs:line 24
+   at wServer.realm.worlds.World.set_Manager(RealmManager value) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 57
+   at wServer.realm.RealmManager.OnWorldAdded(World world) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\RealmManager.cs:line 595
+   at wServer.realm.RealmManager..ctor(Resources resources, Database db, ServerConfig config) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\RealmManager.cs:line 136
+   at wServer.Program.Main(String[] args) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\Program.cs:line 61
+21:50:56,641 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+21:50:56,756 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+21:50:58,179 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+21:50:58,299 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+21:50:58,302 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+21:50:58,304 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+21:50:58,364 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+21:50:59,788 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.

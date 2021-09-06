@@ -1,0 +1,233 @@
+16:11:45,190 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+16:11:45,254 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+16:11:46,112 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+16:11:46,181 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+16:11:46,182 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+16:11:46,187 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+16:11:46,225 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+16:11:46,935 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+16:11:53,915 FATAL NAEast     wServer         System.Net.Sockets.SocketException (0x80004005): Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at wServer.networking.server.Server.Start() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\server\Server.cs:line 169
+   at wServer.Program.Main(String[] args) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\Program.cs:line 71
+16:12:20,292 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+16:12:20,355 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+16:12:21,141 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+16:12:21,210 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+16:12:21,211 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+16:12:21,214 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+16:12:21,250 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+16:12:21,923 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+16:12:27,557 FATAL NAEast     wServer         System.Net.Sockets.SocketException (0x80004005): Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at wServer.networking.server.Server.Start() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\server\Server.cs:line 169
+   at wServer.Program.Main(String[] args) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\Program.cs:line 71
+16:12:38,120 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+16:12:38,182 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+16:12:39,080 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+16:12:39,157 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+16:12:39,159 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+16:12:39,161 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+16:12:39,197 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+16:12:39,874 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+16:12:45,489 FATAL NAEast     wServer         System.Net.Sockets.SocketException (0x80004005): Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at wServer.networking.server.Server.Start() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\server\Server.cs:line 169
+   at wServer.Program.Main(String[] args) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\Program.cs:line 71
+16:13:08,123 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+16:13:08,199 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+16:13:09,024 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+16:13:09,090 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+16:13:09,090 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+16:13:09,096 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+16:13:09,130 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+16:13:09,804 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+16:19:57,097 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+16:23:33,821 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+16:24:28,968 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+16:44:07,208 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+16:44:16,170 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+16:49:05,393 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+16:49:05,459 ERROR NAEast     World           Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.CurseEffect() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 557
+   at wServer.realm.entities.Enemy.Damage(Player from, RealmTime time, Int32 dmg, Boolean noDef, ConditionEffect[] effs) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\Enemy.cs:line 144
+   at wServer.realm.entities.Player.<>c__DisplayClass203_0.<PoisonEnemy>b__0(World w, RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 4253
+   at wServer.realm.WorldTimer.Tick(World world, RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\WorldTimer.cs:line 43
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 664
+16:49:05,467 ERROR NAEast     World           Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.CurseEffect() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 557
+   at wServer.realm.entities.Enemy.Damage(Player from, RealmTime time, Int32 dmg, Boolean noDef, ConditionEffect[] effs) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\Enemy.cs:line 144
+   at wServer.realm.entities.Player.<>c__DisplayClass203_0.<PoisonEnemy>b__0(World w, RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 4253
+   at wServer.realm.WorldTimer.Tick(World world, RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\WorldTimer.cs:line 43
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 664
+16:49:05,478 ERROR NAEast     World           Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.CurseEffect() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 557
+   at wServer.realm.entities.Enemy.Damage(Player from, RealmTime time, Int32 dmg, Boolean noDef, ConditionEffect[] effs) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\Enemy.cs:line 144
+   at wServer.realm.entities.Player.<>c__DisplayClass203_0.<PoisonEnemy>b__0(World w, RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 4253
+   at wServer.realm.WorldTimer.Tick(World world, RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\WorldTimer.cs:line 43
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 664
+16:49:06,062 ERROR NAEast     World           Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.CurseEffect() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 557
+   at wServer.realm.entities.Enemy.Damage(Player from, RealmTime time, Int32 dmg, Boolean noDef, ConditionEffect[] effs) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\Enemy.cs:line 144
+   at wServer.realm.entities.Player.<>c__DisplayClass203_0.<PoisonEnemy>b__0(World w, RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 4253
+   at wServer.realm.WorldTimer.Tick(World world, RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\WorldTimer.cs:line 43
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 664
+16:49:06,068 ERROR NAEast     World           Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.CurseEffect() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 557
+   at wServer.realm.entities.Enemy.Damage(Player from, RealmTime time, Int32 dmg, Boolean noDef, ConditionEffect[] effs) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\Enemy.cs:line 144
+   at wServer.realm.entities.Player.<>c__DisplayClass203_0.<PoisonEnemy>b__0(World w, RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 4253
+   at wServer.realm.WorldTimer.Tick(World world, RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\WorldTimer.cs:line 43
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 664
+16:49:06,078 ERROR NAEast     World           Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.CurseEffect() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 557
+   at wServer.realm.entities.Enemy.Damage(Player from, RealmTime time, Int32 dmg, Boolean noDef, ConditionEffect[] effs) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\Enemy.cs:line 144
+   at wServer.realm.entities.Player.<>c__DisplayClass203_0.<PoisonEnemy>b__0(World w, RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 4253
+   at wServer.realm.WorldTimer.Tick(World world, RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\WorldTimer.cs:line 43
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 664
+16:49:06,511 ERROR NAEast     World           Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.CurseEffect() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 557
+   at wServer.realm.entities.Enemy.Damage(Player from, RealmTime time, Int32 dmg, Boolean noDef, ConditionEffect[] effs) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\Enemy.cs:line 144
+   at wServer.realm.entities.Player.<>c__DisplayClass203_0.<PoisonEnemy>b__0(World w, RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 4253
+   at wServer.realm.WorldTimer.Tick(World world, RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\WorldTimer.cs:line 43
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 664
+16:49:06,521 ERROR NAEast     World           Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.CurseEffect() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 557
+   at wServer.realm.entities.Enemy.Damage(Player from, RealmTime time, Int32 dmg, Boolean noDef, ConditionEffect[] effs) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\Enemy.cs:line 144
+   at wServer.realm.entities.Player.<>c__DisplayClass203_0.<PoisonEnemy>b__0(World w, RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 4253
+   at wServer.realm.WorldTimer.Tick(World world, RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\WorldTimer.cs:line 43
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 664
+17:01:14,997 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+17:12:22,020 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+17:12:22,096 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+17:12:22,961 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+17:12:23,029 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+17:12:23,032 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+17:12:23,035 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+17:12:23,073 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+17:12:23,759 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+17:13:22,019 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+17:13:22,082 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+17:13:22,907 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+17:13:22,979 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+17:13:22,980 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+17:13:22,982 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+17:13:23,023 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+17:13:23,711 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+17:19:21,242 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+17:31:15,825 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+17:31:15,909 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+17:31:16,804 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+17:31:16,878 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+17:31:16,880 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+17:31:16,882 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+17:31:16,924 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+17:31:17,706 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+17:32:13,903 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+17:32:54,503 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+17:32:54,589 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+17:32:55,652 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+17:32:55,870 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+17:32:55,871 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+17:32:55,874 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+17:32:55,915 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+17:32:57,078 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+17:35:27,953 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+17:35:28,040 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+17:35:29,042 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+17:35:29,265 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+17:35:29,266 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+17:35:29,268 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+17:35:29,309 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+17:35:30,366 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+17:41:55,187 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+17:41:55,253 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+17:41:56,113 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+17:41:56,193 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+17:41:56,196 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+17:41:56,200 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+17:41:56,253 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+17:41:56,930 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+17:42:07,797 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+17:44:45,894 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+17:44:45,988 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+17:44:46,907 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+17:44:46,976 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+17:44:46,977 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+17:44:46,979 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+17:44:47,015 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+17:44:47,748 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+17:52:32,947 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+17:52:33,011 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+17:52:33,808 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+17:52:33,870 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+17:52:33,874 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+17:52:33,876 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+17:52:33,910 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+17:52:34,593 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+18:14:18,905 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+21:14:02,334 ERROR NAEast     World           The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at wServer.realm.worlds.logic.MoonLord.SendToCastle() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\logic\Moon.cs:line 52
+   at wServer.realm.worlds.logic.MoonLord.<CloseRealm>b__6_0(World w, RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\logic\Moon.cs:line 41
+   at wServer.realm.WorldTimer.Tick(World world, RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\WorldTimer.cs:line 39
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\worlds\World.cs:line 664
+21:15:17,318 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.InvSwapHandler.<>c__DisplayClass4_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\InvSwapHandler.cs:line 25
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+21:18:39,592 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+21:25:25,574 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+22:22:35,852 ERROR NAEast     FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+22:22:43,532 ERROR NAEast     BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+22:22:43,594 ERROR NAEast     BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+22:22:44,420 ERROR NAEast     BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+22:22:44,500 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+22:22:44,505 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+22:22:44,505 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+22:22:44,548 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+22:22:45,305 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
