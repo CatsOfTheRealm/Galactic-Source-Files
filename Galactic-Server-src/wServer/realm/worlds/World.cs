@@ -122,7 +122,7 @@ namespace wServer.realm.worlds
             if (proto.music != null)
                 Music = proto.music[rnd.Next(0, proto.music.Length)];
             else
-                Music = "Test";
+                Music = "https://ccc.cec.cx/cd0c4ec5515aee1b033f853bcdd6906e/ipk0E1wanl4/rizuzcsozmm";
             WeatherManager = new WeatherManager(this);
         }
         private string Rarity()

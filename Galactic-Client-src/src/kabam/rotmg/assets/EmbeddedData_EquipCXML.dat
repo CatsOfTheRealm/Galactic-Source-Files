@@ -18480,6 +18480,7 @@
       <LifetimeMS>460</LifetimeMS>
       <MultiHit/>
     </Projectile>
+      <Spriter>1</Spriter>
     <ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="3" amount="60">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="112" amount="10">IncrementStat</ActivateOnEquip>
