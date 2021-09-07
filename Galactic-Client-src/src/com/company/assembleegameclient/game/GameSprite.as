@@ -375,8 +375,8 @@ public class GameSprite extends AGameSprite {
         }
         if (this.chatBox_ != null) {
 
-            this.chatBox_.scaleX = _local_7 * Parameters.data_.ScaleChat;
-            this.chatBox_.scaleY = 1 * Parameters.data_.ScaleChat;
+            this.chatBox_.scaleX = _local_7 * 1;
+            this.chatBox_.scaleY = 1 * 1;
             this.chatBox_.y = (300 + (300 * (1 - this.chatBox_.scaleY)));
         }
         if (this.rankText_ != null) {

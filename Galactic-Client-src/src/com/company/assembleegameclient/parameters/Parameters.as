@@ -251,7 +251,7 @@ public class Parameters {
             setDefault("SFXVolume", 0);
         }
         setDefault("HPBar", true);
-        setDefault("fpsMode", "60");
+        setDefault("FPS", "60");
         setDefault("FPSMode", false);
         setDefault("walkSpeed", 0.75);
         setDefault("mouseCameraMultiplier",0);

@@ -155,9 +155,6 @@ public class Options extends Sprite {
     private static function makeWalkSpeedSelectLabels():Vector.<StringBuilder> {
         return (new <StringBuilder>[new StaticStringBuilder("0.75"), new StaticStringBuilder("0.50"), new StaticStringBuilder("0.33"), new StaticStringBuilder("0.25")]);
     }
-    private static function makeChatScaleSelectLabels():Vector.<StringBuilder> {
-        return (new <StringBuilder>[new StaticStringBuilder("100%"), new StaticStringBuilder("50%"), new StaticStringBuilder("25%"), new StaticStringBuilder("OFF"), new StaticStringBuilder("150%")]);
-    }
 
     private static function makeLineBuilder(_arg1:String):LineBuilder {
         return (new LineBuilder().setParams(_arg1));
@@ -188,19 +185,19 @@ public class Options extends Sprite {
     }
 
     public static function refreshFpsMode():void {
-        if (Parameters.data_.fpsMode == "60")
+        if (Parameters.data_.FPS == "60")
         {
             WebMain.STAGE.frameRate = 60;
         }
-        else if (Parameters.data_.fpsMode == "30")
+        else if (Parameters.data_.FPS == "30")
         {
             WebMain.STAGE.frameRate = 30;
         }
-        else if (Parameters.data_.fpsMode == "80")
+        else if (Parameters.data_.FPS == "80")
         {
             WebMain.STAGE.frameRate = 80;
         }
-        else if (Parameters.data_.fpsMode == "144")
+        else if (Parameters.data_.FPS == "144")
         {
             WebMain.STAGE.frameRate = 144;
         }
@@ -500,7 +497,7 @@ public class Options extends Sprite {
         this.addOptionAndPosition(new ChoiceOption("showGuildInvitePopup", makeOnOffLabels(), [true, false], TextKey.OPTIONS_SHOW_GUILD_INVITE_PANEL, TextKey.OPTIONS_SHOW_GUILD_INVITE_PANEL_DESC, null));
         this.addOptionAndPosition(new ChoiceOption("cursorSelect", makeCursorSelectLabels(), [MouseCursor.AUTO, "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "Custom Cursor", "Click here to change the mouse cursor. May help with aiming.", refreshCursor));
         //Hardware Acceleration Disabled for many reasons, if you decided to make this an option again be prepared to fix and redo projectile outlines and atmosphere.
-        this.addOptionAndPosition(new ChoiceOption("GPURender", makeOnOffLabels(), [true, false], TextKey.OPTIONS_HARDWARE_ACC_TITLE, "",null));
+        //this.addOptionAndPosition(new ChoiceOption("GPURender", makeOnOffLabels(), [true, false], TextKey.OPTIONS_HARDWARE_ACC_TITLE, "",null));
         //if (Capabilities.playerType == "Desktop") {
         this.addOptionAndPosition(new KeyMapper("toggleFullscreen", TextKey.OPTIONS_TOGGLE_FULLSCREEN, TextKey.OPTIONS_TOGGLE_FULLSCREEN_DESC));
         this.addOptionAndPosition(new ChoiceOption("fullscreenMode", makeOnOffLabels(), [true, false], TextKey.OPTIONS_FULLSCREEN_MODE, TextKey.OPTIONS_FULLSCREEN_MODE_DESC, this.onFullscreenChange));

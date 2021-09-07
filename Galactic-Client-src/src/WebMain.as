@@ -88,14 +88,6 @@ public class WebMain extends Sprite {
             }
             catch (error:Error) {}
         }
-    private final function cancelEsc(event:KeyboardEvent) : void
-    {
-        if (event.keyCode == 27)
-        {
-            Parameters.data_.fullscreenMode = false;
-            stage.displayState = "normal";
-        }
-    }
 
     private function onAddedToStage(_arg1:Event):void {
         stage.addEventListener(Event.RESIZE, this.onStageResize, false, 0, true);
@@ -127,8 +119,8 @@ public class WebMain extends Sprite {
         this.context.injector.getInstance(StartupSignal).dispatch();
         STAGE = stage;
         UIUtils.toggleQuality(Parameters.data_.uiQuality);
-        if (Parameters.data_.fpsMode == undefined) {
-            Parameters.data_.fpsMode = "120";
+        if (Parameters.data_.FPS == undefined) {
+            Parameters.data_.FPS = "120";
         }
         if (Parameters.data_.GPURender == true) {
             Parameters.data_.GPURender = false;
