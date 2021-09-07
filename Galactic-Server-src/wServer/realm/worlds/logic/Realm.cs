@@ -17,7 +17,7 @@ namespace wServer.realm.worlds.logic
         private readonly bool _oryxPresent;
         private readonly int _mapId;
         private Task _overseerTask;
-
+        private bool _arenaSpawned = false;
 
         private int GladiatorWorldTimer;
         public Realm(ProtoWorld proto, Client client = null) : base(proto)
@@ -45,7 +45,8 @@ namespace wServer.realm.worlds.logic
                 _overseer.Init();
             }
 
-            spawnGladPortal();
+            if (_arenaSpawned != true   )
+               spawnGladPortal();
 
             Log.Info("Game World initalized.");
         }
@@ -59,6 +60,8 @@ namespace wServer.realm.worlds.logic
             nexus.EnterWorld(en);
 
             Log.Info("Spawned Locked Arena.");
+
+            _arenaSpawned = true;
         }
 
         public override void Tick(RealmTime time)
