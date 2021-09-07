@@ -15232,7 +15232,7 @@
     <Lunar/>
   </Object>
 
-  <Object type="0x0c40c" id="Locked Oryx's Arena Portal">
+  <Object type="0x0c40c" id="Locked Champion Portal">
     <Class>Portal</Class>
     <IntergamePortal />
     <NexusPortal />
@@ -15267,7 +15267,7 @@
     <OldSound>use_key</OldSound>
     <Consumable />
     <BagType>8</BagType>
-    <Activate dungeonName="DeathArena" lockedName="Locked Oryx's Arena Portal">UnlockPortal</Activate>
+    <Activate dungeonName="DeathArena" lockedName="Locked Champion Portal">UnlockPortal</Activate>
     <DisplayId>Oryx's Arena Key</DisplayId>
   </Object>
   <Object type="0x566d" id="Epic Limon the Sprite God">

@@ -45,7 +45,20 @@ namespace wServer.realm.worlds.logic
                 _overseer.Init();
             }
 
+            spawnGladPortal();
+
             Log.Info("Game World initalized.");
+        }
+
+        private void spawnGladPortal()
+        {
+            var nexus = Manager.GetWorld(Nexus) as Nexus;
+            var en = Entity.Resolve(Manager, "Locked Champion Portal"); //entity name (portal)
+            en.Name = "Locked Arena";
+            en.Move(68, 59);
+            nexus.EnterWorld(en);
+
+            Log.Info("Spawned Locked Arena.");
         }
 
         public override void Tick(RealmTime time)
@@ -81,26 +94,8 @@ namespace wServer.realm.worlds.logic
                     TaskContinuationOptions.OnlyOnFaulted);
             }
 
-            SpawnGladiatorWorld(time);
         }
-        public void SpawnGladiatorWorld(RealmTime time)
-        {
-            if (GladiatorWorldTimer >= 0)
-                GladiatorWorldTimer -= time.ElaspedMsDelta;
-
-            var nexus = Manager.GetWorld(Nexus) as Nexus;
-
-            if (GladiatorWorldTimer <= 0)
-            {
-                var en = Entity.Resolve(Manager, "Locked Champion Portal"); //entity name (portal)
-                en.Name = "Locked Arena";
-                en.Move(68,59);
-                nexus.EnterWorld(en);
-
-                Log.Info("Spawned");
-                GladiatorWorldTimer = 60 * 60 * 1000;
-            }
-        }
+      
         public void EnemyKilled(Enemy enemy, Player killer)
         {
             if (_overseer != null && !enemy.Spawned)

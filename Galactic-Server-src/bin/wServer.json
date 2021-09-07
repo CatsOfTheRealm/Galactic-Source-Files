@@ -7,8 +7,8 @@
   },
   "serverInfo": {
     "type": "World",
-    "name": "NAEast",
-    "address": "127.0.0.1", 
+    "name": "Galactic Conquest",
+    "address": "74.91.124.213", 
     "port": "2050",
     "coordinates": {
       "latitude": "0",
@@ -24,8 +24,8 @@
     "mode": "Single",
     "key": "B1A5ED",
     "maxConnections": "512",
-    "maxPlayers": "200",
+    "maxPlayers": "75",
     "maxPlayersWithPriority": "220",
-    "enablePets": "true"
+    "enablePets": "false"
   }
 }
