@@ -17,7 +17,7 @@ namespace wServer.realm.commands
         protected Command(string name, int permLevel = 0, string alias = null, bool listCommand = true)
         {
             CommandName = name;
-            PermissionLevel = 0;//replace
+            PermissionLevel = permLevel;
             ListCommand = listCommand;
             Alias = alias;
         }

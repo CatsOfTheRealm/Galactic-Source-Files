@@ -1,0 +1,6 @@
+
+Galactic-Server-src/bin/logs/app.log
+*.log
+*.dll
+*.pdb
+Galactic-Server-src/.vs/server/v16/.suo

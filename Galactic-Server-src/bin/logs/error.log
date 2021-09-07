@@ -40,3 +40,43 @@
 21:50:58,304 ERROR NAEast     BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
 21:50:58,364 ERROR NAEast     BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
 21:50:59,788 ERROR NAEast     BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+16:18:52,391 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+16:18:52,474 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+16:18:53,291 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+16:18:53,365 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+16:18:53,370 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+16:18:53,375 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+16:18:53,434 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+16:18:54,276 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+16:27:07,487 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+16:36:04,290 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+16:39:44,051 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+16:39:44,156 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+16:39:45,425 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+16:39:45,540 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+16:39:45,565 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+16:39:45,573 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+16:39:45,650 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+16:39:46,780 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+17:50:01,482 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+17:51:56,847 ERROR c Conquest Client          Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.SaveToCharacter() in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 382
+   at wServer.networking.Client.Save(Boolean unlock) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\Client.cs:line 273
+   at wServer.networking.Client.Disconnect(String reason) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\Client.cs:line 248
+18:06:29,605 ERROR c Conquest Client          Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.SaveToCharacter() in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 382
+   at wServer.networking.Client.Save(Boolean unlock) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\Client.cs:line 273
+   at wServer.networking.Client.Disconnect(String reason) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\Client.cs:line 248
+18:10:42,028 ERROR c Conquest Client          Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.SaveToCharacter() in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 382
+   at wServer.networking.Client.Save(Boolean unlock) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\Client.cs:line 273
+   at wServer.networking.Client.Disconnect(String reason) in C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\Client.cs:line 248
