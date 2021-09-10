@@ -639,7 +639,11 @@ public class EquipmentToolTip extends ToolTip {
             if (!this.comparisonResults.processedTags[_local1.toXMLString()]) {
                 _local6 = _local1.toString();
                 switch (_local6) {
-
+                    case "XPBoost" :
+                            this.effects.push(new Effect("Test1", {
+                                "Test2": 2
+                            }));
+                     break;
                     case ActivationType.HEAL:
                         this.effects.push(new Effect(TextKey.INCREMENT_STAT, {
                             "statAmount": (("+" + _local1.@amount) + " "),
@@ -1276,7 +1280,6 @@ public class EquipmentToolTip extends ToolTip {
             if (this.objectXML.hasOwnProperty("Upgradeable")) {
                 this.restrictions.push(new Restriction(("Upgradeable: This item can be crafted into a better version using the forge."), 0xff8000, false));
             }
-
 
             if (this.objectXML.hasOwnProperty("@setType")) {
                 this.restrictions.push(new Restriction(("This artifact is a part of " + this.objectXML.attribute("setName")), 0xFF9900, false));

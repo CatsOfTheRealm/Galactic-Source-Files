@@ -311,7 +311,7 @@ namespace wServer.logic
                           new Prioritize(
                               new Wander(0.2)
                               ),
-                          new Reproduce("Oryx Insect Minion", 10, 20, 1),
+                          new Reproduce("Oryx Insect Minion", 10, 20, 500),
                           new Shoot(10, 1, projectileIndex: 0, coolDown: 900)
                          )
                        ),
@@ -325,7 +325,7 @@ namespace wServer.logic
                       new State("its SWARMING time",
                           new Prioritize(
                               new Wander(0.2),
-                              new StayCloseToSpawn(0.4, 8),
+                              new StayCloseToSpawn(0.8, 6),
                                  new Follow(0.8, 10, 1, -1, 0)
                               ),
                           new Shoot(10, 5, projectileIndex: 0, coolDown: 1500),

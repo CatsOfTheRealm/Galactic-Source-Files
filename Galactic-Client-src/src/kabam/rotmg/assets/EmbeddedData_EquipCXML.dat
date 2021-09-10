@@ -2,45 +2,7 @@
 
 <Objects>
 
-    <Object type="0x7b7e" id="[Free] Legendary Sor Converter">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>lofiObj11</File>
-            <Index>0x91</Index>
-        </Texture>
-        <SlotType>10</SlotType>
-        <ExtraTooltipData>
-            <EffectInfo name="" description="Forge with a Sor Crystal to upgrade to a Legendary Sor Crystal."/>
-            <EffectInfo name="Free Pack" description="Obtained from the Free Welcome Back Pack."/>
-        </ExtraTooltipData>
-        <Description>A sor crystal converter capable of unleashing the power of sor crystals bringing out their legendary power.</Description>
-        <LG/>
-        <Soulbound/>
-        <BagType>10</BagType>
-        <feedPower>2200</feedPower>
-    </Object>
 
-    <Object type="0x7b7d" id="[Free] Sor Crystal">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>lofiObj11</File>
-            <Index>0x70</Index>
-        </Texture>
-        <ExtraTooltipData>
-            <EffectInfo name="Free Pack" description="Obtained from the Free Welcome Back Pack."/>
-        </ExtraTooltipData>
-        <SlotType>10</SlotType>
-        <Description>An uncommon crystal found in the mountains; holds a source energy and power.</Description>
-        <ExtraTooltipData>
-            <EffectInfo name="" description="Can be used to forge a Legendary Sor Crystal."/>
-        </ExtraTooltipData>
-        <Upgradeable/>
-        <Soulbound/>
-        <BagType>9</BagType>
-        <feedPower>300</feedPower>
-    </Object>
 
     <Object type="0x7b7c" id="Vargo's Purple Hollographic Dog 2">
         <Class>Projectile</Class>
@@ -821,6 +783,23 @@
 			<LifetimeMS>5000</LifetimeMS>
 		</Projectile>
 	</Object>
+
+
+    <Object type="0x7b7d" id="Enhancement Potion">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>lofiObj3</File>
+            <Index>0x2db</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <Description>Get 2x all XP gained!</Description>
+        <Sound>use_potion</Sound>
+        <Consumable/>
+        <BagType>2</BagType>
+        <Activate duration="60">XPBoost</Activate>
+        <feedPower>200</feedPower>
+    </Object>
 
 	<Object type="0x7b4e" id="Grandolf, the Magic Orc 1">
 		<Class>Projectile</Class>
@@ -42327,13 +42306,13 @@
     <Item/>
     <Texture>
       <File>lofiObj3</File>
-      <Index>0x1b4</Index>
+      <Index>0x1b</Index>
     </Texture>
     <SlotType>10</SlotType>
     <Description>A science experiment.</Description>
     <Sound>use_potion</Sound>
     <Consumable/>
-    <BagType>0</BagType>
+    <BagType>1</BagType>
     <Activate effect="Invisible">ClearConditionEffectSelf</Activate>
     <Activate effect="Hexed" duration="30">ConditionEffectSelf</Activate>
     <feedPower>40</feedPower>
@@ -42352,6 +42331,7 @@
     <Soulbound/>
     <BagType>2</BagType>
     <Timer>-1.0</Timer>
+      <Activate duration="60">XPBoost</Activate>
     <XpBoost/>
     <feedPower>200</feedPower>
   </Object>

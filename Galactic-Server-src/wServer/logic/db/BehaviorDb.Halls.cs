@@ -550,9 +550,9 @@ namespace wServer.logic
                 new State("fight",
                      new Spawn("LH Grotto Bat", 2, 1, givesNoXp: false),
                      new Spawn("LH Grotto Rat", 2, 1, givesNoXp: false),
-                     new Shoot(26, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
-                     new Shoot(24, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
-                     new Shoot(28, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
+                     new Shoot(26, shootAngle: 5, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
+                     new Shoot(24, shootAngle: 5, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
+                     new Shoot(28, shootAngle: 5, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
                      new HpLessTransition(0.66, "fight2")
                        ),
                      new State("fight2",
@@ -565,9 +565,9 @@ namespace wServer.logic
                      new Spawn("LH Grotto Slime", 3, 1, givesNoXp: false),
                      new Spawn("LH Grotto Bat", 2, 1, givesNoXp: false),
                      new Spawn("LH Grotto Rat", 2, 1, givesNoXp: false),
-                      new Shoot(26, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
-                     new Shoot(24, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
-                     new Shoot(28, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
+                      new Shoot(26, shootAngle: 5, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
+                     new Shoot(24, shootAngle: 5, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
+                     new Shoot(28, shootAngle: 5, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
                      new HpLessTransition(0.33, "fight4")
                            ),
                      new State("fight4",
@@ -581,12 +581,18 @@ namespace wServer.logic
                      new Spawn("LH Grotto Slime", 4, 1, givesNoXp: false),
                      new Spawn("LH Grotto Bat", 2, 1, givesNoXp: false),
                      new Spawn("LH Grotto Rat", 2, 1, givesNoXp: false),
-                   new Shoot(26, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
-                     new Shoot(24, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
-                     new Shoot(28, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200)
+                   new Shoot(26, shootAngle: 5, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
+                     new Shoot(24, shootAngle: 5, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200),
+                     new Shoot(28, shootAngle: 5, fixedAngle: 0, count: 3, rotateAngle: 15, coolDown: 200)
+                )
+                      ),
+                       new Threshold(0.01,
+                    new ItemLoot("TricksterST3", 0.006, damagebased: true, threshold: 0.01),
+                     new ItemLoot("Potion of Critical Chance", 0.01),
+                    new ItemLoot("Potion of Critical Damage", 0.01)
                 )
             )
-            )
+            
 
          .Init("LH Grotto Slime",
                   new State(
@@ -746,7 +752,7 @@ namespace wServer.logic
                 new State(
                     new ConditionalEffect(ConditionEffectIndex.Invincible),
                     new State("1",
-                        new TeleportPlayer(8, 35, 48, true)
+                        new TeleportPlayer(8, 45, 125, true)
                 )
             )
             )

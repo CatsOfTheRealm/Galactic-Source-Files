@@ -19,7 +19,6 @@ namespace wServer.realm.worlds.logic
         private Task _overseerTask;
         private bool _arenaSpawned = false;
 
-        private int GladiatorWorldTimer;
         public Realm(ProtoWorld proto, Client client = null) : base(proto)
         {
             _oryxPresent = true;
@@ -45,7 +44,7 @@ namespace wServer.realm.worlds.logic
                 _overseer.Init();
             }
 
-            if (_arenaSpawned != true   )
+            if (_arenaSpawned != true)
                spawnGladPortal();
 
             Log.Info("Game World initalized.");

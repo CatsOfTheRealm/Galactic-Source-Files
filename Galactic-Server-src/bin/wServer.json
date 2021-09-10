@@ -8,7 +8,7 @@
   "serverInfo": {
     "type": "World",
     "name": "Galactic Conquest",
-    "address": "74.91.124.213", 
+    "address": "127.0.0.1", 
     "port": "2050",
     "coordinates": {
       "latitude": "0",

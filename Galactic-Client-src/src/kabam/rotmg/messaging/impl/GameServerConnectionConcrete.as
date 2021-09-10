@@ -1056,10 +1056,11 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         }
         if (((((_local4) && (!(_arg1.isPaused())))) && (((_local4.hasOwnProperty("Consumable")) || (_local4.hasOwnProperty("InvUse")))))) {
             if (!this.validStatInc(_local3, _arg1)) {
-                //this.addTextLine.dispatch(ChatMessage.make("", (_local4.attribute("id") + " Already at Maxed. Potion has been set to the Gift Chest.")));
+                this.addTextLine.dispatch(ChatMessage.make("", (_local4.attribute("id") + " Already at Maxed.")));
+                return true;
             }
             if (isStatPotion(_local3)) {
-                //this.addTextLine.dispatch(ChatMessage.make("", (_local4.attribute("id") + " Consumed ++")));
+                this.addTextLine.dispatch(ChatMessage.make("", (_local4.attribute("id") + " Consumed ++")));
             }
             this.applyUseItem(_arg1, _arg2, _local3, _local4);
             SoundEffectLibrary.play("use_potion");
@@ -1099,9 +1100,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         _local5.itemUsePos_.y_ = 0;
         serverConnection.queueMessage(_local5);
         if (_arg4.hasOwnProperty("Consumable")) {
-            _arg1.equipment_[_arg2] = -1;
-            if (((_arg4.hasOwnProperty("Activate")) && ((_arg4.Activate == "UnlockSkin")))) {
-            }
+            _arg1.equipment_[_arg2] = _arg1.equipment_[_arg2];
         }
     }
 
@@ -1116,6 +1115,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
     {
         if (this.player.map_ == null)
             return;
+
         var x:Number = -1;
         var y:Number = -1;
         var gameObject:GameObject = player != null && player.commune != null && !(player.commune is Player) ? player.commune : player;

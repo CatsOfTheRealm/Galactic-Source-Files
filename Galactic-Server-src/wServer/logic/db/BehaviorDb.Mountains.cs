@@ -74,6 +74,7 @@ namespace wServer.logic
                     new TierLoot(3, ItemType.Ring, 0.25),
                     new TierLoot(4, ItemType.Ring, 0.125),
                      new ItemLoot("Potion Crate", 0.01),
+                    new ItemLoot("Backpack", 0.006),
                      new ItemLoot("Items Crate", 0.009),
                     new ItemLoot("Potion of Attack", 0.1)
                )
@@ -100,7 +101,7 @@ namespace wServer.logic
                     new TierLoot(3, ItemType.Ring, 0.05),
                     new TierLoot(3, ItemType.Ability, 0.05),
                      new ItemLoot("Potion Crate", 0.01),
-                     new ItemLoot("Items Crate", 0.009),
+                   new ItemLoot("Backpack", 0.006),
                     new ItemLoot("Potion of Attack", 0.1)
                )
             )
@@ -122,6 +123,7 @@ namespace wServer.logic
                     new TierLoot(3, ItemType.Ability, 0.05),
                      new ItemLoot("Potion Crate", 0.01),
                      new ItemLoot("Items Crate", 0.009),
+                   new ItemLoot("Backpack", 0.006),
                     new ItemLoot("Potion of Attack", 0.1)
                     )
             )
@@ -152,6 +154,7 @@ namespace wServer.logic
                     new TierLoot(9, ItemType.Armor, 0.05),
                     new TierLoot(3, ItemType.Ring, 0.05),
                     new TierLoot(3, ItemType.Ability, 0.05),
+                    new ItemLoot("Backpack", 0.006),
                      new ItemLoot("Potion Crate", 0.01),
                      new ItemLoot("Items Crate", 0.009),
                     new ItemLoot("Potion of Speed", 0.1)
@@ -173,6 +176,7 @@ namespace wServer.logic
                     new TierLoot(9, ItemType.Armor, 0.05),
                     new TierLoot(3, ItemType.Ring, 0.05),
                     new TierLoot(3, ItemType.Ability, 0.05),
+                    new ItemLoot("Backpack", 0.006),
                      new ItemLoot("Potion Crate", 0.01),
                      new ItemLoot("Items Crate", 0.009),
                     new ItemLoot("Potion of Defense", 0.07)
@@ -196,6 +200,7 @@ namespace wServer.logic
                     new TierLoot(3, ItemType.Ring, 0.05),
                     new TierLoot(3, ItemType.Ability, 0.05),
                     new ItemLoot("Potion Crate", 0.01),
+                    new ItemLoot("Backpack", 0.006),
                     new ItemLoot("Items Crate", 0.009),
                     new ItemLoot("Potion of Defense", 0.1)
                     )
@@ -218,6 +223,7 @@ namespace wServer.logic
                     new TierLoot(3, ItemType.Ring, 0.05),
                     new TierLoot(3, ItemType.Ability, 0.05),
                     new ItemLoot("Potion Crate", 0.01),
+                    new ItemLoot("Backpack", 0.006),
                     new ItemLoot("Items Crate", 0.009),
                     new ItemLoot("Potion of Attack", 0.1)
                     )
@@ -240,6 +246,7 @@ namespace wServer.logic
                     new TierLoot(3, ItemType.Ring, 0.05),
                     new TierLoot(3, ItemType.Ability, 0.05),
                     new ItemLoot("Potion Crate", 0.01),
+                    new ItemLoot("Backpack", 0.006),
                     new ItemLoot("Items Crate", 0.009),
                     new ItemLoot("Potion of Defense", 0.1)
                     )
@@ -262,6 +269,7 @@ namespace wServer.logic
                     new TierLoot(3, ItemType.Ability, 0.05),
                     new ItemLoot("Potion Crate", 0.01),
                     new ItemLoot("Items Crate", 0.009),
+                    new ItemLoot("Backpack", 0.006),
                     new ItemLoot("Potion of Speed", 0.1)
                     )
             )
@@ -414,6 +422,7 @@ namespace wServer.logic
                     new TierLoot(3, ItemType.Ability, 0.05),
                     new ItemLoot("Potion Crate", 0.01),
                     new ItemLoot("Items Crate", 0.009),
+                    new ItemLoot("Backpack", 0.006),
                     new ItemLoot("Potion of Speed", 0.1)
                     )
             )
@@ -454,6 +463,7 @@ namespace wServer.logic
                     ),
                 new Threshold(.01,
                     new ItemLoot("Items Crate", 0.009),
+                    new ItemLoot("Backpack", 0.006),
                     new ItemLoot("Potion Crate", 0.01),//Items Crate
                     new ItemLoot("Potion of Defense", 0.1),
                     new TierLoot(6, ItemType.Weapon, 0.005)

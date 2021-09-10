@@ -420,15 +420,10 @@ namespace wServer.logic
                     new ItemLoot("The Holy Robe", 0.001, damagebased: true, threshold: 0.01),
                     new ItemLoot("Icy Frozen Tome", 0.001, damagebased: true, threshold: 0.01),
                     new ItemLoot("Ice Shard Blizzard Spell", 0.001, damagebased: true, threshold: 0.01),
-                    new TierLoot(11, ItemType.Armor, 0.125),
                     new TierLoot(12, ItemType.Armor, 0.0625),
-                    new TierLoot(13, ItemType.Armor, 0.03125),
-                    new TierLoot(10, ItemType.Weapon, 0.0625),
                     new TierLoot(11, ItemType.Weapon, 0.0625),
-                    new TierLoot(12, ItemType.Weapon, 0.03125),
                     new TierLoot(5, ItemType.Ability, 0.0625),
-                    new TierLoot(6, ItemType.Ability, 0.03125),
-                    new ItemLoot("Mark of Esben", 0, 1)
+                    new ItemLoot("Mark of Esben", 0.75, 1)
                 )
             );
     }

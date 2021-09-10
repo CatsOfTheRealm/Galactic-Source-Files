@@ -4,7 +4,7 @@ import kabam.rotmg.application.api.ApplicationSetup;
 
 public class ProductionSetup implements ApplicationSetup {
 
-    private const SERVER:String = "74.91.124.213" + ":80";
+    private const SERVER:String = WebMain.serverIP + ":80";
     private const UNENCRYPTED:String = ("http://" + SERVER);
     private const ENCRYPTED:String = ("http://" + SERVER);
     private const BUILD_LABEL:String = "Galactic Conquest #1.0.0";
