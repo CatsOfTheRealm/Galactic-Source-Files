@@ -345,8 +345,7 @@ namespace wServer.realm.worlds
         {
             if (entity is Player)
             {
-                if (Players.Values.Contains(entity as Player))
-                    return -1; //prevent duplicated connections
+                //prevent duplicated connections
                 entity.Id = GetNextEntityId();
                 entity.Init(this);
                 entity.ApplyConditionEffect(ConditionEffectIndex.Invulnerable, 5000); //Change timing if ya want

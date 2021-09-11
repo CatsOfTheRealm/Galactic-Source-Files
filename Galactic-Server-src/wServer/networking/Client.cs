@@ -175,19 +175,19 @@ namespace wServer.networking
 
         public void Reconnect(Reconnect pkt)
         {
-            if (Account == null)
-            {
-                Disconnect("Tried to reconnect an client with a null account...");
-                return;
+            if (Account.alreadyConnecting == false) {
+                Account.alreadyConnecting = true;
+                if (Account == null)
+                {
+                    Disconnect("Tried to reconnect an client with a null account...");
+                    return;
+                }
+                Log.InfoFormat("Reconnecting client ({0}) @ {1} to {2}...", Account.Name, IP, pkt.Name);
+                State = ProtocolState.Reconnecting;
+                Save(false);
+                Manager.ConMan.AddReconnect(Account.AccountId, pkt);
+                SendPacket(pkt);
             }
-
-            Log.InfoFormat("Reconnecting client ({0}) @ {1} to {2}...", Account.Name, IP, pkt.Name);
-
-            State = ProtocolState.Reconnecting;
-            Save(false);
-
-            Manager.ConMan.AddReconnect(Account.AccountId, pkt);
-            SendPacket(pkt);
         }
 
         public async void SendFailure(string text, int errorId = 0)

@@ -192,15 +192,11 @@ namespace wServer.realm.entities
         public ushort SetSkin { get; set; }
         public int SetSkinSize { get; set; }
         public Pet Pet { get; set; }
-
         public int? GuildInvite { get; set; }
         public bool Muted { get; set; }
-
         public RInventory DbLink { get; private set; }
         public int[] SlotTypes { get; private set; }
         public Inventory Inventory { get; private set; }
-
-        
         public ItemStacker HealthPots { get; private set; }
         public ItemStacker MagicPots { get; private set; }
         public ItemStacker[] Stacks { get; private set; }
@@ -379,14 +375,14 @@ namespace wServer.realm.entities
             chr.Skin = _originalSkin;
             chr.FameStats = FameCounter.Stats.Write();
             chr.LastSeen = DateTime.Now;
-            chr.HealthStackCount = HealthPots.Count;
-            chr.MagicStackCount = MagicPots.Count;
             chr.HasBackpack = HasBackpack;
             chr.XPBoostTime = XPBoostTime;
             chr.LDBoostTime = LDBoostTime;
             chr.LTBoostTime = LTBoostTime;
             chr.PetId = Pet?.PetId ?? 0;
             chr.Items = Inventory.GetItemTypes();
+            chr.HealthStackCount = HealthPots.Count;
+            chr.MagicStackCount = MagicPots.Count;
         }
 
         public Player(Client client, bool saveInventory = true)
@@ -513,13 +509,10 @@ namespace wServer.realm.entities
 
         byte[,] tiles;
         public FameCounter FameCounter { get; private set; }
-
         public Entity SpectateTarget { get; set; }
         public bool IsControlling => SpectateTarget != null && !(SpectateTarget is Player);
-        
         public int[] LifeSteal { get; private set;}
         public int[] MagicSteal { get; private set; }
-        //CurseEffect
         public int LifeStealSum() => LifeSteal.Sum();
         public int MagicStealSum() => MagicSteal.Sum();
 
@@ -578,7 +571,7 @@ namespace wServer.realm.entities
                     }
                 }
             }
-            return false;//WisDmgEffect
+            return false;
         }
         public bool WisDmgEffect()
         {
@@ -673,6 +666,8 @@ namespace wServer.realm.entities
 
         public override void Init(World owner)
         {
+            Client.Account.alreadyConnecting = false;
+
             var eventsInfo = Program.Config.eventsInfo;
             var x = 0;
             var y = 0;
@@ -686,6 +681,7 @@ namespace wServer.realm.entities
                 x = sRegion.Key.X;
                 y = sRegion.Key.Y;
             }
+
             Move(x + 0.5f, y + 0.5f);
             tiles = new byte[owner.Map.Width, owner.Map.Height];
 
@@ -697,7 +693,6 @@ namespace wServer.realm.entities
             {
                 Client.Account.DonorClaim = true;
             }
-
             if (Client.Account.WelcomeBack == false)
             {
                 SendInfo($"You have unclaimed packages, /Claim to claim them.");
@@ -739,9 +734,8 @@ namespace wServer.realm.entities
 
             SetNewbiePeriod();
 
-           if (owner.Name.Equals("Moon") && chr.MoonPrimed == false)
-           {
-                ReconnectToNexus2();
+           if (owner.Name.Equals("Moon") && chr.MoonPrimed == false)  {
+                ReconnectToNexus();
                 SendInfo($"The gods demand you to ascend before adventuring to the moon.");
            }
            totalMoonPots = chr.LifePotsMoon + chr.ManaPotsMoon + chr.AttackStatsMoon + chr.DefensePotsMoon + chr.AttackStatsMoon + chr.DexterityPotsMoon + chr.VitalityPotsMoon + chr.WisdomPotsMoon + chr.CritDmgPotsMoon + chr.CritHitPotsMoon;
@@ -928,11 +922,9 @@ namespace wServer.realm.entities
            {
               if (Stacks[0].Count < 3 + chr.Toolbelts)  {
                 Stacks[0].Put(Stacks[0].Item);
-                SendInfo("+1 Mana Potion.");
               }
               if (Stacks[1].Count < 3 + chr.Toolbelts)  {
                 Stacks[1].Put(Stacks[1].Item);
-                SendInfo("+1 Mana Potion.");
               }
               _ToolbeltCD = chr.Regeneration;
            }
@@ -1127,8 +1119,6 @@ namespace wServer.realm.entities
         public int statsmaxed;
         void GenerateGravestone(bool phantomDeath = false) //donators
         {
-
-
             var playerDesc = Manager.Resources.GameData.Classes[ObjectType];
             var maxed = playerDesc.Stats.Where((t, i) => Stats.Base[i] == t.MaxValue).Count();
             ushort objType;
@@ -1254,17 +1244,6 @@ namespace wServer.realm.entities
             }
             return false;
         }
-        private void ReconnectToNexus2()
-        {
-            HP = 250;
-            _client.Reconnect(new Reconnect()
-            {
-                Host = "",
-                Port = 2050,
-                GameId = World.Nexus,
-                Name = "Nexus"
-            });
-        }
         private void ReconnectToNexus()
         {
             HP = 250;
@@ -1340,12 +1319,14 @@ namespace wServer.realm.entities
                     i.SendInfo(deathMessage);
                 }
             }
-
         }
 
         public void Death(string killer, Entity entity = null, WmapTile tile = null, bool rekt = false)
         {
             if (_client.State == ProtocolState.Disconnected || Client.State == ProtocolState.Reconnecting || _dead)
+                return;
+
+            if (Client.Account.alreadyConnecting)
                 return;
 
             if (entity != null)
@@ -1360,6 +1341,7 @@ namespace wServer.realm.entities
                 ReconnectToNexus();
                 return;
             }
+
             else if (Rekted(rekt))
                 return;
             else if (Arena(killer))
@@ -1368,6 +1350,7 @@ namespace wServer.realm.entities
                 return;
             else if (TestWorld(killer))
                 return;
+
             if (Resurrection())
             {
                 _dead = false;
@@ -1377,8 +1360,7 @@ namespace wServer.realm.entities
             {
                 _dead = true;
                 SaveToCharacter();
-                Manager.Database.Death(Manager.Resources.GameData, _client.Account,
-                    _client.Character, FameCounter.Stats, killer);
+                Manager.Database.Death(Manager.Resources.GameData, _client.Account, _client.Character, FameCounter.Stats, killer);
             }
           
 
@@ -1484,9 +1466,7 @@ namespace wServer.realm.entities
                 SpectateTarget.FocusLost -= ResetFocus;
                 SpectateTarget.Controller = null;
             }
-            _clientEntities.Dispose();
-
-            Pet?.Dispose();
+          
             Pet = null;
             DbLink = null;
             Inventory = null;
@@ -1494,6 +1474,8 @@ namespace wServer.realm.entities
             MagicPots = null;
             Stacks = null;
 
+            Pet?.Dispose();
+            _clientEntities.Dispose();
             base.Dispose();
         }
 

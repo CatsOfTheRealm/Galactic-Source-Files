@@ -1,0 +1,4 @@
+00:09:45,062 INFO  Server          Dispatching '/char/list'@127.0.0.1
+00:09:45,117 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+00:23:38,148 INFO  Server          Dispatching '/char/list'@127.0.0.1
+00:23:38,266 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1

@@ -1,0 +1,179 @@
+00:00:16,630 INFO  c Conquest Oryx            Oryx is controlling population...
+00:00:16,638 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:00:19,461 INFO  c Conquest Moon            Population Recalculated!
+00:00:36,717 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 6 Liches will feast on your essence!
+00:00:49,367 INFO  c Conquest Moon            Population respawned! 355
+00:01:09,431 INFO  c Conquest Moon            Population Recalculated!
+00:01:16,998 INFO  c Conquest Oryx            Oryx is controlling population...
+00:01:17,007 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:01:27,739 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give pirate cave key
+00:01:31,015 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give pirate cave key
+00:01:34,736 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give pirate cave key
+00:01:37,259 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Kill the Avatar, and you risk setting free an abomination.
+00:01:37,373 INFO  c Conquest World           Loading map for world 3(Pirate Cave)...
+00:01:37,383 INFO  c Conquest RealmManager    World 3(Pirate Cave) added. 7 Worlds existing.
+00:01:37,385 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Pirate Cave...
+00:01:49,454 INFO  c Conquest Moon            Population respawned! 355
+00:01:59,471 INFO  c Conquest Moon            Population Recalculated!
+00:02:17,676 INFO  c Conquest Oryx            Oryx is controlling population...
+00:02:17,688 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:02:49,277 INFO  c Conquest Moon            Population Recalculated!
+00:02:49,279 INFO  c Conquest Moon            Population respawned! 355
+00:02:52,572 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Nexus...
+00:02:53,574 INFO  c Conquest RealmManager    World 3(Pirate Cave) removed.
+00:03:18,249 INFO  c Conquest Oryx            Oryx is controlling population...
+00:03:18,259 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:03:39,370 INFO  c Conquest Moon            Population Recalculated!
+00:03:49,417 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I HAVE CLOSED THIS REALM!
+00:03:49,419 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> YOU WILL NOT LIVE TO SEE THE LIGHT OF DAY!
+00:03:49,421 INFO  c Conquest Moon            Population respawned! 355
+00:03:49,421 INFO  c Conquest Realm           Initializing Game World 1(Realm) from map 1...
+00:03:49,425 INFO  c Conquest World           Loading map for world 1(Realm)...
+00:03:50,051 INFO  c Conquest SetPieces       Applying set pieces to world 1(Realm).
+00:03:50,212 INFO  c Conquest SetPieces       Set pieces applied.
+00:03:50,214 INFO  c Conquest Oryx            Oryx is controlling world 1(Realm)...
+00:03:50,529 INFO  c Conquest Oryx            Spawning minions...
+00:03:50,740 INFO  c Conquest Oryx            Oryx is done.
+00:03:50,742 INFO  c Conquest Oryx            Oryx is controlling world 1(Realm)...
+00:03:51,062 INFO  c Conquest Oryx            Spawning minions...
+00:03:51,336 INFO  c Conquest Oryx            Oryx is done.
+00:03:51,338 INFO  c Conquest Realm           Game World initalized.
+00:03:51,346 INFO  c Conquest Oryx            Oryx is controlling population...
+00:03:51,380 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:04:29,330 INFO  c Conquest Moon            Population Recalculated!
+00:04:30,095 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My legion of 3 Red Demons live only to serve me!
+00:04:49,279 INFO  c Conquest Moon            Population respawned! 355
+00:04:50,176 INFO  c Conquest Oryx            Oryx is controlling population...
+00:04:50,184 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:05:19,328 INFO  c Conquest Moon            Population Recalculated!
+00:05:49,322 INFO  c Conquest Moon            Population respawned! 355
+00:05:50,547 INFO  c Conquest Oryx            Oryx is controlling population...
+00:05:50,556 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:06:09,367 INFO  c Conquest Moon            Population Recalculated!
+00:06:10,821 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I am invincible while my 6 Liches still stand!
+00:06:49,422 INFO  c Conquest Moon            Population respawned! 355
+00:06:51,079 INFO  c Conquest Oryx            Oryx is controlling population...
+00:06:51,090 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:06:59,302 INFO  c Conquest Moon            Population Recalculated!
+00:07:49,349 INFO  c Conquest Moon            Population Recalculated!
+00:07:49,352 INFO  c Conquest Moon            Population respawned! 355
+00:07:51,433 INFO  c Conquest Oryx            Oryx is controlling population...
+00:07:51,443 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:08:39,338 INFO  c Conquest Moon            Population Recalculated!
+00:08:49,294 INFO  c Conquest Moon            Population respawned! 355
+00:08:52,030 INFO  c Conquest Oryx            Oryx is controlling population...
+00:08:52,038 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:09:29,418 INFO  c Conquest Moon            Population Recalculated!
+00:09:49,279 INFO  c Conquest Moon            Population respawned! 355
+00:09:52,655 INFO  c Conquest Oryx            Oryx is controlling population...
+00:09:52,662 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:10:19,333 INFO  c Conquest Moon            Population Recalculated!
+00:10:32,735 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I am invincible while my 6 Liches still stand!
+00:10:49,415 INFO  c Conquest Moon            Population respawned! 355
+00:10:52,914 INFO  c Conquest Oryx            Oryx is controlling population...
+00:10:52,922 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:11:09,272 INFO  c Conquest Moon            Population Recalculated!
+00:11:13,093 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Cretins! I have 4 Cyclops Gods to guard me!
+00:11:33,185 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I am invincible while my 6 Liches still stand!
+00:11:49,371 INFO  c Conquest Moon            Population respawned! 355
+00:11:53,421 INFO  c Conquest Oryx            Oryx is controlling population...
+00:11:53,428 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:11:59,422 INFO  c Conquest Moon            Population Recalculated!
+00:12:49,271 INFO  c Conquest Moon            Population Recalculated!
+00:12:49,273 INFO  c Conquest Moon            Population respawned! 355
+00:12:54,082 INFO  c Conquest Oryx            Oryx is controlling population...
+00:12:54,089 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:13:14,196 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I am invincible while my 6 Liches still stand!
+00:13:39,294 INFO  c Conquest Moon            Population Recalculated!
+00:13:49,348 INFO  c Conquest Moon            Population respawned! 355
+00:13:54,369 INFO  c Conquest Oryx            Oryx is controlling population...
+00:13:54,377 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:14:29,364 INFO  c Conquest Moon            Population Recalculated!
+00:14:49,455 INFO  c Conquest Moon            Population respawned! 355
+00:14:55,140 INFO  c Conquest Oryx            Oryx is controlling population...
+00:14:55,147 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:15:15,357 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My forest of 17 Ent Ancients is all the protection I need!
+00:15:19,396 INFO  c Conquest Moon            Population Recalculated!
+00:15:49,314 INFO  c Conquest Moon            Population respawned! 355
+00:15:55,733 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Cretins! I have 4 Cyclops Gods to guard me!
+00:15:55,736 INFO  c Conquest Oryx            Oryx is controlling population...
+00:15:55,744 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:16:09,296 INFO  c Conquest Moon            Population Recalculated!
+00:16:36,041 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 4 Oasis Giants will feast on your flesh!
+00:16:49,393 INFO  c Conquest Moon            Population respawned! 355
+00:16:56,266 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Mortal scum! My 17 Ent Ancients will defend me forever!
+00:16:56,268 INFO  c Conquest Oryx            Oryx is controlling population...
+00:16:56,276 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:16:59,319 INFO  c Conquest Moon            Population Recalculated!
+00:17:49,279 INFO  c Conquest Moon            Population Recalculated!
+00:17:49,281 INFO  c Conquest Moon            Population respawned! 355
+00:17:57,041 INFO  c Conquest Oryx            Oryx is controlling population...
+00:17:57,049 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:18:17,424 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 6 Liches will feast on your essence!
+00:18:23,237 INFO  c Conquest Client          Received client @ 127.0.0.1.
+00:18:39,396 INFO  c Conquest Moon            Population Recalculated!
+00:18:49,326 INFO  c Conquest Moon            Population respawned! 355
+00:18:57,935 INFO  c Conquest Oryx            Oryx is controlling population...
+00:18:57,944 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:19:18,165 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Mortal scum! My 17 Ent Ancients will defend me forever!
+00:19:29,300 INFO  c Conquest Moon            Population Recalculated!
+00:19:49,318 INFO  c Conquest Moon            Population respawned! 355
+00:19:58,471 INFO  c Conquest Oryx            Oryx is controlling population...
+00:19:58,481 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:20:19,401 INFO  c Conquest Moon            Population Recalculated!
+00:20:38,607 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I am invincible while my 6 Liches still stand!
+00:20:49,417 INFO  c Conquest Moon            Population respawned! 355
+00:20:58,932 INFO  c Conquest Oryx            Oryx is controlling population...
+00:20:58,941 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:21:09,400 INFO  c Conquest Moon            Population Recalculated!
+00:21:49,337 INFO  c Conquest Moon            Population respawned! 355
+00:21:59,295 INFO  c Conquest Moon            Population Recalculated!
+00:21:59,734 INFO  c Conquest Oryx            Oryx is controlling population...
+00:21:59,744 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:22:49,406 INFO  c Conquest Moon            Population Recalculated!
+00:22:49,408 INFO  c Conquest Moon            Population respawned! 355
+00:23:00,325 INFO  c Conquest Oryx            Oryx is controlling population...
+00:23:00,335 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:23:37,979 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+00:23:39,297 INFO  c Conquest Moon            Population Recalculated!
+00:23:49,295 INFO  c Conquest Moon            Population respawned! 355
+00:24:01,137 INFO  c Conquest Oryx            Oryx is controlling population...
+00:24:01,146 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:24:29,278 INFO  c Conquest Moon            Population Recalculated!
+00:24:41,800 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Kill the Avatar, and you risk setting free an abomination.
+00:24:49,282 INFO  c Conquest Moon            Population respawned! 355
+00:25:01,981 INFO  c Conquest Oryx            Oryx is controlling population...
+00:25:01,991 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:25:19,379 INFO  c Conquest Moon            Population Recalculated!
+00:25:42,421 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I am invincible while my 6 Liches still stand!
+00:25:49,466 INFO  c Conquest Moon            Population respawned! 355
+00:26:02,521 INFO  c Conquest Oryx            Oryx is controlling population...
+00:26:02,529 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:26:09,339 INFO  c Conquest Moon            Population Recalculated!
+00:26:49,380 INFO  c Conquest Moon            Population respawned! 355
+00:26:59,484 INFO  c Conquest Moon            Population Recalculated!
+00:27:03,223 INFO  c Conquest Oryx            Oryx is controlling population...
+00:27:03,232 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:27:49,420 INFO  c Conquest Moon            Population Recalculated!
+00:27:49,426 INFO  c Conquest Moon            Population respawned! 355
+00:28:03,862 INFO  c Conquest Oryx            Oryx is controlling population...
+00:28:03,872 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:28:24,082 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My legion of 3 Red Demons live only to serve me!
+00:28:39,302 INFO  c Conquest Moon            Population Recalculated!
+00:28:49,302 INFO  c Conquest Moon            Population respawned! 355
+00:29:04,672 INFO  c Conquest Oryx            Oryx is controlling population...
+00:29:04,681 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:29:11,415 INFO  c Conquest Client          Received client @ 127.0.0.1.
+00:29:23,459 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Realm...
+00:29:29,336 INFO  c Conquest Moon            Population Recalculated!
+00:29:49,282 INFO  c Conquest Moon            Population respawned! 355
+00:30:05,677 INFO  c Conquest Oryx            Oryx is controlling population...
+00:30:05,686 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:30:19,461 INFO  c Conquest Moon            Population Recalculated!
+00:30:49,360 INFO  c Conquest Moon            Population respawned! 355
+00:31:06,465 INFO  c Conquest Oryx            Oryx is controlling population...
+00:31:06,474 INFO  c Conquest Oryx            Oryx is back to sleep.
+00:31:09,447 INFO  c Conquest Moon            Population Recalculated!

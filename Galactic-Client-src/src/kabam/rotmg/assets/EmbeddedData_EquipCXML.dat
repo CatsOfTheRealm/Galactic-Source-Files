@@ -9358,92 +9358,92 @@
     <DisplayId>Moon Statue</DisplayId>
   </Object>
 
-  <Object type="0x3009" id="Large Toolbelt">
-    <Class>Equipment</Class>
-    <Item/>
-    <Texture>
-      <File>LRE</File>
-      <Index>0xdf</Index>
-    </Texture>
-    <SlotType>10</SlotType>
-    <Description>A toolbelt that will increase your potion space by 5!</Description>
-    <ExtraTooltipData>
-      <EffectInfo name="Regeneration" description="Using this will allow you to regenerate health and magic potions."/>
-      <EffectInfo name="Cooldown" description="2 Minutes"/>
-    </ExtraTooltipData>
-    <Sound>spell/light_heal</Sound>
-    <Consumable/>
-    <Activate duration="2" amount="5" >Toolbelt</Activate>
-    <BagType>6</BagType>
-    <OldSound>use_potion</OldSound>
-    <feedPower>200</feedPower>
-  </Object>
+    <Object type="0x3009" id="Large Toolbelt">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>LRE</File>
+            <Index>0xdf</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <Description>A toolbelt that will increase your potion space by 5!</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Regeneration" description="Using this will allow you to regenerate health and magic potions."/>
+            <EffectInfo name="Cooldown" description="2 Minutes"/>
+        </ExtraTooltipData>
+        <OldSound>spell/light_heal</OldSound>
+        <Consumable/>
+        <Activate amount="5" duration="120">Toolbelt</Activate>
+        <BagType>6</BagType>
+        <Removed>use_potion</Removed>
+        <feedPower>200</feedPower>
+    </Object>
 
-  <Object type="0x3008" id="Medium Toolbelt">
-    <Class>Equipment</Class>
-    <Item/>
-    <Texture>
-      <File>LRE</File>
-      <Index>0xde</Index>
-    </Texture>
-    <SlotType>10</SlotType>
-    <Description>A toolbelt that will increase your potion space by 3!</Description>
-    <ExtraTooltipData>
-      <EffectInfo name="Regeneration" description="Using this will allow you to regenerate health and magic potions."/>
-      <EffectInfo name="Cooldown" description="4 Minutes"/>
-    </ExtraTooltipData>
-    <Sound>spell/light_heal</Sound>
-    <Consumable/>
-    <Activate duration="4" amount="3" >Toolbelt</Activate>
-    <BagType>6</BagType>
-    <OldSound>use_potion</OldSound>
-    <feedPower>200</feedPower>
-  </Object>
+    <Object type="0x3008" id="Medium Toolbelt">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>LRE</File>
+            <Index>0xde</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <Description>A toolbelt that will increase your potion space by 3!</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Regeneration" description="Using this will allow you to regenerate health and magic potions."/>
+            <EffectInfo name="Cooldown" description="4 Minutes"/>
+        </ExtraTooltipData>
+        <OldSound>spell/light_heal</OldSound>
+        <Consumable/>
+        <Activate amount="3" duration="240" >Toolbelt</Activate>
+        <BagType>6</BagType>
+        <Removed>use_potion</Removed>
+        <feedPower>200</feedPower>
+    </Object>
 
-  <Object type="0x3007" id="Small Toolbelt">
-    <Class>Equipment</Class>
-    <Item/>
-    <Texture>
-      <File>LRE</File>
-      <Index>0xdd</Index>
-    </Texture>
-    <SlotType>10</SlotType>
-    <Description>A toolbelt that will increase your potion space by 2!</Description>
-    <ExtraTooltipData>
-      <EffectInfo name="Regeneration" description="Using this will allow you to regenerate health and magic potions."/>
-      <EffectInfo name="Cooldown" description="7 Minutes"/>
-    </ExtraTooltipData>
-    <Sound>spell/light_heal</Sound>
-    <Consumable/>
-    <Activate duration="7" amount="2" >Toolbelt</Activate>
-    <BagType>6</BagType>
-    <OldSound>use_potion</OldSound>
-    <feedPower>200</feedPower>
-  </Object>
+    <Object type="0x3007" id="Small Toolbelt">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>LRE</File>
+            <Index>0xdd</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <Description>A toolbelt that will increase your potion space by 2!</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Regeneration" description="Using this will allow you to regenerate health and magic potions."/>
+            <EffectInfo name="Cooldown" description="7 Minutes"/>
+        </ExtraTooltipData>
+        <OldSound>spell/light_heal</OldSound>
+        <Consumable/>
+        <Activate amount="2" duration="480">Toolbelt</Activate>
+        <BagType>6</BagType>
+        <Removed>use_potion</Removed>
+        <feedPower>200</feedPower>
+    </Object>
 
 
-  <Object type="0x3006" id="Tiny Toolbelt">
-    <Class>Equipment</Class>
-    <Item/>
-    <Texture>
-      <File>LRE</File>
-      <Index>0xdc</Index>
-    </Texture>
-    <SlotType>10</SlotType>
-    <Description>A toolbelt that will increase your potion space by 1!</Description>
-    <ExtraTooltipData>
-      <EffectInfo name="Regeneration" description="Using this will allow you to regenerate health and magic potions."/>
-      <EffectInfo name="Cooldown" description="10 Minutes"/>
-    </ExtraTooltipData>
-    <Sound>spell/light_heal</Sound>
-    <Consumable/>
-    <Activate duration="10" amount="1" >Toolbelt</Activate>
-    <BagType>6</BagType>
-    <OldSound>use_potion</OldSound>
-    <feedPower>200</feedPower>
-  </Object>
+    <Object type="0x3006" id="Tiny Toolbelt">
+        <Class>Equipment</Class>
+        <Item/>
+        <Texture>
+            <File>LRE</File>
+            <Index>0xdc</Index>
+        </Texture>
+        <SlotType>10</SlotType>
+        <Description>A toolbelt that will increase your potion space by 1!</Description>
+        <ExtraTooltipData>
+            <EffectInfo name="Regeneration" description="Using this will allow you to regenerate health and magic potions."/>
+            <EffectInfo name="Cooldown" description="10 Minutes"/>
+        </ExtraTooltipData>
+        <OldSound>spell/light_heal</OldSound>
+        <Consumable/>
+        <Activate amount="1" duration="960">Toolbelt</Activate>
+        <BagType>6</BagType>
+        <Removed>use_potion</Removed>
+        <feedPower>200</feedPower>
+    </Object>
 
-  <Object type="0x3010" id="Void Demon Egg">
+    <Object type="0x3010" id="Void Demon Egg">
     <Class>Equipment</Class>
     <Item/>
     <Texture>

@@ -16,6 +16,7 @@
     <Activate duration="60">XPBoost</Activate>
     <feedPower>200</feedPower>
   </Object>
+  
  <Object type="0x7b7e" id="Free Legendary Sor Converter">
         <Class>Equipment</Class>
         <Item/>
@@ -9285,7 +9286,7 @@
     </ExtraTooltipData>
     <OldSound>spell/light_heal</OldSound>
     <Consumable/>
-    <Activate amount="5" duration="2" >Toolbelt</Activate>
+    <Activate amount="5" duration="120">Toolbelt</Activate>
     <BagType>6</BagType>
     <Removed>use_potion</Removed>
     <feedPower>200</feedPower>
@@ -9306,7 +9307,7 @@
     </ExtraTooltipData>
     <OldSound>spell/light_heal</OldSound>
     <Consumable/>
-    <Activate amount="3" duration="4" >Toolbelt</Activate>
+    <Activate amount="3" duration="240" >Toolbelt</Activate>
     <BagType>6</BagType>
     <Removed>use_potion</Removed>
     <feedPower>200</feedPower>
@@ -9327,7 +9328,7 @@
     </ExtraTooltipData>
     <OldSound>spell/light_heal</OldSound>
     <Consumable/>
-    <Activate amount="2" duration="7"  >Toolbelt</Activate>
+    <Activate amount="2" duration="480">Toolbelt</Activate>
     <BagType>6</BagType>
     <Removed>use_potion</Removed>
     <feedPower>200</feedPower>
@@ -9349,7 +9350,7 @@
     </ExtraTooltipData>
     <OldSound>spell/light_heal</OldSound>
     <Consumable/>
-    <Activate amount="1" duration="10">Toolbelt</Activate>
+    <Activate amount="1" duration="960">Toolbelt</Activate>
     <BagType>6</BagType>
     <Removed>use_potion</Removed>
     <feedPower>200</feedPower>

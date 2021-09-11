@@ -403,6 +403,8 @@ namespace common
             set { SetValue<string>("uuid", value); }
         }
 
+       
+
         public string Name
         {
             get { return GetValue<string>("name"); }
@@ -651,7 +653,11 @@ namespace common
             get { return GetValue<int>("masterypoints"); }
             set { SetValue<int>("masterypoints", value); }
         }
-      
+        public bool alreadyConnecting
+        {
+            get { return GetValue<bool>("alreadyConnecting"); }
+            set { SetValue<bool>("alreadyConnecting", value); }
+        }
         public int ItemMasteryPoints
         {
             get { return GetValue<int>("masterypoints"); }
