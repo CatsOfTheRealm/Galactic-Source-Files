@@ -30,9 +30,8 @@ namespace common
     {
         public Tuple<bool, double> LootBoost { get; set; } = new Tuple<bool, double>(false, 0); //changed from multiplying lb to solid lb due to it having a greater effect on richer players, players that aren't maxed in lb will be worse off than players with max lb characters.
         public DayOfWeek LootBoostEventDay { get; } = DayOfWeek.Saturday;
-        public int SmallestLootBoostPossible { get; } = 30; //in % (so if its 25 its : your whole luck + 30)
-        public int BiggestLootBoostPossible { get; } = 50; //in % (so if its 50 its : your whole luck + 50)
-
+        public int SmallestLootBoostPossible { get; } = 50; 
+        public int BiggestLootBoostPossible { get; } = 50; 
         public Tuple<bool, int, int> StatBoost { get; set; } = new Tuple<bool, int, int>(false, 0, 0);
         public Tuple<bool, string> BloodMoon { get; set; } = new Tuple<bool, string>(false, "off");
 

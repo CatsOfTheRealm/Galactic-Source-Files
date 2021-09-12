@@ -1,12 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Objects>
+  <Object type="0x7b7f" id="Warmonger Arrow">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>lofiObj9</File>
+      <Index>0xc5</Index>
+    </Texture>
+    <AngleCorrection>1</AngleCorrection>
+  </Object>
+
+  <Object type="0x7b7e" id="Warmonger">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj9</File>
+      <Index>0xc4</Index>
+    </Texture>
+    <SlotType>3</SlotType>
+    <Description>Shatters Bow Projectile Rarely brandished and in pristine condition, the old monarchy deemed this exquisite recurve too dignified for all but royalty to handle. Though it remains unproven in practical combat, this bow’s raw potential is unmatched, waiting to be drawn out through pure focus.</Description>
+    <RateOfFire>1.1</RateOfFire>
+    <OldSound>weapon/double_bow</OldSound>
+    <Projectile>
+      <ObjectId>Warmonger Arrow</ObjectId>
+      <Speed>85</Speed>
+      <MinDamage>125</MinDamage>
+      <MaxDamage>175</MaxDamage>
+      <LifetimeMS>850</LifetimeMS>
+      <MultiHit/>
+    </Projectile>
+    <LG/>
+    <WarmongerEffect/>
+    <ActivateOnEquip stat="0" amount="20">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="112" amount="25">IncrementStat</ActivateOnEquip>
+    <BagType>9</BagType>
+    <FameBonus>7</FameBonus>
+    <NumProjectiles>2</NumProjectiles>
+    <Removed>arrowShoot</Removed>
+    <feedPower>1200</feedPower>
+  </Object>
+  
   <Object type="0x7b7d" id="Enhancement Potion">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj3</File>
-      <Index>0x2db</Index>
+      <File>CustomItems</File>
+      <Index>0x46</Index>
     </Texture>
     <SlotType>10</SlotType>
     <Description>Get 2x all XP gained!</Description>
@@ -17,46 +56,6 @@
     <feedPower>200</feedPower>
   </Object>
   
- <Object type="0x7b7e" id="Free Legendary Sor Converter">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>lofiObj11</File>
-               <Index>0x91</Index>
-        </Texture>
-        <SlotType>10</SlotType>
-        <ExtraTooltipData>
-          <EffectInfo name="" description="Forge with a Sor Crystal to upgrade to a Legendary Sor Crystal."/>
-          <EffectInfo name="Free Pack" description="Obtained from the Free Welcome Back Pack."/>
-        </ExtraTooltipData>
-        <Description>A sor crystal converter capable of unleashing the power of sor crystals bringing out their legendary power.</Description>
-        <LG/>
-        <Soulbound/>
-        <BagType>10</BagType>
-        <feedPower>2200</feedPower>
-    </Object>
-
- <Object type="0x7b7d" id="Free Sor Crystal">
-        <Class>Equipment</Class>
-        <Item/>
-        <Texture>
-            <File>lofiObj11</File>
-         <Index>0x70</Index>
-        </Texture>
-        <ExtraTooltipData>
-          <EffectInfo name="Free Pack" description="Obtained from the Free Welcome Back Pack."/>
-        </ExtraTooltipData>
-        <SlotType>10</SlotType>
-        <Description>An uncommon crystal found in the mountains; holds a source energy and power.</Description>
-        <ExtraTooltipData>
-            <EffectInfo name="" description="Can be used to forge a Legendary Sor Crystal."/>
-        </ExtraTooltipData>
-        <Upgradeable/>
-        <Soulbound/>
-        <BagType>9</BagType>
-        <feedPower>300</feedPower>
-    </Object>
-		
 	<Object type="0x7b7c" id="Vargo's Purple Hollographic Dog 2">
 		<Class>Projectile</Class>
 		<Texture>

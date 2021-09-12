@@ -712,10 +712,11 @@ namespace common.resources
         public bool Secret { get; private set; }
 
         public double LuckBooster { get; private set; }
-        public bool CurseEffect { get; private set; }//ParalyzeEffect WisDmgEffect
+        public bool CurseEffect { get; private set; }//ParalyzeEffect WisDmgEffect WarmongerEffect
         public bool ParalyzeEffect { get; private set; }
         public bool TouchEffect { get; private set; }
 
+        public bool WarmongerEffect { get; private set; }
         public bool WisDmgEffect { get; private set; }
         public int Doses { get; private set; }
         public int Quantity { get; private set; }
@@ -954,7 +955,7 @@ namespace common.resources
             if (elem.Element("VargoRing") != null) EquipmentStatus.Add(EquippedStatus.VargoRing);
             if (elem.Element("VargoRobe") != null) EquipmentStatus.Add(EquippedStatus.VargoRobe);
             if (elem.Element("Lheavenarmor") != null) EquipmentStatus.Add(EquippedStatus.Lheavenarmor);
-            //valor GResistance
+            //valor GResistance WarmongerEffect
             if (elem.Element("Combustion") != null) EquipmentStatus.Add(EquippedStatus.Combustion);
             if (elem.Element("Resilience") != null) EquipmentStatus.Add(EquippedStatus.Resilience);
             if (elem.Element("GResistance") != null) EquipmentStatus.Add(EquippedStatus.GResistance);
@@ -966,6 +967,7 @@ namespace common.resources
             CurseEffect = elem.Element("CurseEffect") != null;
             ParalyzeEffect = elem.Element("ParalyzeEffect") != null;
             TouchEffect = elem.Element("TouchEffect") != null;
+            WarmongerEffect = elem.Element("WarmongerEffect") != null;
 
             WisDmgEffect = elem.Element("WisDmgEffect") != null;
             if ((n = elem.Element("LuckBooster")) != null)

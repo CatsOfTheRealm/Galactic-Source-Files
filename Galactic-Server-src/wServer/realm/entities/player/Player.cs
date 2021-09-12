@@ -393,7 +393,6 @@ namespace wServer.realm.entities
 
             _client = client;
 
-            // found in player.update partial
             Sight = new Sight(this);
             _clientEntities = new UpdatedSet(this);
 
@@ -588,6 +587,21 @@ namespace wServer.realm.entities
             }
             return false;
         }
+        public bool WarmongerEffect()
+        {
+            for (var i = 0; i < 4; i++)
+            {
+                var item = Inventory[i];
+                if (item != null)
+                {
+                    if (item.WarmongerEffect)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
         public bool TouchEffect()
         {
             for (var i = 0; i < 4; i++)
@@ -736,7 +750,7 @@ namespace wServer.realm.entities
 
            if (owner.Name.Equals("Moon") && chr.MoonPrimed == false)  {
                 ReconnectToNexus();
-                SendInfo($"The gods demand you to ascend before adventuring to the moon.");
+                SendInfo($"No moon time, consume a Lunar Ascension.");
            }
            totalMoonPots = chr.LifePotsMoon + chr.ManaPotsMoon + chr.AttackStatsMoon + chr.DefensePotsMoon + chr.AttackStatsMoon + chr.DexterityPotsMoon + chr.VitalityPotsMoon + chr.WisdomPotsMoon + chr.CritDmgPotsMoon + chr.CritHitPotsMoon;
 

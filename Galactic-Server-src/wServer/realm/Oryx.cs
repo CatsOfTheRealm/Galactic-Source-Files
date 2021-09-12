@@ -823,7 +823,7 @@ namespace wServer.realm
             player.SendInfo("Use [WASDQE] to move; click to shoot!");
             player.SendInfo("Type \"/help\" for more help");
             if(DateTime.Now.DayOfWeek == eventsInfo.LootBoostEventDay && eventsInfo.LootBoost.Item1 && eventsInfo.LootBoost.Item2 > 0)
-                player.SendHelp($"Today is a Happy Saturday! Today your luck is multipled {eventsInfo.LootBoost.Item2} times!");
+                player.SendHelp($"Saturday +50 Bonus Loot Boost");
         }
         private void AnnounceMsg(string message)
         {

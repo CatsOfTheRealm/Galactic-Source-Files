@@ -14,4 +14,3 @@ C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-sr
 C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.csproj.CopyComplete
 C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.exe
 C:\Users\Administrator\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.pdb
-C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.csproj.AssemblyReference.cache

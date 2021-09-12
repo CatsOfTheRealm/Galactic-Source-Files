@@ -41,10 +41,11 @@ namespace wServer
             XmlConfigurator.ConfigureAndWatch(new FileInfo(Config.serverSettings.log4netConfig));
 
             var eventInfo = Config.eventsInfo;
+
             if(DateTime.Now.DayOfWeek == eventInfo.LootBoostEventDay)
             {
                 var value = RandomUtil.RandInt(eventInfo.SmallestLootBoostPossible, eventInfo.BiggestLootBoostPossible);
-                eventInfo.LootBoost = new Tuple<bool, double>(true,((double)value)/100);
+                eventInfo.LootBoost = new Tuple<bool, double>(true,((double)value) / 100);
             }
 
             using (Resources = new Resources(Config.serverSettings.resourceFolder, true))

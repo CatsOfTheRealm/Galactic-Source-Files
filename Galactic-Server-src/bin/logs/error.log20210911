@@ -1,0 +1,122 @@
+08:13:05,626 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+08:13:05,727 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+08:13:07,074 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+08:13:07,209 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+08:13:07,210 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+08:13:07,216 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+08:13:07,287 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+08:13:08,595 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+08:16:09,430 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+08:16:15,922 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+08:18:32,328 ERROR c Conquest Client          Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.SaveToCharacter() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 382
+   at wServer.networking.Client.Save(Boolean unlock) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 273
+   at wServer.networking.Client.Disconnect(String reason) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 248
+08:23:39,362 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+08:26:48,390 ERROR c Conquest Client          Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.SaveToCharacter() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 382
+   at wServer.networking.Client.Save(Boolean unlock) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 273
+   at wServer.networking.Client.Disconnect(String reason) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 248
+08:32:08,489 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+08:47:32,341 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+08:47:40,881 ERROR c Conquest Client          Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.SaveToCharacter() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 382
+   at wServer.networking.Client.Save(Boolean unlock) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 273
+   at wServer.networking.Client.Disconnect(String reason) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 248
+08:56:48,949 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+08:56:49,030 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+08:56:50,050 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+08:56:50,144 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+08:56:50,147 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+08:56:50,150 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+08:56:50,207 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+08:56:51,249 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+09:18:12,741 ERROR c Conquest Client          Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.SaveToCharacter() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 387
+   at wServer.networking.Client.Save(Boolean unlock) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 273
+   at wServer.networking.Client.Disconnect(String reason) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 248
+09:19:13,956 ERROR c Conquest Client          Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.SaveToCharacter() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 387
+   at wServer.networking.Client.Save(Boolean unlock) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 273
+   at wServer.networking.Client.Disconnect(String reason) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 248
+10:26:22,483 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+10:26:22,623 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+10:26:24,382 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+10:26:24,506 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+10:26:24,510 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+10:26:24,511 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+10:26:24,587 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+10:26:26,402 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+11:01:51,980 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+11:01:52,061 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+11:01:53,035 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+11:01:53,115 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+11:01:53,116 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+11:01:53,122 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+11:01:53,169 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+11:01:54,032 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+11:02:38,910 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+11:02:39,021 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+11:02:40,448 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+11:02:40,547 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+11:02:40,551 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+11:02:40,553 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+11:02:40,606 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+11:02:41,650 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+11:05:02,964 ERROR c Conquest Client          Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.SaveToCharacter() in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 387
+   at wServer.networking.Client.Save(Boolean unlock) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 273
+   at wServer.networking.Client.Disconnect(String reason) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 248
+21:43:38,020 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+21:43:38,136 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+21:43:39,586 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+21:43:39,711 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+21:43:39,713 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+21:43:39,716 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+21:43:39,817 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+21:43:41,135 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+21:45:43,768 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+21:45:43,839 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+21:45:44,805 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+21:45:44,909 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+21:45:44,910 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+21:45:44,914 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+21:45:44,979 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+21:45:46,048 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+22:06:17,737 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+22:06:17,803 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+22:06:18,687 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+22:06:18,764 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+22:06:18,767 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+22:06:18,770 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+22:06:18,807 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+22:06:19,559 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+22:07:49,903 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+22:07:49,966 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+22:07:50,843 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+22:07:50,910 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+22:07:50,911 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+22:07:50,912 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+22:07:50,952 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+22:07:51,705 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+22:08:40,626 ERROR c Conquest Client          Error when handling packet '{CharId: 232496221, IsFromArena: True, ID: LOAD, Owner: }'...
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.LoadHandler.Handle(Client client, Load packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\LoadHandler.cs:line 30
+   at wServer.networking.handlers.LoadHandler.HandlePacket(Client client, Load packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\LoadHandler.cs:line 17
+   at wServer.networking.PacketHandlerBase`1.Handle(Client client, IncomingMessage packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\IPacketHandler.cs:line 27
+   at wServer.networking.Client.ProcessPacket(Packet pkt) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 166

@@ -25,7 +25,7 @@ namespace wServer.realm.entities
         public int Maxhowmany;
         public float SizeBoost;
         public int Rarity;
-
+        public int amountofhits = 0;
 
         DamageCounter counter;
         public Enemy(RealmManager manager, ushort objType)
@@ -60,13 +60,13 @@ namespace wServer.realm.entities
             var rarityChance = RandomUtil.RandInt(0, 200);
             Rarity = 0;
             float size = Size;
-            if ((rarityChance < 1 || isMoon("legendary")) && HP > 20000) //legendary - red
+            if ((rarityChance < 1 && HP > 20000 || isMoon("legendary")) ) //legendary - red
             {
                 Rarity = 4;
                 SetDefaultSize((int)(size * 1.5f));
                 HP = (int)(HP * 1.3f);
                 SizeBoost = 0.3f;
-            } else if ((rarityChance < 5 || isMoon("epic")) && HP > 10000) //epic - purple
+            } else if ((rarityChance < 5 && HP > 10000 || isMoon("epic")) ) //epic - purple
             {
                 Rarity = 3;
                 SetDefaultSize((int)(size * 1.25f));
@@ -112,15 +112,10 @@ namespace wServer.realm.entities
 
         public int Damage(Player from, RealmTime time, int dmg, bool noDef, params ConditionEffect[] effs)
         {
-
-           
-
             if (stat) return 0;
             if (HasConditionEffect(ConditionEffects.Invincible))
                 return 0;
-            if (!HasConditionEffect(ConditionEffects.Paused) &&
-                !HasConditionEffect(ConditionEffects.Stasis))
-            {
+            if (!HasConditionEffect(ConditionEffects.Paused) && !HasConditionEffect(ConditionEffects.Stasis))  {
                 var def = this.ObjectDesc.Defense;
                 if (noDef)
                     def = 0;
@@ -174,7 +169,7 @@ namespace wServer.realm.entities
                     }, this, null, PacketPriority.Low);
                 }
                 
-                if (HP < 0 && Owner != null)
+                if (HP <= 0 && Owner != null)
                     Death(time);
 
                 return effDmg;
@@ -185,11 +180,9 @@ namespace wServer.realm.entities
         public override bool HitByProjectile(Projectile projectile, RealmTime time)
         {
             if (stat) return false;
-            if (HasConditionEffect(ConditionEffects.Invincible))
-                return false;
-            if (projectile.ProjectileOwner is Player p &&
-                !HasConditionEffect(ConditionEffects.Paused) &&
-                !HasConditionEffect(ConditionEffects.Stasis))
+            if (HasConditionEffect(ConditionEffects.Invincible)) return false;
+
+            if (projectile.ProjectileOwner is Player p && !HasConditionEffect(ConditionEffects.Paused) && !HasConditionEffect(ConditionEffects.Stasis))
             {
                 var def = this.ObjectDesc.Defense;
                 if (projectile.ProjDesc.ArmorPiercing)
@@ -217,10 +210,7 @@ namespace wServer.realm.entities
                 {
                     EffectChance(p, 2, 2500, false, ConditionEffectIndex.Paralyzed);
                 }
-                if (p.TouchEffect())
-                {
-                    EffectChance(p, 2, 0, true, 0);
-                }
+             
 
                 counter.HitBy(projectile.ProjectileOwner as Player, time, projectile, dmg);
                 if (HasConditionEffect(ConditionEffects.Invincible) || HasConditionEffect(ConditionEffects.Invulnerable)) { }
@@ -229,7 +219,7 @@ namespace wServer.realm.entities
                     
              
 
-                if (HP < 0 && Owner != null)
+                if (HP <= 0 && Owner != null)
                 {
                     Death(time);
                 }
