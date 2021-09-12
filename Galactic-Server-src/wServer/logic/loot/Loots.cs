@@ -153,7 +153,7 @@ namespace wServer.logic.loot
                 {
                     if (player.Item2! >= enemy.MaximumHP / 200) // deal atleast 0.5% damage to qualify for loot.
                     {
-                        var DMGExtraLB = player.Item2 / x2; // Maximum lb 25% (deal 100% of the bosses hp for a 25% increase to lb)
+                        var DMGExtraLB = dmgpercentage / 250; // Maximum lb 25% (deal 100% of the bosses hp for a 25% increase to lb)
                         var LootChance = i.Probabilty; // Item Drop Chance
                         if (i.Item.Tier >= 0 && i.Item.Potion != true)// If item is tiered, dont drop loot modified with loot boost stats.
                         {
@@ -166,7 +166,7 @@ namespace wServer.logic.loot
                         else if ((i.Item.BagType == 9 || i.Item.LG || i.Item.MY || i.Item.MLG) && dmgpercentage < 2) { } //If item is a legendary, you need to deal 2% of the bosses health to qualify.
                         else if (i.Damagebased)//This is to make sure loot like Mighty Chest aren't giving you extra lb from soloing them.
                         {
-                            if (Rand.NextDouble() < LootChance * (1 + (lootDropBoost + luckStatBoost + eventBoost + DMGExtraLB + sizeBoost))) //MAX: 50 + (50 - 145) + 100 + 25 = 225% increase to 325% increase
+                            if (Rand.NextDouble() < LootChance * (1 + (lootDropBoost + luckStatBoost + eventBoost + sizeBoost + DMGExtraLB))) //MAX: 50 + (50 - 145) + 100 + 25 = 225% increase to 325% increase
                             {
                                 loot.Add(i.Item);
                                 reqDrops[i]--;
