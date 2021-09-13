@@ -5140,7 +5140,7 @@
     <Description>A trapped bloody fairy, seem'd to have been corrupted with the same power as these horrible minions of Tidale, its attracted to blood and has no desire to be free'd... How strange, Lets shake it!</Description>
     <OldSound>spell/light_heal</OldSound>
     <Usable/>
-    <BagType>10</BagType>
+    <BagType>8</BagType>
     <MpCost>50</MpCost>
 	<ActivateOnEquip stat="112" amount="50" isPerc="true">IncrementStat</ActivateOnEquip>
 	<Steal type="life" amount="2"/>
