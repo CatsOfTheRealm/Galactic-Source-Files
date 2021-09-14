@@ -203,58 +203,21 @@ namespace wServer.logic
                             new TimedTransition(4000, "Attack4.1")
                             )
                         ),
-                    new State("Phase3", //Blobomb
+                    new State("Phase3",
                         new HpLessTransition(0.20, "Phase4"),
-                        new Taunt("You shall be food for the ether, Blobs, attack!"),
+                        new Taunt("You're making a grave mistake, this path is a evil one, continue and your life will end sooner than later"),
+                        new TimedRandomTransition(5000, true, "Attack6.1", "Attack6.2"),
                         new State("Attack6.1",
-                            new Taunt("BURN!"),
-                            new Order(20, "shtrs blobomb maker", "Spawn"),
-                            new Shoot(0, count: 1, fixedAngle: 220, rotateAngle: 3, coolDown: 300),
-                            new Shoot(0, count: 1, fixedAngle: 230, rotateAngle: 3, coolDownOffset: 300, coolDown: 200),
-                            new Shoot(0, count: 1, fixedAngle: 240, rotateAngle: 3, coolDownOffset: 600, coolDown: 100),
-                            new TimedTransition(900, "Attack6.2")
+                            new Shoot(50, count: 8, shootAngle: 10, fixedAngle: 0, rotateAngle: 5, coolDown: 500, coolDownOffset: 250),
+                            new Shoot(50, count: 8, shootAngle: 10, fixedAngle: 180, rotateAngle: 5, coolDown: 500, coolDownOffset: 250),
+                             new Shoot(50, count: 1, null, 3, predictive: 0.25, coolDown: 1000, coolDownOffset: 500),
+                             new Shoot(50, count: 2, 5, 3, predictive: 0.25, coolDown: 1000)
                             ),
                         new State("Attack6.2",
-                            new Shoot(0, count: 1, fixedAngle: 310, rotateAngle: 3, coolDown: 300),
-                            new Shoot(0, count: 1, fixedAngle: 320, rotateAngle: 3, coolDownOffset: 300, coolDown: 200),
-                            new Shoot(0, count: 1, fixedAngle: 330, rotateAngle: 3, coolDownOffset: 600, coolDown: 100),
-                            new TimedTransition(900, "Attack6.3")
-                            ),
-                        new State("Attack6.3",
-                            new Taunt("HAHAHAHAHA!"),
-                            new Shoot(0, count: 1, fixedAngle: 130, rotateAngle: 3, coolDown: 300),
-                            new Shoot(0, count: 1, fixedAngle: 140, rotateAngle: 3, coolDownOffset: 300, coolDown: 200),
-                            new Shoot(0, count: 1, fixedAngle: 150, rotateAngle: 3, coolDownOffset: 600, coolDown: 100),
-                            new TimedTransition(900, "Attack7.1")
-                            ),
-                        new State("Attack7.1",
-                            new Taunt("LEAVE THIS PLACE!"),
-                            new Flash(0xFFFFFF, 0.5, 4),
-                            new Shoot(0, count: 6, fixedAngle: 36, rotateAngle: 10, coolDown: 200, projectileIndex: 1),
-                            new TimedTransition(2000, "Attack7.2")
-                            ),
-                        new State("Attack7.2",
-                            new Shoot(0, count: 8, fixedAngle: 45, rotateAngle: -10, coolDown: 200),
-                            new TimedTransition(2000, "Attack7.21")
-                            ),
-                        new State("Attack7.21",
-                            new Shoot(0, count: 8, fixedAngle: 45, rotateAngle: 10, coolDown: 200),
-                            new TimedTransition(2000, "Attack7.3")
-                            ),
-                        new State("Attack7.3",
-                            new Shoot(0, count: 6, fixedAngle: 36, rotateAngle: -10, coolDown: 200, projectileIndex: 1),
-                            new TimedTransition(2000, "Attack7.31")
-                            ),
-                        new State("Attack7.31",
-                            new Shoot(0, count: 6, fixedAngle: 36, rotateAngle: 10, coolDown: 200, projectileIndex: 1),
-                            new TimedTransition(2000, "Vul4")
-                            ),
-                        new State("Vul4",
-                            new RemoveConditionalEffect(ConditionEffectIndex.Armored),
-                            new Taunt("I must gather my strength!", "Foolish whelps, leave me be!"),
-                            new Flash(0xFF0000, 0.5, 8),
-                            new Order(20, "shtrs blobomb maker", "Waiting"),
-                            new TimedTransition(4000, "Attack6.1")
+                           new Shoot(50, count: 8, shootAngle: 10, fixedAngle: 90, rotateAngle: 5, coolDown: 500, coolDownOffset: 250),
+                           new Shoot(50, count: 8, shootAngle: 10, fixedAngle: 270, rotateAngle: 5, coolDown: 500, coolDownOffset: 250),
+                           new Shoot(50, count: 1, null, 3, predictive: 0.25, coolDown: 1000, coolDownOffset: 500),
+                           new Shoot(50, count: 2, 5, 3, predictive: 0.25, coolDown:1000)
                             )
                         ),
                     new State("Phase4",

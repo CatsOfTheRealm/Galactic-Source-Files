@@ -15245,7 +15245,7 @@
     <Lunar/>
   </Object>
 
-  <Object type="0x0c40c" id="Locked Champion Portal">
+  <Object type="0xc40c" id="Locked Champion Portal">
     <Class>Portal</Class>
     <IntergamePortal />
     <NexusPortal />
@@ -26842,16 +26842,11 @@
     </Texture>
     <SlotType>9</SlotType>
     <Description>Wearing it makes you feel particularly strong.</Description>
-    <ActivateOnEquip stat="0" amount="80">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="3" amount="80">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="112" amount="25">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="20" amount="16">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="21" amount="8">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="114" amount="5">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="20" amount="5">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
-
+    <ActivateOnEquip stat="28" amount="7">IncrementStat</ActivateOnEquip>
     <BagType>8</BagType>
-    <FameBonus>5</FameBonus>
+    <FameBonus>6</FameBonus>
     <feedPower>500</feedPower>
     <ununSoulbound2/>
     <DisplayId>Bracer of the Guardian</DisplayId>

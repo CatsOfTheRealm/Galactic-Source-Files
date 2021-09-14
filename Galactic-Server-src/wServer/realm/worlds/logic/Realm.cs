@@ -44,23 +44,7 @@ namespace wServer.realm.worlds.logic
                 _overseer.Init();
             }
 
-            if (_arenaSpawned != true)
-               spawnGladPortal();
-
             Log.Info("Game World initalized.");
-        }
-
-        private void spawnGladPortal()
-        {
-            var nexus = Manager.GetWorld(Nexus) as Nexus;
-            var en = Entity.Resolve(Manager, "Locked Champion Portal"); //entity name (portal)
-            en.Name = "Locked Arena";
-            en.Move(68, 59);
-            nexus.EnterWorld(en);
-
-            Log.Info("Spawned Locked Arena.");
-
-            _arenaSpawned = true;
         }
 
         public override void Tick(RealmTime time)
