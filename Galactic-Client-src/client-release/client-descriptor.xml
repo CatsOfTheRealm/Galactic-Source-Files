@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<application xmlns="http://ns.adobe.com/air/application/33.1">
+<application xmlns="http://ns.adobe.com/air/application/15.0">
 
 <!-- Adobe AIR Application Descriptor File Template.
      Specifies parameters for identifying, installing, and launching AIR applications.
 
-     xmlns - The Adobe AIR namespace: http://ns.adobe.com/air/application/33.1.
+     xmlns - The Adobe AIR namespace: http://ns.adobe.com/air/application/15.0.
      The last segment of the namespace specifies the version of the AIR runtime required for this application to run.
 
      minimumPatchLevel - The minimum patch level of the AIR runtime required to run the application. Optional. -->

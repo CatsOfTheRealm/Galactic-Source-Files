@@ -1403,6 +1403,132 @@
             <Index>81</Index>
          </AnimatedTexture>
       </AltTexture>
+     <AltTexture id="2">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x10</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="3">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x11</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="4">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x12</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="5">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x13</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="6">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x20</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="7">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x21</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="8">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x22</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="9">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x23</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="10">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x30</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="11">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x31</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="12">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x32</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="13">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x33</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="14">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x40</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="15">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x41</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="16">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x42</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="17">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x43</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="18">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x50</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="19">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x51</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="20">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x52</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="21">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x53</Index>
+       </Texture>
+     </AltTexture>
+     <AltTexture id="22">
+       <Texture>
+         <File>lofiObj32x32</File>
+         <Index>0x60</Index>
+       </Texture>
+     </AltTexture>
       <StasisImmune/>
       <StunImmune/>
       <ParalyzeImmune/>
@@ -1425,7 +1551,6 @@
          <Damage>120</Damage>
          <Speed>35</Speed>
          <LifetimeMS>5000</LifetimeMS>
-         <ConditionEffect duration="2">Unstable</ConditionEffect>
          <ConditionEffect duration="2">Quiet</ConditionEffect>
          <Amplitude>1.5</Amplitude>
          <Frequency>3</Frequency>
