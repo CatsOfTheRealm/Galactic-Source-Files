@@ -26794,16 +26794,14 @@
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj3</File>
-      <Index>0x480</Index>
+      <File>lofiObj9</File>
+      <Index>0xd2</Index>
     </Texture>
     <SlotType>9</SlotType>
-    <Description>An eerie reminder of what lays in the depths of the Shatter</Description>
-    <ActivateOnEquip stat="0" amount="200">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="26" amount="24">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="112" amount="20">IncrementStat</ActivateOnEquip>
+    <Description>An eerie reminder of what lays in the depths of the Shatters.</Description>
+    <ActivateOnEquip stat="0" amount="190">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="26" amount="50">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="20" amount="15">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="114" amount="10">IncrementStat</ActivateOnEquip>
     <BagType>9</BagType>
     <FameBonus>5</FameBonus>
     <feedPower>500</feedPower>
@@ -26868,9 +26866,6 @@
     </Texture>
     <Rotation>70</Rotation>
   </Object>
-
-
-
   <Object type="0x8218" id="Colossus Slash">
     <Class>Projectile</Class>
     <Texture>

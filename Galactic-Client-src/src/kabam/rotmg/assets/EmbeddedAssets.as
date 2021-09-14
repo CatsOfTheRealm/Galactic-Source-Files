@@ -46,8 +46,9 @@ public class EmbeddedAssets {
     public static var lofiObjBigEmbed_:Class = EmbeddedAssets_lofiObjBigEmbed_;
     public static var lofiObj40x40Embed_:Class = EmbeddedAssets_lofiObj40x40Embed_;
     public static var lofiProjsEmbed_:Class = EmbeddedAssets_lofiProjsEmbed_;
-    public static var lofiProjsBigEmbed_:Class = EmbeddedAssets_lofiProjsBigEmbed_;
+    public static var lofiProjsBigEmbed_:Class = EmbeddedAssets_lofiProjsBigEmbed_;//EmbeddedAssets_32x32EnemiesEmbed_
     public static var lofiParticlesShockerEmbed_:Class = EmbeddedAssets_lofiParticlesShockerEmbed_;
+    public static var Sprites32x32EnemiesEmbed_:Class = EmbeddedAssets_32x32EnemiesEmbed_;
     public static var lofiPartsEmbed_:Class = EmbeddedAssets_lofiPartsEmbed_;
     public static var chars8x8rBeachEmbed_:Class = EmbeddedAssets_chars8x8rBeachEmbed_;
     public static var chars8x8dBeachEmbed_:Class = EmbeddedAssets_chars8x8dBeachEmbed_;

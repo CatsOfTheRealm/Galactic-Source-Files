@@ -21953,6 +21953,7 @@
       <Amplitude>0.5</Amplitude>
       <Frequency>2</Frequency>
     </Projectile>
+      <Spriter>2</Spriter>
     <ActivateOnEquip stat="112" amount="10">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="114" amount="5">IncrementStat</ActivateOnEquip>
     <BagType>9</BagType>
@@ -25319,16 +25320,14 @@
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj3</File>
-      <Index>0x480</Index>
+      <File>lofiObj9</File>
+      <Index>0xd2</Index>
     </Texture>
     <SlotType>9</SlotType>
-    <Description>An eerie reminder of what lays in the depths of the Shatter</Description>
-    <ActivateOnEquip stat="0" amount="200">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="26" amount="24">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="112" amount="20">IncrementStat</ActivateOnEquip>
+    <Description>An eerie reminder of what lays in the depths of the Shatters.</Description>
+    <ActivateOnEquip stat="0" amount="190">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="26" amount="50">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="20" amount="15">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="114" amount="10">IncrementStat</ActivateOnEquip>
     <BagType>9</BagType>
     <FameBonus>5</FameBonus>
     <feedPower>500</feedPower>
@@ -29201,7 +29200,7 @@
     <Description>A key which opens a portal to the Spectre's Lair.</Description>
     <Sound>use_key</Sound>
     <Consumable/>
-
+      <Spriter>1</Spriter>
     <Activate id="Spectre's Lair Portal">Create</Activate>
     <feedPower>100</feedPower>
     <DisplayId>Spectre's Lair Key</DisplayId>
@@ -29401,6 +29400,7 @@
       <Amplitude>0.5</Amplitude>
       <Frequency>0.48</Frequency>
     </Projectile>
+      <Spriter>1</Spriter>
     <BagType>7</BagType>
     <FameBonus>4</FameBonus>
     <feedPower>500</feedPower>
@@ -29431,7 +29431,7 @@
       <LifetimeMS>1300</LifetimeMS>
       <ArmorPiercing/>
     </Projectile>
-    <Usable/>
+    <Usable/><Spriter>1</Spriter>
     <BagType>7</BagType>
     <FameBonus>4</FameBonus>
     <feedPower>500</feedPower>
@@ -29455,7 +29455,7 @@
     <ActivateOnEquip stat="3" amount="50">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="21" amount="17">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="22" amount="3">IncrementStat</ActivateOnEquip>
-    <BagType>7</BagType>
+    <BagType>7</BagType><Spriter>1</Spriter>
     <FameBonus>4</FameBonus>
     <feedPower>500</feedPower>
 
@@ -29476,7 +29476,7 @@
     <ActivateOnEquip stat="3" amount="35">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="28" amount="11">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="21" amount="8">IncrementStat</ActivateOnEquip>
-    <BagType>7</BagType>
+    <BagType>7</BagType><Spriter>1</Spriter>
     <FameBonus>4</FameBonus>
     <feedPower>500</feedPower>
   </Object>
@@ -30160,6 +30160,7 @@
     <ActivateOnEquip stat="3" amount="50">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip>
     <BagType>8</BagType>
+      <Spriter>1</Spriter>
     <FameBonus>4</FameBonus>
   </Object>
 
@@ -36262,8 +36263,8 @@
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj2</File>
-      <Index>0x32</Index>
+      <File>lofiObj9</File>
+      <Index>0x73</Index>
     </Texture>
     <SlotType>10</SlotType>
     <Tier>1</Tier>
@@ -36278,10 +36279,10 @@
   <Object type="0xa23" id="Magic Potion">
     <Class>Equipment</Class>
     <Item/>
-    <Texture>
-      <File>lofiObj2</File>
-      <Index>0x33</Index>
-    </Texture>
+      <Texture>
+          <File>lofiObj9</File>
+          <Index>0x74</Index>
+      </Texture>
     <SlotType>10</SlotType>
     <Tier>1</Tier>
     <Description>A potion that instantly restores magic points.</Description>
@@ -36774,8 +36775,8 @@
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj2</File>
-      <Index>0x24</Index>
+      <File>lofiObj9</File>
+      <Index>0x63</Index>
     </Texture>
     <SlotType>10</SlotType>
     <Description>A potion that instantly restores health points.</Description>
@@ -36790,10 +36791,10 @@
   <Object type="0xaec" id="Greater Magic Potion">
     <Class>Equipment</Class>
     <Item/>
-    <Texture>
-      <File>lofiObj2</File>
-      <Index>0x25</Index>
-    </Texture>
+      <Texture>
+          <File>lofiObj9</File>
+          <Index>0x64</Index>
+      </Texture>
     <SlotType>10</SlotType>
     <Description>A potion that instantly restores magic points.</Description>
     <Sound>use_potion</Sound>

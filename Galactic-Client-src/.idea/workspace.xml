@@ -16,7 +16,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../realm-client-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -98,6 +98,8 @@
       <workItem from="1631069898442" duration="7804000" />
       <workItem from="1631315983992" duration="2509000" />
       <workItem from="1631399881624" duration="3181000" />
+      <workItem from="1631486222814" duration="340000" />
+      <workItem from="1631579405025" duration="8729000" />
     </task>
     <servers />
   </component>

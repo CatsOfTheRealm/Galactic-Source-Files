@@ -1,12 +1,16 @@
 ﻿using common.resources;
+using System;
 using wServer.logic.behaviors;
-using wServer.logic.transitions;
 using wServer.logic.loot;
+using wServer.logic.transitions;
+
 //by GhostMaree, fsod, ???
 namespace wServer.logic
 {
     partial class BehaviorDb
     {
+        private static readonly Random Rand = new Random();
+
         private _ TheShatters = () => Behav()
             .Init("shtrs Abandoned Switch 1",
                 new State(
@@ -120,7 +124,7 @@ namespace wServer.logic
             )
             .Init("shtrs Loot Balloon King",
                 new State(
-                    new ScaleHP2(60,3,15),
+                    new ScaleHP2(60, 3, 15),
                     new State("Idle",
                         new ConditionalEffect(ConditionEffectIndex.Invulnerable),
                         new TimedTransition(5000, "UnsetEffect")
@@ -149,7 +153,7 @@ namespace wServer.logic
             )
             .Init("shtrs Loot Balloon Bridge",
                 new State(
-                    new ScaleHP2(60,3,15),
+                    new ScaleHP2(60, 3, 15),
                     new State("Idle",
                         new ConditionalEffect(ConditionEffectIndex.Invulnerable),
                         new TimedTransition(5000, "UnsetEffect")
@@ -179,7 +183,7 @@ namespace wServer.logic
             )
             .Init("shtrs Loot Balloon Mage",
                 new State(
-                    new ScaleHP2(50,3,15),
+                    new ScaleHP2(50, 3, 15),
                     new State("Idle",
                         new ConditionalEffect(ConditionEffectIndex.Invulnerable),
                         new TimedTransition(5000, "UnsetEffect")
@@ -207,7 +211,7 @@ namespace wServer.logic
             )
             .Init("shtrs Bridge Sentinel",
                 new State(
-                    new ScaleHP2(60,3,15),
+                    new ScaleHP2(60, 3, 15),
                     new OrderOnDeath(50, "shtrs Soul Spawner", "7"),
                     new OrderOnDeath(50, "shtrs Bridge Balloon Spawner", "2"),
                     new OrderOnDeath(50, "shtrs Spawn Bridge", "2"),
@@ -221,7 +225,7 @@ namespace wServer.logic
                     new State("3",
                         new OrderOnce(99, "shtrs Bridge Closer", "2"),
                         new OrderOnce(999, "shtrs Abandoned Switch 1", "2"),
-                        new TimedTransition(2000,  "4")
+                        new TimedTransition(2000, "4")
                     ),
                     new State("4",
                         new Shoot(0, 7, 15, projectileIndex: 6, fixedAngle: 0, coolDown: 2000),
@@ -230,7 +234,7 @@ namespace wServer.logic
                         new OrderOnce(24, "shtrs Bridge Obelisk F", "2"),
                         new OrderOnce(24, "shtrs Bridge Obelisk B", "2"),
                         new OrderOnce(24, "shtrs Bridge Obelisk D", "2"),
-                        new OrderOnce(24, "shtrs Bridge Obelisk E", "2"), 
+                        new OrderOnce(24, "shtrs Bridge Obelisk E", "2"),
                         new EntitiesNotExistsTransition(24, "5", "shtrs Bridge Obelisk A", "shtrs Bridge Obelisk B", "shtrs Bridge Obelisk D", "shtrs Bridge Obelisk E")
                     ),
                     new State("5",
@@ -618,7 +622,7 @@ namespace wServer.logic
             )
             .Init("shtrs Twilight Archmage",
                 new State(
-                    new ScaleHP2(70,3,15),
+                    new ScaleHP2(70, 3, 15),
                     new OrderOnDeath(50, "shtrs Mage Balloon Spawner", "2"),
                     new OrderOnDeath(50, "shtrs MagiGenerators", "4"),
                     new State("1",
@@ -1018,105 +1022,95 @@ namespace wServer.logic
             .Init("shtrs Royal Guardian J",
                 new State(
                     new State("shoot",
-                        new Shoot(0, 8, projectileIndex: 0, fixedAngle: 0, coolDown: 2000),
+                        new Shoot(30, 2, 10, 1, coolDown: 1750, coolDownOffset: 200, predictive: 0.2),
+                        new Shoot(30, 3, 5, 0, coolDown: 1750, coolDownOffset: 400, predictive: 0.2),
+                        new Shoot(30, 4, 20, 2, coolDown: 1750, coolDownOffset: 800, predictive: 0.2),
                         new State("random_orbit",
                             new TimedRandomTransition(500, true, "1", "2", "3")
                         ),
                         new State("1",
-                            new Orbit(0.6, 2, 5, "shtrs The Forgotten King")
+                            new Orbit(0.8, 4, 7, "shtrs The Forgotten King")
                         ),
                         new State("2",
-                            new Orbit(0.6, 1, 5, "shtrs The Forgotten King", orbitClockwise: true)
+                            new Orbit(1, 5, 7, "shtrs The Forgotten King", orbitClockwise: true)
                         ),
                         new State("3",
-                            new Orbit(0.4, 1.5, 5, "shtrs The Forgotten King", orbitClockwise: false)
+                            new Orbit(0.6, 1, 7, "shtrs The Forgotten King", orbitClockwise: false)
                         )
                     )
                 )
             )
             .Init("shtrs The Forgotten King",
                 new State(
-                    new ScaleHP2(80,3,15),
+                    new ScaleHP2(80, 3, 15),
                     new OrderOnDeath(99, "shtrs King Balloon Spawner", "2"),
                     new OrderOnDeath(99, "shtrs Goo Spawner", "4"),
                     new State("1",
-                        new ConditionalEffect(ConditionEffectIndex.Invincible, true), //order close teleporter
+                        new ConditionalEffect(ConditionEffectIndex.Invincible, true),
                         new TimedTransition(1000, "2")
                     ),
                     new State("2",
                         new Spawn("shtrs Green Crystal", 1, 0),
-                        new Spawn("shtrs Yellow Crystal", 1, 0),
                         new Spawn("shtrs Red Crystal", 1, 0),
                         new Spawn("shtrs Blue Crystal", 1, 0),
-                        new TimedTransition(4000, "3")
+                        new TimedTransition(3000, "3")
                     ),
                     new State("3",
-                        new Taunt("I will make quick work of you. Be gone."),
-                        new TimedTransition(2000, "4")
+                        new Taunt("You seem to be enjoying youselves."),
+                        new TimedTransition(2500, "4")
                     ),
-                    new State("4",
+                      new State("4",
+                        new Taunt("May I remind you of the truth?"),
+                        new ChangeSize(10, 150),
+                        new TimedTransition(2500, "5.4")
+                    ),
+                        new State("5.4",
+                        new Taunt("I used to be the ruler! THE KING"),
+                        new TimedTransition(2500, "5.5")
+                    ),
+                    new State("5.5",
                         new OrderOnce(20, "shtrs Green Crystal", "2"),
-                        new OrderOnce(20, "shtrs Yellow Crystal", "2"),
                         new OrderOnce(20, "shtrs Red Crystal", "2"),
                         new OrderOnce(20, "shtrs Blue Crystal", "2"),
                         new OrderOnce(999, "shtrs Abandoned Switch 5", "2"),
-                        new EntitiesNotExistsTransition(999, "5", "shtrs Green Crystal", "shtrs Yellow Crystal", "shtrs Red Crystal", "shtrs Blue Crystal")
+                        new TimedTransition(2500, "5.6")
                     ),
-                    new State("5",
+                    new State("5.6",
                         new RemoveConditionalEffect(ConditionEffectIndex.Invincible),
-                        new Taunt("You would challenge me? I am the King of this place."),
-                        new ChangeSize(50, 150),
+                        new TimedRandomTransition(10000, false,"5.7", "5.8"),
+                        new HpLessTransition(0.8, "6"),
+                        new State("5.7",
+                        new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 1500),
                         new Shoot(24, 2, 0, 3, coolDown: 500),
                         new Shoot(24, 2, 0, 2, coolDown: 500),
-                        new Shoot(0, 2, 180, 1, 90, coolDown: 4250, coolDownOffset: 0),
-                        new Shoot(0, 2, 170, 1, 90, coolDown: 4250, coolDownOffset: 0),
-                        new Shoot(0, 2, 160, 1, 90, coolDown: 4250, coolDownOffset: 250),
-                        new Shoot(0, 2, 150, 1, 90, coolDown: 4250, coolDownOffset: 250),
-                        new Shoot(0, 2, 140, 1, 90, coolDown: 4250, coolDownOffset: 500),
-                        new Shoot(0, 2, 130, 1, 90, coolDown: 4250, coolDownOffset: 500),
-                        new Shoot(0, 2, 120, 1, 90, coolDown: 4250, coolDownOffset: 750),
-                        new Shoot(0, 2, 110, 1, 90, coolDown: 4250, coolDownOffset: 750),
-                        new Shoot(0, 2, 100, 1, 90, coolDown: 4250, coolDownOffset: 1000),
-                        new Shoot(0, 2, 90, 1, 90, coolDown: 4250, coolDownOffset: 1000),
-                        new Shoot(0, 2, 80, 1, 90, coolDown: 4250, coolDownOffset: 1250),
-                        new Shoot(0, 2, 70, 1, 90, coolDown: 4250, coolDownOffset: 1250),
-                        new Shoot(0, 2, 60, 1, 90, coolDown: 4250, coolDownOffset: 1500),
-                        new Shoot(0, 2, 50, 1, 90, coolDown: 4250, coolDownOffset: 1500),
-                        new Shoot(0, 2, 40, 1, 90, coolDown: 4250, coolDownOffset: 1750),
-                        new Shoot(0, 2, 30, 1, 90, coolDown: 4250, coolDownOffset: 1750),
-                        new Shoot(0, 2, 20, 1, 90, coolDown: 4250, coolDownOffset: 2000),
-                        new Shoot(0, 2, 10, 1, 90, coolDown: 4250, coolDownOffset: 2000),
-                        new Shoot(0, 3, 7, 1, 90, coolDown: 4250, coolDownOffset: 2250),
-                        new Shoot(0, 2, 10, 1, 90, coolDown: 4250, coolDownOffset: 2500),
-                        new Shoot(0, 2, 20, 1, 90, coolDown: 4250, coolDownOffset: 2500),
-                        new Shoot(0, 2, 30, 1, 90, coolDown: 4250, coolDownOffset: 2750),
-                        new Shoot(0, 2, 40, 1, 90, coolDown: 4250, coolDownOffset: 2750),
-                        new Shoot(0, 2, 50, 1, 90, coolDown: 4250, coolDownOffset: 3000),
-                        new Shoot(0, 2, 60, 1, 90, coolDown: 4250, coolDownOffset: 3000),
-                        new Shoot(0, 2, 70, 1, 90, coolDown: 4250, coolDownOffset: 3250),
-                        new Shoot(0, 2, 80, 1, 90, coolDown: 4250, coolDownOffset: 3250),
-                        new Shoot(0, 2, 90, 1, 90, coolDown: 4250, coolDownOffset: 3500),
-                        new Shoot(0, 2, 100, 1, 90, coolDown: 4250, coolDownOffset: 3500),
-                        new Shoot(0, 2, 110, 1, 90, coolDown: 4250, coolDownOffset: 3750),
-                        new Shoot(0, 2, 120, 1, 90, coolDown: 4250, coolDownOffset: 3750),
-                        new Shoot(0, 2, 130, 1, 90, coolDown: 4250, coolDownOffset: 4000),
-                        new Shoot(0, 2, 140, 1, 90, coolDown: 4250, coolDownOffset: 4000),
-                        new Shoot(0, 2, 150, 1, 90, coolDown: 4250, coolDownOffset: 4250),
-                        new Shoot(0, 2, 160, 1, 90, coolDown: 4250, coolDownOffset: 4250),
-                        new HpLessTransition(0.8, "6")
-                    ),
+                        new Shoot(0, 2, 180, 1, 90, coolDown: 750, coolDownOffset: 250, rotateAngle: 17.5),
+                        new Shoot(0, 2, 170, 1, 90, coolDown: 750, coolDownOffset: 0, rotateAngle: 11.5)
+                        ),
+                        new State("5.8",
+                        new Wander(0.5),
+                        new Follow(0.75, 15, 1),
+                        new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 1500),
+                        new Shoot(20, 5, 20, projectileIndex: 1, coolDown: 1000),
+                        new Shoot(20, 4, 20, projectileIndex: 4, coolDown: 1350)
+                    )),
                     new State("6",
-                        new ConditionalEffect(ConditionEffectIndex.Invincible, true),
-                        new MoveLine(1, 90, 12),
-                        new TimedTransition(5000, "7")
+                        new ReturnToSpawn(1),
+                        new ConditionalEffect(ConditionEffectIndex.Invulnerable, false),
+                        new TimedTransition(2000, "6.7")
                     ),
+                    new State("6.7",
+                        new ConditionalEffect(ConditionEffectIndex.Invulnerable, false),
+                        new MoveLine(1, 90, 12),
+                        new TimedTransition(2000, "7")
+                        ),
                     new State("7",
-                        new ConditionalEffect(ConditionEffectIndex.Invincible, true),
-                        new Taunt("You fools. Guards, surround me.", "Guards, come to my aid!", "Do not think, even for a moment, that you will best me."),
-                        new Spawn("shtrs Royal Guardian J", 7, 0),
+                        new ConditionalEffect(ConditionEffectIndex.Invulnerable, false),
+                        new Taunt("Do not think, even for a moment, that you will best me."),
+                        new Spawn("shtrs Royal Guardian J", 4, 0),
                         new TimedTransition(5000, "8")
                     ),
                     new State("8",
+                        new ConditionalEffect(ConditionEffectIndex.Invulnerable, false),
                         new EntitiesNotExistsTransition(20, "9", "shtrs Royal Guardian J")
                     ),
                     new State("9",
@@ -1127,8 +1121,7 @@ namespace wServer.logic
                         new Shoot(0, 8, projectileIndex: 1, fixedAngle: 0, coolDown: 100000, coolDownOffset: 1000),
                         new Shoot(0, 10, projectileIndex: 1, fixedAngle: 0, coolDown: 100000, coolDownOffset: 1500),
                         new Shoot(0, 12, projectileIndex: 1, fixedAngle: 0, coolDown: 100000, coolDownOffset: 2000),
-                        new HpLessTransition(0.6, "10"),
-                        new TimedTransition(3000, "7")
+                        new HpLessTransition(0.6, "10")
                     ),
                     new State("10",
                         new ConditionalEffect(ConditionEffectIndex.Invincible, true),
@@ -1752,23 +1745,18 @@ namespace wServer.logic
                         new ConditionalEffect(ConditionEffectIndex.Invincible),
                         new Orbit(0.6, 1, 5, "shtrs The Forgotten King")
                     ),
-                    new State("2",
-                        new RemoveConditionalEffect(ConditionEffectIndex.Invincible),
-                        new HealGroup(8, "Crystals", 3500, 1000),
-                        new Orbit(0.6, 2, 10, null)
-                    )
-                )
-            )
-            .Init("shtrs Yellow Crystal",
-                new State(
-                    new State("orbit",
-                        new ConditionalEffect(ConditionEffectIndex.Invincible),
-                        new Orbit(0.6, 1, 5, "shtrs The Forgotten King", orbitClockwise: true)
+                    new State("2", 
+                    new TimedRandomTransition(1000,false,"2.5", "3"),
+                    new State("2.5",
+                        new Orbit(1, 6, 50, "shtrs The Forgotten King", 0.25),
+                        new Shoot(50, 10, 36, projectileIndex: 0, coolDown: 2700, coolDownOffset: 500, rotateAngle: 17.5, fixedAngle: 0),
+                        new TimedTransition(5000,"3")
                     ),
-                    new State("2",
-                        new RemoveConditionalEffect(ConditionEffectIndex.Invincible),
-                        new Orbit(0.6, 2, 10, null, orbitClockwise: true),
-                        new Shoot(5, 4, 4, projectileIndex: 0)
+                     new State("3",
+                        new Orbit(1.5, 8, 50, "shtrs The Forgotten King", 0.25),
+                        new Shoot(50, 10, 36, projectileIndex: 0, coolDown: 2700, coolDownOffset: 500, rotateAngle: 17.5, fixedAngle: 0),
+                        new TimedTransition(5000, "2.5")
+                         )
                     )
                 )
             )
@@ -1776,12 +1764,11 @@ namespace wServer.logic
                 new State(
                     new State("orbit",
                         new ConditionalEffect(ConditionEffectIndex.Invincible),
-                        new Orbit(0.6, 1, 5, "shtrs The Forgotten King")
+                        new Orbit(0.6, 1, 50, "shtrs The Forgotten King")
                     ),
                     new State("2",
-                        new RemoveConditionalEffect(ConditionEffectIndex.Invincible),
-                        new Orbit(0.6, 2, 5, null),
-                        new TossObject("shtrs Fire Portal", 10, coolDown: 15000, throwEffect: true)
+                      new Orbit(1.25, 9, 50, "shtrs The Forgotten King", 0.25),
+                      new Shoot(50, 4, 90, projectileIndex: 0, coolDown: 2000, coolDownOffset: 500, rotateAngle: 17.5, fixedAngle: 0)
                     )
                 )
             )
@@ -1789,12 +1776,12 @@ namespace wServer.logic
                 new State(
                     new State("orbit",
                         new ConditionalEffect(ConditionEffectIndex.Invincible),
-                        new Orbit(0.6, 1, 5, "shtrs The Forgotten King", orbitClockwise: true)
+                        new Orbit(0.6, 1, 50, "shtrs The Forgotten King", orbitClockwise: true)
                     ),
                     new State("2",
-                        new RemoveConditionalEffect(ConditionEffectIndex.Invincible),
-                        new Orbit(0.6, 2, 5, null, orbitClockwise: true),
-                        new TossObject("shtrs Ice Portal", 10, coolDown: 15000, throwEffect: true)
+                       new Orbit(1.5, 10, 50, "shtrs The Forgotten King", 0.25, orbitClockwise: true),
+                        new Shoot(50, 2, null, projectileIndex: 0, coolDown: 1000, coolDownOffset: 500),
+                        new Shoot(50, 2, null, projectileIndex: 0, coolDown: 1000, coolDownOffset: 600)
                     )
                 )
             )

@@ -23,7 +23,7 @@ namespace wServer.realm.entities
         public Enemy ParentEntity;
         public int Howmany;
         public int Maxhowmany;
-        public float SizeBoost;
+        public float SizeBoost = 0;
         public int Rarity;
         public int amountofhits = 0;
 

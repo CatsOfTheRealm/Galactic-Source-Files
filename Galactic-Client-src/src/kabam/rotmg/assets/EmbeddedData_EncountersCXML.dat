@@ -896,16 +896,17 @@
       <DeathSound>monster/beholder_death</DeathSound>
       <MaxHitPoints>100000</MaxHitPoints>
       <Size>200</Size>
+      <Z>-0.80</Z>
       <Defense>30</Defense>
       <XpMult>0.3</XpMult>
       <AnimatedTexture>
-         <File>chars16x16dEncounters2</File>
-         <Index>88</Index>
+         <File>sprites32x32</File>
+         <Index>0</Index>
       </AnimatedTexture>
       <AltTexture id="1">
          <AnimatedTexture>
-            <File>chars16x16dEncounters2</File>
-            <Index>89</Index>
+             <File>sprites32x32</File>
+             <Index>0</Index>
          </AnimatedTexture>
       </AltTexture>
       <Projectile id="0">

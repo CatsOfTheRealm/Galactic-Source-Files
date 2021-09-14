@@ -1322,6 +1322,9 @@ public class EquipmentToolTip extends ToolTip {
         if (this.objectXML.Spriter == 1) {
             this.restrictions.push(new Restriction(("Sprited By: Bee"), 0xffffff, false));
         }
+        else if (this.objectXML.Spriter == 2) {
+            this.restrictions.push(new Restriction(("Sprited By: Omanoit"), 0xffffff, false));
+        }
 
         if (this.playerCanUse) {
             if (this.objectXML.hasOwnProperty("Usable")) {
