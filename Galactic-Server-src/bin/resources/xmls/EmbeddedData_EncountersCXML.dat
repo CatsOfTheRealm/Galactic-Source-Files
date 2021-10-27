@@ -747,54 +747,125 @@
       <StasisImmune/>
       <PerRealmMax>1</PerRealmMax>
    </Object>
-   <Object type="0x734d" id="shtrs Defense System">
-      <DisplayId>Avatar of the Forgotten King</DisplayId>
-      <Enemy/>
-     <Exp>20000</Exp>
-      <Class>Character</Class>
-      <Quest/>
-      <Level>20</Level>
-      <God/>
-	   <SpecialEnemy/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
-      <DazedImmune/>
-      <HitSound>monster/golems_hit</HitSound>
-      <DeathSound>monster/beholder_death</DeathSound>
-      <MaxHitPoints>125000</MaxHitPoints>
-      <Size>200</Size>
-      <Defense>30</Defense>
-      <XpMult>0.3</XpMult>
-      <AnimatedTexture>
-         <File>chars16x16dEncounters2</File>
-         <Index>88</Index>
-      </AnimatedTexture>
-      <AltTexture id="1">
-         <AnimatedTexture>
-            <File>chars16x16dEncounters2</File>
-            <Index>89</Index>
-         </AnimatedTexture>
-      </AltTexture>
-      <Projectile id="0">
-         <ObjectId>Fire Spinner</ObjectId>
-         <Damage>150</Damage>
-         <Speed>30</Speed>
-         <LifetimeMS>4000</LifetimeMS>
-         <Size>100</Size>
-         <ConditionEffect duration="4">Confused</ConditionEffect>
-         <ConditionEffect duration="4">Unstable</ConditionEffect>
-      </Projectile>
-      <Projectile id="1">
-         <ObjectId>Fire Bullet</ObjectId>
-         <Speed>30</Speed>
-         <Damage>170</Damage>
-         <LifetimeMS>4000</LifetimeMS>
-         <ConditionEffect duration="4">Unstable</ConditionEffect>
-         <Size>100</Size>
-      </Projectile>
-   </Object>
-   <Object type="0x734e" id="shtrs shadowmans">
+  <Object type="0x734d" id="shtrs Defense System">
+    <DisplayId>Avatar of the Forgotten King</DisplayId>
+    <Enemy/>
+    <SpecialEnemy/>
+    <Class>Character</Class>
+    <Quest/>
+    <Level>20</Level>
+    <God/>
+    <StasisImmune/>
+    <StunImmune/>
+    <ParalyzeImmune/>
+    <DazedImmune/>
+    <HitSound>monster/golems_hit</HitSound>
+    <DeathSound>monster/beholder_death</DeathSound>
+    <MaxHitPoints>250000</MaxHitPoints>
+    <Size>175</Size>
+    <Defense>30</Defense>
+    <XpMult>0.3</XpMult>
+    <AnimatedTexture>
+      <File>sprites32x32</File>
+      <Index>0</Index>
+    </AnimatedTexture>
+    <Projectile id="0">
+      <ObjectId>Blue Spinner Shtrs</ObjectId>
+      <Damage>150</Damage>
+      <Speed>30</Speed>
+      <LifetimeMS>4000</LifetimeMS>
+      <Size>80</Size>
+      <ConditionEffect duration="4">Confused</ConditionEffect>
+      <ConditionEffect duration="4">Unstable</ConditionEffect>
+    </Projectile>
+    <Projectile id="1">
+      <ObjectId>Blue Bullet Shtrs</ObjectId>
+      <Speed>30</Speed>
+      <Damage>170</Damage>
+      <LifetimeMS>4000</LifetimeMS>
+      <ConditionEffect duration="4">Unstable</ConditionEffect>
+      <Size>80</Size>
+    </Projectile>
+    <Projectile id="2">
+      <ObjectId>Blue Ball Spinner Shtrs</ObjectId>
+      <Speed>30</Speed>
+      <Damage>150</Damage>
+      <LifetimeMS>4000</LifetimeMS>
+      <Size>80</Size>
+    </Projectile>
+    <Projectile id="3">
+      <ObjectId>Red Spinner Shtrs</ObjectId>
+      <Speed>50</Speed>
+      <Damage>125</Damage>
+      <LifetimeMS>4000</LifetimeMS>
+      <Size>100</Size>
+    </Projectile>
+    <Projectile id="4">
+      <ObjectId>Red Bullet Shtrs</ObjectId>
+      <Speed>50</Speed>
+      <Damage>200</Damage>
+      <LifetimeMS>4000</LifetimeMS>
+      <Size>100</Size>
+    </Projectile>
+    <Projectile id="5">
+      <ObjectId>Red Ball Spinner Shtrs</ObjectId>
+      <Speed>50</Speed>
+      <Damage>200</Damage>
+      <LifetimeMS>4000</LifetimeMS>
+      <Size>100</Size>
+    </Projectile>
+  </Object>
+  <Object type="0x7b90" id="Blue Spinner Shtrs">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>16x16Objects</File>
+      <Index>0xf4</Index>
+    </Texture>
+    <Rotation>80</Rotation>
+  </Object>
+  <Object type="0x7b93" id="Red Spinner Shtrs">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>16x16Objects</File>
+      <Index>0xf5</Index>
+    </Texture>
+    <Rotation>80</Rotation>
+  </Object>
+  <Object type="0x7b91" id="Blue Bullet Shtrs">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>16x16Objects</File>
+      <Index>0xf1</Index>
+    </Texture>
+    <AngleCorrection>1</AngleCorrection>
+  </Object>
+  <Object type="0x7b92" id="Red Bullet Shtrs">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>16x16Objects</File>
+      <Index>0xf0</Index>
+    </Texture>
+    <AngleCorrection>1</AngleCorrection>
+  </Object>
+  <Object type="0x7b94" id="Blue Ball Spinner Shtrs">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>16x16Objects</File>
+      <Index>0xf2</Index>
+    </Texture>
+    <Rotation>80</Rotation>
+  </Object>
+  <Object type="0x7b95" id="Red Ball Spinner Shtrs">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>16x16Objects</File>
+      <Index>0xf3</Index>
+    </Texture>
+    <Rotation>80</Rotation>
+  </Object>
+
+
+  <Object type="0x734e" id="shtrs shadowmans">
       <DisplayId>Shades of the Avatar</DisplayId>
       <Enemy/>
       <Class>Character</Class>

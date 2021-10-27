@@ -26,16 +26,12 @@ public class Parameters {
     public static const ERROR_CHAT_NAME:String = "*Error*";
     public static const HELP_CHAT_NAME:String = "*Help*";
     public static const GUILD_CHAT_NAME:String = "*Guild*";
-    public static const NEWS_TIMESTAMP_DEFAULT:Number = 1.1;
     public static const NAME_CHANGE_PRICE:int = 5000;
     public static const GUILD_CREATION_PRICE:int = 1000;
     public static const TUTORIAL_GAMEID:int = -1;
     public static const NEXUS_GAMEID:int = -2;
     public static const RANDOM_REALM_GAMEID:int = -3;
     public static const MAPTEST_GAMEID:int = -6;
-    public static const REALM_GAMEID:int = -5;
-    public static const VAULT_GAMEID:int = -4;
-    public static const GUILDHALL_GAMEID:int = -7;
     public static const MAX_SINK_LEVEL:Number = 18;
     public static const TERMS_OF_USE_URL:String = "tos";
     public static const PRIVACY_POLICY_URL:String = "tos";
@@ -114,8 +110,7 @@ public class Parameters {
     }
 
     public static function isGpuRender():Boolean {
-        return !GPURenderError && data_.GPURender && !Map.forceSoftwareRender; //todo
-        //return false;
+        return !GPURenderError && data_.GPURender && !Map.forceSoftwareRender;
     }
 
     public static function clearGpuRenderEvent(_arg1:Event):void {

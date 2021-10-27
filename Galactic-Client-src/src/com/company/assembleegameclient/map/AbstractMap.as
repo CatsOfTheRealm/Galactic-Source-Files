@@ -47,10 +47,7 @@ public class AbstractMap extends Sprite {
     public var signalRenderSwitch:Signal;
     protected var wasLastFrameGpu:Boolean = false;
     public var isPetYard:Boolean = false;
-
     public var atmosphere_:AtmosphereHandler;
-    public var weather_:int;
-
     public function AbstractMap() {
         this.goDict_ = new Dictionary();
         this.map_ = new Sprite();

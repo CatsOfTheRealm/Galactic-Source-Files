@@ -1,6 +1,5 @@
 ﻿package kabam.rotmg.account
 {
-    import com.company.assembleegameclient.account.ui.MoneyFrameMediator;
     import flash.display.DisplayObjectContainer;
     import flash.display.LoaderInfo;
     import kabam.rotmg.account.core.BuyCharacterSlotCommand;
@@ -13,7 +12,6 @@
     import kabam.rotmg.account.core.signals.PurchaseGoldSignal;
     import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
     import kabam.rotmg.account.core.signals.VerifyAgeSignal;
-    import kabam.rotmg.account.core.view.MoneyFrame;
     import kabam.rotmg.account.core.view.PurchaseConfirmationDialog;
     import kabam.rotmg.account.core.view.PurchaseConfirmationMediator;
     import kabam.rotmg.account.transfer.TransferAccountConfig;
@@ -59,7 +57,6 @@
             this.injector.map(GetCharListTask);
             this.injector.map(MoneyFrameEnableCancelSignal).asSingleton();
             this.injector.map(OfferModel).asSingleton();
-            this.mediatorMap.map(MoneyFrame).toMediator(MoneyFrameMediator);
             this.mediatorMap.map(PurchaseConfirmationDialog).toMediator(PurchaseConfirmationMediator);
             this.commandMap.map(BuyCharacterSlotSignal).toCommand(BuyCharacterSlotCommand).withGuards(IsAccountRegisteredToBuyGoldGuard);
             this.commandMap.map(PurchaseGoldSignal).toCommand(PurchaseGoldCommand);

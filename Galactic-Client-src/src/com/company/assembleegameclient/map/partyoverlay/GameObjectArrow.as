@@ -46,9 +46,6 @@ public class GameObjectArrow extends Sprite {
         this.big_ = _arg3;
         addChild(this.arrow_);
         this.drawArrow();
-        addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
-        addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
-        addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
         filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
         visible = false;
     }

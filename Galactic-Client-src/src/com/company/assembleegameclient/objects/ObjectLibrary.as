@@ -38,7 +38,6 @@ public class ObjectLibrary {
     public static const TILE_FILTER_LIST:Vector.<String> = new <String>["ALL", "Walkable", "Unwalkable", "Slow", "Speed=1"];
     public static const defaultProps_:ObjectProperties = new ObjectProperties(null);
     public static const TYPE_MAP:Object = {
-        "ArenaGuard": ArenaGuard,
         "ArenaPortal": ArenaPortal,
         "CaveWall": CaveWall,
         "Character": Character,
@@ -66,7 +65,6 @@ public class ObjectLibrary {
         "Player": Player,
         "Portal": Portal,
         "Projectile": Projectile,
-        "QuestRewards": QuestRewards,
         "DailyLoginRewards": DailyLoginRewards,
         "Sign": Sign,
         "SpiderWeb": SpiderWeb,

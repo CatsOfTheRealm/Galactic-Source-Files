@@ -7,7 +7,6 @@ import kabam.lib.tasks.TaskMonitor;
 import kabam.rotmg.account.core.signals.CharListDataSignal;
 import kabam.rotmg.application.api.ApplicationSetup;
 import kabam.rotmg.chat.control.SpamFilter;
-import kabam.rotmg.core.commands.ConfigurePaymentsWindowCommand;
 import kabam.rotmg.core.commands.ConfigureSpamFilterCommand;
 import kabam.rotmg.core.commands.InvalidateDataCommand;
 import kabam.rotmg.core.commands.PurchaseCharacterCommand;
@@ -90,7 +89,6 @@ public class CoreConfig implements IConfig {
         this.commandMap.map(InvalidateDataSignal).toCommand(InvalidateDataCommand);
         this.commandMap.map(SetScreenWithValidDataSignal).toCommand(SetScreenWithValidDataCommand);
         this.commandMap.map(PurchaseCharacterSignal).toCommand(PurchaseCharacterCommand);
-        this.commandMap.map(AppInitDataReceivedSignal).toCommand(ConfigurePaymentsWindowCommand);
         this.commandMap.map(AppInitDataReceivedSignal).toCommand(ConfigureSpamFilterCommand);
         this.commandMap.map(CharListDataSignal).toCommand(UpdatePlayerModelCommand);
         this.commandMap.map(CharListDataSignal).toCommand(UpdatePetsModelCommand);

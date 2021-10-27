@@ -10,7 +10,7 @@ public class InfoHoverPaneFactory extends Sprite {
     public static function make(_arg1:DisplayObject):Sprite {
         var _local4:PopupWindowBackground;
         if (_arg1 == null) {
-            return null;
+            return (null);
         }
         var _local2:Sprite = new Sprite();
         var _local3:int = 8;

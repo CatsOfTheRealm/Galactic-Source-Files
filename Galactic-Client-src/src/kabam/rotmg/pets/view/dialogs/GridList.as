@@ -108,7 +108,7 @@ public class GridList extends Sprite {
         if (this.items.length) {
             return (this.items[0]);
         }
-        return null;
+        return (null);
     }
 
     public function getTopRight():DisplayObject {
@@ -117,7 +117,7 @@ public class GridList extends Sprite {
             _local1 = this.grid[0];
             return (_local1[(this.maxItemsPerRow - 1)]);
         }
-        return null;
+        return (null);
     }
 
     public function getBottomLeft():DisplayObject {
@@ -126,7 +126,7 @@ public class GridList extends Sprite {
             _local1 = this.grid[(this.grid.length - 1)];
             return (_local1[0]);
         }
-        return null;
+        return (null);
     }
 
     public function getBottomRight():DisplayObject {
@@ -135,7 +135,7 @@ public class GridList extends Sprite {
             _local1 = this.grid[(this.grid.length - 1)];
             return (_local1[(this.maxItemsPerRow - 1)]);
         }
-        return null;
+        return (null);
     }
 
 

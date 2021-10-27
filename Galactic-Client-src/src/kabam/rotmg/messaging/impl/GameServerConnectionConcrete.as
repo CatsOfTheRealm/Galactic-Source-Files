@@ -126,11 +126,6 @@ import kabam.lib.net.impl.SocketServer;
 import com.company.assembleegameclient.game.GameSprite;
 import kabam.rotmg.account.core.Account;
 import kabam.rotmg.account.core.view.PurchaseConfirmationDialog;
-import kabam.rotmg.arena.control.ArenaDeathSignal;
-import kabam.rotmg.arena.control.ImminentArenaWaveSignal;
-import kabam.rotmg.arena.model.CurrentArenaRunModel;
-import kabam.rotmg.arena.view.BattleSummaryDialog;
-import kabam.rotmg.arena.view.ContinueOrQuitDialog;
 import kabam.rotmg.chat.model.ChatMessage;
 import kabam.rotmg.classes.model.CharacterClass;
 import kabam.rotmg.classes.model.CharacterSkin;
@@ -340,13 +335,10 @@ public class GameServerConnectionConcrete extends GameServerConnection {
     private var petFeedResult:PetFeedResultSignal;
     private var closeDialogs:CloseDialogsSignal;
     private var openDialog:OpenDialogSignal;
-    private var arenaDeath:ArenaDeathSignal;
-    private var imminentWave:ImminentArenaWaveSignal;
     private var questFetchComplete:QuestFetchCompleteSignal;
     private var questRedeemComplete:QuestRedeemCompleteSignal;
     private var keyInfoResponse:KeyInfoResponseSignal;
     private var claimDailyRewardResponse:ClaimDailyRewardResponseSignal;
-    private var currentArenaRun:CurrentArenaRunModel;
     private var classesModel:ClassesModel;
     private var injector:Injector;
     private var model:GameModel;
@@ -367,8 +359,6 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         this.closeDialogs = this.injector.getInstance(CloseDialogsSignal);
         changeMapSignal = this.injector.getInstance(ChangeMapSignal);
         this.openDialog = this.injector.getInstance(OpenDialogSignal);
-        this.arenaDeath = this.injector.getInstance(ArenaDeathSignal);
-        this.imminentWave = this.injector.getInstance(ImminentArenaWaveSignal);
         this.questFetchComplete = this.injector.getInstance(QuestFetchCompleteSignal);
         this.questRedeemComplete = this.injector.getInstance(QuestRedeemCompleteSignal);
         this.keyInfoResponse = this.injector.getInstance(KeyInfoResponseSignal);
@@ -381,7 +371,6 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         serverConnection = this.injector.getInstance(SocketServer);
         this.messages = this.injector.getInstance(MessageProvider);
         this.model = this.injector.getInstance(GameModel);
-        this.currentArenaRun = this.injector.getInstance(CurrentArenaRunModel);
         this.getPetUpdater();
         server_ = _arg2;
         instance = this;
@@ -520,8 +509,6 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         _local1.map(EVOLVE_PET).toMessage(EvolvedPetMessage).toMethod(this.onEvolvedPet);
         _local1.map(DELETE_PET).toMessage(DeletePetMessage).toMethod(this.onDeletePet);
         _local1.map(HATCH_PET).toMessage(HatchPetMessage).toMethod(this.onHatchPet);
-        _local1.map(IMMINENT_ARENA_WAVE).toMessage(ImminentArenaWave).toMethod(this.onImminentArenaWave);
-        _local1.map(ARENA_DEATH).toMessage(ArenaDeath).toMethod(this.onArenaDeath);
         _local1.map(VERIFY_EMAIL).toMessage(VerifyEmail).toMethod(this.onVerifyEmail);
         _local1.map(RESKIN_UNLOCK).toMessage(ReskinUnlock).toMethod(this.onReskinUnlock);
         _local1.map(PASSWORD_PROMPT).toMessage(PasswordPrompt).toMethod(this.onPasswordPrompt);
@@ -845,9 +832,6 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         _local1.charId_ = charId_;
         _local1.isFromArena_ = isFromArena_;
         serverConnection.queueMessage(_local1);
-        if (isFromArena_) {
-            this.openDialog.dispatch(new BattleSummaryDialog());
-        }
     }
 
     private function onCriticalDamage(_arg1:CriticalDamage):void {
@@ -2337,16 +2321,6 @@ public class GameServerConnectionConcrete extends GameServerConnection {
     private function onPlaySound(_arg1:PlaySound):void {
         var _local2:GameObject = gs_.map.goDict_[_arg1.ownerId_];
         ((_local2) && (_local2.playSound(_arg1.soundId_)));
-    }
-
-    private function onImminentArenaWave(_arg1:ImminentArenaWave):void {
-        this.imminentWave.dispatch(_arg1.currentRuntime);
-    }
-
-    private function onArenaDeath(_arg1:ArenaDeath):void {
-        this.currentArenaRun.costOfContinue = _arg1.cost;
-        this.openDialog.dispatch(new ContinueOrQuitDialog(_arg1.cost, false));
-        this.arenaDeath.dispatch();
     }
 
     private function onVerifyEmail(_arg1:VerifyEmail):void {

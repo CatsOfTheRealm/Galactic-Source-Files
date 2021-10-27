@@ -46,7 +46,6 @@ public class MapUserInput {
     private static const MOUSE_DOWN_WAIT_PERIOD:uint = 175;
 
     private static var stats_:Stats = new Stats();
-    private static var arrowWarning_:Boolean = false;
 
     public var gs_:GameSprite;
     private var moveLeft_:Boolean = false;

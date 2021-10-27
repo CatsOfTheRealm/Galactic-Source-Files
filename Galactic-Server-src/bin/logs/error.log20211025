@@ -1,0 +1,21 @@
+19:06:54,223 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+19:06:54,298 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+19:06:55,614 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+19:06:55,713 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+19:06:55,716 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+19:06:55,717 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+19:06:55,774 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+19:06:56,824 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+19:08:38,234 FATAL AppEngine  Server          System.Net.HttpListenerException (0x80004005): The format of the specified network name is invalid
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at Anna.HttpServer..ctor(String url, IScheduler scheduler)
+   at server.Program.Main(String[] args) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\server\Program.cs:line 79
+19:08:40,520 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+19:08:40,618 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+19:08:41,513 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+19:08:41,582 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+19:08:41,582 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+19:08:41,584 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+19:08:41,620 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+19:08:42,323 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.

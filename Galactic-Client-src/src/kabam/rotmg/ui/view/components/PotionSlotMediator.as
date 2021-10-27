@@ -12,7 +12,6 @@
     import kabam.rotmg.game.signals.UseBuyPotionSignal;
     import kabam.rotmg.messaging.impl.GameServerConnection;
     import kabam.rotmg.pets.data.PetSlotsState;
-    import kabam.rotmg.pets.view.components.slot.FoodFeedFuseSlot;
     import kabam.rotmg.ui.model.HUDModel;
     import kabam.rotmg.ui.model.PotionModel;
     import kabam.rotmg.ui.signals.UpdateHUDSignal;
@@ -73,7 +72,7 @@
         {
             var _local4:InteractiveItemTile;
             var _local2:Player = this.hudModel.gameSprite.map.player_;
-            var _local3:* = DisplayHierarchy.getParentWithTypeArray(_arg1, InteractiveItemTile, Map, FoodFeedFuseSlot);
+            var _local3:* = DisplayHierarchy.getParentWithTypeArray(_arg1, InteractiveItemTile, Map);
             if (_local3 is Map || (Parameters.isGpuRender() && _local3 == null))
             {
                 GameServerConnection.instance.invDrop(_local2, PotionInventoryModel.getPotionSlot(this.view.objectType), this.view.objectType);

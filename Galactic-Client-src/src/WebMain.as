@@ -2,7 +2,6 @@
 {
 import ToolForge.Mediators.ToolForgeMediatorConfiguration;
 
-import com.adobe.crypto.SHA256;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.AssetLoader;
@@ -11,12 +10,7 @@ import com.company.assembleegameclient.util.StageProxy;
 import flash.display.LoaderInfo;
 import flash.display.Sprite;
 import flash.display.Stage;
-import flash.display.StageScaleMode;
 import flash.events.Event;
-import flash.events.KeyboardEvent;
-import flash.events.MouseEvent;
-import flash.system.Capabilities;
-import flash.text.TextField;
 
 import kabam.lib.net.NetConfig;
 import kabam.rotmg.account.AccountConfig;
@@ -24,7 +18,6 @@ import kabam.rotmg.appengine.AppEngineConfig;
 import kabam.rotmg.application.ApplicationConfig;
 import kabam.rotmg.application.ApplicationSpecificConfig;
 import kabam.rotmg.application.EnvironmentConfig;
-import kabam.rotmg.arena.ArenaConfig;
 import kabam.rotmg.assets.AssetsConfig;
 import kabam.rotmg.build.BuildConfig;
 import kabam.rotmg.characters.CharactersConfig;
@@ -39,21 +32,15 @@ import kabam.rotmg.external.ExternalConfig;
 import kabam.rotmg.fame.FameConfig;
 import kabam.rotmg.fortune.FortuneConfig;
 import kabam.rotmg.game.GameConfig;
-import com.demonsters.debugger.MonsterDebugger;
 import kabam.rotmg.language.LanguageConfig;
 import kabam.rotmg.legends.LegendsConfig;
 import kabam.rotmg.maploading.MapLoadingConfig;
 import kabam.rotmg.marketUI.MarketConfig;
 import kabam.rotmg.minimap.MiniMapConfig;
 import kabam.rotmg.mysterybox.MysteryBoxConfig;
-import kabam.rotmg.news.NewsConfig;
-import kabam.rotmg.packages.PackageConfig;
-import kabam.rotmg.pets.PetsConfig;
 import kabam.rotmg.protip.ProTipConfig;
-import kabam.rotmg.questrewards.QuestRewardsConfig;
 import kabam.rotmg.queue.QueueConfig;
 import kabam.rotmg.servers.ServersConfig;
-import kabam.rotmg.stage3D.Renderer;
 import kabam.rotmg.stage3D.Stage3DConfig;
 import kabam.rotmg.startup.StartupConfig;
 import kabam.rotmg.startup.control.StartupSignal;
@@ -122,9 +109,7 @@ public class WebMain extends Sprite {
         if (Parameters.data_.FPS == undefined) {
             Parameters.data_.FPS = "120";
         }
-        if (Parameters.data_.GPURender == true) {
-            Parameters.data_.GPURender = false;
-        }
+        Parameters.data_.GPURender = false;
         stage.frameRate = 120;
     }
 
@@ -174,17 +159,13 @@ public class WebMain extends Sprite {
                 .configure(MarketConfig)
                 .configure(MiniMapConfig)
                 .configure(LegendsConfig)
-                .configure(NewsConfig)
                 .configure(FameConfig)
                 .configure(TooltipsConfig)
                 .configure(ProTipConfig)
                 .configure(MapLoadingConfig)
                 .configure(ClassesConfig)
-                //.configure(PackageConfig)
-                .configure(QuestRewardsConfig)
                 .configure(DailyLoginConfig)
                 .configure(Stage3DConfig)
-                //.configure(ArenaConfig)
                 .configure(ExternalConfig)
                 .configure(MysteryBoxConfig)
                 .configure(FortuneConfig)

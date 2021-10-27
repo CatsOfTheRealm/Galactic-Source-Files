@@ -1,11 +1,7 @@
 ﻿package com.company.assembleegameclient.screens {
 import com.company.assembleegameclient.ui.DeprecatedClickableText;
-import com.company.assembleegameclient.ui.Scrollbar;
-
-import flash.display.DisplayObject;
 import flash.display.Shape;
 import flash.display.Sprite;
-import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 import flash.geom.Rectangle;
@@ -21,8 +17,6 @@ import kabam.rotmg.ui.view.TitleView_topBar;
 import kabam.rotmg.ui.view.charSelectBG;
 import kabam.rotmg.core.model.PlayerModel;
 import kabam.rotmg.game.view.CreditDisplay;
-import kabam.rotmg.news.view.NewsView;
-import kabam.rotmg.packages.view.PackageButton;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -35,7 +29,6 @@ import org.osflash.signals.Signal;
 
 public class CharacterSelectionAndNewsScreen extends Sprite {
 
-    private static const NEWS_X:int = 475;
     private static const TAB_UNSELECTED:uint = 0xB3B3B3;
     private static const TAB_SELECTED:uint = 0xFFFFFF;
 
@@ -62,7 +55,6 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
     private var characterListHeight:Number;
     private var lines:Shape;
     private var scrollBar:UIScrollbar;
-    private var packageButton:PackageButton;
     private var playButton:SliceScalingButton;
     private var classesButton:SliceScalingButton;
     private var backButton:SliceScalingButton;
@@ -156,14 +148,6 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
         this.menuOptionsBar.addButton(this.backButton, MenuOptionsBar.LEFT);
         this.menuOptionsBar.addButton(this.classesButton, MenuOptionsBar.RIGHT);
         addChild(this.menuOptionsBar);
-    }
-
-    private function createNews():void {
-        var _local1:NewsView;
-        _local1 = new NewsView();
-        _local1.x = NEWS_X;
-        _local1.y = 112;
-        addChild(_local1);
     }
 
     private function createScrollbar() : void {
@@ -266,20 +250,6 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
 
     private function onChooseName(_arg1:MouseEvent):void {
         this.chooseName.dispatch();
-    }
-
-    public function showPackageButton():void {
-        this.packageButton = new PackageButton();
-        this.packageButton.init();
-        this.packageButton.x = 6;
-        this.packageButton.y = 40;
-        addChild(this.packageButton);
-    }
-
-    private function removeIfAble(_arg1:DisplayObject):void {
-        if (((_arg1) && (contains(_arg1)))) {
-            removeChild(_arg1);
-        }
     }
 
     private function onPlayClick():void {

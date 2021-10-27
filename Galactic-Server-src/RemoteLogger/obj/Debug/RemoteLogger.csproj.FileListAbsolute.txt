@@ -22,3 +22,11 @@ C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\Remote
 C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.csproj.CopyComplete
 C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.exe
 C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.pdb
+C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\bin\log4net_rl.config
+C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\bin\RemoteLogger.exe.config
+C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\bin\RemoteLogger.exe
+C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\bin\RemoteLogger.pdb
+C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.csproj.CoreCompileInputs.cache
+C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.csproj.CopyComplete
+C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.exe
+C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.pdb

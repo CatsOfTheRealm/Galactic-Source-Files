@@ -14,7 +14,7 @@ namespace wServer.logic
                     new DropPortalOnDeath("The Shatters", 100, 360),
                     new ScaleHP2(70, 3, 15),
                     new State("Normal1",
-                        new ConditionalEffect(ConditionEffectIndex.Armored),
+                        new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 2000),
                         new HpLessTransition(0.80, "Phase1"), //Shadowman
                         new State("Attack0.1",
                             new Taunt("BURN!"),
@@ -38,6 +38,7 @@ namespace wServer.logic
                             ),
                         new State("Attack1.1",
                             new Taunt("LEAVE THIS PLACE!"),
+                            new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 2000),
                             new Flash(0xFFFFFF, 0.5, 4),
                             new Shoot(0, count: 6, fixedAngle: 36, rotateAngle: 10, coolDown: 200, projectileIndex: 1),
                             new TimedTransition(2000, "Attack1.2")
@@ -59,6 +60,7 @@ namespace wServer.logic
                             new TimedTransition(2000, "Vul1")
                             ),
                         new State("Vul1",
+                            new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 2000),
                             new RemoveConditionalEffect(ConditionEffectIndex.Armored),
                             new Taunt("I must gather my strength!", "Foolish whelps, leave me be!"),
                             new Flash(0xFF0000, 0.5, 8),
@@ -86,7 +88,7 @@ namespace wServer.logic
                     new State("Phase2.0",
                         new SetAltTexture(0),
                         new HpLessTransition(0.60, "Phase2"),
-                        new ConditionalEffect(ConditionEffectIndex.Armored),
+                       new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 2000),
                         new State("Attack2.1",
                             new Taunt("BURN!"),
                             new Shoot(0, count: 1, fixedAngle: 220, rotateAngle: 3, coolDown: 300),
@@ -108,6 +110,7 @@ namespace wServer.logic
                             new TimedTransition(900, "Attack3.1")
                             ),
                         new State("Attack3.1",
+                            new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 2000),
                             new Taunt("LEAVE THIS PLACE!"),
                             new Flash(0xFFFFFF, 0.5, 4),
                             new Shoot(0, count: 6, fixedAngle: 36, rotateAngle: 10, coolDown: 200, projectileIndex: 1),
@@ -132,6 +135,7 @@ namespace wServer.logic
                         new State("Vul2",
                             new RemoveConditionalEffect(ConditionEffectIndex.Armored),
                             new Taunt("I must gather my strength!", "Foolish whelps, leave me be!"),
+                            new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 2000),
                             new Flash(0xFF0000, 0.5, 8),
                             new TimedTransition(4000, "Attack2.1")
                             )
@@ -152,6 +156,7 @@ namespace wServer.logic
                         ),
                     new State("Phase3.0",
                         new SetAltTexture(0),
+                        new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 2000),
                         new ConditionalEffect(ConditionEffectIndex.Armored),
                         new HpLessTransition(0.45, "Phase3"),
                         new State("Attack4.1",
@@ -176,6 +181,7 @@ namespace wServer.logic
                             ),
                         new State("Attack5.1",
                             new Taunt("LEAVE THIS PLACE!"),
+                            new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 2000),
                             new Flash(0xFFFFFF, 0.5, 4),
                             new Shoot(0, count: 6, fixedAngle: 36, rotateAngle: 10, coolDown: 200, projectileIndex: 1),
                             new TimedTransition(2000, "Attack5.2")
@@ -197,6 +203,7 @@ namespace wServer.logic
                             new TimedTransition(2000, "Vul3")
                             ),
                         new State("Vul3",
+                            new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 2000),
                             new RemoveConditionalEffect(ConditionEffectIndex.Armored),
                             new Taunt("I must gather my strength!", "Foolish whelps, leave me be!"),
                             new Flash(0xFF0000, 0.5, 8),

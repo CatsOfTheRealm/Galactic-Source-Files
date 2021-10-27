@@ -46,7 +46,7 @@ public class PetInteractionPanel extends Panel {
     private function alignButton():void {
         this.fuseButton.x = (((WIDTH / 4) * 3) - (this.fuseButton.width / 2));
         this.fuseButton.y = ((HEIGHT - this.fuseButton.height) - 4);
-        this.feedButton.x = (((WIDTH / 4)) - (this.feedButton.width / 2));
+        this.feedButton.x = (((WIDTH / 4) * 1) - (this.feedButton.width / 2));
         this.feedButton.y = ((HEIGHT - this.feedButton.height) - 4);
     }
 

@@ -1,0 +1,23 @@
+19:05:35,613 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+19:05:35,670 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+19:05:36,449 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+19:05:36,510 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+19:05:36,511 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+19:05:36,513 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+19:05:36,547 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+19:05:37,229 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+19:08:14,343 ERROR c Conquest Client          Error when handling packet '{ID: FORGE_LIST, Category: 4, Owner: }'...
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at wServer.networking.handlers.ForgeListHandler.<>c__DisplayClass6_0.<HandlePacket>b__2(String x) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\ForgeListHandler.cs:line 28
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at wServer.networking.handlers.ForgeListHandler.<>c__DisplayClass6_0.<HandlePacket>b__1(KeyValuePair`2 _) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\ForgeListHandler.cs:line 26
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at wServer.networking.server.CommHandler.SendPackets(IEnumerable`1 pkts, PacketPriority priority) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\server\CommHandler.cs:line 351
+   at wServer.networking.Client.SendPackets(IEnumerable`1 pkts, PacketPriority priority) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 129
+   at wServer.networking.handlers.ForgeListHandler.HandlePacket(Client client, ForgeList packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\handlers\ForgeListHandler.cs:line 23
+   at wServer.networking.PacketHandlerBase`1.Handle(Client client, IncomingMessage packet) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\IPacketHandler.cs:line 27
+   at wServer.networking.Client.ProcessPacket(Packet pkt) in C:\Users\raphe\OneDrive\Desktop\Galactic Conquest\Galactic-Server-src\wServer\networking\Client.cs:line 166

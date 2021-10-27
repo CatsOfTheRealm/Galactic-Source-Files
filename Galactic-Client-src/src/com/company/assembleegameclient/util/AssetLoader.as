@@ -44,8 +44,6 @@ public class AssetLoader {
     }
 
     private function addImages():void {
-
-
         AssetLibrary.addImageSet("lofiObj9",new EmbeddedAssets.lofiObj9Embed_().bitmapData,8,8);
         AssetLibrary.addImageSet("lofiObj10",new EmbeddedAssets.lofiObj10Embed_().bitmapData,8,8);
         AssetLibrary.addImageSet("lofiObj11",new EmbeddedAssets.lofiObj11Embed_().bitmapData,8,8);
@@ -134,7 +132,7 @@ public class AssetLoader {
     }
 
     private function addAnimatedCharacters():void {//Sprites32x32EnemiesEmbed_
-        AnimatedChars.add("sprites32x32", new EmbeddedAssets.Sprites32x32EnemiesEmbed_().bitmapData, null, 32, 32, 224, 32, AnimatedChar.RIGHT);
+        AnimatedChars.add("sprites32x32", new EmbeddedAssets.Sprites32x32EnemiesEmbed_().bitmapData, null, 24, 24, 168, 24, AnimatedChar.RIGHT);
         AnimatedChars.add("sprites80x80", new EmbeddedAssets.e8080art().bitmapData, null, 80, 80, 560, 80, AnimatedChar.RIGHT);
         AnimatedChars.add("sprites64x64", new EmbeddedAssets.e6464art().bitmapData, null, 64, 64, 448, 64, AnimatedChar.RIGHT);
         AnimatedChars.add("lostHallsChars16x16", new EmbeddedAssets.lostHallsChars16x16().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);

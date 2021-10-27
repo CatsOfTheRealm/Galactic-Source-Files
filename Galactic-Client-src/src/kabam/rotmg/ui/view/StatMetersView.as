@@ -33,10 +33,8 @@ import flash.events.Event;
 import kabam.rotmg.text.model.TextKey;
 
 public class StatMetersView extends Sprite {
-    private var player:Player;
     private var expBar_:StatusBar;
     private var fameBar_:StatusBar;
-    private var OverhpBar_:StatusBar;
     private var hpBar_:StatusBar;
     private var mpBar_:StatusBar;
     private var areTempXpListenersAdded:Boolean;

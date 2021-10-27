@@ -32,9 +32,6 @@ import kabam.rotmg.pets.controller.reskin.ReskinPetFlowStartSignal;
 import kabam.rotmg.pets.data.PetFormModel;
 import kabam.rotmg.pets.data.PetSlotsState;
 import kabam.rotmg.pets.data.PetsModel;
-import kabam.rotmg.pets.view.components.slot.FoodFeedFuseSlot;
-import kabam.rotmg.questrewards.components.ModalItemSlot;
-import kabam.rotmg.questrewards.view.QuestRewardsView;
 import kabam.rotmg.ui.model.HUDModel;
 import kabam.rotmg.ui.model.TabStripModel;
 
@@ -88,13 +85,11 @@ public class ItemGridMediator extends Mediator {
         var _local4:InteractiveItemTile;
         var _local5:TabStripView;
         var _local6:int;
-        var _local7:FoodFeedFuseSlot;
         var _local_9:ForgeInventorySlot;
-        var _local_6:ModalItemSlot;
         var _local8:int;
         var _local2:InteractiveItemTile = _arg1.tile;
-        var _local3:* = DisplayHierarchy.getParentWithTypeArray(_local2.getDropTarget(), TabStripView, InteractiveItemTile, FoodFeedFuseSlot, QuestRewardsView, ForgeInventorySlot, ToolForgeFrame, Map);
-        if ((((_local2.getItemId() == PotionInventoryModel.HEALTH_POTION_ID)) || ((((_local2.getItemId() == PotionInventoryModel.MAGIC_POTION_ID)) && (!(Boolean((_local3 as FoodFeedFuseSlot)))))))) {
+        var _local3:* = DisplayHierarchy.getParentWithTypeArray(_local2.getDropTarget(), TabStripView, InteractiveItemTile, ForgeInventorySlot, ToolForgeFrame, Map);
+        if ((((_local2.getItemId() == PotionInventoryModel.HEALTH_POTION_ID)) || ((((_local2.getItemId() == PotionInventoryModel.MAGIC_POTION_ID)))))) {
             this.onPotionMove(_arg1);
             return;
         }
@@ -123,7 +118,7 @@ public class ItemGridMediator extends Mediator {
             }
             else
             {
-                if ((((((((_local3 is FoodFeedFuseSlot)) || ((_local3 is ModalItemSlot)))) || ((_local3 is ForgeInventorySlot)))) || ((_local3 is ToolForgeFrame))))
+                if ((((((_local3 is ForgeInventorySlot)))) || ((_local3 is ToolForgeFrame))))
                 {
                     if ((_local3 is ToolForgeFrame))
                     {
@@ -145,23 +140,9 @@ public class ItemGridMediator extends Mediator {
                     }
                 }
                 else {
-                    if ((_local3 is FoodFeedFuseSlot)) {
-                        _local7 = (_local3 as FoodFeedFuseSlot);
-                        if (!_local7.processing) {
-                            this.petSlotsState.rightSlotId = _local2.tileId;
-                            this.petSlotsState.rightSlotOwnerId = _local2.ownerGrid.owner.objectId_;
-                            _local8 = _local2.getItemId();
-                            _local7.setItem(_local8, _local2.tileId, _local2.ownerGrid.owner.objectId_, this.petFoodCancel(_local2));
-                            _local2.setItem(ItemConstants.NO_ITEM);
-                            _local2.blockingItemUpdates = true;
-                            _local2.updateUseability(this.view.curPlayer);
-                            _local7.setItemPart2(_local8);
-                        }
-                    } else {
                         if ((((_local3 is Map)) || ((this.hudModel.gameSprite.map.mouseX < 300)))) {
                             this.dropItem(_local2);
                         }
-                    }
                 }
             }
         }

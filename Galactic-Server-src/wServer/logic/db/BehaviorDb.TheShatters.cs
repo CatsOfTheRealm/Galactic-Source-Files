@@ -1022,9 +1022,8 @@ namespace wServer.logic
             .Init("shtrs Royal Guardian J",
                 new State(
                     new State("shoot",
-                        new Shoot(30, 2, 10, 1, coolDown: 1750, coolDownOffset: 200, predictive: 0.2),
-                        new Shoot(30, 3, 5, 0, coolDown: 1750, coolDownOffset: 400, predictive: 0.2),
-                        new Shoot(30, 4, 20, 2, coolDown: 1750, coolDownOffset: 800, predictive: 0.2),
+                        new Shoot(30, 2, 5, 1, coolDown: 1750, coolDownOffset: 200),
+                        new Shoot(30, 3, 5, 0, coolDown: 1750, coolDownOffset: 400),
                         new State("random_orbit",
                             new TimedRandomTransition(500, true, "1", "2", "3", "4")
                         ),
@@ -1038,7 +1037,7 @@ namespace wServer.logic
                             new Orbit(0.6, 1, 7, "shtrs The Forgotten King", orbitClockwise: false)
                         ),
                          new State("4",
-                            new Follow(0.6, 2)
+                            new Follow(0.6, 20, 1)
                         )
                     )
                 )
@@ -1050,7 +1049,7 @@ namespace wServer.logic
                     new OrderOnDeath(99, "shtrs Goo Spawner", "4"),
                     new State("1",
                         new ConditionalEffect(ConditionEffectIndex.Invincible, true),
-                        new TimedTransition(1000, "20")
+                        new TimedTransition(1000, "2")
                     ),
                     new State("2",
                         new Spawn("shtrs Green Crystal", 1, 0),
@@ -1080,7 +1079,7 @@ namespace wServer.logic
                     ),
                     new State("5.6",
                         new RemoveConditionalEffect(ConditionEffectIndex.Invincible),
-                        new TimedRandomTransition(10000, false,"5.7", "5.8"),
+                        new TimedRandomTransition(8000, false, "5.7", "5.8"),
                         new HpLessTransition(0.8, "6"),
                         new State("5.7",
                         new ConditionalEffect(ConditionEffectIndex.Invulnerable, false, 1500),
@@ -1218,83 +1217,133 @@ namespace wServer.logic
                     new State("20",
                       new Flash(0xFF0000, 0.5, 8),
                       new ConditionalEffect(ConditionEffectIndex.Invincible, true),
-                        new Shoot(0, 30, projectileIndex: 0, fixedAngle: 0, coolDown: 1000000, coolDownOffset: 1250),
+                        new Shoot(0, 16, 22.7, projectileIndex: 6, fixedAngle: 0, coolDown: 3750, coolDownOffset: 1000, rotateAngle: 10),
+                        new Shoot(0, 16, 22.7, projectileIndex: 7, fixedAngle: 0, coolDown: 3750, coolDownOffset: 1000, rotateAngle: 10),
+                        new Shoot(0, 16, 22.7, projectileIndex: 8, fixedAngle: 0, coolDown: 3750, coolDownOffset: 1000, rotateAngle: 10),
                         new State("A1",
                         new Taunt("No.... NO.... THIS IS NOT HOW IT WILL END TODAY!"),
                         new SetAltTexture(2),
                         new TimedTransition(3000, "A2")
                         ),
                         new State("A2",
-                        new Taunt("I WILL SHOW YOU THE POWER I USED TO RULE THE REALM ONCE!"),
+                        new Taunt("*Cough*... My power..."),
                         new SetAltTexture(3),
-                        new TimedTransition(150, "A3")
+                        new TimedTransition(100, "A3")
                         ),
                         new State("A3",
                         new SetAltTexture(4),
-                        new TimedTransition(150, "A4")
+                        new TimedTransition(250, "A4")
                         ),
                         new State("A4",
                         new SetAltTexture(5),
-                        new TimedTransition(150, "A5")
+                        new TimedTransition(250, "A5")
                              ),
-                        new State("A5",
-                        new SetAltTexture(6),
-                        new TimedTransition(150, "A6")
-                             ),
-                        new State("A6",
-                        new SetAltTexture(7),
-                        new TimedTransition(150, "A7")
-                             ),
+                        new State("Attack1",
+                         new Taunt("I WONT LET IT END LIKE THIS..."),
+                          new Shoot(50, 2, 15, 3, coolDown: 200, coolDownOffset: 250),
+                          new Shoot(50, 15, 27.6, 5, 0, coolDown: 2000, rotateAngle: 17.5),
+                          new TimedTransition(5000, "A7"),
+                         new State("A5",
+                          new SetAltTexture(4),
+                          new TimedTransition(250, "A6")
+                               ),
+                         new State("A6",
+                          new SetAltTexture(5),
+                          new TimedTransition(250, "A5")
+                               )
+                            ),
                         new State("A7",
-                        new SetAltTexture(8),
+                        new SetAltTexture(6),
                         new TimedTransition(150, "A8")
                             ),
                         new State("A8",
-                        new SetAltTexture(9),
+                        new SetAltTexture(7),
                         new TimedTransition(150, "A9")
                               ),
                         new State("A9",
-                        new SetAltTexture(10),
+                        new SetAltTexture(6),
                         new TimedTransition(150, "A10")
                                   ),
                         new State("A10",
-                        new SetAltTexture(11),
+                        new SetAltTexture(7),
                         new TimedTransition(150, "A11")
                                   ),
                         new State("A11",
-                        new SetAltTexture(12),
+                        new SetAltTexture(8),
                         new TimedTransition(150, "A12")
                                   ),
                         new State("A12",
-                        new SetAltTexture(13),
+                        new SetAltTexture(11),
                          new TimedTransition(150, "A13")
                               ),
                         new State("A13",
-                        new SetAltTexture(14),
+                        new SetAltTexture(12),
                          new TimedTransition(150, "A14")
                               ),
                         new State("A14",
-                        new SetAltTexture(15),
+                        new SetAltTexture(13),
                          new TimedTransition(150, "A15")
                               ),
                         new State("A15",
-                        new SetAltTexture(16),
-                         new TimedTransition(150, "A16")
+                        new SetAltTexture(14),
+                         new TimedTransition(1500, "A16")
                               ),
                         new State("A16",
-                        new SetAltTexture(17)
-                    )
-                )),
+                        new SetAltTexture(15),
+                        new Shoot(50, 13, 27.6, 4, 0, coolDown: 500, rotateAngle: 17.5),
+                        new TimedTransition(2500, "A17")
+                           ),
+                        new State("A17",
+                        new SetAltTexture(16),
+                        new TimedTransition(2500, "A18")
+                              ),
+                        new State("A18",
+                        new SetAltTexture(17),
+                        new TimedTransition(2500, "AttackTwo")
+                              ),
+                        new State("AttackTwo",
+                        new TimedTransition(10000, "A21"),
+                        new Taunt("YOU STILL STAND?..."),
+                        new Shoot(50, 16, 27.6, 2, 0, coolDown: 2000, rotateAngle: 20, coolDownOffset: 500),
+                        new Shoot(50, 16, 27.6, 2, 0, coolDown: 2000, rotateAngle: 20),
+                        new State("A19",
+                        new SetAltTexture(18),
+                        new TimedTransition(100, "A20")
+                            ),
+                          new State("A20",
+                        new SetAltTexture(19),
+                        new TimedTransition(100, "A19")
+                          )
+                            )
+                       ),
+                      new State("A21",
+                        new SetAltTexture(20),
+                        new Taunt("Incredible..."),
+                        new TimedTransition(2500, "A22")
+                            ),
+                        new State("A22",
+                        new SetAltTexture(21),
+                        new Taunt("{PLAYER}... You have remarkable skill."),
+                        new TimedTransition(2000, "A23")
+                                ),
+                        new State("A23",
+                        new HealSelf(100000, 25000),
+                        new RemoveConditionalEffect(ConditionEffectIndex.Invulnerable),
+                        new RemoveConditionalEffect(ConditionEffectIndex.Invincible),
+                        new SetAltTexture(22),
+                        new Taunt("...")
+                            )
+                    ),
                 new Threshold(0.01,
-                        new ItemLoot("Potion of Life", 0.3, 3),
-                        new TierLoot(11, ItemType.Weapon, 0.0625),
-                        new TierLoot(12, ItemType.Weapon, 0.03125),
-                        new TierLoot(12, ItemType.Armor, 0.0625),
-                        new TierLoot(13, ItemType.Armor, 0.03125),
-                        new TierLoot(6, ItemType.Armor, 0.03125),
-                        new TierLoot(6, ItemType.Ring, 0.03125),
+                        new ItemLoot("Potion of Life", 0.75, 3),
+                        new TierLoot(13, ItemType.Weapon, 0.05125),
+                        new TierLoot(14, ItemType.Armor, 0.05125),
+                        new TierLoot(6, ItemType.Ring, 0.05125),
                         new ItemLoot("50 Credits", 0.01),
-                        new ItemLoot("Potion of Critical Chance", 0.02),
+                        new ItemLoot("50 Credits", 0.025),
+                        new ItemLoot("50 Credits", 0.01),
+                        new ItemLoot("50 Credits", 0.025),
+                        new ItemLoot("Greater Potion of Critical Chance", 1),
                         new ItemLoot("Potion of Critical Damage", 0.02),
                         new ItemLoot("Light Armor Schematic", 0.02, damagebased: true),
                         new ItemLoot("Robe Schematic", 0.02, damagebased: true),
@@ -1807,8 +1856,8 @@ namespace wServer.logic
                     ),
                     new State("2",
                        new Orbit(1.5, 10, 50, "shtrs The Forgotten King", 0.25, orbitClockwise: true),
-                        new Shoot(50, 2, null, projectileIndex: 0, coolDown: 1000, coolDownOffset: 500),
-                        new Shoot(50, 2, null, projectileIndex: 0, coolDown: 1000, coolDownOffset: 600)
+                        new Shoot(50, 4, 80, projectileIndex: 0, coolDown: 1500, coolDownOffset: 500),
+                        new Shoot(50, 8, 45, projectileIndex: 0, coolDown: 1500, coolDownOffset: 600)
                     )
                 )
             )

@@ -72,7 +72,7 @@ public class PetsModel {
     public function getPet(_arg1:int):PetVO {
         var _local2:int = this.getPetIndex(_arg1);
         if (_local2 == -1) {
-            return null;
+            return (null);
         }
         return (this.pets[_local2]);
     }

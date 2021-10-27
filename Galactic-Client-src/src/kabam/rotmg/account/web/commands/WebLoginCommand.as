@@ -17,7 +17,6 @@ import kabam.rotmg.core.signals.SetScreenWithValidDataSignal;
 import kabam.rotmg.core.signals.TaskErrorSignal;
 import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
-import kabam.rotmg.packages.services.GetPackagesTask;
 
 public class WebLoginCommand {
 
@@ -40,8 +39,6 @@ public class WebLoginCommand {
     [Inject]
     public var screenModel:ScreenModel;
     [Inject]
-    public var getPackageTask:GetPackagesTask;
-    [Inject]
     public var mysteryBoxTask:GetMysteryBoxesTask;
     private var setScreenTask:DispatchSignalTask;
 
@@ -59,7 +56,6 @@ public class WebLoginCommand {
         _local1.add(new DispatchSignalTask(this.closeDialogs));
         _local1.add(new DispatchSignalTask(this.updateLogin));
         _local1.add(new DispatchSignalTask(this.invalidate));
-        _local1.add(this.getPackageTask);
         this.mysteryBoxTask.lastRan = 0;
         _local1.add(this.mysteryBoxTask);
         _local1.add(this.setScreenTask);

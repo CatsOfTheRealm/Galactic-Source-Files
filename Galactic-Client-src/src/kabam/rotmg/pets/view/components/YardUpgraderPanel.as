@@ -66,7 +66,7 @@ public class YardUpgraderPanel extends Panel {
         if (((this.upgradeYardButton) && (contains(this.upgradeYardButton)))) {
             this.upgradeYardButton.x = (((WIDTH / 4) * 3) - (this.upgradeYardButton.width / 2));
             this.upgradeYardButton.y = ((HEIGHT - this.upgradeYardButton.height) - 4);
-            this.infoButton.x = (((WIDTH / 4)) - (this.infoButton.width / 2));
+            this.infoButton.x = (((WIDTH / 4) * 1) - (this.infoButton.width / 2));
             this.infoButton.y = ((HEIGHT - this.infoButton.height) - 4);
         }
         else {

@@ -2,9 +2,7 @@
 import com.company.assembleegameclient.game.AGameSprite;
 import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.ui.tooltip.ToolTip;
-import com.company.assembleegameclient.objects.Player;
-import com.company.assembleegameclient.util.Currency;
-import com.company.assembleegameclient.game.GameSprite;
+
 import flash.display.Bitmap;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
@@ -39,7 +37,7 @@ public class PetPanel extends Panel {
     public var petVO:PetVO;
     private var petBitmap:Bitmap;
 
-    public function PetPanel(_arg1:GameSprite, _arg2:PetVO) {
+    public function PetPanel(_arg1:AGameSprite, _arg2:PetVO) {
         this.petBitmapContainer = new Sprite();
         super(_arg1);
         this.petVO = _arg2;

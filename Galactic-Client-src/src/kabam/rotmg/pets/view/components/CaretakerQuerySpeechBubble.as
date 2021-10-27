@@ -3,7 +3,7 @@ import flash.display.Shape;
 import flash.display.Sprite;
 import flash.text.TextFieldAutoSize;
 
-
+import flashx.textLayout.formats.VerticalAlign;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -43,7 +43,7 @@ public class CaretakerQuerySpeechBubble extends Sprite {
     }
 
     private function makeText(_arg1:String):TextFieldDisplayConcrete {
-        var _local2:TextFieldDisplayConcrete = new TextFieldDisplayConcrete().setSize(16).setAutoSize(TextFieldAutoSize.CENTER).setPosition((this.WIDTH / 2), (this.HEIGHT / 2));
+        var _local2:TextFieldDisplayConcrete = new TextFieldDisplayConcrete().setSize(16).setAutoSize(TextFieldAutoSize.CENTER).setVerticalAlign(VerticalAlign.MIDDLE).setPosition((this.WIDTH / 2), (this.HEIGHT / 2));
         _local2.setStringBuilder(new LineBuilder().setParams(_arg1));
         return (_local2);
     }

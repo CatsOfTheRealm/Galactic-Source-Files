@@ -16,7 +16,6 @@ import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.account.core.Account;
 import kabam.rotmg.account.core.view.RegisterPromptDialog;
-import kabam.rotmg.arena.util.ArenaViewAssetFactory;
 import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
 import kabam.rotmg.fortune.components.FortuneModal;
@@ -79,7 +78,6 @@ public class FortuneGroundPanel extends Panel {
             addChild(this.infoButton_);
         }
         this.nameText_.setStringBuilder(new LineBuilder().setParams(_local7));
-        this.bitmap_.bitmapData = ArenaViewAssetFactory.returnHostBitmap(_arg2).bitmapData;
         addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
         addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         if (!FortuneModal.modalIsOpen) {

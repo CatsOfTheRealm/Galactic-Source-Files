@@ -14,12 +14,8 @@ import kabam.rotmg.pets.view.components.FameOrGoldBuyButtons;
 import kabam.rotmg.pets.view.components.FeedFuseArrow;
 import kabam.rotmg.pets.view.components.FusionStrength;
 import kabam.rotmg.pets.view.components.PetAbilityMeter;
-import kabam.rotmg.pets.view.components.PetFeeder;
-import kabam.rotmg.pets.view.components.PetFuser;
 import kabam.rotmg.pets.view.components.PetsButtonBar;
 import kabam.rotmg.pets.view.components.PopupWindowBackground;
-import kabam.rotmg.pets.view.components.slot.FoodFeedFuseSlot;
-import kabam.rotmg.pets.view.components.slot.PetFeedFuseSlot;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -91,17 +87,6 @@ public class PetsViewAssetFactory {
         return (_local3);
     }
 
-    public static function returnPetFeeder():PetFeeder {
-        var _local1:PetFeeder = new PetFeeder();
-        _local1.y = PetsConstants.PET_WINDOW_TOOL_Y_POS;
-        return (_local1);
-    }
-
-    public static function returnPetFuser():PetFuser {
-        var _local1:PetFuser = new PetFuser();
-        _local1.y = (PetsConstants.PET_WINDOW_TOOL_Y_POS + 50);
-        return (_local1);
-    }
 
     public static function returnPetFeederArrow():FeedFuseArrow {
         var _local1:FeedFuseArrow;
@@ -111,21 +96,6 @@ public class PetsViewAssetFactory {
         return (_local1);
     }
 
-    public static function returnPetFeederRightSlot():FoodFeedFuseSlot {
-        var _local1:FoodFeedFuseSlot = new FoodFeedFuseSlot();
-        _local1.x = (PetsConstants.PET_FEEDER_ARROW_X + 35);
-        _local1.hideOuterSlot(true);
-        return (_local1);
-    }
-
-    public static function returnPetFuserRightSlot():PetFeedFuseSlot {
-        var _local1:PetFeedFuseSlot;
-        _local1 = new PetFeedFuseSlot();
-        _local1.x = (PetsConstants.PET_FEEDER_ARROW_X + 35);
-        _local1.hideOuterSlot(true);
-        _local1.showFamily = true;
-        return (_local1);
-    }
 
     public static function returnPetSlotShape(_arg1:uint, _arg2:uint, _arg3:int, _arg4:Boolean, _arg5:Boolean, _arg6:int = 2):Shape {
         var _local7:Shape = new Shape();
@@ -172,7 +142,7 @@ public class PetsViewAssetFactory {
             _local4 = _local3.ScaleValue;
         }
         var _local5:BitmapData = ObjectLibrary.getRedrawnTextureFromType(_arg1, 80, true, true, _local4);
-        _local5 = BitmapUtil.cropToBitmapData(_local5, 4, 4, (_local5.width - 8), (_local5.height - 8),0xffffff);
+        _local5 = BitmapUtil.cropToBitmapData(_local5, 4, 4, (_local5.width - 8), (_local5.height - 8), 0xffffff);
         return (new Bitmap(_local5));
     }
 

@@ -26,7 +26,6 @@ import com.company.assembleegameclient.ui.panels.ArenaPortalPanel;
 import com.company.assembleegameclient.ui.panels.GuildRegisterPanel;
 import com.company.assembleegameclient.ui.panels.InteractPanel;
 import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
-import com.company.assembleegameclient.ui.panels.mediators.ArenaPortalPanelMediator;
 import com.company.assembleegameclient.ui.panels.mediators.GuildRegisterPanelMediator;
 import com.company.assembleegameclient.ui.panels.mediators.InteractPanelMediator;
 import com.company.assembleegameclient.ui.panels.mediators.ItemGridMediator;
@@ -68,7 +67,6 @@ import kabam.rotmg.game.view.TextPanel;
 import kabam.rotmg.game.view.TextPanelMediator;
 import kabam.rotmg.game.view.components.StatsTabHotKeyInputSignal;
 import kabam.rotmg.game.view.components.StatsUndockedSignal;
-import kabam.rotmg.news.services.GetInGameNewsTask;
 import kabam.rotmg.startup.control.StartupSequence;
 import kabam.rotmg.ui.commands.ChooseNameCommand;
 import kabam.rotmg.ui.commands.EnterGameCommand;
@@ -193,7 +191,6 @@ public class UIConfig implements IConfig {
         this.mediatorMap.map(NewChooseNameFrame).toMediator(NewChooseNameFrameMediator);
         this.mediatorMap.map(PlayerGroupMenu).toMediator(PlayerGroupMenuMediator);
         this.mediatorMap.map(LanguageOptionOverlay).toMediator(LanguageOptionOverlayMediator);
-        this.mediatorMap.map(ArenaPortalPanel).toMediator(ArenaPortalPanelMediator);
         this.mediatorMap.map(StatMetersView).toMediator(StatMetersMediator);
         this.mediatorMap.map(HUDView).toMediator(HUDMediator);
         this.mediatorMap.map(PotionSlotView).toMediator(PotionSlotMediator);
@@ -208,7 +205,6 @@ public class UIConfig implements IConfig {
         this.startup.addTask(LoadAccountTask);
         this.startup.addTask(GetCharListTask);
         this.startup.addTask(FetchPlayerCalendarTask);
-        this.startup.addTask(GetInGameNewsTask);
         this.startup.addSignal(ShowTitleUISignal, StartupSequence.LAST);
     }
 

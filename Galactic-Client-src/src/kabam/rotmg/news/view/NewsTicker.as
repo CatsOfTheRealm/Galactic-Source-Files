@@ -40,7 +40,7 @@ public class NewsTicker extends Sprite {
 
 
     public function activateNewScrollText(_arg1:String):void {
-        if (!this.visible) {
+        if (this.visible == false) {
             this.visible = true;
         }
         else {

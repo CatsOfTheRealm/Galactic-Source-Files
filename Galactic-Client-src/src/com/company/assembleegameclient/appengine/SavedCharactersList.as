@@ -8,7 +8,6 @@ import flash.events.Event;
 import kabam.rotmg.account.core.Account;
 import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import kabam.rotmg.promotions.model.BeginnersPackageModel;
 import kabam.rotmg.servers.api.LatLong;
 
 import org.swiftsuspenders.Injector;
@@ -68,7 +67,6 @@ public class SavedCharactersList extends Event {
         this.charsXML_ = new XML(this.origData_);
         var _local2:XML = XML(this.charsXML_.Account);
         this.parseUserData(_local2);
-        this.parseBeginnersPackageData(_local2);
         this.parseGuildData(_local2);
         this.parseCharacterData();
         this.parseCharacterStatsData();
@@ -159,20 +157,6 @@ public class SavedCharactersList extends Event {
         this.deadMusic_ = _arg1.DeadMusic;
     }
 
-    private function parseBeginnersPackageData(_arg1:XML):void {
-        var _local2:Number;
-        var _local3:BeginnersPackageModel;
-        if (_arg1.hasOwnProperty("BeginnerPackageTimeLeft")) {
-            _local2 = _arg1.BeginnerPackageTimeLeft;
-            _local3 = this.getBeginnerModel();
-            _local3.setBeginnersOfferSecondsLeft(_local2);
-        }
-    }
-
-    private function getBeginnerModel():BeginnersPackageModel {
-        var _local1:Injector = StaticInjectorContext.getInjector();
-        return (_local1.getInstance(BeginnersPackageModel));
-    }
 
     private function parseGuildData(_arg1:XML):void {
         var _local2:XML;
