@@ -10,3 +10,45 @@
    at wServer.networking.handlers.UseItemHandler.Handle(Player player, RealmTime time, UseItem packet) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\UseItemHandler.cs:line 22
    at wServer.networking.handlers.UseItemHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\UseItemHandler.cs:line 14
    at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+07:09:24,606 FATAL AppEngine  Server          StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s); to create a disconnected multiplexer, disable AbortOnConnectFail. Loading on PING
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImpl(Func`1 multiplexerFactory, TextWriter log) in C:\dev\backend\StackExchange.Redis\StackExchange.Redis\StackExchange\Redis\ConnectionMultiplexer.cs:line 827
+   at common.Database..ctor(String host, Int32 port, String password, Int32 dbIndex, Resources data) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\common\Database.cs:line 41
+   at server.Program.Main(String[] args) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\server\Program.cs:line 56
+07:09:31,755 FATAL c Conquest wServer         StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s); to create a disconnected multiplexer, disable AbortOnConnectFail. UnableToResolvePhysicalConnection on PING
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImpl(Func`1 multiplexerFactory, TextWriter log) in C:\dev\backend\StackExchange.Redis\StackExchange.Redis\StackExchange\Redis\ConnectionMultiplexer.cs:line 827
+   at common.Database..ctor(String host, Int32 port, String password, Int32 dbIndex, Resources data) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\common\Database.cs:line 41
+   at wServer.Program.Main(String[] args) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\Program.cs:line 52
+07:09:54,366 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+07:09:54,429 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+07:09:55,253 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+07:09:55,318 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+07:09:55,319 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+07:09:55,320 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+07:09:55,358 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+07:09:56,095 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+07:39:24,343 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+08:12:42,564 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+08:14:56,837 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.Activate(RealmTime time, Item item, Position target) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 671
+   at wServer.realm.entities.Player.UseItem(RealmTime time, Int32 objId, Int32 slot, Position pos) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 362
+   at wServer.networking.handlers.UseItemHandler.Handle(Player player, RealmTime time, UseItem packet) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\UseItemHandler.cs:line 22
+   at wServer.networking.handlers.UseItemHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\UseItemHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+08:15:16,427 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.Activate(RealmTime time, Item item, Position target) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 671
+   at wServer.realm.entities.Player.UseItem(RealmTime time, Int32 objId, Int32 slot, Position pos) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 362
+   at wServer.networking.handlers.UseItemHandler.Handle(Player player, RealmTime time, UseItem packet) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\UseItemHandler.cs:line 22
+   at wServer.networking.handlers.UseItemHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\UseItemHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+08:15:16,982 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.Activate(RealmTime time, Item item, Position target) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 671
+   at wServer.realm.entities.Player.UseItem(RealmTime time, Int32 objId, Int32 slot, Position pos) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.UseItem.cs:line 362
+   at wServer.networking.handlers.UseItemHandler.Handle(Player player, RealmTime time, UseItem packet) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\UseItemHandler.cs:line 22
+   at wServer.networking.handlers.UseItemHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\UseItemHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140

@@ -92,9 +92,9 @@ public class EditorConfig implements IConfig {
         this.mediatorMap.map(DialogsView).toMediator(DialogsMediator);
         this.mediatorMap.map(ResultsBox).toMediator(ResultsBoxMediator);
         this.mediatorMap.map(TermsView).toMediator(TermsMediator);
-        this.mediatorMap.map(TextureView).toMediator(TextureMediator);
-        this.mediatorMap.map(SaveTextureDialog).toMediator(SaveTextureMediator);
-        this.mediatorMap.map(LoadTextureDialog).toMediator(LoadTextureMediator);
+        //this.mediatorMap.map(TextureView).toMediator(TextureMediator);
+        //this.mediatorMap.map(SaveTextureDialog).toMediator(SaveTextureMediator);
+        //this.mediatorMap.map(LoadTextureDialog).toMediator(LoadTextureMediator);
     }
 
     private function init():void {

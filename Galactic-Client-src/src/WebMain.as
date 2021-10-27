@@ -52,7 +52,8 @@ import robotlegs.bender.bundles.mvcs.MVCSBundle;
 import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
 import robotlegs.bender.framework.api.IContext;
 import robotlegs.bender.framework.api.LogLevel;
-
+import com.demonsters.debugger.MonsterDebugger;
+import flash.display.Sprite;
 [SWF(frameRate="120", backgroundColor="#000000", width="800", height="600")]
 public class WebMain extends Sprite {
 
@@ -64,6 +65,8 @@ public class WebMain extends Sprite {
     protected var context:IContext;
 
     public function WebMain() {
+        MonsterDebugger.initialize(this);
+        MonsterDebugger.trace(this, "Hello World!");
             try {
                 if (stage) {
                     stage.addEventListener("resize", this.onStageResize);

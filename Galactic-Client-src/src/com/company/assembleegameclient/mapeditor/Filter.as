@@ -33,12 +33,12 @@ public class Filter extends Sprite {
         this._search.addEventListener(FocusEvent.FOCUS_OUT, this.onFocusOut);
         addChild(this._search);
         this._searchPrompt = new BaseSimpleText(14, 0x939393, false, Chooser.WIDTH);
-        this._searchPrompt.htmlText = '<p align="center">search</p>';
+        this._searchPrompt.htmlText = '<p align="center"></p>';
         this._searchPrompt.y = (this.curY + GAP);
         addChild(this._searchPrompt);
         this.curY = (this.curY + (this._search.height + GAP));
         this._filterTypeDropdown = new DropDown(ObjectLibrary.TILE_FILTER_LIST, 80, 20, "Filter By");
-        this._filterTypeDropdown.y = this.curY;
+        this._filterTypeDropdown.y = (0 + GAP);
         this._filterTypeDropdown.addEventListener(Event.CHANGE, this.onFilterTypeChange);
         addChild(this._filterTypeDropdown);
         this._dungeonDropDown = new DropDown(GroupDivider.getDungeonsLabel(), Chooser.WIDTH, 26);

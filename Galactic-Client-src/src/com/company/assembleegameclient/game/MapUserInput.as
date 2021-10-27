@@ -83,7 +83,7 @@ public class MapUserInput {
         this.gs_.addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         var _local2:Injector = StaticInjectorContext.getInjector();
         this.giftStatusUpdateSignal = _local2.getInstance(GiftStatusUpdateSignal);
-        this.reskinPetFlowStart = _local2.getInstance(ReskinPetFlowStartSignal);
+        //this.reskinPetFlowStart = _local2.getInstance(ReskinPetFlowStartSignal);
         this.addTextLine = _local2.getInstance(AddTextLineSignal);
         this.setTextBoxVisibility = _local2.getInstance(SetTextBoxVisibilitySignal);
         this.miniMapZoom = _local2.getInstance(MiniMapZoomSignal);
@@ -175,14 +175,14 @@ public class MapUserInput {
         if (!this.enablePlayerInput_) {
             return;
         }
-        if (this.mouseDown_ != true){
+        if (!this.mouseDown_){
             this.mouseDown_ = true;
         }
     }
 
     public function onMouseUp(_arg1:MouseEvent):void {
         var _local2:Player = this.gs_.map.player_;
-        if (this.mouseDown_ != false){
+        if (this.mouseDown_ == true){
             this.mouseDown_ = false;
         }
         if (_local2 == null) {
@@ -210,7 +210,7 @@ public class MapUserInput {
     {
         var _loc2_:Number = NaN;
         var _loc3_:Player = null;
-        doneAction(this.gs_,Tutorial.UPDATE_ACTION);
+        //doneAction(this.gs_,Tutorial.UPDATE_ACTION);
         if(this.enablePlayerInput_ && (this.mouseDown_ || this.autofire_))
         {
             _loc2_ = Math.atan2(this.gs_.map.mouseY,this.gs_.map.mouseX);

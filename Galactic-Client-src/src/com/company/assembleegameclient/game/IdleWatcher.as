@@ -22,13 +22,6 @@ public class IdleWatcher {
         this.addTextLine = StaticInjectorContext.getInjector().getInstance(AddTextLineSignal);
     }
 
-    public function start(gs:GameSprite):void {
-        this.gs_ = gs;
-        this.idleTime_ = 0;
-        this.gs_.stage.addEventListener(MouseEvent.MOUSE_MOVE, this.onMouseMove);
-        this.gs_.stage.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-    }
-
     public function update(elapsedMS:int):Boolean {
         var idleTime:int = this.idleTime_;
         this.idleTime_ = this.idleTime_ + elapsedMS;
@@ -61,20 +54,6 @@ public class IdleWatcher {
         msg.name = Parameters.ERROR_CHAT_NAME;
         msg.text = "You have been idle for " + KICK_MINUTES + " minutes, disconnecting.";
         return msg;
-    }
-
-    public function stop():void {
-        this.gs_.stage.removeEventListener(MouseEvent.MOUSE_MOVE, this.onMouseMove);
-        this.gs_.stage.removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-        this.gs_ = null;
-    }
-
-    private function onMouseMove(_arg1:MouseEvent):void {
-        this.idleTime_ = 0;
-    }
-
-    private function onKeyDown(_arg1:KeyboardEvent):void {
-        this.idleTime_ = 0;
     }
 
 

@@ -71,7 +71,6 @@ public class GameSprite extends AGameSprite {
 
     public var chatBox_:Chat;
     public var isNexus_:Boolean = false;
-    public var idleWatcher_:IdleWatcher;
     public var rankText_:RankText;
     public var guildText_:GuildText;
     public var creditDisplay_:CreditDisplay;
@@ -107,7 +106,6 @@ public class GameSprite extends AGameSprite {
         this.chatBox_.list.addEventListener(MouseEvent.MOUSE_DOWN, this.onChatDown);
         this.chatBox_.list.addEventListener(MouseEvent.MOUSE_UP, this.onChatUp);
         addChild(this.chatBox_);
-        this.idleWatcher_ = new IdleWatcher();
     }
 
 
@@ -371,7 +369,6 @@ public class GameSprite extends AGameSprite {
                 this.gsc_.connect();
             else
                 this.gsc_.sendHello();
-            this.idleWatcher_.start(this);
             lastUpdate_ = getTimer();
             stage.addEventListener("MONEY_CHANGED", this.onMoneyChanged);
             stage.addEventListener("enterFrame", this.onEnterFrame);
@@ -394,7 +391,6 @@ public class GameSprite extends AGameSprite {
         if (this.isGameStarted) {
             this.isGameStarted = false;
             Renderer.inGame = false;
-            this.idleWatcher_.stop();
             if (this.serverDisconnect)
                 this.gsc_.disconnect();
             NewsTicker2.dispose();
@@ -426,10 +422,6 @@ public class GameSprite extends AGameSprite {
         stage.dispatchEvent(new Event(Event.RESIZE));
         var _local2:int = getTimer();
         var _local3:int = (_local2 - lastUpdate_);
-        if (this.idleWatcher_.update(_local3)) {
-            closed.dispatch();
-            return;
-        }
         LoopedProcess.runProcesses(_local2);
         map.update(_local2, _local3);
         camera_.update(_local3);

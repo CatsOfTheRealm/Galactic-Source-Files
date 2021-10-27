@@ -25,7 +25,6 @@ public class ColorPicker extends Sprite {
     private var paletteBoxes_:Vector.<PaletteBox>;
     private var selected_:PaletteBox = null;
     private var paletteSelect_:Bitmap;
-    private var gradientPalette_:GradientPalette;
     private var HSBD_:BitmapData;
     private var HSBox_:Sprite;
     private var HSSelect_:Bitmap;
@@ -61,11 +60,6 @@ public class ColorPicker extends Sprite {
         }
         this.paletteSelect_ = new paletteselectEmbed_();
         addChild(this.paletteSelect_);
-        this.gradientPalette_ = new GradientPalette();
-        this.gradientPalette_.x = 172;
-        this.gradientPalette_.y = 2;
-        this.gradientPalette_.addEventListener(ColorEvent.COLOR_EVENT, this.onColorEvent);
-        addChild(this.gradientPalette_);
         this.HSBD_ = new BitmapDataSpy(360, 100, false, 0xFF0000);
         _local_1 = new Bitmap(this.HSBD_);
         this.HSBox_ = new Sprite();

@@ -49,7 +49,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Flash Remote Debug.Remote debug (Cosmic)">
+  <component name="RunManager" selected="Flash App.Cosmic (loe-v4-client)">
     <configuration name="Cosmic (loe-v4-client)" type="FlashRunConfigurationType" nameIsGenerated="true">
       <option name="BCName" value="Cosmic" />
       <option name="IOSSimulatorDevice" value="" />
@@ -130,7 +130,8 @@
       <workItem from="1632615586592" duration="719000" />
       <workItem from="1632616408371" duration="1293000" />
       <workItem from="1632689872102" duration="1266000" />
-      <workItem from="1635297559611" duration="12024000" />
+      <workItem from="1635297559611" duration="12571000" />
+      <workItem from="1635336420927" duration="5441000" />
     </task>
     <servers />
   </component>
