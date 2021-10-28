@@ -52,3 +52,51 @@
    at wServer.networking.handlers.UseItemHandler.Handle(Player player, RealmTime time, UseItem packet) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\UseItemHandler.cs:line 22
    at wServer.networking.handlers.UseItemHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\UseItemHandler.cs:line 14
    at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+12:59:11,239 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+12:59:11,387 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+12:59:12,904 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+12:59:13,120 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+12:59:13,120 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+12:59:13,120 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+12:59:13,183 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+12:59:14,608 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+13:06:57,586 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+13:06:57,687 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+13:06:59,105 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+13:06:59,227 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+13:06:59,227 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+13:06:59,227 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+13:06:59,305 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+13:07:00,577 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+13:14:28,995 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+13:14:29,118 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+13:14:30,856 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+13:14:31,037 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+13:14:31,045 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+13:14:31,070 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+13:14:31,157 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+13:14:32,993 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+13:20:54,087 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+13:20:54,219 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+13:20:55,707 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+13:20:55,807 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+13:20:55,807 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+13:20:55,822 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+13:20:55,891 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+13:20:57,310 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+13:47:42,861 ERROR c Conquest Client          Error when handling packet '{ClassType: 39316, SkinType: 65505, ID: CREATE, Owner: }'...
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at common.Database.CreateCharacter(XmlData dat, DbAccount acc, UInt16 type, UInt16 skinType, DbChar& character) in C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\common\Database.cs:line 1029
+   at wServer.networking.handlers.CreateHandler.Handle(Client client, Create packet) in C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\CreateHandler.cs:line 27
+   at wServer.networking.handlers.CreateHandler.HandlePacket(Client client, Create packet) in C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\CreateHandler.cs:line 18
+   at wServer.networking.PacketHandlerBase`1.Handle(Client client, IncomingMessage packet) in C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\IPacketHandler.cs:line 27
+   at wServer.networking.Client.ProcessPacket(Packet pkt) in C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\networking\Client.cs:line 166
+13:51:35,907 ERROR c Conquest World           Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.<GetRemovedStatics>d__233.MoveNext() in C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.Update.cs:line 290
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at wServer.realm.entities.Player.SendUpdate(RealmTime time) in C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.Update.cs:line 179
+   at wServer.realm.entities.Player.Tick(RealmTime time) in C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 846
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\realm\worlds\World.cs:line 674

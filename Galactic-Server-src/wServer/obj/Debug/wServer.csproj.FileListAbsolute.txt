@@ -1874,3 +1874,4 @@ C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\obj\Deb
 C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\obj\Debug\wServer.csproj.CopyComplete
 C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\obj\Debug\wServer.exe
 C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\obj\Debug\wServer.pdb
+C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\wServer\obj\Debug\wServer.csproj.SuggestedBindingRedirects.cache

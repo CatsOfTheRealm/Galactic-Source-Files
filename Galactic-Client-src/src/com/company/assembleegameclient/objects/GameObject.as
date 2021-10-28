@@ -1326,7 +1326,7 @@ import kabam.rotmg.messaging.impl.incoming.Damage;
             {
                 this.hpbarBackFill_ = new GraphicsSolidFill();
                 this.hpbarBackPath_ = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>());
-                this.hpbarFill_ = new GraphicsSolidFill(0x10FF00);
+                this.hpbarFill_ = new GraphicsSolidFill(0x006400);
                 this.hpbarPath_ = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>());
             }
             var maxHp:Number = this.maxHP_;
@@ -1339,14 +1339,22 @@ import kabam.rotmg.messaging.impl.incoming.Damage;
             if (this.hp_ <= maxHp)
             {
                 var hp:Number = (maxHp - this.hp_) / maxHp;
-                this.hpbarBackFill_.color = MoreColorUtil.lerpColor(0x545454, 0xFF0000, Math.abs(Math.sin(time / 300)) * hp);
+                this.hpbarBackFill_.color = MoreColorUtil.lerpColor(0x00FF00, 0xFF0000, Math.abs(Math.sin(time / 300)) * hp);
             }
             else
             {
-                this.hpbarBackFill_.color = 0x545454;
+                this.hpbarBackFill_.color = 0x00FF00;
             }
             this.hpbarBackPath_.data.length = 0;
-            this.hpbarBackPath_.data.push(posS_[0] - 20, posS_[1] + 4, posS_[0] + 20, posS_[1] + 4, posS_[0] + 20, posS_[1] + 10, posS_[0] - 20, posS_[1] + 10);
+            this.hpbarBackPath_.data.push(
+                    posS_[0] - 22,
+                    posS_[1] + 4,
+                    posS_[0] + 20,//right,top
+                    posS_[1] + 6,
+                    posS_[0] + 22,
+                    posS_[1] + 12,
+                    posS_[0] - 22,
+                    posS_[1] + 12);
             graphicsData.push(this.hpbarBackFill_);
             graphicsData.push(this.hpbarBackPath_);
             graphicsData.push(GraphicsUtil.END_FILL);
@@ -1354,7 +1362,11 @@ import kabam.rotmg.messaging.impl.incoming.Damage;
             {
                 var hp:Number = ((this.hp_ / this.maxHP_) * 2) * 20;
                 this.hpbarPath_.data.length = 0;
-                this.hpbarPath_.data.push(posS_[0] - 20, posS_[1] + 4, posS_[0] - 20 + hp, posS_[1] + 4, posS_[0] - 20 + hp, posS_[1] + 10, posS_[0] - 20, posS_[1] + 10);
+                this.hpbarPath_.data.push(
+                        posS_[0] - 20, posS_[1] + 4,
+                        posS_[0] - 20 + hp, posS_[1] + 4,
+                        posS_[0] - 20 + hp, posS_[1] + 10,
+                        posS_[0] - 20, posS_[1] + 10);
                 graphicsData.push(this.hpbarFill_);
                 graphicsData.push(this.hpbarPath_);
                 graphicsData.push(GraphicsUtil.END_FILL);

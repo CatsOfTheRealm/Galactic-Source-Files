@@ -76,18 +76,20 @@ namespace common
 
         public static readonly string[] GuestNames =
         {
-            "Yasuo", "Yone", "Teemo", "Shen",
-            "Kayle", "PeanutHead"
+            "Guest #"
         };
 
         public DbAccount CreateGuestAccount(string uuid)
         {
             var newAccounts = _resources.Settings.Accounts;
 
+            var info = new DbLoginInfo(_db, uuid);
+            var acc = new DbAccount(_db, info.AccountId);
+
             var acnt = new DbAccount(_db, 0)
             {
                 UUID = uuid,
-                Name = GuestNames[(uint) uuid.GetHashCode()%GuestNames.Length],
+                Name = GuestNames[(uint) uuid.GetHashCode()%GuestNames.Length] + acc.AccountId,
                 Admin = false,
                 NameChosen = false,
                 Verified = false,
@@ -544,18 +546,18 @@ namespace common
 
             using (TimedLock.Lock(guild.MemberLock))
             {
-                int guildSize = 50;
+                int guildSize = 10;
                 switch(guild.Level)
                 {
                     case (0):
                     case (1):
-                        guildSize = 50;
+                        guildSize = 20;
                         break;
                     case (2):
-                        guildSize = 60;
+                        guildSize = 30;
                         break;
                     case (3):
-                        guildSize = 75;
+                        guildSize = 50;
                         break;
                 }
 
