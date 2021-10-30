@@ -114,7 +114,7 @@ public class GameSpriteMediator extends Mediator {
     }
 
     public function onSetWorldInteraction(_arg1:Boolean):void {
-        this.view.mui_.setEnablePlayerInput(_arg1);
+
     }
 
     private function onClosed():void {

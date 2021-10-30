@@ -5,7 +5,6 @@ import com.company.assembleegameclient.map.RegionLibrary;
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.particles.ParticleLibrary;
 import com.company.assembleegameclient.parameters.Parameters;
-import com.company.assembleegameclient.sound.SFX;
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.AssetLibrary;
@@ -14,12 +13,6 @@ import flash.utils.ByteArray;
 import flash.utils.getQualifiedClassName;
 
 import kabam.rotmg.assets.EmbeddedAssets;
-import kabam.rotmg.assets.EmbeddedAssets_Duelist16x16_;
-import kabam.rotmg.assets.EmbeddedAssets_Duelist8x8_;
-import kabam.rotmg.assets.EmbeddedAssets_Duelist8x8_;
-import kabam.rotmg.assets.EmbeddedAssets_SilentWilderness16x16EnemiesEmbed_;
-import kabam.rotmg.assets.EmbeddedAssets_SilentWilderness16x16ObjectsEmbed_;
-import kabam.rotmg.assets.EmbeddedAssets_lofiparticlesMusicNotesEmbed_;
 import kabam.rotmg.assets.EmbeddedData;
 import kabam.rotmg.emotes.Emotes;
 
@@ -40,7 +33,6 @@ public class AssetLoader {
         Parameters.load();
         Options.refreshCursor();
         Emotes.load();
-        SFX.load();
     }
 
     private function addImages():void {

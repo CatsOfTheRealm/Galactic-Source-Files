@@ -13,7 +13,6 @@ public class MarketPanel extends ButtonPanel {
 
     override protected function onButtonClick(event:MouseEvent) : void
     {
-        this.gs_.mui_.setEnablePlayerInput(false);
         this.gs_.addChild(new MarketMainTab(this.gs_));
     }
 }

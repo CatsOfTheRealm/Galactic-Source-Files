@@ -20,6 +20,7 @@ public class ProjectileProperties {
     public var particleTrailIntensity_:int = -1;
     public var particleTrailLifetimeMS:int = -1;
     public var particleTrailColor_:int = 0xFF00FF;
+    public var projglowcolor:int;
     public var wavy_:Boolean;
     public var parametric_:Boolean;
     public var boomerang_:Boolean;
@@ -66,6 +67,10 @@ public class ProjectileProperties {
         }
         if (_arg1.ParticleTrail.hasOwnProperty("@lifetimeMS")) {
             this.particleTrailLifetimeMS = Number(_arg1.ParticleTrail.@lifetimeMS);
+        }
+        this.projglowcolor = this.projglowcolor ? Number(_arg1.GlowColor) : Number(0x000000);
+        if (this.projglowcolor == 0) {
+            this.projglowcolor = 0x000000;
         }
         this.particleTrailColor_ = ((this.particleTrail_) ? Number(_arg1.ParticleTrail) : Number(0xFF00FF));
         if (this.particleTrailColor_ == 0) {

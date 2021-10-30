@@ -1,7 +1,7 @@
 ﻿package com.company.assembleegameclient.map.mapoverlay {
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.objects.GameObject;
-
+import com.company.ui.BaseSimpleText;
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.Sprite;
@@ -15,7 +15,6 @@ import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 public class CharacterStatusText extends Sprite implements IMapOverlayElement {
 
     public const MAX_DRIFT:int = 40;
-
     public var go_:GameObject;
     public var offset_:Point;
     public var color_:uint;
@@ -24,16 +23,34 @@ public class CharacterStatusText extends Sprite implements IMapOverlayElement {
     private var startTime_:int = 0;
     private var textDisplay:TextFieldDisplayConcrete;
 
-    public function CharacterStatusText(_arg1:GameObject, _arg2:uint, _arg3:int, _arg4:int = 0) {
-        this.go_ = _arg1;
-        this.offset_ = new Point(0, (((-(_arg1.texture_.height) * (_arg1.size_ / 100)) * 5) - 20));
-        this.color_ = _arg2;
-        this.lifetime_ = _arg3;
-        this.offsetTime_ = _arg4;
-        this.textDisplay = new TextFieldDisplayConcrete().setSize(24).setColor(_arg2).setBold(true);
-        this.textDisplay.filters = [new GlowFilter(0, 1, 4, 4, 2, 1)];
-        addChild(this.textDisplay);
-        visible = false;
+    public function CharacterStatusText(_arg1:GameObject, _arg2:uint, _arg3:int, _arg4:int = 0, text:String = "None") {
+        if( text == "None"){
+            this.go_ = _arg1;
+            this.offset_ = new Point(0, (((-(_arg1.texture_.height) * (_arg1.size_ / 100)) * 5) - 20));
+            this.color_ = _arg2;
+            this.lifetime_ = _arg3;
+            this.offsetTime_ = _arg4;
+            this.textDisplay = new TextFieldDisplayConcrete().setSize(24).setColor(_arg2).setBold(true);
+            this.textDisplay.filters = [new GlowFilter(0, 1, 4, 4, 2, 1)];
+            addChild(this.textDisplay);
+            visible = false;
+        }
+        else{
+            this.go_ = _arg1;
+            this.offset_ = new Point(0,-_arg1.texture_.height * (_arg1.size_ / 100) * 5 - 20);
+            this.color_ = _arg2;
+            this.lifetime_ = _arg3;
+            this.offsetTime_ =  _arg4;
+            var t:BaseSimpleText = new BaseSimpleText(24, color_,false,0,0);
+            t.setBold(true);
+            t.text = text;
+            t.updateMetrics();
+            t.filters = [new GlowFilter(0,1,4,4,2,1)];
+            t.x = -t.width / 2;
+            t.y = -t.height / 2;
+            addChild(t);
+            visible = false;
+        }
     }
 
     public function draw(_arg1:Camera, _arg2:int):Boolean {

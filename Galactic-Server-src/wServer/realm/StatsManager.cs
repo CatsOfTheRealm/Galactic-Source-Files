@@ -95,7 +95,7 @@ namespace wServer.realm
                 def *= (int)(Diminished);
             if (host.HasConditionEffect(ConditionEffects.ArmorBroken))
                 def = 0;
-          
+
             float limit = dmg * 0.25f;//0.15f;
 
             float ret;
@@ -104,7 +104,7 @@ namespace wServer.realm
 
             if (host.HasConditionEffect(ConditionEffects.Curse))
                 ret = (int)(ret * 1.20);
-          
+
             if (host.HasConditionEffect(ConditionEffects.Invulnerable) ||
                 host.HasConditionEffect(ConditionEffects.Invincible))
                 ret = 0;
@@ -129,7 +129,7 @@ namespace wServer.realm
 
             if (Owner.HasConditionEffect(ConditionEffects.ArmorBroken) || noDef)
                 def = 0;
-        
+
             float limit = dmg * 0.25f;//0.15f;
 
             float ret;
@@ -141,7 +141,7 @@ namespace wServer.realm
             if (Owner.HasConditionEffect(ConditionEffects.Curse))
                 ret = (int)(ret * 1.20);
             if (Owner.HasConditionEffect(ConditionEffects.Invulnerable) ||
-                Owner.HasConditionEffect(ConditionEffects.Invincible) || 
+                Owner.HasConditionEffect(ConditionEffects.Invincible) ||
                 Owner.HasConditionEffect(ConditionEffects.NoDamage))//NoDamage
                 ret = 0;
             return ret;
@@ -167,37 +167,28 @@ namespace wServer.realm
                 baseFreq = baseFreq * 0.85f;
 
             return  (1 / baseFreq) * (1 / Owner.Inventory[0].RateOfFire);
-        } 
+        }
 
         public float CriticalModifier()
         {
-            var returnamount = 0;
-            var rand2Chance = Owner.Stats[7]; //Wisdomi
-            if (rand2Chance >= 100) //Wis above30 | scale
-            {
-                returnamount = (Owner.Stats[7] / 100);
-            }
-
-            var randChance = Owner.Client.Random.NextIntRange(0, 250); //Raw crit chance
+            var randChance = Owner.Client.Random.NextIntRange(0, 100); //Raw crit chance
             var erandChance = Owner.Client.Random.NextIntRange(0, 100); //Raw Spirited crit chance
-            var ret = 1.0f + returnamount; //raw crit Multiplier
+            var ret = 1.0f; //raw crit Multiplier
 
             var critChance = CritChance(); //base crit chance stat
             var mult = CritMultiplier(); //base crit multiplier stat
 
             if (randChance < critChance)
-                ret *= mult;
+                ret += mult;
 
             if (Owner.EquipStatus.ContainsKey(EquippedStatus.Critical)) //If critical passive is on
             {
                 if (erandChance < 1)
-                    ret *= 5.0f;
+                    ret += 5.0f;
             }
 
             return ret;
-            
         }
-
 
         public int CritChance()
         {
@@ -208,7 +199,7 @@ namespace wServer.realm
         }
         public float CritMultiplier()
         {
-            float ret = (100 + Owner.Stats[11]) / 100f;
+            float ret = Owner.Stats[11] / 100f;
             return ret;
         }
 

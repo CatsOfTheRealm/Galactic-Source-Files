@@ -1,0 +1,65 @@
+01:23:27,336 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+01:23:27,399 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+01:23:28,239 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+01:23:28,302 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+01:23:28,303 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+01:23:28,305 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+01:23:28,338 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+01:23:29,155 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+07:52:53,091 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+07:52:53,165 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+07:52:54,077 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+07:52:54,147 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+07:52:54,148 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+07:52:54,149 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+07:52:54,184 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+07:52:55,006 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+12:22:56,357 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+12:23:03,632 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+12:23:03,689 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+12:23:04,434 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+12:23:04,494 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+12:23:04,495 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+12:23:04,496 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+12:23:04,528 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+12:23:05,172 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+15:35:44,408 ERROR c Conquest World           Object reference not set to an instance of an object.
+   at wServer.realm.entities.Player.SaveToCharacter() in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 367
+   at wServer.realm.entities.Player.UpdateOnPing() in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.KeepAlive.cs:line 130
+   at wServer.realm.entities.Player.KeepAlive(RealmTime time) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.KeepAlive.cs:line 97
+   at wServer.realm.entities.Player.Tick(RealmTime time) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\entities\player\Player.cs:line 802
+   at wServer.realm.worlds.World.Tick(RealmTime time) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\worlds\World.cs:line 674
+15:54:38,882 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+15:54:38,950 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+15:54:39,854 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+15:54:39,920 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+15:54:39,922 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+15:54:39,923 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+15:54:39,963 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+15:54:40,735 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+19:50:48,854 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+20:24:52,976 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+20:24:53,034 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+20:24:54,192 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+20:24:54,300 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+20:24:54,302 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+20:24:54,303 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+20:24:54,342 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+20:24:55,373 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+21:38:49,829 ERROR c Conquest BehaviorDb      Failed to add behavior: Sadala. Xml data not found.
+21:38:49,891 ERROR c Conquest BehaviorDb      Failed to add behavior: MW Fountain Spirit. Xml data not found.
+21:38:50,756 ERROR c Conquest BehaviorDb      Failed to add behavior: OM Loot Chest. Xml data not found.
+21:38:50,822 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Protector1. Xml data not found.
+21:38:50,825 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Wilderness Swordsmen1. Xml data not found.
+21:38:50,826 ERROR c Conquest BehaviorDb      Failed to add behavior: 1Flying Bug1. Xml data not found.
+21:38:50,862 ERROR c Conquest BehaviorDb      Failed to add behavior: Jungle Event Loot Chest. Xml data not found.
+21:38:51,655 ERROR c Conquest BehaviorDb      Failed to add behavior: iiBeer God. Xml data not found.
+22:34:07,151 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.InvSwapHandler.<>c__DisplayClass4_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\InvSwapHandler.cs:line 25
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140

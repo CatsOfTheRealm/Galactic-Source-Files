@@ -80,7 +80,6 @@ public class MarketMainTab extends Sprite {
         this.views[MarketUtil.SELL_TAB].Dispose();
         this.views.length = 0;
         this._gameSprite.removeChild(this);
-        this._gameSprite.mui_.setEnablePlayerInput(true);
     }
 
     private function onMenuChanged(menu:String):void {

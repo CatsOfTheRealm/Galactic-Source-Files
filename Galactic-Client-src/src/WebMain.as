@@ -113,6 +113,7 @@ public class WebMain extends Sprite {
             Parameters.data_.FPS = "120";
         }
         Parameters.data_.GPURender = false;
+        Parameters.HWAcceleration = Parameters.data_.HWAcceleration;
         stage.frameRate = 120;
     }
 
@@ -176,7 +177,6 @@ public class WebMain extends Sprite {
                 .configure(ToolForgeMediatorConfiguration)
                 .configure(this);
         this.context.logLevel = LogLevel.DEBUG;
-        //stage.addEventListener("keyUp", this.cancelEsc);
     }
 
 

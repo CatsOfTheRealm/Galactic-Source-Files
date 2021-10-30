@@ -31,3 +31,5 @@ C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\ob
 C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.exe
 C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.pdb
 C:\Users\hewas\Documents\GitHub\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.csproj.SuggestedBindingRedirects.cache
+C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.csproj.AssemblyReference.cache
+C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\RemoteLogger\obj\Debug\RemoteLogger.exe.config

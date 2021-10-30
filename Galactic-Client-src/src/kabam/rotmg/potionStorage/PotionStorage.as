@@ -347,7 +347,6 @@ public class PotionStorage extends Sprite
     private function onClose(e:MouseEvent):void {
         /* remove UI */
         this.parent.removeChild(this);
-        this.gameSprite_.mui_.setEnablePlayerInput(true);
         this.closeButton_.removeEventListener(MouseEvent.CLICK, this.onClose);
     }
 }

@@ -51,7 +51,8 @@ public class Parameters {
 
     public static var root:DisplayObject;
     public static var data_:Object = null;
-    public static var GPURenderError:Boolean = false; //todo
+    public static var GPURenderError:Boolean = false; //todoHWAcceleration
+    public static var HWAcceleration:Boolean = true;
     public static var blendType_:int = 1;
     public static var projColorType_:int = 0;
     public static var drawProj_:Boolean = true;
@@ -59,10 +60,8 @@ public class Parameters {
     public static var screenShotSlimMode_:Boolean = false;
     public static var sendLogin_:Boolean = true;
     private static var savedOptions_:SharedObject = null;
-    public static var toggleHPBar_:Boolean = false;
     public static var toggleWalking:Boolean = false;
     private static var keyNames_:Dictionary = new Dictionary();
-
 
     public static function load():void {
         try {
@@ -72,6 +71,7 @@ public class Parameters {
         catch (error:Error) {
             data_ = new Object();
         }
+        Parameters.HWAcceleration = Parameters.data_.HWAcceleration;
         setDefaults();
         save();
     }
@@ -164,7 +164,6 @@ public class Parameters {
         setDefault("playerObjectType", 782);
         setDefaultKey("walkKey",16);
         setDefault("playMusic", true);
-        setDefault("playSFX", true);
         setDefault("playPewPew", true);
         setDefault("centerOnPlayer", true);
         setDefault("preferredServer", null);
@@ -232,19 +231,16 @@ public class Parameters {
         setDefault("hideLockList", false);
         setDefault("itemColorText", true);
         setDefault("smartProjectiles",true);
-        setDefault("lootPreview", true);
+        setDefault("screenShotMode_",false);
+        setDefault("lootPreview", true);//screenShotMode_
         if (((data_.hasOwnProperty("playMusic")) && data_.playMusic)) {
             setDefault("musicVolume", 0.25);
         }
         else {
             setDefault("musicVolume", 0);
         }
-        if (((data_.hasOwnProperty("playSFX")) && data_.playMusic)) {
-            setDefault("SFXVolume", 0.25);
-        }
-        else {
-            setDefault("SFXVolume", 0);
-        }
+        setDefault("playSFX",true);//HWAcceleration
+        setDefault("HWAcceleration",true);
         setDefault("HPBar", true);
         setDefault("FPS", "60");
         setDefault("FPSMode", false);

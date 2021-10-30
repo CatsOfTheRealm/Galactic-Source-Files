@@ -40,31 +40,25 @@ import WeatherStuff.AtmosphereHandler;
 import com.gskinner.motion.GTween;
 import WeatherStuff.AtmosphereHandler;
 
+import org.osflash.signals.Signal;
+
 
 public class Map extends AbstractMap {
+
+    private static const VISIBLE_SORT_FIELDS:Array = ["sortVal_","objectId_"];
+    private static const VISIBLE_SORT_PARAMS:Array = [Array.NUMERIC,Array.NUMERIC];
+    protected static const BLIND_FILTER:ColorMatrixFilter = new ColorMatrixFilter([0.05,0.05,0.05,0,0,0.05,0.05,0.05,0,0,0.05,0.05,0.05,0,0,0.05,0.05,0.05,1,0]);
+    protected static var BREATH_CT:ColorTransform = new ColorTransform(255 / 255,55 / 255,0 / 255,0);
 
     public static const CLOTH_BAZAAR:String = "Cloth Bazaar";
     public static const NEXUS:String = "Nexus";
     public static const DAILY_QUEST_ROOM:String = "Daily Quest Room";
-    public static const DAILY_LOGIN_ROOM:String = "Daily Login Room";
-    public static const PET_YARD_1:String = "Pet Yard";
-    public static const PET_YARD_2:String = "Pet Yard 2";
-    public static const PET_YARD_3:String = "Pet Yard 3";
-    public static const PET_YARD_4:String = "Pet Yard 4";
-    public static const PET_YARD_5:String = "Pet Yard 5";
     public static const GUILD_HALL:String = "Guild Hall";
     public static const NEXUS_EXPLANATION:String = "Nexus_Explanation";
     public static const VAULT:String = "Vault";
-    private static const VISIBLE_SORT_FIELDS:Array = ["sortVal_", "objectId_"];
-    private static const VISIBLE_SORT_PARAMS:Array = [Array.NUMERIC, Array.NUMERIC];
-    protected static const BLIND_FILTER:ColorMatrixFilter = new ColorMatrixFilter([0.05, 0.05, 0.05, 0, 0, 0.05, 0.05, 0.05, 0, 0, 0.05, 0.05, 0.05, 0, 0, 0.05, 0.05, 0.05, 1, 0]);
-
     public static var forceSoftwareRender:Boolean = false;
-    protected static var BREATH_CT:ColorTransform = new ColorTransform((0xFF / 0xFF), (55 / 0xFF), (0 / 0xFF), 0);
     public static var texture:BitmapData;
 
-    public var ifDrawEffectFlag:Boolean = true;
-    private var loopMonitor:RollingMeanLoopMonitor;
     private var inUpdate_:Boolean = false;
     private var objsToAdd_:Vector.<BasicObject>;
     private var idsToRemove_:Vector.<int>;
@@ -79,12 +73,13 @@ public class Map extends AbstractMap {
     public var visibleSquares_:Vector.<Square>;
     public var topSquares_:Vector.<Square>;
 
-    public function Map(_arg1:AGameSprite) {
+    public function Map(gs:AGameSprite) {
+
         this.objsToAdd_ = new Vector.<BasicObject>();
-        this.idsToRemove_ = new Vector.<int>();
         this.forceSoftwareMap = new Dictionary();
         this.darkness = new EmbeddedAssets.DarknessBackground();
-        atmosphere_ = new AtmosphereHandler(this.gs_, this);
+        this.atmosphere_ = new AtmosphereHandler(this.gs_, this);
+        this.idsToRemove_ = new Vector.<int>();
         this.graphicsData_ = new Vector.<IGraphicsData>();
         this.graphicsDataStageSoftware_ = new Vector.<IGraphicsData>();
         this.graphicsData3d_ = new Vector.<Object3DStage3D>();
@@ -93,43 +88,28 @@ public class Map extends AbstractMap {
         this.visibleSquares_ = new Vector.<Square>();
         this.topSquares_ = new Vector.<Square>();
         super();
-        gs_ = _arg1;
-        hurtOverlay_ = new HurtOverlay();
-        gradientOverlay_ = new GradientOverlay();
-        mapOverlay_ = new MapOverlay();
-        partyOverlay_ = new PartyOverlay(this);
-        party_ = new Party(this);
-        quest_ = new Quest(this);
-
-
+        gs_ = gs;
+        this.hurtOverlay_ = new HurtOverlay();
+        this.gradientOverlay_ = new GradientOverlay();
+        this.mapOverlay_ = new MapOverlay();
+        this.partyOverlay_ = new PartyOverlay(this);
+        this.party_ = new Party(this);
+        this.quest_ = new Quest(this);
+        this.signalRenderSwitch = new Signal();
         StaticInjectorContext.getInjector().getInstance(GameModel).gameObjects = goDict_;
-        //this.forceSoftwareMap[PET_YARD_1] = true;
-        //this.forceSoftwareMap[PET_YARD_2] = true;
-        //this.forceSoftwareMap[PET_YARD_3] = true;
-        //this.forceSoftwareMap[PET_YARD_4] = true;
-        //this.forceSoftwareMap[PET_YARD_5] = true;
-        //this.forceSoftwareMap["Nexus"] = true;
-        //this.forceSoftwareMap["Tomb of the Ancients"] = true;
-        //this.forceSoftwareMap["Tomb of the Ancients (Heroic)"] = true;
-        //this.forceSoftwareMap["Mad Lab"] = true;
-        //this.forceSoftwareMap["Guild Hall"] = true;
-        //this.forceSoftwareMap["Guild Hall 2"] = true;
-        //this.forceSoftwareMap["Guild Hall 3"] = true;
-        //this.forceSoftwareMap["Guild Hall 4"] = true;
-        //this.forceSoftwareMap["Cloth Bazaar"] = true;
-        wasLastFrameGpu = Parameters.isGpuRender();
+        wasLastFrameGpu = Parameters.HWAcceleration;
     }
 
 
 
     override public function setProps(_arg1:int, _arg2:int, _arg3:String, _arg4:int, _arg5:Boolean, _arg6:Boolean, _arg9:int):void {
-        width_ = _arg1;
-        height_ = _arg2;
-        name_ = _arg3;
-        back_ = _arg4;
-        allowPlayerTeleport_ = _arg5;
-        showDisplays_ = _arg6;
-        atmosphere_.init(_arg9);
+        this.width_ = _arg1;
+        this.height_ = _arg2;
+        this.name_ = _arg3;
+        this.back_ = _arg4;
+        this.allowPlayerTeleport_ = _arg5;
+        this.showDisplays_ = _arg6;
+        this.atmosphere_.init(_arg9);
         this.forceSoftwareRenderCheck(name_);
     }
 
@@ -137,51 +117,55 @@ public class Map extends AbstractMap {
         forceSoftwareRender = this.forceSoftwareMap[_arg1] != null || WebMain.STAGE != null && WebMain.STAGE.stage3Ds[0].context3D == null;
     }
 
-    override public function initialize():void {
-        squares_.length = (width_ * height_);
-        background_ = Background.getBackground(back_);
-        if (background_ != null) {
-            addChild(background_);
+    override public function initialize() : void
+    {
+        this.squares_.length = this.width_ * this.height_;
+        this.background_ = Background.getBackground(this.back_);
+        if (this.background_ != null) {
+            addChild(this.background_);
         }
-        addChild(map_);
-        addChild(atmosphere_);
-        addChild(hurtOverlay_);
-        addChild(gradientOverlay_);
-        addChild(mapOverlay_);
-        addChild(partyOverlay_);
-        isPetYard = (name_.substr(0, 8) == "Pet Yard");
+        addChild(this.map_);
+        addChild(this.atmosphere_);
+        addChild(this.hurtOverlay_);
+        addChild(this.gradientOverlay_);
+        addChild(this.mapOverlay_);
+        addChild(this.partyOverlay_);
     }
 
-    override public function dispose():void {
-        var _local1:Square;
-        var _local2:GameObject;
-        var _local3:BasicObject;
-        gs_ = null;
-        background_ = null;
-        map_ = null;
-        hurtOverlay_ = null;
-        gradientOverlay_ = null;
-        mapOverlay_ = null;
-        partyOverlay_ = null;
-        for each (_local1 in squareList_) {
-            _local1.dispose();
+    override public function dispose() : void
+    {
+        var square:Square = null;
+        var go:GameObject = null;
+        var bo:BasicObject = null;
+        this.gs_ = null;
+        this.background_ = null;
+        this.map_ = null;
+        this.hurtOverlay_ = null;
+        this.gradientOverlay_ = null;
+        this.mapOverlay_ = null;
+        this.partyOverlay_ = null;
+        for each(square in this.squareList_)
+        {
+            square.dispose();
         }
-        squareList_.length = 0;
-        squareList_ = null;
-        squares_.length = 0;
-        squares_ = null;
-        for each (_local2 in goDict_) {
-            _local2.dispose();
+        this.squareList_.length = 0;
+        this.squareList_ = null;
+        this.squares_.length = 0;
+        this.squares_ = null;
+        for each(go in this.goDict_)
+        {
+            go.dispose();
         }
-        goDict_ = null;
-        for each (_local3 in boDict_) {
-            _local3.dispose();
+        this.goDict_ = null;
+        for each(bo in this.boDict_)
+        {
+            bo.dispose();
         }
-        boDict_ = null;
-        merchLookup_ = null;
-        player_ = null;
-        party_ = null;
-        quest_ = null;
+        this.boDict_ = null;
+        this.merchLookup_ = null;
+        this.player_ = null;
+        this.party_ = null;
+        this.quest_ = null;
         this.objsToAdd_ = null;
         this.idsToRemove_ = null;
         this.atmosphere_ = null;
@@ -191,157 +175,175 @@ public class Map extends AbstractMap {
     }
 
 
-
-    override public function update(_arg1:int, _arg2:int):void {
-        var _local3:BasicObject;
-        var _local4:int;
+    override public function update(time:int, dt:int) : void
+    {
+        var bo:BasicObject = null;
+        var go:GameObject = null;
+        var objId:int = 0;
         this.inUpdate_ = true;
-        for each (_local3 in goDict_) {
-            if (!_local3.update(_arg1, _arg2)) {
-                this.idsToRemove_.push(_local3.objectId_);
+
+        for each(go in this.goDict_)
+        {
+            if(!go.update(time,dt))
+            {
+                this.idsToRemove_.push(go.objectId_);
             }
         }
-        for each (_local3 in boDict_) {
-            if (!_local3.update(_arg1, _arg2)) {
-                this.idsToRemove_.push(_local3.objectId_);
+
+        for each(bo in this.boDict_)
+        {
+            if(!bo.update(time,dt))
+            {
+                this.idsToRemove_.push(bo.objectId_);
             }
         }
+
         this.inUpdate_ = false;
-        for each (_local3 in this.objsToAdd_) {
-            this.internalAddObj(_local3);
+        for each(bo in this.objsToAdd_)
+        {
+            this.internalAddObj(bo);
         }
+
         this.objsToAdd_.length = 0;
-        for each (_local4 in this.idsToRemove_) {
-            this.internalRemoveObj(_local4);
+        for each(objId in this.idsToRemove_)
+        {
+            this.internalRemoveObj(objId);
         }
 
         this.idsToRemove_.length = 0;
-        party_.update(_arg1, _arg2);
-
+        this.party_.update(time,dt);
         atmosphere_.update();
     }
 
-    override public function pSTopW(_arg1:Number, _arg2:Number):Point {
-        var _local3:Square;
-        for each (_local3 in this.visibleSquares_) {
-            if (((!((_local3.faces_.length == 0))) && (_local3.faces_[0].face_.contains(_arg1, _arg2)))) {
-                return (new Point(_local3.center_.x, _local3.center_.y));
+    override public function pSTopW(xS:Number, yS:Number) : Point
+    {
+        var square:Square = null;
+        var p:Point = null;
+        for each(square in this.visibleSquares_)
+        {
+            if(square.faces_.length != 0 && square.faces_[0].face_.contains(xS,yS))
+            {
+                return new Point(square.center_.x,square.center_.y);
             }
         }
         return null;
     }
 
-    override public function setGroundTile(_arg1:int, _arg2:int, _arg3:uint):void {
-        var _local8:int;
-        var _local9:int;
-        var _local10:Square;
-        var _local4:Square = this.getSquare(_arg1, _arg2);
-        _local4.setTileType(_arg3);
-        var _local5:int = (((_arg1 < (width_ - 1))) ? (_arg1 + 1) : _arg1);
-        var _local6:int = (((_arg2 < (height_ - 1))) ? (_arg2 + 1) : _arg2);
-        var _local7:int = (((_arg1 > 0)) ? (_arg1 - 1) : _arg1);
-        while (_local7 <= _local5) {
-            _local8 = (((_arg2 > 0)) ? (_arg2 - 1) : _arg2);
-            while (_local8 <= _local6) {
-                _local9 = (_local7 + (_local8 * width_));
-                _local10 = squares_[_local9];
-                if (((!((_local10 == null))) && (((_local10.props_.hasEdge_) || (!((_local10.tileType_ == _arg3))))))) {
-                    _local10.faces_.length = 0;
+
+    override public function setGroundTile(x:int, y:int, tileType:uint) : void
+    {
+        var yi:int = 0;
+        var ind:int = 0;
+        var n:Square = null;
+        var square:Square = this.getSquare(x,y);
+        square.setTileType(tileType);
+        var xend:int = x < this.width_ - 1? x + 1 : x;
+        var yend:int = y < this.height_ - 1? y + 1 : y;
+        for(var xi:int = x > 0 ? x - 1: x; xi <= xend; xi++)
+        {
+            for(yi = y > 0? y - 1 : y; yi <= yend; yi++)
+            {
+                ind = xi + yi * this.width_;
+                n = this.squares_[ind];
+                if(n != null && (n.props_.hasEdge_ || n.tileType_ != tileType))
+                {
+                    n.faces_.length = 0;
                 }
-                _local8++;
             }
-            _local7++;
         }
     }
 
-    override public function addObj(_arg1:BasicObject, _arg2:Number, _arg3:Number):void {
-        _arg1.x_ = _arg2;
-        _arg1.y_ = _arg3;
-        if ((_arg1 is ParticleEffect)) {
-            (_arg1 as ParticleEffect).reducedDrawEnabled = !(Parameters.data_.particleEffect);
+
+    override public function addObj(bo:BasicObject, posX:Number, posY:Number) : void
+    {
+        bo.x_ = posX;
+        bo.y_ = posY;
+        if(this.inUpdate_)
+        {
+            this.objsToAdd_.push(bo);
         }
-        if (this.inUpdate_) {
-            this.objsToAdd_.push(_arg1);
-        }
-        else {
-            this.internalAddObj(_arg1);
+        else
+        {
+            this.internalAddObj(bo);
         }
     }
 
-    public function internalAddObj(_arg1:BasicObject):void {
-        if (!_arg1.addTo(this, _arg1.x_, _arg1.y_)) {
+
+    public function internalAddObj(bo:BasicObject) : void
+    {
+        if(!bo.addTo(this,bo.x_,bo.y_))
+        {
+            trace("ERROR: adding: " + bo);
             return;
         }
-        var _local2:Dictionary = (((_arg1 is GameObject)) ? goDict_ : boDict_);
-        if (_local2[_arg1.objectId_] != null) {
-            if (!isPetYard) {
-                return;
-            }
+        var dict:Dictionary = bo is GameObject?this.goDict_:this.boDict_;
+        if(dict[bo.objectId_] != null)
+        {
+            trace("ERROR: duplicate add: " + bo + " would replace: " + dict[bo.objectId_]);
+            return;
         }
-        _local2[_arg1.objectId_] = _arg1;
+        dict[bo.objectId_] = bo;
+    }
+    override  public function removeObj(objectId:int) : void
+    {
+        if(this.inUpdate_)
+        {
+            this.idsToRemove_.push(objectId);
+        }
+        else
+        {
+            this.internalRemoveObj(objectId);
+        }
     }
 
-    override public function removeObj(_arg1:int):void {
-        if (this.inUpdate_) {
-            this.idsToRemove_.push(_arg1);
-        }
-        else {
-            this.internalRemoveObj(_arg1);
-        }
-    }
-
-    public function internalRemoveObj(objId:int):void {
-        var dict:Dictionary = goDict_;
-        var bo:BasicObject = dict[objId];
-        if (bo == null) {
-            dict = boDict_;
-            bo = dict[objId];
-            if (bo == null) {
+    public function internalRemoveObj(objectId:int) : void
+    {
+        var dict:Dictionary = this.goDict_;
+        var bo:BasicObject = dict[objectId];
+        if(bo == null)
+        {
+            dict = this.boDict_;
+            bo = dict[objectId];
+            if(bo == null)
+            {
                 return;
             }
         }
         bo.removeFromMap();
-        delete dict[objId];
+        delete dict[objectId];
     }
 
-    public function getSquare(_arg1:Number, _arg2:Number):Square {
-        if ((((((((_arg1 < 0)) || ((_arg1 >= width_)))) || ((_arg2 < 0)))) || ((_arg2 >= height_)))) {
+    public function getSquare(posX:Number, posY:Number) : Square
+    {
+        if(posX < 0 || posX >= this.width_ || posY < 0 || posY >= this.height_)
+        {
             return null;
         }
-        var _local3:int = (int(_arg1) + (int(_arg2) * width_));
-        var _local4:Square = squares_[_local3];
-        if (_local4 == null) {
-            _local4 = new Square(this, int(_arg1), int(_arg2));
-            squares_[_local3] = _local4;
-            squareList_.push(_local4);
+        var ind:int = int(posX) + int(posY) * this.width_;
+        var square:Square = this.squares_[ind];
+        if(square == null)
+        {
+            square = new Square(this,int(posX),int(posY));
+            this.squares_[ind] = square;
+            this.squareList_.push(square);
         }
-        return (_local4);
+        return square;
     }
 
-    public function lookupSquare(_arg1:int, _arg2:int):Square {
-        if ((((((((_arg1 < 0)) || ((_arg1 >= width_)))) || ((_arg2 < 0)))) || ((_arg2 >= height_)))) {
+    public function lookupSquare(x:int, y:int) : Square
+    {
+        if(x < 0 || x >= this.width_ || y < 0 || y >= this.height_)
+        {
             return null;
         }
-        return (squares_[(_arg1 + (_arg2 * width_))]);
+        return this.squares_[x + y * this.width_];
     }
 
-    override public function draw(camera:Camera, currentTime:int):void {
-        var rect:Rectangle = camera.clipRect_;
-        if (stage.scaleMode == "noScale")
-        {
-            x = ((-(rect.x) * 800) / WebMain.sWidth);
-            y = ((-(rect.y) * 600) / WebMain.sHeight);
-        } else
-        {
-            x = -(rect.x);
-            y = -(rect.y);
-        }
-        if(wasLastFrameGpu)
-        {
-            WebMain.STAGE.stage3Ds[0].x = 400 - Stage3DConfig.HALF_WIDTH;
-            WebMain.STAGE.stage3Ds[0].y = 300 - Stage3DConfig.HALF_HEIGHT;
-        }
-        if (wasLastFrameGpu != Parameters.isGpuRender()) {
+    override public function draw(camera:Camera, time:int) : void
+    {
+        var isGpuRender:Boolean = Parameters.isGpuRender(); // cache result for faster access
+        Parameters.HWAcceleration= isGpuRender;
+        if (wasLastFrameGpu != isGpuRender) {
             var context:Context3D = WebMain.STAGE.stage3Ds[0].context3D;
             if (wasLastFrameGpu && context != null &&
                     context.driverInfo.toLowerCase().indexOf("disposed") == -1) {
@@ -352,11 +354,30 @@ public class Map extends AbstractMap {
                 map_.graphics.clear();
             }
             signalRenderSwitch.dispatch(wasLastFrameGpu);
-            wasLastFrameGpu = Parameters.isGpuRender();
+            wasLastFrameGpu = isGpuRender;
         }
 
-        if (background_ != null) {
-            background_.draw(camera, currentTime);
+        var filter:uint = 0;
+        var render3D:Render3D = null;
+        var i:int = 0;
+        var square:Square = null;
+        var go:GameObject = null;
+        var bo:BasicObject = null;
+        var yi:int = 0;
+        var dX:Number = NaN;
+        var dY:Number = NaN;
+        var distSq:Number = NaN;
+        var b:Number = NaN;
+        var t:Number = NaN;
+        var d:Number = NaN;
+        var screenRect:Rectangle = camera.clipRect_;
+        x = -screenRect.x;
+        y = -screenRect.y;
+        var distW:Number = (-screenRect.y - screenRect.height / 2) / 50;
+        var screenCenterW:Point = new Point(camera.x_ + distW * Math.cos(camera.angleRad_ - Math.PI / 2),camera.y_ + distW * Math.sin(camera.angleRad_ - Math.PI / 2));
+        if(this.background_ != null)
+        {
+            this.background_.draw(camera,time);
         }
 
         this.visible_.length = 0;
@@ -364,24 +385,35 @@ public class Map extends AbstractMap {
         this.visibleSquares_.length = 0;
         this.topSquares_.length = 0;
 
+        var delta:int = camera.maxDist_;
+        var xStart:int = Math.max(0,screenCenterW.x - delta);
+        var xEnd:int = Math.min(this.width_ - 1,screenCenterW.x + delta);
+        var yStart:int = Math.max(0,screenCenterW.y - delta);
+        var yEnd:int = Math.min(this.height_ - 1,screenCenterW.y + delta);
+
         this.graphicsData_.length = 0;
         this.graphicsDataStageSoftware_.length = 0;
         this.graphicsData3d_.length = 0;
 
         // visible tiles
-        var sqr:Square;
-        var len:int = 15;
-        for (var i:int = -len; i <= len; i++) {
-            for (var j:int = -len; j <= len; j++) {
-                if (i * i + j * j <= len * len) {
-                    sqr = this.lookupSquare(i + this.player_.x_, j + this.player_.y_);
-                    if (sqr != null) {
-                        sqr.lastVisible_ = currentTime;
-                        sqr.draw(this.graphicsData_, camera, currentTime);
-                        this.visibleSquares_.push(sqr);
-                        if (sqr.topFace_ != null)
+        for(var xi:int = xStart; xi <= xEnd; xi++)
+        {
+            for(yi = yStart; yi <= yEnd; yi++)
+            {
+                square = this.squares_[xi + yi * this.width_];
+                if(square != null)
+                {
+                    dX = screenCenterW.x - square.center_.x;
+                    dY = screenCenterW.y - square.center_.y;
+                    distSq = dX * dX + dY * dY;
+                    if(distSq <= camera.maxDistSq_)
+                    {
+                        square.lastVisible_ = time;
+                        square.draw(this.graphicsData_,camera,time);
+                        this.visibleSquares_.push(square);
+                        if(square.topFace_ != null)
                         {
-                            this.topSquares_.push(sqr);
+                            this.topSquares_.push(square);
                         }
                     }
                 }
@@ -389,32 +421,39 @@ public class Map extends AbstractMap {
         }
 
         // visible game objects
-        for each (var go:GameObject in goDict_) {
+        for each(go in this.goDict_)
+        {
             go.drawn_ = false;
-            if (go.dead_) {
-                continue;
-            }
-            sqr = go.square_;
-            if (sqr != null && sqr.lastVisible_ == currentTime) {
+            square = go.square_;
+            if(!(square == null || square.lastVisible_ != time))
+            {
                 go.drawn_ = true;
                 go.computeSortVal(camera);
-                if (go.props_.drawUnder_) {
-                    if (go.props_.drawOnGround_) {
-                        go.draw(this.graphicsData_, camera, currentTime);
+                if(go.props_.drawUnder_)
+                {
+                    if(go.props_.drawOnGround_)
+                    {
+                        go.draw(this.graphicsData_,camera,time);
                     }
-                    this.visibleUnder_.push(go);
+                    else
+                    {
+                        this.visibleUnder_.push(go);
+                    }
                 }
-                else {
+                else
+                {
                     this.visible_.push(go);
                 }
             }
         }
 
         // visible basic objects (projectiles, particles and such)
-        for each (var bo:BasicObject in boDict_) {
+        for each(bo in this.boDict_)
+        {
             bo.drawn_ = false;
-            sqr = bo.square_;
-            if (sqr != null && sqr.lastVisible_ == currentTime) {
+            square = bo.square_;
+            if(!(square == null || square.lastVisible_ != time))
+            {
                 bo.drawn_ = true;
                 bo.computeSortVal(camera);
                 this.visible_.push(bo);
@@ -422,161 +461,161 @@ public class Map extends AbstractMap {
         }
 
         // draw visible under
-        if (this.visibleUnder_.length > 0) {
-            this.visibleUnder_.sortOn(VISIBLE_SORT_FIELDS, VISIBLE_SORT_PARAMS);
-            for each (bo in this.visibleUnder_) {
-                if (bo is GameObject && (bo as GameObject).props_.drawOnGround_) {
-                    continue;
-                }
-                bo.draw(this.graphicsData_, camera, currentTime);
+        if(this.visibleUnder_.length > 0)
+        {
+            this.visibleUnder_.sortOn(VISIBLE_SORT_FIELDS,VISIBLE_SORT_PARAMS);
+            for each(bo in this.visibleUnder_)
+            {
+                bo.draw(this.graphicsData_,camera,time);
             }
         }
 
         // draw shadows
-        this.visible_.sortOn(VISIBLE_SORT_FIELDS, VISIBLE_SORT_PARAMS);
-        if (Parameters.data_.drawShadows) {
-            for each (bo in this.visible_) {
-                if (bo.hasShadow_) {
-
-                 bo.drawShadow(this.graphicsData_, camera, currentTime);
-
+        this.visible_.sortOn(VISIBLE_SORT_FIELDS,VISIBLE_SORT_PARAMS);
+        if(Parameters.data_.drawShadows)
+        {
+            for each(bo in this.visible_)
+            {
+                if(bo.hasShadow_)
+                {
+                    bo.drawShadow(this.graphicsData_,camera,time);
                 }
             }
         }
 
         // draw visible
-        for each (bo in this.visible_) {
-            bo.draw(this.graphicsData_, camera, currentTime);
-            if (Parameters.isGpuRender()) {
-                 //  bo.draw3d(this.graphicsData3d_);
+        for each(bo in this.visible_)
+        {
+            bo.draw(this.graphicsData_,camera,time);
+            if (isGpuRender) {
+                bo.draw3d(this.graphicsData3d_);
             }
         }
 
         // draw top squares
-        if (this.topSquares_.length > 0) {
-            for each (sqr in this.topSquares_) {
-                sqr.drawTop(this.graphicsData_, camera, currentTime);
+        if(this.topSquares_.length > 0)
+        {
+            for each(square in this.topSquares_)
+            {
+                square.drawTop(this.graphicsData_,camera,time);
             }
         }
 
         // draw breath overlay
-        if (player_ != null && player_.breath_ >= 0 && player_.breath_ < Parameters.BREATH_THRESH) {
-            var bMult:Number = Parameters.BREATH_THRESH - player_.breath_ / Parameters.BREATH_THRESH;
-            var btMult:Number = Math.abs(Math.sin(currentTime / 300)) * 0.75;
-            BREATH_CT.alphaMultiplier = bMult * btMult;
-            hurtOverlay_.transform.colorTransform = BREATH_CT;
-            hurtOverlay_.visible = true;
-            hurtOverlay_.x = rect.left;
-            hurtOverlay_.y = rect.top;
+        if(this.player_ != null && this.player_.breath_ >= 0 && this.player_.breath_ < Parameters.BREATH_THRESH)
+        {
+            b = (Parameters.BREATH_THRESH - this.player_.breath_) / Parameters.BREATH_THRESH;
+            t = Math.abs(Math.sin(time / 300)) * 0.75;
+            BREATH_CT.alphaMultiplier = b * t;
+            this.hurtOverlay_.transform.colorTransform = BREATH_CT;
+            this.hurtOverlay_.visible = true;
+            this.hurtOverlay_.x = screenRect.left;
+            this.hurtOverlay_.y = screenRect.top;
         }
-        else {
-            hurtOverlay_.visible = false;
+        else
+        {
+            this.hurtOverlay_.visible = false;
         }
 
         // draw side bar gradient
-        if (player_ != null && !Parameters.screenShotMode_) {
-            gradientOverlay_.visible = true;
-            gradientOverlay_.x = (rect.right - 10);
-            gradientOverlay_.y = rect.top;
+        if(this.player_ != null)
+        {
+            this.gradientOverlay_.visible = true;
+            this.gradientOverlay_.x = screenRect.right - 10;
+            this.gradientOverlay_.y = screenRect.top;
         }
-        else {
-            gradientOverlay_.visible = false;
+        else
+        {
+            this.gradientOverlay_.visible = false;
         }
 
         // draw hw capable screen filters
-         if (Parameters.isGpuRender() && Renderer.inGame) {
-           var fIndex:uint = this.getFilterIndex();
-           var r3d:Render3D = StaticInjectorContext.getInjector().getInstance(Render3D);
-           r3d.dispatch(this.graphicsData_, this.graphicsData3d_, width_, height_, camera, fIndex);
-           for (var i:int = 0; i < this.graphicsData_.length; i++) {
-               if (this.graphicsData_[i] is GraphicsBitmapFill && GraphicsFillExtra.isSoftwareDraw(GraphicsBitmapFill(this.graphicsData_[i]))) {
-                   this.graphicsDataStageSoftware_.push(this.graphicsData_[i]);
-                   this.graphicsDataStageSoftware_.push(this.graphicsData_[i + 1]);
-                   this.graphicsDataStageSoftware_.push(this.graphicsData_[i + 2]);
-               }
-               else {
-                   if (this.graphicsData_[i] is GraphicsSolidFill && GraphicsFillExtra.isSoftwareDrawSolid(GraphicsSolidFill(this.graphicsData_[i]))) {
-                       this.graphicsDataStageSoftware_.push(this.graphicsData_[i]);
-                       this.graphicsDataStageSoftware_.push(this.graphicsData_[i + 1]);
-                       this.graphicsDataStageSoftware_.push(this.graphicsData_[i + 2]);
-                   }
-               }
-           }
-           if (this.graphicsDataStageSoftware_.length > 0) {
-               map_.graphics.clear();
-               map_.graphics.drawGraphicsData(this.graphicsDataStageSoftware_);
-               if (this.lastSoftwareClear) {
-                   this.lastSoftwareClear = false;
-               }
-           }
-           else {
-               if (!this.lastSoftwareClear) {
-                   map_.graphics.clear();
-                   this.lastSoftwareClear = true;
-               }
-           }
-           if ((currentTime % 149) == 0) {
-               GraphicsFillExtra.manageSize();
-           }
-              }
-          else {
-        map_.graphics.clear();
-        map_.graphics.drawGraphicsData(this.graphicsData_);
+        if(isGpuRender && Renderer.inGame)
+        {
+            filter = this.getFilterIndex();
+            render3D = StaticInjectorContext.getInjector().getInstance(Render3D);
+            render3D.dispatch(this.graphicsData_,this.graphicsData3d_,width_,height_,camera,filter);
+            for(i = 0; i < this.graphicsData_.length; i++)
+            {
+                if(this.graphicsData_[i] is GraphicsBitmapFill && GraphicsFillExtra.isSoftwareDraw(GraphicsBitmapFill(this.graphicsData_[i])))
+                {
+                    this.graphicsDataStageSoftware_.push(this.graphicsData_[i]);
+                    this.graphicsDataStageSoftware_.push(this.graphicsData_[i + 1]);
+                    this.graphicsDataStageSoftware_.push(this.graphicsData_[i + 2]);
+                }
+                else if(this.graphicsData_[i] is GraphicsSolidFill && GraphicsFillExtra.isSoftwareDrawSolid(GraphicsSolidFill(this.graphicsData_[i])))
+                {
+                    this.graphicsDataStageSoftware_.push(this.graphicsData_[i]);
+                    this.graphicsDataStageSoftware_.push(this.graphicsData_[i + 1]);
+                    this.graphicsDataStageSoftware_.push(this.graphicsData_[i + 2]);
+                }
+            }
+            if(this.graphicsDataStageSoftware_.length > 0)
+            {
+                map_.graphics.clear();
+                map_.graphics.drawGraphicsData(this.graphicsDataStageSoftware_);
+                if(this.lastSoftwareClear)
+                {
+                    this.lastSoftwareClear = false;
+                }
+            }
+            else if(!this.lastSoftwareClear)
+            {
+                map_.graphics.clear();
+                this.lastSoftwareClear = true;
+            }
+            if(time % 149 == 0)
+            {
+                GraphicsFillExtra.manageSize();
+            }
+        }
+        else
+        {
+            map_.graphics.clear();
+            map_.graphics.drawGraphicsData(this.graphicsData_);
         }
 
         // draw filters
-        map_.filters.length = 0;
-        if (player_ != null && (player_.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.MAP_FILTER_BITMASK) != 0) {
+        this.map_.filters.length = 0;
+        if(this.player_ != null)
+        {
             var filters:Array = [];
-            if (player_.isDrunk()) {
-                var blur:Number = 20 + 10 * Math.sin(currentTime / 1000);
-                filters.push(new BlurFilter(blur, blur));
+            if(this.player_.isDrunk())
+            {
+                d = 20 + 10 * Math.sin(time / 1000);
+                filters.push(new BlurFilter(d,d));
             }
-            if (player_.isBlind()) {
+            if(this.player_.isBlind())
+            {
                 filters.push(BLIND_FILTER);
             }
-            map_.filters = filters;
+            this.map_.filters = filters;
         }
-        else {
-            if (map_.filters.length > 0) {
-                map_.filters = [];
-            }
+        else if(this.map_.filters.length > 0)
+        {
+            this.map_.filters = [];
         }
-        mapOverlay_.draw(camera, currentTime);
-        partyOverlay_.draw(camera, currentTime);
 
-        // draw darkness
-        if (player_ && player_.isDarkness()) {
-            this.darkness.x = -300;
-            this.darkness.y = Parameters.data_.centerOnPlayer ? -525 : -515;
-            this.darkness.alpha = 0.95;
-            addChild(this.darkness);
-        }
-        else {
-            if (contains(this.darkness)) {
-                removeChild(this.darkness);
-            }
-        }
+        this.mapOverlay_.draw(camera,time);
+        this.partyOverlay_.draw(camera,time);
     }
 
-    private function getFilterIndex():uint {
-        var _local1:uint;
-        if (((!((player_ == null))) && (!(((player_.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.MAP_FILTER_BITMASK) == 0))))) {
-            if (player_.isPaused() && player_.commune == null) {
-                _local1 = Renderer.STAGE3D_FILTER_PAUSE;
+
+    private function getFilterIndex() : uint
+    {
+        var filterIndex:uint = 0;
+        if(player_ != null)
+        {
+            if(player_.isBlind())
+            {
+                filterIndex = Renderer.STAGE3D_FILTER_BLIND;
             }
-            else {
-                if (player_.isBlind()) {
-                    _local1 = Renderer.STAGE3D_FILTER_BLIND;
-                }
-                else {
-                    if (player_.isDrunk()) {
-                        _local1 = Renderer.STAGE3D_FILTER_DRUNK;
-                    }
-                }
+            else if(player_.isDrunk())
+            {
+                filterIndex = Renderer.STAGE3D_FILTER_DRUNK;
             }
         }
-        return (_local1);
+        return filterIndex;
     }
 
 

@@ -613,7 +613,7 @@ public class Player extends Character {
             var dmg:int = map_.gs_.gsc_.getNextDamage(square_.props_.minDamage_, square_.props_.maxDamage_);
             var conditionEffects:Vector.<uint> = new Vector.<uint>();
             conditionEffects.push(ConditionEffect.GROUND_DAMAGE);
-            damage(-1, dmg, conditionEffects, hp_ <= dmg, null);
+            damage(dmg, conditionEffects, null);
             map_.gs_.gsc_.groundDamage(currentTime, x_, y_);
             square_.lastDamage_ = currentTime;
         }
@@ -1038,7 +1038,7 @@ public class Player extends Character {
             _local11 = getBulletId();
             _local12 = (FreeList.newObject(Projectile) as Projectile);
             if (((_arg5) && (!((this.projectileIdSetOverrideNew == ""))))) {
-                _local12.reset(_arg2, 0, objectId_, _local11, _local9, _arg1, this.projectileIdSetOverrideNew, this.projectileIdSetOverrideOld);
+                _local12.reset(_arg2, 0, objectId_, _local11, _local9, _arg1);
             }
             else {
                 _local12.reset(_arg2, 0, objectId_, _local11, _local9, _arg1);
@@ -1064,27 +1064,25 @@ public class Player extends Character {
     public function critMulti() : Number
     {
         var grabWeapon:int = equipment_[0];
-        var grabAbility:int = equipment_[1];
         var CriticalHit:int = this.CriticalHit_;
-        var CriticalHitChance:int = map_.gs_.gsc_.getNextDamage(0, 200);
-        var CriticalAbility:int = map_.gs_.gsc_.getNextDamage(0, 100);
-        var weapon:XML = ObjectLibrary.xmlLibrary_[grabWeapon];
-        var CriticalMultiplier:Number = (100 + this.CriticalDmg_) / 100.0;
-        criticalMultiplier_ = 1.0;
 
-        if (grabAbility == 0x7a47)
-            criticalMultiplier_ = (this.wisdom_ / 100.0) + 1.0;
+        var CriticalHitChance:int = map_.gs_.gsc_.getNextDamage(0, 100);
+        var CriticalAbility:int = map_.gs_.gsc_.getNextDamage(0, 100);
+
+        var weapon:XML = ObjectLibrary.xmlLibrary_[grabWeapon];
+        var CriticalMultiplier:Number = this.CriticalDmg_ / 100.0;
+        criticalMultiplier_ = 1.0;
 
         if (isBloodlust())
             CriticalHit += 25;
 
         if (CriticalHitChance < CriticalHit)
-            criticalMultiplier_ *= CriticalMultiplier;
+            criticalMultiplier_ += CriticalMultiplier;
 
         if (weapon.Critical)
         {
             if (CriticalAbility < 1)
-                criticalMultiplier_ *= 5.0;
+                criticalMultiplier_ += 5.0;
         }
         return criticalMultiplier_;
     }

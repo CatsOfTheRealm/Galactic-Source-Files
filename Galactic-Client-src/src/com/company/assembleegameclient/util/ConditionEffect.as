@@ -12,7 +12,7 @@ import kabam.rotmg.text.model.TextKey;
 
 public class ConditionEffect {
 
-    //public static const NOTHING:uint = 0;
+    public static const NOTHING:uint = 0;
     public static const DEAD:uint = 1 + valX2;
     public static const QUIET:uint = 2 + valX2;
     public static const WEAK:uint = 3 + valX2;

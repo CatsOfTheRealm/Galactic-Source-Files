@@ -1,71 +1,86 @@
-﻿package kabam.rotmg.stage3D.graphic3D {
+﻿package kabam.rotmg.stage3D.graphic3D
+{
 import kabam.rotmg.stage3D.proxies.Context3DProxy;
 import kabam.rotmg.stage3D.proxies.Program3DProxy;
 import kabam.rotmg.stage3D.shaders.FragmentShader;
 import kabam.rotmg.stage3D.shaders.FragmentShaderRepeat;
 import kabam.rotmg.stage3D.shaders.VertextShader;
 
-public class Program3DFactory {
-
-    public static const TYPE_REPEAT_ON:Boolean = true;
-    public static const TYPE_REPEAT_OFF:Boolean = false;
+public class Program3DFactory
+{
 
     private static var instance:Program3DFactory;
 
+    public static const TYPE_REPEAT_ON:Boolean = true;
+
+    public static const TYPE_REPEAT_OFF:Boolean = false;
+
+
     private var repeatProgram:Program3DProxy;
+
     private var noRepeatProgram:Program3DProxy;
 
-    public function Program3DFactory(_arg1:String = "") {
-        if (_arg1 != "yoThisIsInternal") {
-            throw (new Error("Program3DFactory is a singleton. Use Program3DFactory.getInstance()"));
+    public function Program3DFactory(password:String = "")
+    {
+        super();
+        if(password != "yoThisIsInternal")
+        {
+            throw new Error("Program3DFactory is a singleton. Use Program3DFactory.getInstance()");
         }
     }
 
-    public static function getInstance():Program3DFactory {
-        if (instance == null) {
+    public static function getInstance() : Program3DFactory
+    {
+        if(instance == null)
+        {
             instance = new Program3DFactory("yoThisIsInternal");
         }
-        return (instance);
+        return instance;
     }
 
-
-    public function dispose():void {
-        if (this.repeatProgram != null) {
+    public function dispose() : void
+    {
+        if(this.repeatProgram != null)
+        {
             this.repeatProgram.getProgram3D().dispose();
         }
-        if (this.noRepeatProgram != null) {
+        if(this.noRepeatProgram != null)
+        {
             this.noRepeatProgram.getProgram3D().dispose();
         }
         instance = null;
     }
 
-    public function getProgram(_arg1:Context3DProxy, _arg2:Boolean):Program3DProxy {
-        var _local3:Program3DProxy;
-        switch (_arg2) {
+    public function getProgram(context3D:Context3DProxy, type:Boolean) : Program3DProxy
+    {
+        var program:Program3DProxy = null;
+        switch(type)
+        {
             case TYPE_REPEAT_ON:
-                if (this.repeatProgram == null) {
-                    this.repeatProgram = _arg1.createProgram();
-                    this.repeatProgram.upload(new VertextShader().getVertexProgram(), new FragmentShaderRepeat().getVertexProgram());
+                if(this.repeatProgram == null)
+                {
+                    this.repeatProgram = context3D.createProgram();
+                    this.repeatProgram.upload(new VertextShader().getVertexProgram(),new FragmentShaderRepeat().getVertexProgram());
                 }
-                _local3 = this.repeatProgram;
+                program = this.repeatProgram;
                 break;
             case TYPE_REPEAT_OFF:
-                if (this.noRepeatProgram == null) {
-                    this.noRepeatProgram = _arg1.createProgram();
-                    this.noRepeatProgram.upload(new VertextShader().getVertexProgram(), new FragmentShader().getVertexProgram());
+                if(this.noRepeatProgram == null)
+                {
+                    this.noRepeatProgram = context3D.createProgram();
+                    this.noRepeatProgram.upload(new VertextShader().getVertexProgram(),new FragmentShader().getVertexProgram());
                 }
-                _local3 = this.noRepeatProgram;
+                program = this.noRepeatProgram;
                 break;
             default:
-                if (this.repeatProgram == null) {
-                    this.repeatProgram = _arg1.createProgram();
-                    this.repeatProgram.upload(new VertextShader().getVertexProgram(), new FragmentShaderRepeat().getVertexProgram());
+                if(this.repeatProgram == null)
+                {
+                    this.repeatProgram = context3D.createProgram();
+                    this.repeatProgram.upload(new VertextShader().getVertexProgram(),new FragmentShaderRepeat().getVertexProgram());
                 }
-                _local3 = this.repeatProgram;
+                program = this.repeatProgram;
         }
-        return (_local3);
+        return program;
     }
-
-
 }
 }

@@ -19,7 +19,8 @@ import com.company.util.GraphicsUtil;
 import com.hurlant.util.asn1.parser.boolean;
 
 import flash.display.BitmapData;
-    import flash.display.GraphicsGradientFill;
+import flash.display.GradientType;
+import flash.display.GraphicsGradientFill;
     import flash.display.GraphicsPath;
     import flash.display.IGraphicsData;
     import flash.geom.Matrix;
@@ -41,24 +42,29 @@ import flash.display.BitmapData;
         public var damagesEnemies_:Boolean;
         public var damagesPlayers_:Boolean;
         public var damage_:int;
+        public var _isCrit:Number = 1;
         public var sound_:String;
         public var startX_:Number;
         public var startY_:Number;
         public var startTime_:int;
         public var angle_:Number = 0;
         public var multiHitDict_:Dictionary;
-        public var p_:Point3D = new Point3D(100);
-        private var staticPoint_:Point = new Point();
-        private var staticVector3D_:Vector3D = new Vector3D();
-        protected var shadowGradientFill_:GraphicsGradientFill = new GraphicsGradientFill("radial", [0, 0], [0.5, 0], null, new Matrix());
-        protected var shadowPath_:GraphicsPath = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>());
-        private var size:int;
+        public var p_:Point3D;
+        private var staticPoint_:Point;
+        private var staticVector3D_:Vector3D;
+        protected var shadowGradientFill_:GraphicsGradientFill;
+        protected var shadowPath_:GraphicsPath;
+        private var ProjSize:Number;
 
         public function Projectile()
         {
+            this.p_ = new Point3D(100);
+            this.staticPoint_ = new Point();
+            this.staticVector3D_ = new Vector3D();
+            this.shadowGradientFill_ = new GraphicsGradientFill(GradientType.RADIAL,[0,0],[0.5,0],null,new Matrix());
+            this.shadowPath_ = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS,new Vector.<Number>());
             super();
         }
-
         public static function findObjId(_arg1:int, _arg2:uint) : int
         {
             return objBullIdToObjId_[_arg2 << 24 | _arg1];
@@ -82,76 +88,88 @@ import flash.display.BitmapData;
         }
 
 
-        public function reset(_arg1:int, _arg2:int, _arg3:int, _arg4:int, _arg5:Number, _arg6:int, _arg7:String = "", _arg8:String = ""):void {
-            var _local11:Number;
+        public function reset(containerType:int, bulletType:int, ownerId:int, bulletId:int, angle:Number, startTime:int) : void
+        {
+            ProjSize = 0;
             clear();
-            this.containerType_ = _arg1;
-            this.bulletType_ = _arg2;
-            this.ownerId_ = _arg3;
-            this.bulletId_ = _arg4;
-            this.angle_ = Trig.boundToPI(_arg5);
-            this.startTime_ = _arg6;
-            objectId_ = getNewObjId(this.ownerId_, this.bulletId_);
+            this.containerType_ = containerType;
+            this.bulletType_ = bulletType;
+            this.bulletId_ = bulletId;
+            this.ownerId_ = ownerId;
+            this.angle_ = Trig.boundToPI(angle);
+            this.startTime_ = startTime;
+            objectId_ = getNextFakeObjectId();
             z_ = 0.5;
             this.containerProps_ = ObjectLibrary.propsLibrary_[this.containerType_];
-            this.projProps_ = this.containerProps_.projectiles_[_arg2];
-            var _local9:String = ((((!((_arg7 == ""))) && ((this.projProps_.objectId_ == _arg8)))) ? _arg7 : this.projProps_.objectId_);
-            this.props_ = ObjectLibrary.getPropsFromId(_local9);
-            hasShadow_ = (this.props_.shadowSize_ > 0);
-            var _local10:TextureData = ObjectLibrary.typeToTextureData_[this.props_.type_];
-            this.texture_ = _local10.getTexture(objectId_);
+            this.projProps_ = this.containerProps_.projectiles_[bulletType];
+            this.props_ = ObjectLibrary.getPropsFromId(this.projProps_.objectId_);
+            hasShadow_ = this.props_.shadowSize_ > 0;
+            var textureData:TextureData = ObjectLibrary.typeToTextureData_[this.props_.type_];
+            this.texture_ = textureData.getTexture(objectId_);
             this.damagesPlayers_ = this.containerProps_.isEnemy_;
-            this.damagesEnemies_ = !(this.damagesPlayers_);
+            this.damagesEnemies_ = !this.damagesPlayers_;
             this.sound_ = this.containerProps_.oldSound_;
-            this.multiHitDict_ = ((this.projProps_.multiHit_) ? new Dictionary() : null);
-            if(this.projProps_.size_ > 0)
+            this.multiHitDict_ = this.projProps_.multiHit_ ? new Dictionary() : null;
+            if(this.projProps_.size_ >= 0)
             {
-                _local11 = this.projProps_.size_;
+                ProjSize = this.projProps_.size_;
             }
             else
             {
-                _local11 = ObjectLibrary.getSizeFromType(this.containerType_);
+                ProjSize = ObjectLibrary.getSizeFromType(this.containerType_);
             }
-            var _loc12_:Number = this.texture_.width / 8;
-            this.p_.setSize((8 * (_local11 / 100)));
-            this.size = _local11 / _loc12_;
+            this.p_.setSize(8 * (ProjSize / 100));
             this.damage_ = 0;
         }
 
-        public var _isCrit:Number = 1;
+
 
         public function setDamage(_arg1:int, _arg2:Number = 1):void {
             this._isCrit = _arg2;
-            this.damage_ = _arg1;
+            this.damage_ = _arg1 * _isCrit;
         }
 
-        override public function addTo(_arg1:Map, _arg2:Number, _arg3:Number):Boolean {
-            var _local4:Player;
-            this.startX_ = _arg2;
-            this.startY_ = _arg3;
-            if (!super.addTo(_arg1, _arg2, _arg3)) {
+        override public function addTo(map:Map, x:Number, y:Number) : Boolean
+        {
+            var player:Player = null;
+            this.startX_ = x;
+            this.startY_ = y;
+            if(!super.addTo(map,x,y))
+            {
                 return false;
             }
-            if (((!(this.containerProps_.flying_)) && (square_.sink_))) {
-                z_ = 0.1;
+            if(!this.containerProps_.flying_ && square_.sink_)
+            {
+                if (square_.obj_ && square_.obj_.props_.protectFromSink_)
+                {
+                    z_ = 0.5;
+                }
+                else
+                {
+                    z_ = 0.1;
+                }
             }
-            else {
-                _local4 = (_arg1.goDict_[this.ownerId_] as Player);
-                if (((!((_local4 == null))) && ((_local4.sinkLevel_ > 0)))) {
-                    z_ = (0.5 - (0.4 * (_local4.sinkLevel_ / Parameters.MAX_SINK_LEVEL)));
+            else
+            {
+                player = map.goDict_[this.ownerId_] as Player;
+                if(player != null && player.sinkLevel_ > 0)
+                {
+                    z_ = (0.5 - (0.4 * (player.sinkLevel_ / Parameters.MAX_SINK_LEVEL)));
                 }
             }
             return true;
         }
 
-        public function moveTo(_arg1:Number, _arg2:Number):Boolean {
-            var _local3:Square = map_.getSquare(_arg1, _arg2);
-            if (_local3 == null) {
+        public function moveTo(x:Number, y:Number) : Boolean
+        {
+            var square:Square = map_.getSquare(x,y);
+            if(square == null)
+            {
                 return false;
             }
-            x_ = _arg1;
-            y_ = _arg2;
-            square_ = _local3;
+            x_ = x;
+            y_ = y;
+            square_ = square;
             return true;
         }
 
@@ -162,160 +180,155 @@ import flash.display.BitmapData;
             FreeList.deleteObject(this);
         }
 
-        private function positionAt(_arg1:int, _arg2:Point):void {
-            var _local5:Number;
-            var _local6:Number;
-            var _local7:Number;
-            var _local8:Number;
-            var _local9:Number;
-            var _local10:Number;
-            var _local11:Number;
-            var _local12:Number;
+        private function positionAt(elapsed:int, p:Point) : void
+        {
+            var periodFactor:Number = NaN;
+            var amplitudeFactor:Number = NaN;
+            var theta:Number = NaN;
+            var t:Number = NaN;
+            var x:Number = NaN;
+            var y:Number = NaN;
+            var sin:Number = NaN;
+            var cos:Number = NaN;
+            var halfway:Number = NaN;
+            var deflection:Number = NaN;
+            p.x = this.startX_;
+            p.y = this.startY_;
             var _local13:Number;
             var _local14:Number;
-            _arg2.x = this.startX_;
-            _arg2.y = this.startY_;
-            var _local3:Number = (_arg1 * (this.projProps_.speed_ / 10000));
-            var _local4:Number = ((((this.bulletId_ % 2)) == 0) ? 0 : Math.PI);
-            if (this.projProps_.wavy_) {
-                _local5 = (6 * Math.PI);
-                _local6 = (Math.PI / 64);
-                _local7 = (this.angle_ + (_local6 * Math.sin((_local4 + ((_local5 * _arg1) / 1000)))));
-                _arg2.x = (_arg2.x + (_local3 * Math.cos(_local7)));
-                _arg2.y = (_arg2.y + (_local3 * Math.sin(_local7)));
+            var speed:Number = this.projProps_.speed_;
+            var dist:Number = (elapsed * (speed / 10000));
+            var phase:Number = this.bulletId_ % 2 == 0?Number(0):Number(Math.PI);
+            if(this.projProps_.wavy_)
+            {
+                periodFactor = 6 * Math.PI;
+                amplitudeFactor = Math.PI / 64;
+                theta = this.angle_ + amplitudeFactor * Math.sin(phase + periodFactor * elapsed / 1000);
+                p.x = p.x + dist * Math.cos(theta);
+                p.y = p.y + dist * Math.sin(theta);
+            }
+            else if(this.projProps_.parametric_)
+            {
+                t = elapsed / this.projProps_.lifetime_ * 2 * Math.PI;
+                x = Math.sin(t) * (Boolean(this.bulletId_ % 2)?1:-1);
+                y = Math.sin(2 * t) * (this.bulletId_ % 4 < 2?1:-1);
+                sin = Math.sin(this.angle_);
+                cos = Math.cos(this.angle_);
+                p.x = p.x + (x * cos - y * sin) * this.projProps_.magnitude_;
+                p.y = p.y + (x * sin + y * cos) * this.projProps_.magnitude_;
             }
             else {
-                if (this.projProps_.parametric_) {
-                    _local8 = (((_arg1 / this.projProps_.lifetime_) * 2) * Math.PI);
-                    _local9 = (Math.sin(_local8) * (((this.bulletId_ % 2)) ? 1 : -1));
-                    _local10 = (Math.sin((2 * _local8)) * ((((this.bulletId_ % 4)) < 2) ? 1 : -1));
-                    _local11 = Math.sin(this.angle_);
-                    _local12 = Math.cos(this.angle_);
-                    _arg2.x = (_arg2.x + (((_local9 * _local12) - (_local10 * _local11)) * this.projProps_.magnitude_));
-                    _arg2.y = (_arg2.y + (((_local9 * _local11) + (_local10 * _local12)) * this.projProps_.magnitude_));
+                if (this.projProps_.boomerang_) {
+                    _local13 = ((this.projProps_.lifetime_ * (this.projProps_.speed_ / 10000)) / 2);
+                    if (dist > _local13) {
+                        dist = (_local13 - (dist - _local13));
+                    }
                 }
-                else {
-                    if (this.projProps_.boomerang_) {
-                        _local13 = ((this.projProps_.lifetime_ * (this.projProps_.speed_ / 10000)) / 2);
-                        if (_local3 > _local13) {
-                            _local3 = (_local13 - (_local3 - _local13));
-                        }
+                else if(this.projProps_.blazingBoomerang_){
+                    _local13 = ((this.projProps_.lifetime_ * (this.projProps_.speed_ / 10000)) / 1.25);
+                    if (dist > _local13) {
+                        dist = (_local13 - (dist - _local13));
                     }
-                    else if(this.projProps_.blazingBoomerang_){
-                        _local13 = ((this.projProps_.lifetime_ * (this.projProps_.speed_ / 10000)) / 1.25);
-                        if (_local3 > _local13) {
-                            _local3 = (_local13 - (_local3 - _local13));
-                        }
-                        this.angle_ += _local3 / 500;
-                    }
-                    else if(this.projProps_.vargoSpellBoomerang_){
-                        var xVal:Number = ((this.projProps_.lifetime_ * (this.projProps_.speed_ / 10000)) / 4);
-                        if(_local3 > 2 * xVal)
-                            _local3 -=  2 * xVal;
-                        else if(_local3 > xVal)
-                            _local3 = xVal - (_local3 - xVal);
-                        this.angle_ += _local3 / 5;
-                    }
-                        _arg2.x = (_arg2.x + (_local3 * Math.cos(this.angle_)));
-                        _arg2.y = (_arg2.y + (_local3 * Math.sin(this.angle_)));
-                    if (this.projProps_.amplitude_ != 0) {
-                        _local14 = (this.projProps_.amplitude_ * Math.sin((_local4 + ((((_arg1 / this.projProps_.lifetime_) * this.projProps_.frequency_) * 2) * Math.PI))));
-                        _arg2.x = (_arg2.x + (_local14 * Math.cos((this.angle_ + (Math.PI / 2)))));
-                        _arg2.y = (_arg2.y + (_local14 * Math.sin((this.angle_ + (Math.PI / 2)))));
-                    }
+                    this.angle_ += dist / 500;
+                }
+                else if(this.projProps_.vargoSpellBoomerang_){
+                    var xVal:Number = ((this.projProps_.lifetime_ * (this.projProps_.speed_ / 10000)) / 4);
+                    if(dist > 2 * xVal)
+                        dist -=  2 * xVal;
+                    else if(dist > xVal)
+                        dist = xVal - (dist - xVal);
+                    this.angle_ += dist / 5;
+                }
+                p.x = (p.x + (dist * Math.cos(this.angle_)));
+                p.y = (p.y + (dist * Math.sin(this.angle_)));
+                if (this.projProps_.amplitude_ != 0) {
+                    _local14 = (this.projProps_.amplitude_ * Math.sin((phase + ((((elapsed / this.projProps_.lifetime_) * this.projProps_.frequency_) * 2) * Math.PI))));
+                    p.x = (p.x + (_local14 * Math.cos((this.angle_ + (Math.PI / 2)))));
+                    p.y = (p.y + (_local14 * Math.sin((this.angle_ + (Math.PI / 2)))));
                 }
             }
         }
 
-        override public function update(currentTime:int, msDelta:int):Boolean {
-            var blood:Vector.<uint>;
-
-            var lifetime:int = currentTime - this.startTime_;
-            if (lifetime > this.projProps_.lifetime_) {
+        override public function update(time:int, dt:int) : Boolean
+        {
+            var colors:Vector.<uint> = null;
+            var player:Player = null;
+            var isPlayer:Boolean = false;
+            var isTargetAnEnemy:Boolean = false;
+            var sendMessage:Boolean = false;
+            var d:int = 0;
+            var elapsed:int = time - this.startTime_;
+            if(elapsed > this.projProps_.lifetime_)
+            {
                 return false;
             }
 
-            var pnt:Point = this.staticPoint_;
-            this.positionAt(lifetime, pnt);
-
-            if (!this.moveTo(pnt.x, pnt.y) || square_.tileType_ == 0xFFFF) {
+            var p:Point = this.staticPoint_;
+            this.positionAt(elapsed,p);
+            if(!this.moveTo(p.x,p.y) || square_.tileType_ == 255)
+            {
+                if(this.damagesPlayers_)
+                {
+                    map_.gs_.gsc_.squareHit(time, this.bulletId_, this.ownerId_);
+                }
+                else if(square_.obj_ != null)
+                {
+                    if (Parameters.data_.eyeCandyParticles) {//eyeCandyParticles Parameters.data_.particles
+                        colors = BloodComposition.getColors(this.texture_);
+                        map_.addObj(new HitEffect(colors, 100, 3, this.angle_, this.projProps_.speed_), p.x, p.y);
+                    }
+                }
+                return false;
+            }
+            if (square_.obj_ != null && (!square_.obj_.props_.isEnemy_ || !this.damagesEnemies_) && (square_.obj_.props_.enemyOccupySquare_ || !this.projProps_.passesCover_ && square_.obj_.props_.occupySquare_)) {
                 if (this.damagesPlayers_) {
-                    map_.gs_.gsc_.squareHit(currentTime, this.bulletId_, this.ownerId_);
+                    map_.gs_.gsc_.squareHit(time, this.bulletId_, this.ownerId_);
                 }
                 else {
-                    if (square_.obj_ != null) {
-                        blood = BloodComposition.getColors(this.texture_);
-                        map_.addObj(new HitEffect(blood, 100, 3, this.angle_, this.projProps_.speed_), pnt.x, pnt.y);
+                    if (Parameters.data_.eyeCandyParticles) {
+                        colors = BloodComposition.getColors(this.texture_);
+                        map_.addObj(new HitEffect(colors, 100, 3, this.angle_, this.projProps_.speed_), p.x, p.y);
                     }
                 }
                 return false;
             }
 
-            if (square_.obj_ != null &&
-                    (!square_.obj_.props_.isEnemy_ || !this.damagesEnemies_) &&
-                    (square_.obj_.props_.enemyOccupySquare_ || !this.projProps_.passesCover_ && square_.obj_.props_.occupySquare_)) {
-                if (this.damagesPlayers_) {
-                    map_.gs_.gsc_.otherHit(currentTime, this.bulletId_, this.ownerId_, square_.obj_.objectId_);
-                }
-                else {
-                    blood = BloodComposition.getColors(this.texture_);
-                    map_.addObj(new HitEffect(blood, 100, 3, this.angle_, this.projProps_.speed_), pnt.x, pnt.y);
-                }
-                return false;
-            }
-
-            var go:GameObject = this.getHit(pnt.x, pnt.y);
-            if (go != null) {
-                var player:Player = map_.player_;
-                var goIsEnemy:Boolean = go.props_.isEnemy_;
-                var goHit:Boolean = player != null &&
-                        !player.isPaused() &&
-                        !player.isHidden() &&
-                        (this.damagesPlayers_ || goIsEnemy && this.ownerId_ == player.objectId_);
-
-                if (goHit) {
-                    var dmg:int = GameObject.damageWithDefense(this.damage_, go.defense_, this.projProps_.armorPiercing_, go.condition_);
-
-                    var killed:Boolean = false;
-                    if (go.hp_ <= dmg) {
-                        killed = true;
-                        if (goIsEnemy) {
-                            doneAction(map_.gs_, Tutorial.KILL_ACTION);
-                        }
-                    }
-
-                    if (go == player) {
+            var target:GameObject = this.getHit(p.x,p.y);
+            if(target != null)
+            {
+                player = map_.player_;
+                isPlayer = player != null;
+                isTargetAnEnemy = target.props_.isEnemy_;
+                sendMessage = isPlayer && (this.damagesPlayers_ || isTargetAnEnemy && this.ownerId_ == player.objectId_);
+                if(sendMessage)
+                {
+                    d = GameObject.damageWithDefense(this.damage_,target.defense_,this.projProps_.armorPiercing_,target.condition_);
+                    if(target == player)
+                    {
                         map_.gs_.gsc_.playerHit(this.bulletId_, this.ownerId_);
-                        if (containerType_ != 0x1392)
-                        {
-                            go.damage(this.containerType_, dmg, null, false, this); //null = this.projProps_.effects_
-                        }
+                        target.damage(d, this.projProps_.effects_, this);
                     }
-
-                    else {
-                        if (goIsEnemy) {
-                            map_.gs_.gsc_.enemyHit(currentTime, this.bulletId_, go.objectId_, killed);
-                            go.damage(this.containerType_, dmg, this.projProps_.effects_, killed, this);
-                        }
-                        else {
-                            if (!this.projProps_.multiHit_) {
-                                map_.gs_.gsc_.otherHit(currentTime, this.bulletId_, this.ownerId_, go.objectId_);
-                            }
-                        }
+                    else if(target.props_.isEnemy_)
+                    {
+                        map_.gs_.gsc_.enemyHit(time,this.bulletId_,target.objectId_, false);
+                        target.damage(d,this.projProps_.effects_,this);
                     }
                 }
-
-                if (this.projProps_.multiHit_) {
-                    this.multiHitDict_[go] = true;
+                if(this.projProps_.multiHit_)
+                {
+                    this.multiHitDict_[target] = true;
                 }
-                else {
+                else
+                {
                     return false;
                 }
             }
             return true;
         }
 
-        public function getHit(pX:Number, pY:Number):GameObject {
+
+        public function getHit(pX:Number, pY:Number) : GameObject
+        {
             var go:GameObject = null;
             var xDiff:Number = NaN;
             var yDiff:Number = NaN;
@@ -323,35 +336,36 @@ import flash.display.BitmapData;
             var minDist:Number = Number.MAX_VALUE;
             var minGO:GameObject = null;
 
-            for each(go in map_.goDict_)
+            if (damagesEnemies_)
             {
-                if(!go.isInvincible())
+                for each(go in map_.goDict_)
                 {
-                    if(!go.isStasis())
+                    xDiff = go.x_ > pX?Number(go.x_ - pX):Number(pX - go.x_);
+                    yDiff = go.y_ > pY?Number(go.y_ - pY):Number(pY - go.y_);
+                    if(!(xDiff > go.radius_ || yDiff >  go.radius_))
                     {
-                        if(this.damagesEnemies_ && go.props_.isEnemy_ || this.damagesPlayers_ && go.props_.isPlayer_)
+                        if(!(this.projProps_.multiHit_ && this.multiHitDict_[go] != null))
                         {
-                            if(!(go.dead_ || go.isPaused()))
+                            dist = Math.sqrt(xDiff * xDiff + yDiff * yDiff);
+                            if(dist < minDist)
                             {
-                                xDiff = go.x_ > pX?Number(go.x_ - pX):Number(pX - go.x_);
-                                yDiff = go.y_ > pY?Number(go.y_ - pY):Number(pY - go.y_);
-                                if(!(xDiff > go.radius_ || yDiff > go.radius_))
-                                {
-                                    if(!(this.projProps_.multiHit_ && this.multiHitDict_[go] != null))
-                                    {
-                                        if(go == map_.player_)
-                                        {
-                                            return go;
-                                        }
-                                        dist = Math.sqrt(xDiff * xDiff + yDiff * yDiff);
-                                        if(dist < minDist)
-                                        {
-                                            minDist = dist;
-                                            minGO = go;
-                                        }
-                                    }
-                                }
+                                minDist = dist;
+                                minGO = go;
                             }
+                        }
+                    }
+                }
+            }
+            else if (damagesPlayers_)
+            {
+                go = map_.player_;
+                if (go.isTargetable())
+                {
+                    xDiff = go.x_ > pX ? Number(go.x_ - pX) : Number(pX - go.x_);
+                    yDiff = go.y_ > pY ? Number(go.y_ - pY) : Number(pY - go.y_);
+                    if (!(xDiff > go.radius_ || yDiff >  go.radius_)) {
+                        if (!(this.projProps_.multiHit_ && this.multiHitDict_[go] != null)) {
+                            return go;
                         }
                     }
                 }
@@ -359,24 +373,22 @@ import flash.display.BitmapData;
             return minGO;
         }
 
-        override public function draw(param1:Vector.<IGraphicsData>, param2:Camera, param3:int) : void
+        override public function draw(graphicsData:Vector.<IGraphicsData>, camera:Camera, time:int) : void
         {
-            var _loc4_:BitmapData = this.texture_;
-            var _loc5_:Number = this.props_.rotation_ == 0?Number(0):Number(param3 / this.props_.rotation_);
+
+            var texture:BitmapData = this.texture_;
+            var r:Number = this.props_.rotation_ == 0?Number(0):Number(time / this.props_.rotation_);
             this.staticVector3D_.x = x_;
             this.staticVector3D_.y = y_;
             this.staticVector3D_.z = z_;
-            var _loc6_:Number = !Parameters.data_.smartProjectiles?Number(this.angle_):Number(this.getDirectionAngle(param3));
-            var _loc7_:Number = _loc6_ - param2.angleRad_ + this.props_.angleCorrection_ + _loc5_;
-            this.p_.draw(param1,this.staticVector3D_,_loc7_,param2.wToS_,param2,_loc4_);
-            if(this.projProps_.particleTrail_)
+            var _loc6_:Number = !Parameters.data_.smartProjectiles?Number(this.angle_):Number(this.getDirectionAngle(time));
+            var _loc7_:Number = _loc6_ - camera.angleRad_ + this.props_.angleCorrection_ + r;
+            this.p_.draw(graphicsData,this.staticVector3D_,_loc7_,camera.wToS_,camera,texture);
+            if(this.projProps_.particleTrail_ && Parameters.data_.eyeCandyParticles)
             {
-                if(Parameters.data_.eyeCandyParticles)
-                {
-                    map_.addObj(new SparkParticle(100,16711935,600,0.5,RandomUtil.plusMinus(3),RandomUtil.plusMinus(3)),x_,y_);
-                    map_.addObj(new SparkParticle(100,16711935,600,0.5,RandomUtil.plusMinus(3),RandomUtil.plusMinus(3)),x_,y_);
-                    map_.addObj(new SparkParticle(100,16711935,600,0.5,RandomUtil.plusMinus(3),RandomUtil.plusMinus(3)),x_,y_);
-                }
+                map_.addObj(new SparkParticle(100, 16711935, 600, 0.5, RandomUtil.plusMinus(3), RandomUtil.plusMinus(3)), x_, y_);
+                map_.addObj(new SparkParticle(100, 16711935, 600, 0.5, RandomUtil.plusMinus(3), RandomUtil.plusMinus(3)), x_, y_);
+                map_.addObj(new SparkParticle(100, 16711935, 600, 0.5, RandomUtil.plusMinus(3), RandomUtil.plusMinus(3)), x_, y_);
             }
         }
 

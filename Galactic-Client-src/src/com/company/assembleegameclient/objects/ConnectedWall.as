@@ -1,348 +1,384 @@
-﻿package com.company.assembleegameclient.objects {
+﻿package com.company.assembleegameclient.objects
+{
 import com.company.assembleegameclient.engine3d.ObjectFace3D;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.util.AssetLibrary;
-
 import flash.display.BitmapData;
 import flash.geom.Vector3D;
-
 import kabam.rotmg.stage3D.GraphicsFillExtra;
 
-public class ConnectedWall extends ConnectedObject {
+public class ConnectedWall extends ConnectedObject
+{
+
 
     protected var objectXML_:XML;
+
     protected var bI_:Number = 0.5;
+
     protected var tI_:Number = 0.25;
-    protected var h_:Number = 1;
+
+    protected var h_:Number = 1.0;
+
     protected var wallRepeat_:Boolean;
+
     protected var topRepeat_:Boolean;
 
-    public function ConnectedWall(_arg1:XML) {
-        super(_arg1);
-        this.objectXML_ = _arg1;
-        if (_arg1.hasOwnProperty("BaseIndent")) {
-            this.bI_ = (0.5 - Number(_arg1.BaseIndent));
+    public function ConnectedWall(objectXML:XML)
+    {
+        super(objectXML);
+        this.objectXML_ = objectXML;
+        if(objectXML.hasOwnProperty("BaseIndent"))
+        {
+            this.bI_ = 0.5 - Number(objectXML.BaseIndent);
         }
-        if (_arg1.hasOwnProperty("TopIndent")) {
-            this.tI_ = (0.5 - Number(_arg1.TopIndent));
+        if(objectXML.hasOwnProperty("TopIndent"))
+        {
+            this.tI_ = 0.5 - Number(objectXML.TopIndent);
         }
-        if (_arg1.hasOwnProperty("Height")) {
-            this.h_ = Number(_arg1.Height);
+        if(objectXML.hasOwnProperty("Height"))
+        {
+            this.h_ = Number(objectXML.Height);
         }
-        this.wallRepeat_ = !(_arg1.hasOwnProperty("NoWallTextureRepeat"));
-        this.topRepeat_ = !(_arg1.hasOwnProperty("NoTopTextureRepeat"));
+        this.wallRepeat_ = !objectXML.hasOwnProperty("NoWallTextureRepeat");
+        this.topRepeat_ = !objectXML.hasOwnProperty("NoTopTextureRepeat");
     }
 
-    override protected function buildDot():void {
-        var _local1:Vector3D = new Vector3D(-(this.bI_), -(this.bI_), 0);
-        var _local2:Vector3D = new Vector3D(this.bI_, -(this.bI_), 0);
-        var _local3:Vector3D = new Vector3D(this.bI_, this.bI_, 0);
-        var _local4:Vector3D = new Vector3D(-(this.bI_), this.bI_, 0);
-        var _local5:Vector3D = new Vector3D(-(this.tI_), -(this.tI_), this.h_);
-        var _local6:Vector3D = new Vector3D(this.tI_, -(this.tI_), this.h_);
-        var _local7:Vector3D = new Vector3D(this.tI_, this.tI_, this.h_);
-        var _local8:Vector3D = new Vector3D(-(this.tI_), this.tI_, this.h_);
-        this.addQuad(_local6, _local5, _local1, _local2, texture_, true, true);
-        this.addQuad(_local7, _local6, _local2, _local3, texture_, true, true);
-        this.addQuad(_local5, _local8, _local4, _local1, texture_, true, true);
-        this.addQuad(_local8, _local7, _local3, _local4, texture_, true, true);
-        var _local9:BitmapData = texture_;
-        if (this.objectXML_.hasOwnProperty("DotTexture")) {
-            _local9 = AssetLibrary.getImageFromSet(String(this.objectXML_.DotTexture.File), int(this.objectXML_.DotTexture.Index));
+    override protected function buildDot() : void
+    {
+        var v0:Vector3D = new Vector3D(-this.bI_,-this.bI_,0);
+        var v1:Vector3D = new Vector3D(this.bI_,-this.bI_,0);
+        var v2:Vector3D = new Vector3D(this.bI_,this.bI_,0);
+        var v3:Vector3D = new Vector3D(-this.bI_,this.bI_,0);
+        var v4:Vector3D = new Vector3D(-this.tI_,-this.tI_,this.h_);
+        var v5:Vector3D = new Vector3D(this.tI_,-this.tI_,this.h_);
+        var v6:Vector3D = new Vector3D(this.tI_,this.tI_,this.h_);
+        var v7:Vector3D = new Vector3D(-this.tI_,this.tI_,this.h_);
+        this.addQuad(v5,v4,v0,v1,texture_,true,true);
+        this.addQuad(v6,v5,v1,v2,texture_,true,true);
+        this.addQuad(v4,v7,v3,v0,texture_,true,true);
+        this.addQuad(v7,v6,v2,v3,texture_,true,true);
+        var texture:BitmapData = texture_;
+        if(this.objectXML_.hasOwnProperty("DotTexture"))
+        {
+            texture = AssetLibrary.getImageFromSet(String(this.objectXML_.DotTexture.File),int(this.objectXML_.DotTexture.Index));
         }
-        this.addTop([_local5, _local6, _local7, _local8], new <Number>[0.25, 0.25, 0.75, 0.25, 0.25, 0.75], _local9);
+        this.addTop([v4,v5,v6,v7],new <Number>[0.25,0.25,0.75,0.25,0.25,0.75],texture);
     }
 
-    override protected function buildShortLine():void {
-        var _local1:Vector3D = new Vector3D(-(this.bI_), -0.5, 0);
-        var _local2:Vector3D = new Vector3D(this.bI_, -0.5, 0);
-        var _local3:Vector3D = new Vector3D(this.bI_, this.bI_, 0);
-        var _local4:Vector3D = new Vector3D(-(this.bI_), this.bI_, 0);
-        var _local5:Vector3D = new Vector3D(-(this.tI_), -0.5, this.h_);
-        var _local6:Vector3D = new Vector3D(this.tI_, -0.5, this.h_);
-        var _local7:Vector3D = new Vector3D(this.tI_, this.tI_, this.h_);
-        var _local8:Vector3D = new Vector3D(-(this.tI_), this.tI_, this.h_);
-        this.addQuad(_local7, _local6, _local2, _local3, texture_, true, false);
-        this.addQuad(_local5, _local8, _local4, _local1, texture_, false, true);
-        this.addQuad(_local8, _local7, _local3, _local4, texture_, true, true);
-        var _local9:BitmapData = texture_;
-        if (this.objectXML_.hasOwnProperty("ShortLineTexture")) {
-            _local9 = AssetLibrary.getImageFromSet(String(this.objectXML_.ShortLineTexture.File), int(this.objectXML_.ShortLineTexture.Index));
+    override protected function buildShortLine() : void
+    {
+        var v0:Vector3D = new Vector3D(-this.bI_,-0.5,0);
+        var v1:Vector3D = new Vector3D(this.bI_,-0.5,0);
+        var v2:Vector3D = new Vector3D(this.bI_,this.bI_,0);
+        var v3:Vector3D = new Vector3D(-this.bI_,this.bI_,0);
+        var v4:Vector3D = new Vector3D(-this.tI_,-0.5,this.h_);
+        var v5:Vector3D = new Vector3D(this.tI_,-0.5,this.h_);
+        var v6:Vector3D = new Vector3D(this.tI_,this.tI_,this.h_);
+        var v7:Vector3D = new Vector3D(-this.tI_,this.tI_,this.h_);
+        this.addQuad(v6,v5,v1,v2,texture_,true,false);
+        this.addQuad(v4,v7,v3,v0,texture_,false,true);
+        this.addQuad(v7,v6,v2,v3,texture_,true,true);
+        var texture:BitmapData = texture_;
+        if(this.objectXML_.hasOwnProperty("ShortLineTexture"))
+        {
+            texture = AssetLibrary.getImageFromSet(String(this.objectXML_.ShortLineTexture.File),int(this.objectXML_.ShortLineTexture.Index));
         }
-        this.addTop([_local5, _local6, _local7, _local8], new <Number>[0.25, 0, 0.75, 0, 0.25, 0.75], _local9);
+        this.addTop([v4,v5,v6,v7],new <Number>[0.25,0,0.75,0,0.25,0.75],texture);
     }
 
-    override protected function buildL():void {
-        var _local1:Vector3D = new Vector3D(-(this.bI_), -0.5, 0);
-        var _local2:Vector3D = new Vector3D(this.bI_, -0.5, 0);
-        var _local3:Vector3D = new Vector3D(this.bI_, -(this.bI_), 0);
-        var _local4:Vector3D = new Vector3D(0.5, -(this.bI_), 0);
-        var _local5:Vector3D = new Vector3D(0.5, this.bI_, 0);
-        var _local6:Vector3D = new Vector3D(-(this.bI_), this.bI_, 0);
-        var _local7:Vector3D = new Vector3D(-(this.tI_), -0.5, this.h_);
-        var _local8:Vector3D = new Vector3D(this.tI_, -0.5, this.h_);
-        var _local9:Vector3D = new Vector3D(this.tI_, -(this.tI_), this.h_);
-        var _local10:Vector3D = new Vector3D(0.5, -(this.tI_), this.h_);
-        var _local11:Vector3D = new Vector3D(0.5, this.tI_, this.h_);
-        var _local12:Vector3D = new Vector3D(-(this.tI_), this.tI_, this.h_);
-        this.addBit(_local9, _local8, _local2, _local3, texture_, N2, true, true, true);
-        this.addBit(_local10, _local9, _local3, _local4, texture_, N2, false, true, false);
-        this.addQuad(_local12, _local11, _local5, _local6, texture_, true, false);
-        this.addQuad(_local7, _local12, _local6, _local1, texture_, false, true);
-        var _local13:BitmapData = texture_;
-        if (this.objectXML_.hasOwnProperty("LTexture")) {
-            _local13 = AssetLibrary.getImageFromSet(String(this.objectXML_.LTexture.File), int(this.objectXML_.LTexture.Index));
+    override protected function buildL() : void
+    {
+        var v0:Vector3D = new Vector3D(-this.bI_,-0.5,0);
+        var v1:Vector3D = new Vector3D(this.bI_,-0.5,0);
+        var v2:Vector3D = new Vector3D(this.bI_,-this.bI_,0);
+        var v3:Vector3D = new Vector3D(0.5,-this.bI_,0);
+        var v4:Vector3D = new Vector3D(0.5,this.bI_,0);
+        var v5:Vector3D = new Vector3D(-this.bI_,this.bI_,0);
+        var v6:Vector3D = new Vector3D(-this.tI_,-0.5,this.h_);
+        var v7:Vector3D = new Vector3D(this.tI_,-0.5,this.h_);
+        var v8:Vector3D = new Vector3D(this.tI_,-this.tI_,this.h_);
+        var v9:Vector3D = new Vector3D(0.5,-this.tI_,this.h_);
+        var va:Vector3D = new Vector3D(0.5,this.tI_,this.h_);
+        var vb:Vector3D = new Vector3D(-this.tI_,this.tI_,this.h_);
+        this.addBit(v8,v7,v1,v2,texture_,N2,true,true,true);
+        this.addBit(v9,v8,v2,v3,texture_,N2,false,true,false);
+        this.addQuad(vb,va,v4,v5,texture_,true,false);
+        this.addQuad(v6,vb,v5,v0,texture_,false,true);
+        var texture:BitmapData = texture_;
+        if(this.objectXML_.hasOwnProperty("LTexture"))
+        {
+            texture = AssetLibrary.getImageFromSet(String(this.objectXML_.LTexture.File),int(this.objectXML_.LTexture.Index));
         }
-        this.addTop([_local7, _local8, _local9, _local10, _local11, _local12], new <Number>[0.25, 0, 0.75, 0, 0.25, 0.75], _local13);
+        this.addTop([v6,v7,v8,v9,va,vb],new <Number>[0.25,0,0.75,0,0.25,0.75],texture);
     }
 
-    override protected function buildLine():void {
-        var _local1:Vector3D = new Vector3D(-(this.bI_), -0.5, 0);
-        var _local2:Vector3D = new Vector3D(this.bI_, -0.5, 0);
-        var _local3:Vector3D = new Vector3D(this.bI_, 0.5, 0);
-        var _local4:Vector3D = new Vector3D(-(this.bI_), 0.5, 0);
-        var _local5:Vector3D = new Vector3D(-(this.tI_), -0.5, this.h_);
-        var _local6:Vector3D = new Vector3D(this.tI_, -0.5, this.h_);
-        var _local7:Vector3D = new Vector3D(this.tI_, 0.5, this.h_);
-        var _local8:Vector3D = new Vector3D(-(this.tI_), 0.5, this.h_);
-        this.addQuad(_local7, _local6, _local2, _local3, texture_, false, false);
-        this.addQuad(_local5, _local8, _local4, _local1, texture_, false, false);
-        var _local9:BitmapData = texture_;
-        if (this.objectXML_.hasOwnProperty("LineTexture")) {
-            _local9 = AssetLibrary.getImageFromSet(String(this.objectXML_.LineTexture.File), int(this.objectXML_.LineTexture.Index));
+    override protected function buildLine() : void
+    {
+        var v0:Vector3D = new Vector3D(-this.bI_,-0.5,0);
+        var v1:Vector3D = new Vector3D(this.bI_,-0.5,0);
+        var v2:Vector3D = new Vector3D(this.bI_,0.5,0);
+        var v3:Vector3D = new Vector3D(-this.bI_,0.5,0);
+        var v4:Vector3D = new Vector3D(-this.tI_,-0.5,this.h_);
+        var v5:Vector3D = new Vector3D(this.tI_,-0.5,this.h_);
+        var v6:Vector3D = new Vector3D(this.tI_,0.5,this.h_);
+        var v7:Vector3D = new Vector3D(-this.tI_,0.5,this.h_);
+        this.addQuad(v6,v5,v1,v2,texture_,false,false);
+        this.addQuad(v4,v7,v3,v0,texture_,false,false);
+        var texture:BitmapData = texture_;
+        if(this.objectXML_.hasOwnProperty("LineTexture"))
+        {
+            texture = AssetLibrary.getImageFromSet(String(this.objectXML_.LineTexture.File),int(this.objectXML_.LineTexture.Index));
         }
-        this.addTop([_local5, _local6, _local7, _local8], new <Number>[0.25, 0, 0.75, 0, 0.25, 1], _local9);
+        this.addTop([v4,v5,v6,v7],new <Number>[0.25,0,0.75,0,0.25,1],texture);
     }
 
-    override protected function buildT():void {
-        var _local1:Vector3D = new Vector3D(-(this.bI_), -0.5, 0);
-        var _local2:Vector3D = new Vector3D(this.bI_, -0.5, 0);
-        var _local3:Vector3D = new Vector3D(this.bI_, -(this.bI_), 0);
-        var _local4:Vector3D = new Vector3D(0.5, -(this.bI_), 0);
-        var _local5:Vector3D = new Vector3D(0.5, this.bI_, 0);
-        var _local6:Vector3D = new Vector3D(-0.5, this.bI_, 0);
-        var _local7:Vector3D = new Vector3D(-0.5, -(this.bI_), 0);
-        var _local8:Vector3D = new Vector3D(-(this.bI_), -(this.bI_), 0);
-        var _local9:Vector3D = new Vector3D(-(this.tI_), -0.5, this.h_);
-        var _local10:Vector3D = new Vector3D(this.tI_, -0.5, this.h_);
-        var _local11:Vector3D = new Vector3D(this.tI_, -(this.tI_), this.h_);
-        var _local12:Vector3D = new Vector3D(0.5, -(this.tI_), this.h_);
-        var _local13:Vector3D = new Vector3D(0.5, this.tI_, this.h_);
-        var _local14:Vector3D = new Vector3D(-0.5, this.tI_, this.h_);
-        var _local15:Vector3D = new Vector3D(-0.5, -(this.tI_), this.h_);
-        var _local16:Vector3D = new Vector3D(-(this.tI_), -(this.tI_), this.h_);
-        this.addBit(_local11, _local10, _local2, _local3, texture_, N2, true);
-        this.addBit(_local12, _local11, _local3, _local4, texture_, N2, false);
-        this.addQuad(_local14, _local13, _local5, _local6, texture_, false, false);
-        this.addBit(_local16, _local15, _local7, _local8, texture_, N0, true);
-        this.addBit(_local9, _local16, _local8, _local1, texture_, N0, false);
-        var _local17:BitmapData = texture_;
-        if (this.objectXML_.hasOwnProperty("TTexture")) {
-            _local17 = AssetLibrary.getImageFromSet(String(this.objectXML_.TTexture.File), int(this.objectXML_.TTexture.Index));
+    override protected function buildT() : void
+    {
+        var v0:Vector3D = new Vector3D(-this.bI_,-0.5,0);
+        var v1:Vector3D = new Vector3D(this.bI_,-0.5,0);
+        var v2:Vector3D = new Vector3D(this.bI_,-this.bI_,0);
+        var v3:Vector3D = new Vector3D(0.5,-this.bI_,0);
+        var v4:Vector3D = new Vector3D(0.5,this.bI_,0);
+        var v5:Vector3D = new Vector3D(-0.5,this.bI_,0);
+        var v6:Vector3D = new Vector3D(-0.5,-this.bI_,0);
+        var v7:Vector3D = new Vector3D(-this.bI_,-this.bI_,0);
+        var v8:Vector3D = new Vector3D(-this.tI_,-0.5,this.h_);
+        var v9:Vector3D = new Vector3D(this.tI_,-0.5,this.h_);
+        var va:Vector3D = new Vector3D(this.tI_,-this.tI_,this.h_);
+        var vb:Vector3D = new Vector3D(0.5,-this.tI_,this.h_);
+        var vc:Vector3D = new Vector3D(0.5,this.tI_,this.h_);
+        var vd:Vector3D = new Vector3D(-0.5,this.tI_,this.h_);
+        var ve:Vector3D = new Vector3D(-0.5,-this.tI_,this.h_);
+        var vf:Vector3D = new Vector3D(-this.tI_,-this.tI_,this.h_);
+        this.addBit(va,v9,v1,v2,texture_,N2,true);
+        this.addBit(vb,va,v2,v3,texture_,N2,false);
+        this.addQuad(vd,vc,v4,v5,texture_,false,false);
+        this.addBit(vf,ve,v6,v7,texture_,N0,true);
+        this.addBit(v8,vf,v7,v0,texture_,N0,false);
+        var texture:BitmapData = texture_;
+        if(this.objectXML_.hasOwnProperty("TTexture"))
+        {
+            texture = AssetLibrary.getImageFromSet(String(this.objectXML_.TTexture.File),int(this.objectXML_.TTexture.Index));
         }
-        this.addTop([_local9, _local10, _local11, _local12, _local13, _local14, _local15, _local16], new <Number>[0.25, 0, 0.75, 0, 0.25, 0.25], _local17);
+        this.addTop([v8,v9,va,vb,vc,vd,ve,vf],new <Number>[0.25,0,0.75,0,0.25,0.25],texture);
     }
 
-    override protected function buildCross():void {
-        var _local1:Vector3D = new Vector3D(-(this.bI_), -0.5, 0);
-        var _local2:Vector3D = new Vector3D(this.bI_, -0.5, 0);
-        var _local3:Vector3D = new Vector3D(this.bI_, -(this.bI_), 0);
-        var _local4:Vector3D = new Vector3D(0.5, -(this.bI_), 0);
-        var _local5:Vector3D = new Vector3D(0.5, this.bI_, 0);
-        var _local6:Vector3D = new Vector3D(this.bI_, this.bI_, 0);
-        var _local7:Vector3D = new Vector3D(this.bI_, 0.5, 0);
-        var _local8:Vector3D = new Vector3D(-(this.bI_), 0.5, 0);
-        var _local9:Vector3D = new Vector3D(-(this.bI_), this.bI_, 0);
-        var _local10:Vector3D = new Vector3D(-0.5, this.bI_, 0);
-        var _local11:Vector3D = new Vector3D(-0.5, -(this.bI_), 0);
-        var _local12:Vector3D = new Vector3D(-(this.bI_), -(this.bI_), 0);
-        var _local13:Vector3D = new Vector3D(-(this.tI_), -0.5, this.h_);
-        var _local14:Vector3D = new Vector3D(this.tI_, -0.5, this.h_);
-        var _local15:Vector3D = new Vector3D(this.tI_, -(this.tI_), this.h_);
-        var _local16:Vector3D = new Vector3D(0.5, -(this.tI_), this.h_);
-        var _local17:Vector3D = new Vector3D(0.5, this.tI_, this.h_);
-        var _local18:Vector3D = new Vector3D(this.tI_, this.tI_, this.h_);
-        var _local19:Vector3D = new Vector3D(this.tI_, 0.5, this.h_);
-        var _local20:Vector3D = new Vector3D(-(this.tI_), 0.5, this.h_);
-        var _local21:Vector3D = new Vector3D(-(this.tI_), this.tI_, this.h_);
-        var _local22:Vector3D = new Vector3D(-0.5, this.tI_, this.h_);
-        var _local23:Vector3D = new Vector3D(-0.5, -(this.tI_), this.h_);
-        var _local24:Vector3D = new Vector3D(-(this.tI_), -(this.tI_), this.h_);
-        this.addBit(_local15, _local14, _local2, _local3, texture_, N2, true);
-        this.addBit(_local16, _local15, _local3, _local4, texture_, N2, false);
-        this.addBit(_local18, _local17, _local5, _local6, texture_, N4, true);
-        this.addBit(_local19, _local18, _local6, _local7, texture_, N4, false);
-        this.addBit(_local21, _local20, _local8, _local9, texture_, N6, true);
-        this.addBit(_local22, _local21, _local9, _local10, texture_, N6, false);
-        this.addBit(_local24, _local23, _local11, _local12, texture_, N0, true);
-        this.addBit(_local13, _local24, _local12, _local1, texture_, N0, false);
-        var _local25:BitmapData = texture_;
-        if (this.objectXML_.hasOwnProperty("CrossTexture")) {
-            _local25 = AssetLibrary.getImageFromSet(String(this.objectXML_.CrossTexture.File), int(this.objectXML_.CrossTexture.Index));
+    override protected function buildCross() : void
+    {
+        var vb0:Vector3D = new Vector3D(-this.bI_,-0.5,0);
+        var vb1:Vector3D = new Vector3D(this.bI_,-0.5,0);
+        var vb2:Vector3D = new Vector3D(this.bI_,-this.bI_,0);
+        var vb3:Vector3D = new Vector3D(0.5,-this.bI_,0);
+        var vb4:Vector3D = new Vector3D(0.5,this.bI_,0);
+        var vb5:Vector3D = new Vector3D(this.bI_,this.bI_,0);
+        var vb6:Vector3D = new Vector3D(this.bI_,0.5,0);
+        var vb7:Vector3D = new Vector3D(-this.bI_,0.5,0);
+        var vb8:Vector3D = new Vector3D(-this.bI_,this.bI_,0);
+        var vb9:Vector3D = new Vector3D(-0.5,this.bI_,0);
+        var vba:Vector3D = new Vector3D(-0.5,-this.bI_,0);
+        var vbb:Vector3D = new Vector3D(-this.bI_,-this.bI_,0);
+        var vt0:Vector3D = new Vector3D(-this.tI_,-0.5,this.h_);
+        var vt1:Vector3D = new Vector3D(this.tI_,-0.5,this.h_);
+        var vt2:Vector3D = new Vector3D(this.tI_,-this.tI_,this.h_);
+        var vt3:Vector3D = new Vector3D(0.5,-this.tI_,this.h_);
+        var vt4:Vector3D = new Vector3D(0.5,this.tI_,this.h_);
+        var vt5:Vector3D = new Vector3D(this.tI_,this.tI_,this.h_);
+        var vt6:Vector3D = new Vector3D(this.tI_,0.5,this.h_);
+        var vt7:Vector3D = new Vector3D(-this.tI_,0.5,this.h_);
+        var vt8:Vector3D = new Vector3D(-this.tI_,this.tI_,this.h_);
+        var vt9:Vector3D = new Vector3D(-0.5,this.tI_,this.h_);
+        var vta:Vector3D = new Vector3D(-0.5,-this.tI_,this.h_);
+        var vtb:Vector3D = new Vector3D(-this.tI_,-this.tI_,this.h_);
+        this.addBit(vt2,vt1,vb1,vb2,texture_,N2,true);
+        this.addBit(vt3,vt2,vb2,vb3,texture_,N2,false);
+        this.addBit(vt5,vt4,vb4,vb5,texture_,N4,true);
+        this.addBit(vt6,vt5,vb5,vb6,texture_,N4,false);
+        this.addBit(vt8,vt7,vb7,vb8,texture_,N6,true);
+        this.addBit(vt9,vt8,vb8,vb9,texture_,N6,false);
+        this.addBit(vtb,vta,vba,vbb,texture_,N0,true);
+        this.addBit(vt0,vtb,vbb,vb0,texture_,N0,false);
+        var texture:BitmapData = texture_;
+        if(this.objectXML_.hasOwnProperty("CrossTexture"))
+        {
+            texture = AssetLibrary.getImageFromSet(String(this.objectXML_.CrossTexture.File),int(this.objectXML_.CrossTexture.Index));
         }
-        this.addTop([_local13, _local14, _local15, _local16, _local17, _local18, _local19, _local20, _local21, _local22, _local23, _local24], new <Number>[0.25, 0, 0.75, 0, 0.25, 0.25], _local25);
+        this.addTop([vt0,vt1,vt2,vt3,vt4,vt5,vt6,vt7,vt8,vt9,vta,vtb],new <Number>[0.25,0,0.75,0,0.25,0.25],texture);
     }
 
-    protected function addQuad(_arg1:Vector3D, _arg2:Vector3D, _arg3:Vector3D, _arg4:Vector3D, _arg5:BitmapData, _arg6:Boolean, _arg7:Boolean):void {
-        var _local11:Number;
-        var _local12:Number;
-        var _local13:Vector.<Number>;
-        var _local8:int = (obj3D_.vL_.length / 3);
-        obj3D_.vL_.push(_arg1.x, _arg1.y, _arg1.z, _arg2.x, _arg2.y, _arg2.z, _arg3.x, _arg3.y, _arg3.z, _arg4.x, _arg4.y, _arg4.z);
-        var _local9:Number = ((_arg6) ? (-((this.bI_ - this.tI_)) / ((1 - (this.bI_ - this.tI_)) - ((_arg7) ? (this.bI_ - this.tI_) : 0))) : 0);
-        obj3D_.uvts_.push(0, 0, 0, 1, 0, 0, 1, 1, 0, _local9, 1, 0);
-        var _local10:ObjectFace3D = new ObjectFace3D(obj3D_, new <int>[_local8, (_local8 + 1), (_local8 + 2), (_local8 + 3)]);
-        _local10.texture_ = _arg5;
-        _local10.bitmapFill_.repeat = this.wallRepeat_;
-        obj3D_.faces_.push(_local10);
-        if ((((GraphicsFillExtra.getVertexBuffer(_local10.bitmapFill_) == null)) && (Parameters.isGpuRender()))) {
-            _local11 = 0;
-            _local12 = 0;
-            if (_arg6) {
-                _local11 = _local9;
+    protected function addQuad(v0:Vector3D, v1:Vector3D, v2:Vector3D, v3:Vector3D, texture:BitmapData, leftIndent:Boolean, rightIndent:Boolean) : void
+    {
+        var n1:Number = NaN;
+        var n2:Number = NaN;
+        var vertexBuffer3D:Vector.<Number> = null;
+        var offset:int = obj3D_.vL_.length / 3;
+        obj3D_.vL_.push(v0.x,v0.y,v0.z,v1.x,v1.y,v1.z,v2.x,v2.y,v2.z,v3.x,v3.y,v3.z);
+        var n:Number = !!leftIndent?Number(-(this.bI_ - this.tI_) / (1 - (this.bI_ - this.tI_) - (!!rightIndent?this.bI_ - this.tI_:0))):Number(0);
+        obj3D_.uvts_.push(0,0,0,1,0,0,1,1,0,n,1,0);
+        var face:ObjectFace3D = new ObjectFace3D(obj3D_,new <int>[offset,offset + 1,offset + 2,offset + 3]);
+        face.texture_ = texture;
+        face.bitmapFill_.repeat = this.wallRepeat_;
+        obj3D_.faces_.push(face);
+        if(GraphicsFillExtra.getVertexBuffer(face.bitmapFill_) == null && Parameters.HWAcceleration)
+        {
+            n1 = 0;
+            n2 = 0;
+            if(leftIndent)
+            {
+                n1 = n;
             }
-            if (_arg7) {
-                _local12 = -(_local9);
+            if(rightIndent)
+            {
+                n2 = -n;
             }
-            if ((((((((_local12 == 0)) && ((_local11 == 0)))) && (_arg7))) && ((_arg4.x == -0.5)))) {
-                _local12 = 0.34;
+            if(n2 == 0 && n1 == 0 && rightIndent && v3.x == -0.5)
+            {
+                n2 = 0.34;
             }
-            _local13 = Vector.<Number>([-0.5, 0.5, 0, 0, 0, 0.5, 0.5, 0, 1, 0, (-0.5 + _local11), -0.5, 0, 0, 1, (0.5 + _local12), -0.5, 0, 1, 1]);
-            GraphicsFillExtra.setVertexBuffer(_local10.bitmapFill_, _local13);
+            vertexBuffer3D = Vector.<Number>([-0.5,0.5,0,0,0,0.5,0.5,0,1,0,-0.5 + n1,-0.5,0,0,1,0.5 + n2,-0.5,0,1,1]);
+            GraphicsFillExtra.setVertexBuffer(face.bitmapFill_,vertexBuffer3D);
         }
     }
 
-    protected function addBit(_arg1:Vector3D, _arg2:Vector3D, _arg3:Vector3D, _arg4:Vector3D, _arg5:BitmapData, _arg6:Vector3D, _arg7:Boolean, _arg8:Boolean = false, _arg9:Boolean = false):void {
-        var _local12:Vector.<Number>;
-        var _local10:int = (obj3D_.vL_.length / 3);
-        obj3D_.vL_.push(_arg1.x, _arg1.y, _arg1.z, _arg2.x, _arg2.y, _arg2.z, _arg3.x, _arg3.y, _arg3.z, _arg4.x, _arg4.y, _arg4.z);
-        if (_arg7) {
-            obj3D_.uvts_.push((-0.5 + this.tI_), 0, 0, 0, 0, 0, 0, 0, 0, (-0.5 + this.bI_), 1, 0);
+    protected function addBit(v0:Vector3D, v1:Vector3D, v2:Vector3D, v3:Vector3D, texture:BitmapData, normalL:Vector3D, indent:Boolean, forceStage3D:Boolean = false, leanLeft:Boolean = false) : void
+    {
+        var vertexBuffer3D:Vector.<Number> = null;
+        var offset:int = obj3D_.vL_.length / 3;
+        obj3D_.vL_.push(v0.x,v0.y,v0.z,v1.x,v1.y,v1.z,v2.x,v2.y,v2.z,v3.x,v3.y,v3.z);
+        if(indent)
+        {
+            obj3D_.uvts_.push(-0.5 + this.tI_,0,0,0,0,0,0,0,0,-0.5 + this.bI_,1,0);
         }
-        else {
-            obj3D_.uvts_.push(1, 0, 0, (1.5 - this.tI_), 0, 0, 0, 0, 0, 1, 1, 0);
+        else
+        {
+            obj3D_.uvts_.push(1,0,0,1.5 - this.tI_,0,0,0,0,0,1,1,0);
         }
-        var _local11:ObjectFace3D = new ObjectFace3D(obj3D_, new <int>[_local10, (_local10 + 1), (_local10 + 2), (_local10 + 3)]);
-        _local11.texture_ = _arg5;
-        _local11.bitmapFill_.repeat = this.wallRepeat_;
-        _local11.normalL_ = _arg6;
-        if (((!(Parameters.isGpuRender())) && (!(_arg8)))) {
-            obj3D_.faces_.push(_local11);
+        var face:ObjectFace3D = new ObjectFace3D(obj3D_,new <int>[offset,offset + 1,offset + 2,offset + 3]);
+        face.texture_ = texture;
+        face.bitmapFill_.repeat = this.wallRepeat_;
+        face.normalL_ = normalL;
+        if(!Parameters.HWAcceleration && !forceStage3D)
+        {
+            obj3D_.faces_.push(face);
         }
-        else {
-            if (_arg8) {
-                if (_arg9) {
-                    _local12 = Vector.<Number>([-0.75, 0.5, 0, 0, 0, -0.5, 0.5, 0, 1, 0, -0.75, -0.5, 0, 0, 1, -0.5, -0.5, 0, 1, 1]);
+        else if(forceStage3D)
+        {
+            if(leanLeft)
+            {
+                vertexBuffer3D = Vector.<Number>([-0.75,0.5,0,0,0,-0.5,0.5,0,1,0,-0.75,-0.5,0,0,1,-0.5,-0.5,0,1,1]);
+            }
+            else
+            {
+                vertexBuffer3D = Vector.<Number>([0.5,0.5,0,0,0,0.75,0.5,0,1,0,0.5,-0.5,0,0,1,0.75,-0.5,0,1,1]);
+            }
+            GraphicsFillExtra.setVertexBuffer(face.bitmapFill_,vertexBuffer3D);
+            obj3D_.faces_.push(face);
+        }
+    }
+
+    protected function addTop(verts:Array, uvs:Vector.<Number>, texture:BitmapData) : void
+    {
+        var face2:ObjectFace3D = null;
+        var vertexBuffer3D:Vector.<Number> = null;
+        var idxMod:int = 0;
+        var processing:Array = null;
+        var next:Array = null;
+        var texSpecial:Array = null;
+        var n:int = 0;
+        var temp:int = 0;
+        var texidx:int = 0;
+        var offset:int = obj3D_.vL_.length / 3;
+        var indices:Vector.<int> = new Vector.<int>();
+        for(var i:uint = 0; i < verts.length; i++)
+        {
+            obj3D_.vL_.push(verts[i].x,verts[i].y,verts[i].z);
+            indices.push(offset + i);
+            if(i == 0)
+            {
+                obj3D_.uvts_.push(uvs[0],uvs[1],0);
+            }
+            else if(i == 1)
+            {
+                obj3D_.uvts_.push(uvs[2],uvs[3],0);
+            }
+            else if(i == verts.length - 1)
+            {
+                obj3D_.uvts_.push(uvs[4],uvs[5],0);
+            }
+            else
+            {
+                obj3D_.uvts_.push(0,0,0);
+            }
+        }
+        var face:ObjectFace3D = new ObjectFace3D(obj3D_,indices);
+        face.texture_ = texture;
+        face.bitmapFill_.repeat = this.topRepeat_;
+        obj3D_.faces_.push(face);
+        if(indices.length == 6 && Parameters.HWAcceleration)
+        {
+            face2 = new ObjectFace3D(obj3D_,indices);
+            face2.texture_ = texture;
+            face2.bitmapFill_.repeat = this.topRepeat_;
+            obj3D_.faces_.push(face2);
+        }
+        var idx:int = 0;
+        if(indices.length == 4 && GraphicsFillExtra.getVertexBuffer(face.bitmapFill_) == null && Parameters.HWAcceleration)
+        {
+            vertexBuffer3D = new Vector.<Number>();
+            for(idx = 0; idx < indices.length; idx++)
+            {
+                if(idx == 3)
+                {
+                    idxMod = 2;
                 }
-                else {
-                    _local12 = Vector.<Number>([0.5, 0.5, 0, 0, 0, 0.75, 0.5, 0, 1, 0, 0.5, -0.5, 0, 0, 1, 0.75, -0.5, 0, 1, 1]);
+                else if(idx == 2)
+                {
+                    idxMod = 3;
                 }
-                GraphicsFillExtra.setVertexBuffer(_local11.bitmapFill_, _local12);
-                obj3D_.faces_.push(_local11);
+                else
+                {
+                    idxMod = idx;
+                }
+                vertexBuffer3D.push(obj3D_.vL_[indices[idxMod] * 3],obj3D_.vL_[indices[idxMod] * 3 + 1] * -1,obj3D_.vL_[indices[idxMod] * 3 + 2],obj3D_.uvts_[indices[idxMod != 2?idxMod:idxMod - 1] * 3],obj3D_.uvts_[indices[idxMod != 2?idxMod:idxMod + 1] * 3 + 1]);
             }
+            GraphicsFillExtra.setVertexBuffer(face.bitmapFill_,vertexBuffer3D);
         }
-    }
-
-    protected function addTop(_arg1:Array, _arg2:Vector.<Number>, _arg3:BitmapData):void {
-        var _local8:ObjectFace3D;
-        var _local10:Vector.<Number>;
-        var _local11:int;
-        var _local12:Array;
-        var _local13:Array;
-        var _local14:Array;
-        var _local15:int;
-        var _local16:int;
-        var _local17:int;
-        var _local4:int = (obj3D_.vL_.length / 3);
-        var _local5:Vector.<int> = new Vector.<int>();
-        var _local6:uint;
-        while (_local6 < _arg1.length) {
-            obj3D_.vL_.push(_arg1[_local6].x, _arg1[_local6].y, _arg1[_local6].z);
-            _local5.push((_local4 + _local6));
-            if (_local6 == 0) {
-                obj3D_.uvts_.push(_arg2[0], _arg2[1], 0);
-            }
-            else {
-                if (_local6 == 1) {
-                    obj3D_.uvts_.push(_arg2[2], _arg2[3], 0);
+        else if(indices.length == 6 && GraphicsFillExtra.getVertexBuffer(face.bitmapFill_) == null && Parameters.HWAcceleration)
+        {
+            processing = [0,1,5,2];
+            next = [2,3,5,4];
+            texSpecial = [5,0,2,1];
+            for(n = 0; n < 2; n++)
+            {
+                if(n == 1)
+                {
+                    processing = next;
                 }
-                else {
-                    if (_local6 == (_arg1.length - 1)) {
-                        obj3D_.uvts_.push(_arg2[4], _arg2[5], 0);
+                vertexBuffer3D = new Vector.<Number>();
+                temp = 0;
+                texidx = 0;
+                for each(idx in processing)
+                {
+                    if(n == 1)
+                    {
+                        texidx = texSpecial[temp];
                     }
-                    else {
-                        obj3D_.uvts_.push(0, 0, 0);
+                    else
+                    {
+                        texidx = idx;
                     }
+                    vertexBuffer3D.push(obj3D_.vL_[indices[idx] * 3],obj3D_.vL_[indices[idx] * 3 + 1] * -1,obj3D_.vL_[indices[idx] * 3 + 2],obj3D_.uvts_[indices[texidx != 2?texidx:texidx - 1] * 3],obj3D_.uvts_[indices[texidx != 2?texidx:texidx + 1] * 3 + 1]);
+                    temp++;
                 }
-            }
-            _local6++;
-        }
-        var _local7:ObjectFace3D = new ObjectFace3D(obj3D_, _local5);
-        _local7.texture_ = _arg3;
-        _local7.bitmapFill_.repeat = this.topRepeat_;
-        obj3D_.faces_.push(_local7);
-        if ((((_local5.length == 6)) && (Parameters.isGpuRender()))) {
-            _local8 = new ObjectFace3D(obj3D_, _local5);
-            _local8.texture_ = _arg3;
-            _local8.bitmapFill_.repeat = this.topRepeat_;
-            obj3D_.faces_.push(_local8);
-        }
-        var _local9:int;
-        if ((((((_local5.length == 4)) && ((GraphicsFillExtra.getVertexBuffer(_local7.bitmapFill_) == null)))) && (Parameters.isGpuRender()))) {
-            _local10 = new Vector.<Number>();
-            _local9 = 0;
-            while (_local9 < _local5.length) {
-                if (_local9 == 3) {
-                    _local11 = 2;
+                if(n == 1)
+                {
+                    GraphicsFillExtra.setVertexBuffer(face2.bitmapFill_,vertexBuffer3D);
                 }
-                else {
-                    if (_local9 == 2) {
-                        _local11 = 3;
-                    }
-                    else {
-                        _local11 = _local9;
-                    }
-                }
-                _local10.push(obj3D_.vL_[(_local5[_local11] * 3)], (obj3D_.vL_[((_local5[_local11] * 3) + 1)] * -1), obj3D_.vL_[((_local5[_local11] * 3) + 2)], obj3D_.uvts_[(_local5[(((_local11) != 2) ? _local11 : (_local11 - 1))] * 3)], obj3D_.uvts_[((_local5[(((_local11) != 2) ? _local11 : (_local11 + 1))] * 3) + 1)]);
-                _local9++;
-            }
-            GraphicsFillExtra.setVertexBuffer(_local7.bitmapFill_, _local10);
-        }
-        else {
-            if ((((((_local5.length == 6)) && ((GraphicsFillExtra.getVertexBuffer(_local7.bitmapFill_) == null)))) && (Parameters.isGpuRender()))) {
-                _local12 = [0, 1, 5, 2];
-                _local13 = [2, 3, 5, 4];
-                _local14 = [5, 0, 2, 1];
-                _local15 = 0;
-                while (_local15 < 2) {
-                    if (_local15 == 1) {
-                        _local12 = _local13;
-                    }
-                    _local10 = new Vector.<Number>();
-                    _local16 = 0;
-                    _local17 = 0;
-                    for each (_local9 in _local12) {
-                        if (_local15 == 1) {
-                            _local17 = _local14[_local16];
-                        }
-                        else {
-                            _local17 = _local9;
-                        }
-                        _local10.push(obj3D_.vL_[(_local5[_local9] * 3)], (obj3D_.vL_[((_local5[_local9] * 3) + 1)] * -1), obj3D_.vL_[((_local5[_local9] * 3) + 2)], obj3D_.uvts_[(_local5[(((_local17) != 2) ? _local17 : (_local17 - 1))] * 3)], obj3D_.uvts_[((_local5[(((_local17) != 2) ? _local17 : (_local17 + 1))] * 3) + 1)]);
-                        _local16++;
-                    }
-                    if (_local15 == 1) {
-                        GraphicsFillExtra.setVertexBuffer(_local8.bitmapFill_, _local10);
-                    }
-                    else {
-                        GraphicsFillExtra.setVertexBuffer(_local7.bitmapFill_, _local10);
-                    }
-                    _local15++;
+                else
+                {
+                    GraphicsFillExtra.setVertexBuffer(face.bitmapFill_,vertexBuffer3D);
                 }
             }
         }
     }
-
-
 }
 }

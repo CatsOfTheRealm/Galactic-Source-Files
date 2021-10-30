@@ -57,7 +57,7 @@ public class AtmosphereHandler extends Sprite {
     public function getCurrentAtmosphereColor():uint {
         switch (CurrentAtmosphereString) {
             case NIGHT:
-                return 0x0004FF;
+                return 0x000000;
             case DAY:
                 return uint.MAX_VALUE;
             default:

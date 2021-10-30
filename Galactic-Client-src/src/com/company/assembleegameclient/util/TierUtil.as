@@ -8,7 +8,7 @@ import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
 
 public class TierUtil
 {
-    private static const STANDARD_OUTLINE_FILTER:Array = [new GlowFilter(0, 1, 2, 2, 10, 1)];
+    private static const STANDARD_OUTLINE_FILTER:Array = [new GlowFilter(0, 0.25, 2, 2, 10, 1)];
 
     public static function getTierTag(_arg_1:XML, _arg_2:int=12):UILabel
     {
@@ -29,7 +29,7 @@ public class TierUtil
             if (_local_8)
             {
                 _local_10 = 0xFFFFFF;
-                _local_11 = ("T" + _arg_1.Tier);
+                _local_11 = ("C");
             }
             else
             {
@@ -37,62 +37,57 @@ public class TierUtil
                 if (x2 == 11) {
 
                     _local_10 = 0x00ff00;
-                    _local_11 = "F ";
+                    _local_11 = "F";
                 }
                 else if (_arg_1.hasOwnProperty("Radiant"))
                 {
                     _local_10 = 0x7540AA;
-                    _local_11 = "RT";
+                    _local_11 = "R";
                 }
                 else if (_arg_1.hasOwnProperty("@setType"))
                 {
                     _local_10 = 0xFF9900;
-                    _local_11 = "ST";
+                    _local_11 = "S";
                 }
                 else if (_arg_1.hasOwnProperty("LG"))
                 {
                     _local_10 = 0xfce303;
-                    _local_11 = "LG";
+                    _local_11 = "L";
                 }
                 else if (_arg_1.hasOwnProperty("ST"))
                 {
                     _local_10 = 0xE90000;
-                    _local_11 = "MY";
+                    _local_11 = "M";
                 }
                 else if (_arg_1.hasOwnProperty("MLG"))
                 {
                     _local_10 = 0xD5FBFC;
-                    _local_11 = "LG";
+                    _local_11 = "L";
                 }
                 else if (_arg_1.hasOwnProperty("Lunar"))
                 {
                     _local_10 = 0xCACACA;
-                    _local_11 = "LT";
+                    _local_11 = "L";
                 }
                 else if (_arg_1.hasOwnProperty("MY"))
                 {
                     _local_10 = 0xfce303;//0xaf0847
-                    _local_11 = "LG";
+                    _local_11 = "L";
                 }
                 else if (_arg_1.hasOwnProperty("BG"))
                 {
                     _local_10 = 0xDC143C;
-                    _local_11 = "BG";
-                }
-                else if (_arg_1.hasOwnProperty("Lunar"))
-                {
-                    _local_10 = 0xCACACA;
-                    _local_11 = "UT";
+                    _local_11 = "B";
                 }
                 else if (_arg_1.hasOwnProperty("Epic"))
                 {
                     _local_10 = 0x8A2BE2;
-                    _local_11 = "UT";
+                    _local_11 = "E";
                 }
                 else if (x != 10)
                 {
-                    _local_10 = 0xB200FF;
-                    _local_11 = "UT";
+                    _local_10 = 0x9F2B68;
+                    _local_11 = "R";
                 }
             }
             _local_9.text = _local_11;

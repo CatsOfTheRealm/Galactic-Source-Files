@@ -1328,7 +1328,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         }
         var _local4:GameObject = _local2.goDict_[_arg1.targetId_];
         if (_local4 != null) {
-            _local4.damage(-1, _arg1.damageAmount_, _arg1.effects_, _arg1.kill_, _local3);
+            _local4.damage(_arg1.damageAmount_, _arg1.effects_, _local3);
         }
     }
 
@@ -1347,7 +1347,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         var _local4:Projectile = (FreeList.newObject(Projectile) as Projectile);
         var _local5:Player = (_local3 as Player);
         if (_local5 != null) {
-            _local4.reset(_arg1.containerType_, 0, _arg1.ownerId_, _arg1.bulletId_, _arg1.angle_, gs_.lastUpdate_, _local5.projectileIdSetOverrideNew, _local5.projectileIdSetOverrideOld);
+            _local4.reset(_arg1.containerType_, 0, _arg1.ownerId_, _arg1.bulletId_, _arg1.angle_, gs_.lastUpdate_);
         }
         else {
             _local4.reset(_arg1.containerType_, 0, _arg1.ownerId_, _arg1.bulletId_, _arg1.angle_, gs_.lastUpdate_);
@@ -1367,7 +1367,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         var _local3:Projectile = (FreeList.newObject(Projectile) as Projectile);
         var _local4:Player = (_local2 as Player);
         if (_local4 != null) {
-            _local3.reset(_arg1.containerType_, 0, _arg1.ownerId_, _arg1.bulletId_, _arg1.angle_, gs_.lastUpdate_, _local4.projectileIdSetOverrideNew, _local4.projectileIdSetOverrideOld);
+            _local3.reset(_arg1.containerType_, 0, _arg1.ownerId_, _arg1.bulletId_, _arg1.angle_, gs_.lastUpdate_);
         }
         else {
             _local3.reset(_arg1.containerType_, 0, _arg1.ownerId_, _arg1.bulletId_, _arg1.angle_, gs_.lastUpdate_);
@@ -2281,7 +2281,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
                 _local5 = new Vector.<uint>();
                 _local5.push(_arg1.effect_);
             }
-            this.player.damage(_arg1.origType_, _local4, _local5, false, null);
+            this.player.damage(_local4, _local5,null);
             this.aoeAck(gs_.lastUpdate_, this.player.x_, this.player.y_, _arg1.damage_, _arg1.objectName_, _arg1.effect_, _arg1.duration_);
         }
     }

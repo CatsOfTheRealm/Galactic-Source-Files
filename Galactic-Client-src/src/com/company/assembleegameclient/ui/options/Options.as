@@ -496,9 +496,7 @@ public class Options extends Sprite {
         this.addOptionAndPosition(new ChoiceOption("showTradePopup", makeOnOffLabels(), [true, false], TextKey.OPTIONS_SHOW_TRADE_REQUEST_PANEL, TextKey.OPTIONS_SHOW_TRADE_REQUEST_PANEL_DESC, null));
         this.addOptionAndPosition(new ChoiceOption("showGuildInvitePopup", makeOnOffLabels(), [true, false], TextKey.OPTIONS_SHOW_GUILD_INVITE_PANEL, TextKey.OPTIONS_SHOW_GUILD_INVITE_PANEL_DESC, null));
         this.addOptionAndPosition(new ChoiceOption("cursorSelect", makeCursorSelectLabels(), [MouseCursor.AUTO, "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "Custom Cursor", "Click here to change the mouse cursor. May help with aiming.", refreshCursor));
-        //Hardware Acceleration Disabled for many reasons, if you decided to make this an option again be prepared to fix and redo projectile outlines and atmosphere.
-        //this.addOptionAndPosition(new ChoiceOption("GPURender", makeOnOffLabels(), [true, false], TextKey.OPTIONS_HARDWARE_ACC_TITLE, "",null));
-        //if (Capabilities.playerType == "Desktop") {
+        this.addOption(new ChoiceOption("HWAcceleration",makeOnOffLabels(),[true,false],"Hardware Acceleration","Enables Hardware Acceleration if your system supports it",null));
         this.addOptionAndPosition(new KeyMapper("toggleFullscreen", TextKey.OPTIONS_TOGGLE_FULLSCREEN, TextKey.OPTIONS_TOGGLE_FULLSCREEN_DESC));
         this.addOptionAndPosition(new ChoiceOption("fullscreenMode", makeOnOffLabels(), [true, false], TextKey.OPTIONS_FULLSCREEN_MODE, TextKey.OPTIONS_FULLSCREEN_MODE_DESC, this.onFullscreenChange));
         this.addOptionAndPosition(new ChoiceOption("toggleBarText", makeOnOffLabels(), [true, false], TextKey.OPTIONS_TOGGLE_BARTEXT, TextKey.OPTIONS_TOGGLE_BARTEXT_DESC, onBarTextToggle));
@@ -524,8 +522,7 @@ public class Options extends Sprite {
     private function addSoundOptions():void {
         this.addOptionAndPosition(new ChoiceOption("playMusic", makeOnOffLabels(), [true, false], TextKey.OPTIONS_PLAY_MUSIC, TextKey.OPTIONS_PLAY_MUSIC_DESC, this.onPlayMusicChange));
         this.addOptionAndPosition(new SliderOption("musicVolume", this.onMusicVolumeChange), -120, 11);
-        this.addOptionAndPosition(new ChoiceOption("playSFX", makeOnOffLabels(), [true, false], TextKey.OPTIONS_PLAY_SOUND_EFFECTS, TextKey.OPTIONS_PLAY_SOUND_EFFECTS_DESC, this.onPlaySoundEffectsChange));
-        this.addOptionAndPosition(new SliderOption("SFXVolume", this.onSoundEffectsVolumeChange), -100, 53);
+        this.addOption(new ChoiceOption("playSFX", makeOnOffLabels(),[true,false],"Play Sound Effects","This toggles whether sound effects are played",this.onPlaySoundEffectsChange));
         this.addOptionAndPosition(new ChoiceOption("playPewPew", makeOnOffLabels(), [true, false], TextKey.OPTIONS_PLAY_WEAPON_SOUNDS, TextKey.OPTIONS_PLAY_WEAPON_SOUNDS_DESC, null));
     }
 
@@ -534,24 +531,15 @@ public class Options extends Sprite {
         this.refresh();
     }
 
-    private function onPlaySoundEffectsChange():void {
+    private function onPlaySoundEffectsChange() : void
+    {
         SFX.setPlaySFX(Parameters.data_.playSFX);
-        if (((Parameters.data_.playSFX) || (Parameters.data_.playPewPew))) {
-            SFX.setSFXVolume(0.5);
-        }
-        else {
-            SFX.setSFXVolume(0);
-        }
-        this.refresh();
     }
 
     private function onMusicVolumeChange(_arg1:Number):void {
         Music.setMusicVolume(_arg1);
     }
 
-    private function onSoundEffectsVolumeChange(_arg1:Number):void {
-        SFX.setSFXVolume(_arg1);
-    }
 
     private function addOptionAndPosition(option:Option, offsetX:Number = 0, offsetY:Number = 0):void {
         var positionOption:Function;

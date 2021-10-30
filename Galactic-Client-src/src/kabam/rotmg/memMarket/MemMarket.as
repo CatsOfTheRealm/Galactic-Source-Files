@@ -148,7 +148,6 @@ public class MemMarket extends Sprite
     /* Remove */
     private function onClose(event:Event) : void
     {
-        this.gameSprite_.mui_.setEnablePlayerInput(true); /* Enable player movement */
         this.gameSprite_ = null;
         this.titleText_ = null;
         this.closeButton_.removeEventListener(MouseEvent.CLICK, this.onClose);

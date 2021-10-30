@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
- <Object type="0x5461" id="Elf">
-    <Class>Player</Class>
-    <Description>The Night Elf is a crossbow user who assist their teammates using elf healing magic.</Description>
-    <AnimatedTexture>
-      <File>players</File>
-      <Index>15</Index>
-    </AnimatedTexture>
-    <HitSound>player/archer_hit</HitSound>
-    <DeathSound>player/archer_death</DeathSound>
-    <Player/>
-    <BloodProb>1.0</BloodProb>
-    <SlotTypes>3, 58, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-    <Equipment>0x3153, 0x6285, 0x7904, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
-    <MaxHitPoints max="800">140</MaxHitPoints>
-    <MaxMagicPoints max="272">100</MaxMagicPoints>
-    <Attack max="45">10</Attack>
-    <Defense max="30">0</Defense>
-    <Speed max="55">12</Speed>
-    <Dexterity max="45">10</Dexterity>
-    <HpRegen max="70">16</HpRegen>
-    <MpRegen max="50">10</MpRegen>
-      <CriticalDmg max="50">20</CriticalDmg>
-    <Luck max="50">0</Luck>
-    <CriticalHit max="25">5</CriticalHit>
-    <LevelIncrease min="20" max="40">MaxHitPoints</LevelIncrease>
-    <LevelIncrease min="2" max="10">MaxMagicPoints</LevelIncrease>
-    <LevelIncrease min="1" max="2">Attack</LevelIncrease>
-    <LevelIncrease min="0" max="1">Defense</LevelIncrease>
-    <LevelIncrease min="1" max="2">Speed</LevelIncrease>
-    <LevelIncrease min="1" max="2">Dexterity</LevelIncrease>
-    <LevelIncrease min="2" max="4">HpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="2">MpRegen</LevelIncrease>
-    <UnlockLevel level="10" type="0x0307">Archer</UnlockLevel>
-    <UnlockLevel level="10" type="0x0310">Priest</UnlockLevel>
-    <UnlockLevel level="20" type="0x5460">Bard</UnlockLevel>
-    <UnlockCost>199</UnlockCost>
-  </Object>
+
   <Object type="0x0300" id="Rogue">
     <Class>Player</Class>
     <Description>The rogue relies on his speed to deal damage at medium range while avoiding attacks.</Description>
@@ -56,12 +20,12 @@
     <Attack max="50">10</Attack>
     <Defense max="25">0</Defense>
     <Speed max="75">15</Speed>
-    <Dexterity max="75">15</Dexterity>
+    <Dexterity max="65">15</Dexterity>
     <HpRegen max="40">15</HpRegen>
     <MpRegen max="50">10</MpRegen>
-     <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
-
+    <Luck max="50">0</Luck>
+    <CriticalDmg max="40">22</CriticalDmg>
+    <CriticalHit max="45">35</CriticalHit>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="0" max="2">Attack</LevelIncrease>
@@ -70,7 +34,6 @@
     <LevelIncrease min="1" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="0" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
   </Object>
   <Object type="0x0307" id="Archer">
     <Class>Player</Class>
@@ -87,15 +50,15 @@
     <Equipment>0xa1a, 0xa61, 0x7904, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="700">130</MaxHitPoints>
     <MaxMagicPoints max="252">100</MaxMagicPoints>
-    <Attack max="75">12</Attack>
+    <Attack max="65">12</Attack>
     <Defense max="25">0</Defense>
-    <Speed max="50">12</Speed>
+    <Speed max="40">12</Speed>
     <Dexterity max="50">12</Dexterity>
     <HpRegen max="40">12</HpRegen>
     <MpRegen max="50">10</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
-
+	  <CriticalDmg max="100">50</CriticalDmg>
+    <CriticalHit max="5">0</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -104,8 +67,6 @@
     <LevelIncrease min="0" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="0" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x030e" id="Wizard">
     <Class>Player</Class>
@@ -122,15 +83,15 @@
     <Equipment>0xa97, 0xa2e, 0x7902, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="670">100</MaxHitPoints>
     <MaxMagicPoints max="385">100</MaxMagicPoints>
-    <Attack max="75">12</Attack>
+    <Attack max="65">12</Attack>
     <Defense max="25">0</Defense>
-    <Speed max="50">10</Speed>
-    <Dexterity max="75">15</Dexterity>
+    <Speed max="40">10</Speed>
+    <Dexterity max="65">15</Dexterity>
     <HpRegen max="40">12</HpRegen>
     <MpRegen max="60">12</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
-
+	  <CriticalDmg max="40">25</CriticalDmg>
+    <CriticalHit max="25">12</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="5" max="15">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -139,8 +100,6 @@
     <LevelIncrease min="1" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="0" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x0310" id="Priest">
     <Class>Player</Class>
@@ -157,14 +116,15 @@
     <Equipment>0xa04, 0xa31, 0x7902, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="670">100</MaxHitPoints>
     <MaxMagicPoints max="385">100</MaxMagicPoints>
-    <Attack max="50">10</Attack>
-    <Defense max="25">0</Defense>
-    <Speed max="50">12</Speed>
+    <Attack max="55">10</Attack>
+    <Defense max="30">0</Defense>
+    <Speed max="55">12</Speed>
     <Dexterity max="50">12</Dexterity>
     <HpRegen max="40">10</HpRegen>
     <MpRegen max="75">15</MpRegen>
-       <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+	  <CriticalDmg max="30">16</CriticalDmg>
+    <CriticalHit max="20">7</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="5" max="15">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="0" max="2">Attack</LevelIncrease>
@@ -173,8 +133,6 @@
     <LevelIncrease min="0" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="1" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x031d" id="Warrior">
     <Class>Player</Class>
@@ -191,14 +149,15 @@
     <Equipment>0xa00, 0x0a66, 0x7903, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="770">200</MaxHitPoints>
     <MaxMagicPoints max="252">100</MaxMagicPoints>
-    <Attack max="75">15</Attack>
-    <Defense max="25">0</Defense>
-    <Speed max="50">7</Speed>
-    <Dexterity max="50">10</Dexterity>
-    <HpRegen max="75">10</HpRegen>
+    <Attack max="65">15</Attack>
+    <Defense max="20">0</Defense>
+    <Speed max="40">7</Speed>
+    <Dexterity max="65">10</Dexterity>
+    <HpRegen max="60">10</HpRegen>
     <MpRegen max="50">10</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+	  <CriticalDmg max="35">15</CriticalDmg>
+    <CriticalHit max="20">0</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -207,8 +166,6 @@
     <LevelIncrease min="0" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="1" max="2">HpRegen</LevelIncrease>
     <LevelIncrease min="0" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x031e" id="Knight">
     <Class>Player</Class>
@@ -225,14 +182,15 @@
     <Equipment>0xa00, 0x0a08, 0x7903, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="770">200</MaxHitPoints>
     <MaxMagicPoints max="252">100</MaxMagicPoints>
-    <Attack max="50">15</Attack>
-    <Defense max="40">0</Defense>
-    <Speed max="50">7</Speed>
-    <Dexterity max="50">10</Dexterity>
+    <Attack max="65">15</Attack>
+    <Defense max="30">0</Defense>
+    <Speed max="35">7</Speed>
+    <Dexterity max="55">10</Dexterity>
     <HpRegen max="75">10</HpRegen>
-    <MpRegen max="50">10</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+    <MpRegen max="30">10</MpRegen>
+	  <CriticalDmg max="15">0</CriticalDmg>
+    <CriticalHit max="50">25</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -241,8 +199,6 @@
     <LevelIncrease min="0" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="1" max="2">HpRegen</LevelIncrease>
     <LevelIncrease min="0" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x031f" id="Paladin">
     <Class>Player</Class>
@@ -260,13 +216,14 @@
     <MaxHitPoints max="770">200</MaxHitPoints>
     <MaxMagicPoints max="252">100</MaxMagicPoints>
     <Attack max="50">12</Attack>
-    <Defense max="25">0</Defense>
-    <Speed max="50">7</Speed>
-    <Dexterity max="50">10</Dexterity>
+    <Defense max="20">0</Defense>
+    <Speed max="40">7</Speed>
+    <Dexterity max="65">10</Dexterity>
     <HpRegen max="40">10</HpRegen>
     <MpRegen max="75">10</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+	  <CriticalDmg max="75">40</CriticalDmg>
+    <CriticalHit max="10">0</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -275,8 +232,6 @@
     <LevelIncrease min="0" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="1" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x0320" id="Assassin">
     <Class>Player</Class>
@@ -291,16 +246,17 @@
     <BloodProb>1.0</BloodProb>
     <SlotTypes>2, 18, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>0xa14, 0xaa3, 0x7904, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
-    <MaxHitPoints max="720">150</MaxHitPoints>
-    <MaxMagicPoints max="252">100</MaxMagicPoints>
+    <MaxHitPoints max="700">150</MaxHitPoints>
+    <MaxMagicPoints max="275">100</MaxMagicPoints>
     <Attack max="60">12</Attack>
-    <Defense max="25">0</Defense>
-    <Speed max="75">15</Speed>
+    <Defense max="20">0</Defense>
+    <Speed max="60">15</Speed>
     <Dexterity max="75">15</Dexterity>
-    <HpRegen max="40">15</HpRegen>
-    <MpRegen max="80">14</MpRegen>
-     <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+    <HpRegen max="30">15</HpRegen>
+    <MpRegen max="90">21</MpRegen>
+	<CriticalDmg max="50">28</CriticalDmg>
+    <CriticalHit max="25">8</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="0" max="2">Attack</LevelIncrease>
@@ -309,8 +265,6 @@
     <LevelIncrease min="1" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="1" max="3">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x5460" id="Bard">
     <Class>Player</Class>
@@ -325,16 +279,17 @@
     <BloodProb>1.0</BloodProb>
     <SlotTypes>3, 54, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>0xa1a, 0x5299, 0x7904, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
-    <MaxHitPoints max="720">130</MaxHitPoints>
-    <MaxMagicPoints max="250">100</MaxMagicPoints>
-    <Attack max="70">12</Attack>
+    <MaxHitPoints max="710">130</MaxHitPoints>
+    <MaxMagicPoints max="265">100</MaxMagicPoints>
+    <Attack max="65">12</Attack>
     <Defense max="20">0</Defense>
-    <Speed max="55">12</Speed>
-    <Dexterity max="45">12</Dexterity>
+    <Speed max="45">12</Speed>
+    <Dexterity max="50">12</Dexterity>
     <HpRegen max="60">14</HpRegen>
-    <MpRegen max="50">10</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+    <MpRegen max="75">10</MpRegen>
+    <Luck max="50">0</Luck>
+	<CriticalDmg max="60">38</CriticalDmg>
+    <CriticalHit max="10">3</CriticalHit>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -343,10 +298,45 @@
     <LevelIncrease min="0" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="1" max="2">HpRegen</LevelIncrease>
     <LevelIncrease min="0" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
     <UnlockLevel level="10" type="0x0307">Archer</UnlockLevel>
     <UnlockLevel level="10" type="0x0310">Priest</UnlockLevel>
+    <UnlockCost>199</UnlockCost>
+  </Object>
+  <Object type="0x5461" id="Elf">
+    <Class>Player</Class>
+    <Description>The Night Elf is a crossbow user who assist their teammates using elf healing magic.</Description>
+    <AnimatedTexture>
+      <File>players</File>
+      <Index>15</Index>
+    </AnimatedTexture>
+    <HitSound>player/archer_hit</HitSound>
+    <DeathSound>player/archer_death</DeathSound>
+    <Player/>
+    <BloodProb>1.0</BloodProb>
+    <SlotTypes>3, 58, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
+    <Equipment>0x3153, 0x6285, 0x7904, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+    <MaxHitPoints max="800">150</MaxHitPoints>
+    <MaxMagicPoints max="275">110</MaxMagicPoints>
+    <Attack max="50">10</Attack>
+    <Defense max="20">0</Defense>
+    <Speed max="55">12</Speed>
+    <Dexterity max="50">10</Dexterity>
+    <HpRegen max="50">16</HpRegen>
+    <MpRegen max="65">10</MpRegen>
+	<Luck max="50">0</Luck>
+	<CriticalDmg max="50">25</CriticalDmg>
+    <CriticalHit max="50">25</CriticalHit>
+    <LevelIncrease min="20" max="40">MaxHitPoints</LevelIncrease>
+    <LevelIncrease min="2" max="10">MaxMagicPoints</LevelIncrease>
+    <LevelIncrease min="1" max="2">Attack</LevelIncrease>
+    <LevelIncrease min="0" max="1">Defense</LevelIncrease>
+    <LevelIncrease min="1" max="2">Speed</LevelIncrease>
+    <LevelIncrease min="1" max="2">Dexterity</LevelIncrease>
+    <LevelIncrease min="2" max="4">HpRegen</LevelIncrease>
+    <LevelIncrease min="1" max="2">MpRegen</LevelIncrease>
+    <UnlockLevel level="10" type="0x0307">Archer</UnlockLevel>
+    <UnlockLevel level="10" type="0x0310">Priest</UnlockLevel>
+    <UnlockLevel level="20" type="0x5460">Bard</UnlockLevel>
     <UnlockCost>199</UnlockCost>
   </Object>
   <Object type="0x0321" id="Necromancer">
@@ -362,16 +352,17 @@
     <BloodProb>1.0</BloodProb>
     <SlotTypes>17, 19, 14, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>0xa97, 0xaaa, 0x7902, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
-    <MaxHitPoints max="670">100</MaxHitPoints>
+    <MaxHitPoints max="700">100</MaxHitPoints>
     <MaxMagicPoints max="385">100</MaxMagicPoints>
     <Attack max="60">12</Attack>
     <Defense max="25">0</Defense>
-    <Speed max="50">10</Speed>
+    <Speed max="40">10</Speed>
     <Dexterity max="60">15</Dexterity>
     <HpRegen max="30">10</HpRegen>
     <MpRegen max="75">12</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+	<CriticalDmg max="40">20</CriticalDmg>
+    <CriticalHit max="15">7</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="5" max="15">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -380,8 +371,6 @@
     <LevelIncrease min="1" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="1" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x0322" id="Huntress">
     <Class>Player</Class>
@@ -398,14 +387,15 @@
     <Equipment>0xa1a, 0xab1, 0x7904, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
     <MaxHitPoints max="700">130</MaxHitPoints>
     <MaxMagicPoints max="252">100</MaxMagicPoints>
-    <Attack max="75">12</Attack>
-    <Defense max="25">0</Defense>
-    <Speed max="50">12</Speed>
-    <Dexterity max="50">12</Dexterity>
+    <Attack max="70">12</Attack>
+    <Defense max="20">0</Defense>
+    <Speed max="45">12</Speed>
+    <Dexterity max="55">12</Dexterity>
     <HpRegen max="40">12</HpRegen>
-    <MpRegen max="50">10</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+    <MpRegen max="60">17</MpRegen>
+    <CriticalDmg max="75">48</CriticalDmg>
+    <CriticalHit max="20">7</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -414,8 +404,6 @@
     <LevelIncrease min="0" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="0" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x0323" id="Mystic">
     <Class>Player</Class>
@@ -430,16 +418,17 @@
     <BloodProb>1.0</BloodProb>
     <SlotTypes>17, 21, 14, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>0xa97, 0xae4, 0x7902, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
-    <MaxHitPoints max="670">100</MaxHitPoints>
-    <MaxMagicPoints max="385">100</MaxMagicPoints>
+    <MaxHitPoints max="690">100</MaxHitPoints>
+    <MaxMagicPoints max="345">100</MaxMagicPoints>
     <Attack max="60">10</Attack>
     <Defense max="25">0</Defense>
     <Speed max="60">12</Speed>
-    <Dexterity max="50">10</Dexterity>
+    <Dexterity max="60">10</Dexterity>
     <HpRegen max="40">15</HpRegen>
     <MpRegen max="75">15</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+	<CriticalDmg max="30">15</CriticalDmg>
+    <CriticalHit max="35">20</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="5" max="15">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -448,8 +437,6 @@
     <LevelIncrease min="0" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="1" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x0324" id="Trickster">
     <Class>Player</Class>
@@ -464,16 +451,17 @@
     <BloodProb>1.0</BloodProb>
     <SlotTypes>2, 22, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>0xa14, 0xae3, 0x7904, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
-    <MaxHitPoints max="720">150</MaxHitPoints>
-    <MaxMagicPoints max="252">100</MaxMagicPoints>
+    <MaxHitPoints max="710">150</MaxHitPoints>
+    <MaxMagicPoints max="265">100</MaxMagicPoints>
     <Attack max="65">10</Attack>
     <Defense max="25">0</Defense>
-    <Speed max="75">12</Speed>
-    <Dexterity max="75">15</Dexterity>
+    <Speed max="65">12</Speed>
+    <Dexterity max="65">15</Dexterity>
     <HpRegen max="40">12</HpRegen>
     <MpRegen max="60">12</MpRegen>
-    <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+	<CriticalDmg max="60">40</CriticalDmg>
+	<CriticalHit max="25">10</CriticalHit>
+    <Luck max="50">0</Luck>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -482,8 +470,6 @@
     <LevelIncrease min="1" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="0" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x0325" id="Sorcerer">
     <Class>Player</Class>
@@ -506,8 +492,9 @@
     <Dexterity max="60">12</Dexterity>
     <HpRegen max="75">10</HpRegen>
     <MpRegen max="60">15</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+	  <CriticalDmg max="60">20</CriticalDmg>
+    <Luck max="50">0</Luck>
+    <CriticalHit max="25">9</CriticalHit>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="5" max="15">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -516,8 +503,6 @@
     <LevelIncrease min="0" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="1" max="2">HpRegen</LevelIncrease>
     <LevelIncrease min="1" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
   <Object type="0x0326" id="Ninja">
     <Class>Player</Class>
@@ -532,16 +517,17 @@
     <BloodProb>1.0</BloodProb>
     <SlotTypes>1, 25, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
     <Equipment>0xc44, 0xc53, 0x7904, 0x7901, 0xa22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
-    <MaxHitPoints max="720">150</MaxHitPoints>
+    <MaxHitPoints max="780">185</MaxHitPoints>
     <MaxMagicPoints max="252">100</MaxMagicPoints>
-    <Attack max="70">15</Attack>
-    <Defense max="25">0</Defense>
-    <Speed max="60">10</Speed>
-    <Dexterity max="70">12</Dexterity>
-    <HpRegen max="40">10</HpRegen>
-    <MpRegen max="70">12</MpRegen>
-   <CriticalDmg max="50">20</CriticalDmg>
-    <CriticalHit max="25">5</CriticalHit>
+    <Attack max="75">15</Attack>
+    <Defense max="15">0</Defense>
+    <Speed max="55">10</Speed>
+    <Dexterity max="60">12</Dexterity>
+    <HpRegen max="50">10</HpRegen>
+    <MpRegen max="60">12</MpRegen>
+	<CriticalDmg max="80">57</CriticalDmg>
+    <Luck max="50">0</Luck>
+    <CriticalHit max="40">27</CriticalHit>
     <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
     <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
     <LevelIncrease min="1" max="2">Attack</LevelIncrease>
@@ -550,7 +536,5 @@
     <LevelIncrease min="1" max="2">Dexterity</LevelIncrease>
     <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
     <LevelIncrease min="1" max="2">MpRegen</LevelIncrease>
-    <LevelIncrease min="1" max="1">CriticalDmg</LevelIncrease>
-    <LevelIncrease min="0" max="0">CriticalHit</LevelIncrease>
   </Object>
 </Objects>

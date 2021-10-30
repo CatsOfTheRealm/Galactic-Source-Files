@@ -15,6 +15,7 @@ import flash.display.StageDisplayState;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
+
 import kabam.rotmg.application.api.ApplicationSetup;
 import kabam.rotmg.chat.model.ChatMessage;
 import kabam.rotmg.constants.GeneralConstants;
@@ -75,7 +76,6 @@ public class MapUserInput {
     public var layers:Layers;
     private var exitGame:ExitGameSignal;
     private var areFKeysAvailable:Boolean;
-    private var reskinPetFlowStart:ReskinPetFlowStartSignal;
 
     public function MapUserInput(_arg1:GameSprite) {
         this.gs_ = _arg1;
@@ -83,7 +83,6 @@ public class MapUserInput {
         this.gs_.addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         var _local2:Injector = StaticInjectorContext.getInjector();
         this.giftStatusUpdateSignal = _local2.getInstance(GiftStatusUpdateSignal);
-        //this.reskinPetFlowStart = _local2.getInstance(ReskinPetFlowStartSignal);
         this.addTextLine = _local2.getInstance(AddTextLineSignal);
         this.setTextBoxVisibility = _local2.getInstance(SetTextBoxVisibilitySignal);
         this.miniMapZoom = _local2.getInstance(MiniMapZoomSignal);
@@ -143,8 +142,16 @@ public class MapUserInput {
         _local2.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
         _local2.addEventListener(KeyboardEvent.KEY_UP, this.onKeyUp);
         _local2.addEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
-        _local2.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
-        _local2.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+        if(Parameters.HWAcceleration)
+        {
+            _local2.addEventListener(MouseEvent.MOUSE_DOWN,this.onMouseDown);
+            _local2.addEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
+        }
+        else
+        {
+            this.gs_.map.addEventListener(MouseEvent.MOUSE_DOWN,this.onMouseDown);
+            this.gs_.map.addEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
+        }
         _local2.addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
         _local2.addEventListener(MouseEvent.RIGHT_CLICK, this.disableRightClick);
     }
@@ -158,8 +165,16 @@ public class MapUserInput {
         _local2.removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
         _local2.removeEventListener(KeyboardEvent.KEY_UP, this.onKeyUp);
         _local2.removeEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
-        _local2.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
-        _local2.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+        if(Parameters.HWAcceleration)
+        {
+            _local2.removeEventListener(MouseEvent.MOUSE_DOWN,this.onMouseDown);
+            _local2.removeEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
+        }
+        else
+        {
+            this.gs_.map.removeEventListener(MouseEvent.MOUSE_DOWN,this.onMouseDown);
+            this.gs_.map.removeEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
+        }
         _local2.removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
         _local2.removeEventListener(MouseEvent.RIGHT_CLICK, this.disableRightClick);
     }
@@ -210,19 +225,22 @@ public class MapUserInput {
     {
         var _loc2_:Number = NaN;
         var _loc3_:Player = null;
-        //doneAction(this.gs_,Tutorial.UPDATE_ACTION);
         if(this.enablePlayerInput_ && (this.mouseDown_ || this.autofire_))
         {
             _loc2_ = Math.atan2(this.gs_.map.mouseY,this.gs_.map.mouseX);
             _loc3_ = this.gs_.map.player_;
-            if(_loc3_ != null)
+            if (_loc3_.isUnstable()) {
+                _loc3_.attemptAttackAngle((Math.random() * 100));
+                return;
+            }
+            if(Parameters.HWAcceleration)
             {
-                if (_loc3_.isUnstable()) {
-                    _loc3_.attemptAttackAngle((Math.random() * 100));
-                }
-                else {
+                if(param1.currentTarget == param1.target || param1.target == this.gs_.map || param1.target == this.gs_)
+                {
                     _loc3_.attemptAttackAngle(_loc2_);
                 }
+            }else {
+                _loc3_.attemptAttackAngle(_loc2_);
             }
         }
     }

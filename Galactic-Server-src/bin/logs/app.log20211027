@@ -1,0 +1,485 @@
+00:01:52,890 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+00:01:52,901 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+00:01:52,941 INFO  Server          Dispatching '/app/init'@127.0.0.1
+00:01:52,977 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+00:01:53,001 INFO  Server          Dispatching '/char/list'@127.0.0.1
+00:01:53,262 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+00:01:53,391 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+00:10:44,654 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+00:10:44,663 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+00:10:44,697 INFO  Server          Dispatching '/app/init'@127.0.0.1
+00:10:44,728 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+00:10:44,760 INFO  Server          Dispatching '/char/list'@127.0.0.1
+00:10:44,916 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+00:10:45,013 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+07:09:14,904 INFO  AppSettings     Loading app settings...
+07:09:14,936 INFO  XmlData         Loading xml data...
+07:09:15,315 WARN  XmlData         'Gothic Rug' and 'Gothic Rug' has the same ID of 0x0049!
+07:09:15,316 WARN  XmlData         0x0049 and 0x0049 has the same name of Gothic Rug!
+07:09:15,316 WARN  XmlData         0x0065 and 0x0061 has the same name of Grey Circle!
+07:09:15,339 WARN  XmlData         'Ice Tomb Attacker Statue' and 'Void anchor' has the same ID of 0x7fa9!
+07:09:15,371 WARN  XmlData         'Lantern Flicker' and 'Lantern Flicker' has the same ID of 0xab55!
+07:09:15,372 WARN  XmlData         0xab55 and 0xab55 has the same name of Lantern Flicker!
+07:09:15,382 WARN  XmlData         'Nexus Anchor' and 'Royal Majesty Bolt2' has the same ID of 0x7412!
+07:09:15,382 WARN  XmlData         'Nexus Chinese Dragon' and 'Haunted Shield' has the same ID of 0x7413!
+07:09:15,399 WARN  XmlData         'Lil' Ghost Skin' and 'Carrot of Wisdom' has the same ID of 0x8031!
+07:09:15,399 WARN  XmlData         'Spirit Skin' and 'Carrot's Revenge Basic' has the same ID of 0x8032!
+07:09:15,400 WARN  XmlData         'Baby Skin' and 'Carrot's Revenge' has the same ID of 0x8033!
+07:09:15,400 WARN  XmlData         'Eagle Skin' and 'Planted Carrot' has the same ID of 0x8040!
+07:09:15,401 WARN  XmlData         'Blue Landfish Skin' and 'Sealed Crystal Skull' has the same ID of 0x8078!
+07:09:15,402 WARN  XmlData         0x0197 and 0x0164 has the same name of Heal!
+07:09:15,402 WARN  XmlData         0x019a and 0x0715 has the same name of Decoy!
+07:09:15,418 WARN  XmlData         0x5461 and 0x7f60 has the same name of Elf!
+07:09:15,425 WARN  XmlData         'Heavy Crossbow Bolt' and 'Infestation 2' has the same ID of 0x0001!
+07:09:15,425 WARN  XmlData         'Red Fire' and 'Infestation 1' has the same ID of 0x0002!
+07:09:15,429 WARN  XmlData         'Poison Katana Slash' and 'Poison Katana Slash' has the same ID of 0x217e!
+07:09:15,430 WARN  XmlData         0x217e and 0x217e has the same name of Poison Katana Slash!
+07:09:15,433 WARN  XmlData         0x738d and 0x5783 has the same name of BellaShot!
+07:09:15,433 WARN  XmlData         0x738e and 0x5780 has the same name of BellaBerry!
+07:09:15,434 WARN  XmlData         0x738f and 0x5782 has the same name of BellaPetal!
+07:09:15,435 WARN  XmlData         0x740d and 0x5781 has the same name of BellaLeaf!
+07:09:15,437 WARN  XmlData         'Void Star' and 'Void Star' has the same ID of 0x716e!
+07:09:15,438 WARN  XmlData         0x716e and 0x716e has the same name of Void Star!
+07:09:15,439 WARN  XmlData         'TH Stinger Large' and 'TH Stinger Large' has the same ID of 0x011e!
+07:09:15,440 WARN  XmlData         0x011e and 0x011e has the same name of TH Stinger Large!
+07:09:15,441 WARN  XmlData         'TH Stinger Small' and 'TH Stinger Small' has the same ID of 0x011f!
+07:09:15,442 WARN  XmlData         0x011f and 0x011f has the same name of TH Stinger Small!
+07:09:15,443 WARN  XmlData         'TH Honey Daze' and 'TH Honey Daze' has the same ID of 0xa233!
+07:09:15,444 WARN  XmlData         0xa233 and 0xa233 has the same name of TH Honey Daze!
+07:09:15,445 WARN  XmlData         'Dragon Arrow' and 'Dragon Arrow' has the same ID of 0x7fcc!
+07:09:15,446 WARN  XmlData         0x7fcc and 0x7fcc has the same name of Dragon Arrow!
+07:09:15,766 WARN  XmlData         0x31a2 and 0x319d has the same name of SW Catenae's shuriken large proj!
+07:09:16,015 WARN  XmlData         'Brown Wall' and 'MagicHeal' has the same ID of 0x0170!
+07:09:16,017 WARN  XmlData         'Broken Grey Pillar' and 'AttackMid' has the same ID of 0x0180!
+07:09:16,018 WARN  XmlData         'Broken Purple Pillar' and 'AttackFar' has the same ID of 0x0181!
+07:09:16,019 WARN  XmlData         'Broken Blue Pillar' and 'ElectricZap' has the same ID of 0x0182!
+07:09:16,020 WARN  XmlData         'Broken Red Pillar' and 'PetSavage' has the same ID of 0x0183!
+07:09:16,020 WARN  XmlData         'Cross' and 'PetDecoy' has the same ID of 0x0184!
+07:09:16,021 WARN  XmlData         'Fir Tree 1' and 'PetRisingFury' has the same ID of 0x0185!
+07:09:16,022 WARN  XmlData         'Cherry Tree' and 'Attack Mid' has the same ID of 0x0194!
+07:09:16,024 WARN  XmlData         'Saguaro Cactus 1' and 'Heal' has the same ID of 0x0197!
+07:09:16,027 WARN  XmlData         'Saguaro Cactus 2' and 'Magic Heal' has the same ID of 0x0198!
+07:09:16,028 WARN  XmlData         'Saguaro Cactus 3' and 'Savage' has the same ID of 0x0199!
+07:09:16,029 WARN  XmlData         'Small Saguaro Cactus 1' and 'Decoy' has the same ID of 0x019a!
+07:09:16,030 WARN  XmlData         'Small Saguaro Cactus 2' and 'Rising Fury' has the same ID of 0x019b!
+07:09:16,518 WARN  XmlData         0x3a8b and 0x39bd has the same name of SNN lWPFs!
+07:09:16,753 WARN  XmlData         0x3b2a and 0x3b10 has the same name of SN CW!
+07:09:16,756 WARN  XmlData         0x3b98 and 0x3b83 has the same name of SNS CW!
+07:09:16,759 WARN  XmlData         0x3bf9 and 0x3be4 has the same name of SNN CW!
+07:09:16,770 WARN  XmlData         0x3c7b and 0x3c66 has the same name of SNR CW!
+07:09:16,920 WARN  XmlData         'TH Fat Bees' and 'TH Fat Bees' has the same ID of 0x0127!
+07:09:16,922 WARN  XmlData         0x0127 and 0x0127 has the same name of TH Fat Bees!
+07:09:15,198 WARN  XmlData         'Castle of Dark Magic Portal' and 'Master Zemith's Hideout Key' has the same ID of 0x7b68!
+07:09:15,241 WARN  XmlData         'Super Magic Mushroom' and 'Super Magic Mushroom' has the same ID of 0x7833!
+07:09:15,242 WARN  XmlData         0x7833 and 0x7833 has the same name of Super Magic Mushroom!
+07:09:15,299 WARN  XmlData         'Oryx's Battle Attires' and 'Oryx Awesome Set' has the same skinType of 0x0401!
+07:09:15,301 WARN  XmlData         'The Stone Revenant set' and 'Crystal Kunoichi Set' has the same skinType of 0x4b50!
+07:09:15,313 WARN  XmlData         'SP Crystal Light Ground' and 'Abyss Troom Ground' has the same ID of 0x8590!
+07:09:15,313 WARN  XmlData         0x8560 and 0x8567 has the same name of Moon Dark Tile!
+07:09:18,303 WARN  XmlData         'Debug Spawn' and 'Debug Spawn' has the same ID of 0x4309!
+07:09:18,306 WARN  XmlData         0x4309 and 0x4309 has the same name of Debug Spawn!
+07:09:18,332 INFO  XmlData         Finish loading game data.
+07:09:18,337 INFO  XmlData         2233 Items
+07:09:18,340 INFO  XmlData         1361 Tiles
+07:09:18,342 INFO  XmlData         4353 Objects
+07:09:18,344 INFO  XmlData         35 Skins
+07:09:18,350 INFO  XmlData         24 Equipment Sets
+07:09:18,355 INFO  XmlData         16 Classes
+07:09:18,361 INFO  XmlData         101 Portals
+07:09:18,370 INFO  XmlData         4 Merchants
+07:09:18,373 INFO  XmlData         164 Pets
+07:09:18,375 INFO  XmlData         7 Remote Textures
+07:09:18,380 INFO  XmlData         0 Additions
+07:09:15,314 WARN  XmlData         '1Crystal Graoundb1' and '1SnowGround1' has the same ID of 0x5579!
+07:09:18,999 INFO  Resources       Loading web data...
+07:09:19,396 INFO  Resources       Loading language data...
+07:09:24,606 FATAL Server          StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s); to create a disconnected multiplexer, disable AbortOnConnectFail. Loading on PING
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImpl(Func`1 multiplexerFactory, TextWriter log) in C:\dev\backend\StackExchange.Redis\StackExchange.Redis\StackExchange\Redis\ConnectionMultiplexer.cs:line 827
+   at common.Database..ctor(String host, Int32 port, String password, Int32 dbIndex, Resources data) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\common\Database.cs:line 41
+   at server.Program.Main(String[] args) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\server\Program.cs:line 56
+07:09:51,273 INFO  XmlData         Loading xml data...
+07:09:51,239 INFO  AppSettings     Loading app settings...
+07:09:51,550 WARN  XmlData         'Gothic Rug' and 'Gothic Rug' has the same ID of 0x0049!
+07:09:51,551 WARN  XmlData         0x0049 and 0x0049 has the same name of Gothic Rug!
+07:09:51,551 WARN  XmlData         0x0065 and 0x0061 has the same name of Grey Circle!
+07:09:51,572 WARN  XmlData         'Ice Tomb Attacker Statue' and 'Void anchor' has the same ID of 0x7fa9!
+07:09:51,606 WARN  XmlData         'Lantern Flicker' and 'Lantern Flicker' has the same ID of 0xab55!
+07:09:51,436 WARN  XmlData         'Castle of Dark Magic Portal' and 'Master Zemith's Hideout Key' has the same ID of 0x7b68!
+07:09:51,607 WARN  XmlData         0xab55 and 0xab55 has the same name of Lantern Flicker!
+07:09:51,619 WARN  XmlData         'Nexus Anchor' and 'Royal Majesty Bolt2' has the same ID of 0x7412!
+07:09:51,620 WARN  XmlData         'Nexus Chinese Dragon' and 'Haunted Shield' has the same ID of 0x7413!
+07:09:51,638 WARN  XmlData         'Lil' Ghost Skin' and 'Carrot of Wisdom' has the same ID of 0x8031!
+07:09:51,483 WARN  XmlData         0x7833 and 0x7833 has the same name of Super Magic Mushroom!
+07:09:51,638 WARN  XmlData         'Spirit Skin' and 'Carrot's Revenge Basic' has the same ID of 0x8032!
+07:09:51,482 WARN  XmlData         'Super Magic Mushroom' and 'Super Magic Mushroom' has the same ID of 0x7833!
+07:09:51,639 WARN  XmlData         'Baby Skin' and 'Carrot's Revenge' has the same ID of 0x8033!
+07:09:51,639 WARN  XmlData         'Eagle Skin' and 'Planted Carrot' has the same ID of 0x8040!
+07:09:51,640 WARN  XmlData         'Blue Landfish Skin' and 'Sealed Crystal Skull' has the same ID of 0x8078!
+07:09:51,642 WARN  XmlData         0x0197 and 0x0164 has the same name of Heal!
+07:09:51,642 WARN  XmlData         0x019a and 0x0715 has the same name of Decoy!
+07:09:51,659 WARN  XmlData         0x5461 and 0x7f60 has the same name of Elf!
+07:09:51,666 WARN  XmlData         'Heavy Crossbow Bolt' and 'Infestation 2' has the same ID of 0x0001!
+07:09:51,666 WARN  XmlData         'Red Fire' and 'Infestation 1' has the same ID of 0x0002!
+07:09:51,538 WARN  XmlData         'The Stone Revenant set' and 'Crystal Kunoichi Set' has the same skinType of 0x4b50!
+07:09:51,670 WARN  XmlData         'Poison Katana Slash' and 'Poison Katana Slash' has the same ID of 0x217e!
+07:09:51,536 WARN  XmlData         'Oryx's Battle Attires' and 'Oryx Awesome Set' has the same skinType of 0x0401!
+07:09:51,672 WARN  XmlData         0x738d and 0x5783 has the same name of BellaShot!
+07:09:51,671 WARN  XmlData         0x217e and 0x217e has the same name of Poison Katana Slash!
+07:09:51,673 WARN  XmlData         0x738e and 0x5780 has the same name of BellaBerry!
+07:09:51,674 WARN  XmlData         0x738f and 0x5782 has the same name of BellaPetal!
+07:09:51,675 WARN  XmlData         0x740d and 0x5781 has the same name of BellaLeaf!
+07:09:51,676 WARN  XmlData         'Void Star' and 'Void Star' has the same ID of 0x716e!
+07:09:51,676 WARN  XmlData         0x716e and 0x716e has the same name of Void Star!
+07:09:51,678 WARN  XmlData         'TH Stinger Large' and 'TH Stinger Large' has the same ID of 0x011e!
+07:09:51,679 WARN  XmlData         0x011e and 0x011e has the same name of TH Stinger Large!
+07:09:51,682 WARN  XmlData         'TH Stinger Small' and 'TH Stinger Small' has the same ID of 0x011f!
+07:09:51,682 WARN  XmlData         0x011f and 0x011f has the same name of TH Stinger Small!
+07:09:51,548 WARN  XmlData         'SP Crystal Light Ground' and 'Abyss Troom Ground' has the same ID of 0x8590!
+07:09:51,683 WARN  XmlData         'TH Honey Daze' and 'TH Honey Daze' has the same ID of 0xa233!
+07:09:51,685 WARN  XmlData         0xa233 and 0xa233 has the same name of TH Honey Daze!
+07:09:51,685 WARN  XmlData         'Dragon Arrow' and 'Dragon Arrow' has the same ID of 0x7fcc!
+07:09:51,686 WARN  XmlData         0x7fcc and 0x7fcc has the same name of Dragon Arrow!
+07:09:51,703 WARN  XmlData         0x31a2 and 0x319d has the same name of SW Catenae's shuriken large proj!
+07:09:51,715 WARN  XmlData         'Brown Wall' and 'MagicHeal' has the same ID of 0x0170!
+07:09:51,716 WARN  XmlData         'Broken Grey Pillar' and 'AttackMid' has the same ID of 0x0180!
+07:09:51,717 WARN  XmlData         'Broken Purple Pillar' and 'AttackFar' has the same ID of 0x0181!
+07:09:51,719 WARN  XmlData         'Broken Blue Pillar' and 'ElectricZap' has the same ID of 0x0182!
+07:09:51,720 WARN  XmlData         'Broken Red Pillar' and 'PetSavage' has the same ID of 0x0183!
+07:09:51,721 WARN  XmlData         'Cross' and 'PetDecoy' has the same ID of 0x0184!
+07:09:51,722 WARN  XmlData         'Fir Tree 1' and 'PetRisingFury' has the same ID of 0x0185!
+07:09:51,723 WARN  XmlData         'Cherry Tree' and 'Attack Mid' has the same ID of 0x0194!
+07:09:51,723 WARN  XmlData         'Saguaro Cactus 1' and 'Heal' has the same ID of 0x0197!
+07:09:51,724 WARN  XmlData         'Saguaro Cactus 2' and 'Magic Heal' has the same ID of 0x0198!
+07:09:51,726 WARN  XmlData         'Saguaro Cactus 3' and 'Savage' has the same ID of 0x0199!
+07:09:51,727 WARN  XmlData         'Small Saguaro Cactus 1' and 'Decoy' has the same ID of 0x019a!
+07:09:51,728 WARN  XmlData         'Small Saguaro Cactus 2' and 'Rising Fury' has the same ID of 0x019b!
+07:09:51,750 WARN  XmlData         0x3a8b and 0x39bd has the same name of SNN lWPFs!
+07:09:51,761 WARN  XmlData         0x3b2a and 0x3b10 has the same name of SN CW!
+07:09:51,763 WARN  XmlData         0x3b98 and 0x3b83 has the same name of SNS CW!
+07:09:51,766 WARN  XmlData         0x3bf9 and 0x3be4 has the same name of SNN CW!
+07:09:51,769 WARN  XmlData         0x3c7b and 0x3c66 has the same name of SNR CW!
+07:09:51,793 WARN  XmlData         'TH Fat Bees' and 'TH Fat Bees' has the same ID of 0x0127!
+07:09:51,795 WARN  XmlData         0x0127 and 0x0127 has the same name of TH Fat Bees!
+07:09:51,806 WARN  XmlData         'Debug Spawn' and 'Debug Spawn' has the same ID of 0x4309!
+07:09:51,807 WARN  XmlData         0x4309 and 0x4309 has the same name of Debug Spawn!
+07:09:51,810 INFO  XmlData         Finish loading game data.
+07:09:51,811 INFO  XmlData         2233 Items
+07:09:51,812 INFO  XmlData         1361 Tiles
+07:09:51,813 INFO  XmlData         4353 Objects
+07:09:51,815 INFO  XmlData         35 Skins
+07:09:51,816 INFO  XmlData         24 Equipment Sets
+07:09:51,817 INFO  XmlData         16 Classes
+07:09:51,818 INFO  XmlData         4 Merchants
+07:09:51,819 INFO  XmlData         164 Pets
+07:09:51,820 INFO  XmlData         7 Remote Textures
+07:09:51,821 INFO  XmlData         0 Additions
+07:09:51,831 INFO  Resources       Loading web data...
+07:09:51,842 INFO  Resources       Loading language data...
+07:09:51,817 INFO  XmlData         101 Portals
+07:09:54,167 INFO  ISManager       Server's Id is f75fdbf7-7c3f-41a8-b16d-57557bb654bc
+07:09:54,288 INFO  ISManager       AppEngine (Account, f75fdbf7-7c3f-41a8-b16d-57557bb654bc) joined the network.
+07:09:54,290 INFO  ISManager       Galactic Conquest (World, 931f1a78-9e69-4264-8f6f-8c7d8d03d66a) joined the network.
+07:09:51,548 WARN  XmlData         0x8560 and 0x8567 has the same name of Moon Dark Tile!
+07:09:51,550 WARN  XmlData         '1Crystal Graoundb1' and '1SnowGround1' has the same ID of 0x5579!
+07:09:55,042 INFO  Server          Listening at port 80...
+07:09:58,587 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+07:09:58,656 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+07:09:59,224 INFO  Server          Dispatching '/app/init'@127.0.0.1
+07:09:59,237 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+07:09:59,267 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:09:59,654 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:09:59,742 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+07:25:51,416 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+07:25:51,423 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+07:25:51,450 INFO  Server          Dispatching '/app/init'@127.0.0.1
+07:25:51,485 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+07:25:51,514 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:25:51,566 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:25:51,635 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+07:34:23,315 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+07:34:23,321 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+07:34:23,357 INFO  Server          Dispatching '/app/init'@127.0.0.1
+07:34:23,389 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+07:34:23,419 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:34:23,552 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:34:23,616 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+07:39:24,442 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:39:24,499 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:46:01,366 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+07:46:01,409 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+07:46:01,450 INFO  Server          Dispatching '/app/init'@127.0.0.1
+07:46:01,479 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+07:46:01,510 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:46:01,564 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:46:01,642 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+07:52:20,687 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+07:52:20,758 INFO  Server          Dispatching '/app/init'@127.0.0.1
+07:52:20,822 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+07:52:20,886 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:52:20,983 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:53:24,989 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+07:53:25,141 INFO  Server          Dispatching '/app/init'@127.0.0.1
+07:53:25,204 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+07:53:25,297 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:53:25,406 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:54:22,437 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+07:54:22,540 INFO  Server          Dispatching '/app/init'@127.0.0.1
+07:54:22,683 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+07:54:22,731 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:54:22,812 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:54:22,938 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+07:54:31,646 INFO  Server          Dispatching '/account/verify'@127.0.0.1
+07:55:33,228 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+07:55:33,410 INFO  Server          Dispatching '/app/init'@127.0.0.1
+07:55:33,490 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+07:55:33,552 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:55:33,631 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:55:33,757 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+07:56:00,227 INFO  Server          Dispatching '/account/verify'@127.0.0.1
+07:56:01,984 INFO  Server          Dispatching '/account/verify'@127.0.0.1
+07:56:03,349 INFO  Server          Dispatching '/account/verify'@127.0.0.1
+07:56:03,411 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+07:56:03,412 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:56:03,473 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:57:18,348 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+07:57:18,549 INFO  Server          Dispatching '/app/init'@127.0.0.1
+07:57:18,630 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+07:57:18,675 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:57:18,834 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:57:18,962 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+07:58:50,182 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:58:50,243 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+07:59:05,490 INFO  Server          Dispatching '/char/list'@127.0.0.1
+07:59:05,584 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:06:33,603 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+08:06:33,628 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+08:06:33,668 INFO  Server          Dispatching '/app/init'@127.0.0.1
+08:06:33,695 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+08:06:33,741 INFO  Server          Dispatching '/char/list'@127.0.0.1
+08:06:33,803 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:06:33,882 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+08:06:56,337 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+08:06:56,375 INFO  Server          Dispatching '/app/init'@127.0.0.1
+08:06:56,400 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+08:06:56,449 INFO  Server          Dispatching '/char/list'@127.0.0.1
+08:06:56,514 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:06:56,657 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+08:10:18,963 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+08:10:19,017 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+08:10:19,048 INFO  Server          Dispatching '/app/init'@127.0.0.1
+08:10:19,086 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+08:10:19,108 INFO  Server          Dispatching '/char/list'@127.0.0.1
+08:10:19,160 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:10:19,242 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+08:11:15,561 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+08:11:15,634 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+08:11:15,668 INFO  Server          Dispatching '/app/init'@127.0.0.1
+08:11:15,709 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+08:11:15,747 INFO  Server          Dispatching '/char/list'@127.0.0.1
+08:11:15,809 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:11:15,875 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+08:12:35,586 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+08:12:35,649 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+08:12:35,686 INFO  Server          Dispatching '/app/init'@127.0.0.1
+08:12:35,718 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+08:12:35,749 INFO  Server          Dispatching '/char/list'@127.0.0.1
+08:12:35,802 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:12:35,873 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+08:12:42,661 INFO  Server          Dispatching '/char/list'@127.0.0.1
+08:12:42,680 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:13:40,081 INFO  Server          Dispatching '/char/list'@127.0.0.1
+08:13:40,099 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:15:18,672 INFO  Server          Dispatching '/char/fame'@127.0.0.1
+08:15:20,706 INFO  Server          Dispatching '/fame/list'@127.0.0.1
+08:15:21,086 INFO  Server          Dispatching '/char/list'@127.0.0.1
+08:15:21,111 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:19:33,267 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+08:19:33,273 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+08:19:33,314 INFO  Server          Dispatching '/app/init'@127.0.0.1
+08:19:33,345 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+08:19:33,375 INFO  Server          Dispatching '/char/list'@127.0.0.1
+08:19:33,440 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:19:33,540 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+08:28:18,650 INFO  Server          Dispatching '/crossdomain.xml'@127.0.0.1
+08:28:18,655 INFO  Server          Dispatching '/app/getLanguageStrings'@127.0.0.1
+08:28:18,680 INFO  Server          Dispatching '/app/init'@127.0.0.1
+08:28:18,707 INFO  Server          Dispatching '/app/getServerXmls'@127.0.0.1
+08:28:18,739 INFO  Server          Dispatching '/char/list'@127.0.0.1
+08:28:18,792 INFO  Server          Dispatching '/dailyLogin/fetchCalendar'@127.0.0.1
+08:28:18,850 INFO  Server          Dispatching '/mysterybox/getBoxes'@127.0.0.1
+08:41:06,104 INFO  ISManager       AppEngine (Account, f75fdbf7-7c3f-41a8-b16d-57557bb654bc) timed out.
+08:41:06,105 INFO  ISManager       Galactic Conquest (World, 931f1a78-9e69-4264-8f6f-8c7d8d03d66a) timed out.
+08:41:24,350 INFO  ISManager       AppEngine (Account, f75fdbf7-7c3f-41a8-b16d-57557bb654bc) re-joined the network.
+08:41:24,505 INFO  ISManager       Galactic Conquest (World, 931f1a78-9e69-4264-8f6f-8c7d8d03d66a) re-joined the network.
+15:58:49,088 INFO  AppSettings     Loading app settings...
+15:58:49,120 INFO  XmlData         Loading xml data...
+15:58:49,379 WARN  XmlData         'Gothic Rug' and 'Gothic Rug' has the same ID of 0x0049!
+15:58:49,380 WARN  XmlData         0x0049 and 0x0049 has the same name of Gothic Rug!
+15:58:49,380 WARN  XmlData         0x0065 and 0x0061 has the same name of Grey Circle!
+15:58:49,402 WARN  XmlData         'Ice Tomb Attacker Statue' and 'Void anchor' has the same ID of 0x7fa9!
+15:58:49,454 WARN  XmlData         'Lantern Flicker' and 'Lantern Flicker' has the same ID of 0xab55!
+15:58:49,455 WARN  XmlData         0xab55 and 0xab55 has the same name of Lantern Flicker!
+15:58:49,466 WARN  XmlData         'Nexus Anchor' and 'Royal Majesty Bolt2' has the same ID of 0x7412!
+15:58:49,466 WARN  XmlData         'Nexus Chinese Dragon' and 'Haunted Shield' has the same ID of 0x7413!
+15:58:49,483 WARN  XmlData         'Lil' Ghost Skin' and 'Carrot of Wisdom' has the same ID of 0x8031!
+15:58:49,484 WARN  XmlData         'Spirit Skin' and 'Carrot's Revenge Basic' has the same ID of 0x8032!
+15:58:49,485 WARN  XmlData         'Baby Skin' and 'Carrot's Revenge' has the same ID of 0x8033!
+15:58:49,485 WARN  XmlData         'Eagle Skin' and 'Planted Carrot' has the same ID of 0x8040!
+15:58:49,486 WARN  XmlData         'Blue Landfish Skin' and 'Sealed Crystal Skull' has the same ID of 0x8078!
+15:58:49,488 WARN  XmlData         0x0197 and 0x0164 has the same name of Heal!
+15:58:49,488 WARN  XmlData         0x019a and 0x0715 has the same name of Decoy!
+15:58:49,504 WARN  XmlData         0x5461 and 0x7f60 has the same name of Elf!
+15:58:49,512 WARN  XmlData         'Heavy Crossbow Bolt' and 'Infestation 2' has the same ID of 0x0001!
+15:58:49,513 WARN  XmlData         'Red Fire' and 'Infestation 1' has the same ID of 0x0002!
+15:58:49,517 WARN  XmlData         'Poison Katana Slash' and 'Poison Katana Slash' has the same ID of 0x217e!
+15:58:49,519 WARN  XmlData         0x217e and 0x217e has the same name of Poison Katana Slash!
+15:58:49,521 WARN  XmlData         0x738d and 0x5783 has the same name of BellaShot!
+15:58:49,522 WARN  XmlData         0x738e and 0x5780 has the same name of BellaBerry!
+15:58:49,523 WARN  XmlData         0x738f and 0x5782 has the same name of BellaPetal!
+15:58:49,525 WARN  XmlData         0x740d and 0x5781 has the same name of BellaLeaf!
+15:58:49,527 WARN  XmlData         'Void Star' and 'Void Star' has the same ID of 0x716e!
+15:58:49,528 WARN  XmlData         0x716e and 0x716e has the same name of Void Star!
+15:58:49,532 WARN  XmlData         'TH Stinger Large' and 'TH Stinger Large' has the same ID of 0x011e!
+15:58:49,534 WARN  XmlData         0x011e and 0x011e has the same name of TH Stinger Large!
+15:58:49,536 WARN  XmlData         'TH Stinger Small' and 'TH Stinger Small' has the same ID of 0x011f!
+15:58:49,538 WARN  XmlData         0x011f and 0x011f has the same name of TH Stinger Small!
+15:58:49,539 WARN  XmlData         'TH Honey Daze' and 'TH Honey Daze' has the same ID of 0xa233!
+15:58:49,540 WARN  XmlData         0xa233 and 0xa233 has the same name of TH Honey Daze!
+15:58:49,541 WARN  XmlData         'Dragon Arrow' and 'Dragon Arrow' has the same ID of 0x7fcc!
+15:58:49,542 WARN  XmlData         0x7fcc and 0x7fcc has the same name of Dragon Arrow!
+15:58:49,560 WARN  XmlData         0x31a2 and 0x319d has the same name of SW Catenae's shuriken large proj!
+15:58:49,576 WARN  XmlData         'Brown Wall' and 'MagicHeal' has the same ID of 0x0170!
+15:58:49,577 WARN  XmlData         'Broken Grey Pillar' and 'AttackMid' has the same ID of 0x0180!
+15:58:49,579 WARN  XmlData         'Broken Purple Pillar' and 'AttackFar' has the same ID of 0x0181!
+15:58:49,580 WARN  XmlData         'Broken Blue Pillar' and 'ElectricZap' has the same ID of 0x0182!
+15:58:49,581 WARN  XmlData         'Broken Red Pillar' and 'PetSavage' has the same ID of 0x0183!
+15:58:49,582 WARN  XmlData         'Cross' and 'PetDecoy' has the same ID of 0x0184!
+15:58:49,583 WARN  XmlData         'Fir Tree 1' and 'PetRisingFury' has the same ID of 0x0185!
+15:58:49,585 WARN  XmlData         'Cherry Tree' and 'Attack Mid' has the same ID of 0x0194!
+15:58:49,586 WARN  XmlData         'Saguaro Cactus 1' and 'Heal' has the same ID of 0x0197!
+15:58:49,587 WARN  XmlData         'Saguaro Cactus 2' and 'Magic Heal' has the same ID of 0x0198!
+15:58:49,588 WARN  XmlData         'Saguaro Cactus 3' and 'Savage' has the same ID of 0x0199!
+15:58:49,590 WARN  XmlData         'Small Saguaro Cactus 1' and 'Decoy' has the same ID of 0x019a!
+15:58:49,591 WARN  XmlData         'Small Saguaro Cactus 2' and 'Rising Fury' has the same ID of 0x019b!
+15:58:49,609 WARN  XmlData         0x3a8b and 0x39bd has the same name of SNN lWPFs!
+15:58:49,621 WARN  XmlData         0x3b2a and 0x3b10 has the same name of SN CW!
+15:58:49,623 WARN  XmlData         0x3b98 and 0x3b83 has the same name of SNS CW!
+15:58:49,626 WARN  XmlData         0x3bf9 and 0x3be4 has the same name of SNN CW!
+15:58:49,631 WARN  XmlData         0x3c7b and 0x3c66 has the same name of SNR CW!
+15:58:49,659 WARN  XmlData         'TH Fat Bees' and 'TH Fat Bees' has the same ID of 0x0127!
+15:58:49,661 WARN  XmlData         0x0127 and 0x0127 has the same name of TH Fat Bees!
+15:58:49,674 WARN  XmlData         'Debug Spawn' and 'Debug Spawn' has the same ID of 0x4309!
+15:58:49,675 WARN  XmlData         0x4309 and 0x4309 has the same name of Debug Spawn!
+15:58:49,678 INFO  XmlData         Finish loading game data.
+15:58:49,680 INFO  XmlData         2233 Items
+15:58:49,681 INFO  XmlData         1361 Tiles
+15:58:49,683 INFO  XmlData         4353 Objects
+15:58:49,685 INFO  XmlData         35 Skins
+15:58:49,687 INFO  XmlData         24 Equipment Sets
+15:58:49,688 INFO  XmlData         16 Classes
+15:58:49,691 INFO  XmlData         101 Portals
+15:58:49,694 INFO  XmlData         4 Merchants
+15:58:49,696 INFO  XmlData         164 Pets
+15:58:49,698 INFO  XmlData         7 Remote Textures
+15:58:49,700 INFO  XmlData         0 Additions
+15:58:49,713 INFO  Resources       Loading web data...
+15:58:49,726 INFO  Resources       Loading language data...
+15:58:49,273 WARN  XmlData         'Castle of Dark Magic Portal' and 'Master Zemith's Hideout Key' has the same ID of 0x7b68!
+15:58:51,339 INFO  ISManager       Server's Id is e965df05-f755-4722-82bc-3d98d98f683e
+15:58:49,316 WARN  XmlData         0x7833 and 0x7833 has the same name of Super Magic Mushroom!
+15:58:49,316 WARN  XmlData         'Super Magic Mushroom' and 'Super Magic Mushroom' has the same ID of 0x7833!
+15:58:49,367 WARN  XmlData         'Oryx's Battle Attires' and 'Oryx Awesome Set' has the same skinType of 0x0401!
+15:58:49,368 WARN  XmlData         'The Stone Revenant set' and 'Crystal Kunoichi Set' has the same skinType of 0x4b50!
+15:58:49,377 WARN  XmlData         'SP Crystal Light Ground' and 'Abyss Troom Ground' has the same ID of 0x8590!
+15:58:51,458 INFO  ISManager       AppEngine (Account, e965df05-f755-4722-82bc-3d98d98f683e) joined the network.
+15:58:51,525 INFO  Server          Listening at port 80...
+15:58:49,378 WARN  XmlData         0x8560 and 0x8567 has the same name of Moon Dark Tile!
+15:58:49,379 WARN  XmlData         '1Crystal Graoundb1' and '1SnowGround1' has the same ID of 0x5579!
+16:01:08,304 INFO  AppSettings     Loading app settings...
+16:01:08,637 WARN  XmlData         'Gothic Rug' and 'Gothic Rug' has the same ID of 0x0049!
+16:01:08,638 WARN  XmlData         0x0049 and 0x0049 has the same name of Gothic Rug!
+16:01:08,639 WARN  XmlData         0x0065 and 0x0061 has the same name of Grey Circle!
+16:01:08,664 WARN  XmlData         'Ice Tomb Attacker Statue' and 'Void anchor' has the same ID of 0x7fa9!
+16:01:08,695 WARN  XmlData         'Lantern Flicker' and 'Lantern Flicker' has the same ID of 0xab55!
+16:01:08,696 WARN  XmlData         0xab55 and 0xab55 has the same name of Lantern Flicker!
+16:01:08,706 WARN  XmlData         'Nexus Anchor' and 'Royal Majesty Bolt2' has the same ID of 0x7412!
+16:01:08,707 WARN  XmlData         'Nexus Chinese Dragon' and 'Haunted Shield' has the same ID of 0x7413!
+16:01:08,724 WARN  XmlData         'Lil' Ghost Skin' and 'Carrot of Wisdom' has the same ID of 0x8031!
+16:01:08,724 WARN  XmlData         'Spirit Skin' and 'Carrot's Revenge Basic' has the same ID of 0x8032!
+16:01:08,725 WARN  XmlData         'Baby Skin' and 'Carrot's Revenge' has the same ID of 0x8033!
+16:01:08,725 WARN  XmlData         'Eagle Skin' and 'Planted Carrot' has the same ID of 0x8040!
+16:01:08,726 WARN  XmlData         'Blue Landfish Skin' and 'Sealed Crystal Skull' has the same ID of 0x8078!
+16:01:08,727 WARN  XmlData         0x0197 and 0x0164 has the same name of Heal!
+16:01:08,727 WARN  XmlData         0x019a and 0x0715 has the same name of Decoy!
+16:01:08,744 WARN  XmlData         0x5461 and 0x7f60 has the same name of Elf!
+16:01:08,751 WARN  XmlData         'Heavy Crossbow Bolt' and 'Infestation 2' has the same ID of 0x0001!
+16:01:08,752 WARN  XmlData         'Red Fire' and 'Infestation 1' has the same ID of 0x0002!
+16:01:08,756 WARN  XmlData         'Poison Katana Slash' and 'Poison Katana Slash' has the same ID of 0x217e!
+16:01:08,757 WARN  XmlData         0x217e and 0x217e has the same name of Poison Katana Slash!
+16:01:08,759 WARN  XmlData         0x738d and 0x5783 has the same name of BellaShot!
+16:01:08,760 WARN  XmlData         0x738e and 0x5780 has the same name of BellaBerry!
+16:01:08,761 WARN  XmlData         0x738f and 0x5782 has the same name of BellaPetal!
+16:01:08,342 INFO  XmlData         Loading xml data...
+16:01:08,762 WARN  XmlData         0x740d and 0x5781 has the same name of BellaLeaf!
+16:01:08,763 WARN  XmlData         'Void Star' and 'Void Star' has the same ID of 0x716e!
+16:01:08,766 WARN  XmlData         0x716e and 0x716e has the same name of Void Star!
+16:01:08,767 WARN  XmlData         'TH Stinger Large' and 'TH Stinger Large' has the same ID of 0x011e!
+16:01:08,768 WARN  XmlData         0x011e and 0x011e has the same name of TH Stinger Large!
+16:01:08,770 WARN  XmlData         'TH Stinger Small' and 'TH Stinger Small' has the same ID of 0x011f!
+16:01:08,771 WARN  XmlData         0x011f and 0x011f has the same name of TH Stinger Small!
+16:01:08,772 WARN  XmlData         'TH Honey Daze' and 'TH Honey Daze' has the same ID of 0xa233!
+16:01:08,774 WARN  XmlData         0xa233 and 0xa233 has the same name of TH Honey Daze!
+16:01:08,775 WARN  XmlData         'Dragon Arrow' and 'Dragon Arrow' has the same ID of 0x7fcc!
+16:01:08,776 WARN  XmlData         0x7fcc and 0x7fcc has the same name of Dragon Arrow!
+16:01:08,794 WARN  XmlData         0x31a2 and 0x319d has the same name of SW Catenae's shuriken large proj!
+16:01:08,806 WARN  XmlData         'Brown Wall' and 'MagicHeal' has the same ID of 0x0170!
+16:01:08,807 WARN  XmlData         'Broken Grey Pillar' and 'AttackMid' has the same ID of 0x0180!
+16:01:08,808 WARN  XmlData         'Broken Purple Pillar' and 'AttackFar' has the same ID of 0x0181!
+16:01:08,809 WARN  XmlData         'Broken Blue Pillar' and 'ElectricZap' has the same ID of 0x0182!
+16:01:08,810 WARN  XmlData         'Broken Red Pillar' and 'PetSavage' has the same ID of 0x0183!
+16:01:08,811 WARN  XmlData         'Cross' and 'PetDecoy' has the same ID of 0x0184!
+16:01:08,813 WARN  XmlData         'Fir Tree 1' and 'PetRisingFury' has the same ID of 0x0185!
+16:01:08,814 WARN  XmlData         'Cherry Tree' and 'Attack Mid' has the same ID of 0x0194!
+16:01:08,816 WARN  XmlData         'Saguaro Cactus 1' and 'Heal' has the same ID of 0x0197!
+16:01:08,817 WARN  XmlData         'Saguaro Cactus 2' and 'Magic Heal' has the same ID of 0x0198!
+16:01:08,818 WARN  XmlData         'Saguaro Cactus 3' and 'Savage' has the same ID of 0x0199!
+16:01:08,819 WARN  XmlData         'Small Saguaro Cactus 1' and 'Decoy' has the same ID of 0x019a!
+16:01:08,820 WARN  XmlData         'Small Saguaro Cactus 2' and 'Rising Fury' has the same ID of 0x019b!
+16:01:08,837 WARN  XmlData         0x3a8b and 0x39bd has the same name of SNN lWPFs!
+16:01:08,847 WARN  XmlData         0x3b2a and 0x3b10 has the same name of SN CW!
+16:01:08,850 WARN  XmlData         0x3b98 and 0x3b83 has the same name of SNS CW!
+16:01:08,852 WARN  XmlData         0x3bf9 and 0x3be4 has the same name of SNN CW!
+16:01:08,855 WARN  XmlData         0x3c7b and 0x3c66 has the same name of SNR CW!
+16:01:08,884 WARN  XmlData         'TH Fat Bees' and 'TH Fat Bees' has the same ID of 0x0127!
+16:01:08,885 WARN  XmlData         0x0127 and 0x0127 has the same name of TH Fat Bees!
+16:01:08,896 WARN  XmlData         'Debug Spawn' and 'Debug Spawn' has the same ID of 0x4309!
+16:01:08,897 WARN  XmlData         0x4309 and 0x4309 has the same name of Debug Spawn!
+16:01:08,899 INFO  XmlData         Finish loading game data.
+16:01:08,901 INFO  XmlData         2233 Items
+16:01:08,902 INFO  XmlData         1361 Tiles
+16:01:08,903 INFO  XmlData         4353 Objects
+16:01:08,904 INFO  XmlData         35 Skins
+16:01:08,905 INFO  XmlData         24 Equipment Sets
+16:01:08,906 INFO  XmlData         16 Classes
+16:01:08,907 INFO  XmlData         101 Portals
+16:01:08,907 INFO  XmlData         4 Merchants
+16:01:08,909 INFO  XmlData         164 Pets
+16:01:08,910 INFO  XmlData         7 Remote Textures
+16:01:08,911 INFO  XmlData         0 Additions
+16:01:08,919 INFO  Resources       Loading web data...
+16:01:08,930 INFO  Resources       Loading language data...
+16:01:10,539 INFO  ISManager       Server's Id is 52844418-ce76-4f41-bc86-e1d612ebd63f
+16:01:08,513 WARN  XmlData         'Castle of Dark Magic Portal' and 'Master Zemith's Hideout Key' has the same ID of 0x7b68!
+16:01:08,564 WARN  XmlData         'Super Magic Mushroom' and 'Super Magic Mushroom' has the same ID of 0x7833!
+16:01:08,565 WARN  XmlData         0x7833 and 0x7833 has the same name of Super Magic Mushroom!
+16:01:10,614 INFO  ISManager       AppEngine (Account, 52844418-ce76-4f41-bc86-e1d612ebd63f) joined the network.
+16:01:08,624 WARN  XmlData         'The Stone Revenant set' and 'Crystal Kunoichi Set' has the same skinType of 0x4b50!
+16:01:08,622 WARN  XmlData         'Oryx's Battle Attires' and 'Oryx Awesome Set' has the same skinType of 0x0401!
+16:01:10,654 INFO  ISManager       AppEngine (Account, 52844418-ce76-4f41-bc86-e1d612ebd63f) joined the network.
+16:01:10,656 INFO  ISManager       AppEngine (Account, e965df05-f755-4722-82bc-3d98d98f683e) joined the network.
+16:01:08,634 WARN  XmlData         'SP Crystal Light Ground' and 'Abyss Troom Ground' has the same ID of 0x8590!
+16:01:10,701 FATAL Server          System.Net.HttpListenerException (0x80004005): Failed to listen on prefix 'http://127.0.0.1:80/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at Anna.HttpServer..ctor(String url, IScheduler scheduler)
+   at server.Program.Main(String[] args) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\server\Program.cs:line 79

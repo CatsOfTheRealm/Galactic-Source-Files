@@ -392,7 +392,7 @@ public class EquipmentToolTip extends ToolTip {
                 }
                 else if(x != 10) {
                     this.tierText.filters = getoutlinetext();
-                    this.tierText.setColor(0xB200FF);
+                    this.tierText.setColor(0x9F2B68);
                     this.tierText.setStringBuilder(new LineBuilder().setParams(TextKey.UNTIERED_ABBR));
                 }
             }
@@ -1177,7 +1177,7 @@ public class EquipmentToolTip extends ToolTip {
                 this.restrictions.push(new Restriction(("Speciality: Normal"), 0xffffff, false));
             }
             else if (x != 10) {
-                this.restrictions.push(new Restriction(("Earth: Rare"), 0xB200FF, false));
+                this.restrictions.push(new Restriction(("Earth: Rare"), 0x9F2B68, false));
             }
             else if (_local22) {
                 this.restrictions.push(new Restriction(("Speciality: Normal"), 0xffffff, false));
@@ -1269,7 +1269,7 @@ public class EquipmentToolTip extends ToolTip {
                 this.restrictions.push(new Restriction(("Speciality: Normal"), 0xffffff, false));
             }
             else if (x != 10) {
-                this.restrictions.push(new Restriction(("Earth: Rare"), 0xB200FF, false));
+                this.restrictions.push(new Restriction(("Earth: Rare"), 0x9F2B68, false));
             }
             else if (_local22) {
                 this.restrictions.push(new Restriction(("Speciality: Normal"), 0xffffff, false));

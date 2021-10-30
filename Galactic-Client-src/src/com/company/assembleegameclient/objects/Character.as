@@ -22,8 +22,8 @@ public class Character extends GameObject {
         return 16776960 - 1280 * int(50 - param1);
     }
 
-    override public function damage(_arg1:int, _arg2:int, _arg3:Vector.<uint>, _arg4:Boolean, _arg5:Projectile):void {
-        super.damage(_arg1, _arg2, _arg3, _arg4, _arg5);
+    override public function damage(_arg2:int, _arg3:Vector.<uint>, _arg5:Projectile):void {
+        super.damage(_arg2, _arg3, _arg5);
         if (dead_) {
             SoundEffectLibrary.play(this.deathSound_);
         }

@@ -36,7 +36,7 @@ namespace wServer.realm.entities
         }
 
         public DamageCounter DamageCounter { get { return counter; } }
-          
+
         public WmapTerrain Terrain { get; set; }
 
         Position? pos;
@@ -168,15 +168,15 @@ namespace wServer.realm.entities
                         ObjectId = -1
                     }, this, null, PacketPriority.Low);
                 }
-                
-                if (HP <= 0 && Owner != null)
+
+                if (HP <= 0)
                     Death(time);
 
                 return effDmg;
             }
             return 0;
         }
-        
+
         public override bool HitByProjectile(Projectile projectile, RealmTime time)
         {
             if (stat) return false;
@@ -210,16 +210,16 @@ namespace wServer.realm.entities
                 {
                     EffectChance(p, 2, 2500, false, ConditionEffectIndex.Paralyzed);
                 }
-             
+
 
                 counter.HitBy(projectile.ProjectileOwner as Player, time, projectile, dmg);
                 if (HasConditionEffect(ConditionEffects.Invincible) || HasConditionEffect(ConditionEffects.Invulnerable)) { }
                 else
                     (projectile.ProjectileOwner as Player).LifeManaSteal(this, dmg);
-                    
-             
 
-                if (HP <= 0 && Owner != null)
+
+
+                if (HP <= 0)
                 {
                     Death(time);
                 }
