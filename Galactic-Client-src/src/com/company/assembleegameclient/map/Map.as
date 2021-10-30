@@ -169,11 +169,30 @@ public class Map extends AbstractMap {
         this.objsToAdd_ = null;
         this.idsToRemove_ = null;
         this.atmosphere_ = null;
+        vulnPlayerDict = null;
+        vulnEnemyDict = null;
         TextureFactory.disposeTextures();
         GraphicsFillExtra.dispose();
         Program3DFactory.getInstance().dispose();
     }
 
+    override public function calcVulnerables() : void
+    {
+        var gameObject:GameObject;
+        this.vulnEnemyDict.length = 0;
+        this.vulnPlayerDict.length = 0;
+        for each(gameObject in goDict_)
+        {
+            if(gameObject.props_.isEnemy_ && !gameObject.dead_)
+            {
+                vulnEnemyDict.push(gameObject);
+            }
+            else if(gameObject.props_.isPlayer_ && !gameObject.dead_)
+            {
+                vulnPlayerDict.push(gameObject);
+            }
+        }
+    }
 
     override public function update(time:int, dt:int) : void
     {

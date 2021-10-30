@@ -10,7 +10,8 @@
     import com.company.assembleegameclient.tutorial.Tutorial;
     import com.company.assembleegameclient.tutorial.doneAction;
     import com.company.assembleegameclient.util.BloodComposition;
-    import com.company.assembleegameclient.util.FreeList;
+import com.company.assembleegameclient.util.ConditionEffect;
+import com.company.assembleegameclient.util.FreeList;
     import com.company.assembleegameclient.util.RandomUtil;
     import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.TextureRedrawer_textureShaderEmbed_;
@@ -54,7 +55,6 @@ import flash.display.GraphicsGradientFill;
         private var staticVector3D_:Vector3D;
         protected var shadowGradientFill_:GraphicsGradientFill;
         protected var shadowPath_:GraphicsPath;
-        private var ProjSize:Number;
 
         public function Projectile()
         {
@@ -90,7 +90,7 @@ import flash.display.GraphicsGradientFill;
 
         public function reset(containerType:int, bulletType:int, ownerId:int, bulletId:int, angle:Number, startTime:int) : void
         {
-            ProjSize = 0;
+            var size:Number = NaN;
             clear();
             this.containerType_ = containerType;
             this.bulletType_ = bulletType;
@@ -112,13 +112,13 @@ import flash.display.GraphicsGradientFill;
             this.multiHitDict_ = this.projProps_.multiHit_ ? new Dictionary() : null;
             if(this.projProps_.size_ >= 0)
             {
-                ProjSize = this.projProps_.size_;
+                size = this.projProps_.size_;
             }
             else
             {
-                ProjSize = ObjectLibrary.getSizeFromType(this.containerType_);
+                size = ObjectLibrary.getSizeFromType(this.containerType_);
             }
-            this.p_.setSize(8 * (ProjSize / 100));
+            this.p_.setSize(8 * (size / 100));
             this.damage_ = 0;
         }
 
@@ -296,6 +296,7 @@ import flash.display.GraphicsGradientFill;
             var target:GameObject = this.getHit(p.x,p.y);
             if(target != null)
             {
+
                 player = map_.player_;
                 isPlayer = player != null;
                 isTargetAnEnemy = target.props_.isEnemy_;
@@ -303,6 +304,15 @@ import flash.display.GraphicsGradientFill;
                 if(sendMessage)
                 {
                     d = GameObject.damageWithDefense(this.damage_,target.defense_,this.projProps_.armorPiercing_,target.condition_);
+
+                    var killed:Boolean = false;
+                    if (target.hp_ <= d) {
+                        killed = true;
+                        if (isTargetAnEnemy) {
+                            doneAction(map_.gs_, Tutorial.KILL_ACTION);
+                        }
+                    }
+
                     if(target == player)
                     {
                         map_.gs_.gsc_.playerHit(this.bulletId_, this.ownerId_);
@@ -310,8 +320,8 @@ import flash.display.GraphicsGradientFill;
                     }
                     else if(target.props_.isEnemy_)
                     {
-                        map_.gs_.gsc_.enemyHit(time,this.bulletId_,target.objectId_, false);
-                        target.damage(d,this.projProps_.effects_,this);
+                        map_.gs_.gsc_.enemyHit(time,this.bulletId_,target.objectId_, killed);
+                        target.damage(d,this.projProps_.effects_, this);
                     }
                 }
                 if(this.projProps_.multiHit_)
@@ -327,55 +337,57 @@ import flash.display.GraphicsGradientFill;
         }
 
 
-        public function getHit(pX:Number, pY:Number) : GameObject
-        {
-            var go:GameObject = null;
-            var xDiff:Number = NaN;
-            var yDiff:Number = NaN;
-            var dist:Number = NaN;
-            var minDist:Number = Number.MAX_VALUE;
-            var minGO:GameObject = null;
+
+        public function getHit(x:Number, y:Number):GameObject {
+            var currentDSqr:Number = Number.MAX_VALUE;
+            var hit:GameObject;
+            var dx:Number;
+            var dy:Number;
 
             if (damagesEnemies_)
             {
-                for each(go in map_.goDict_)
+                for each (var go:GameObject in map_.vulnEnemyDict)
                 {
-                    xDiff = go.x_ > pX?Number(go.x_ - pX):Number(pX - go.x_);
-                    yDiff = go.y_ > pY?Number(go.y_ - pY):Number(pY - go.y_);
-                    if(!(xDiff > go.radius_ || yDiff >  go.radius_))
+                    if ((dx = Math.abs(go.x_ - x)) > go.radius_ ||
+                            (dy = Math.abs(go.y_ - y)) > go.radius_ ||
+                            go.dead_ ||
+                            go.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.PROJ_NOHIT_BITMASK ||
+                            map_.goDict_[go.objectId_] == null) {
+                        continue;
+                    }
+                    if (!projProps_.multiHit_ || multiHitDict_[go] == null)
                     {
-                        if(!(this.projProps_.multiHit_ && this.multiHitDict_[go] != null))
+                        var dSqr:Number = dx * dx + dy * dy;
+                        if (dSqr < currentDSqr)
                         {
-                            dist = Math.sqrt(xDiff * xDiff + yDiff * yDiff);
-                            if(dist < minDist)
-                            {
-                                minDist = dist;
-                                minGO = go;
-                            }
+                            currentDSqr = dSqr;
+                            hit = go;
                         }
                     }
                 }
             }
             else if (damagesPlayers_)
             {
-                go = map_.player_;
-                if (go.isTargetable())
+                for each (var go:GameObject in map_.vulnPlayerDict)
                 {
-                    xDiff = go.x_ > pX ? Number(go.x_ - pX) : Number(pX - go.x_);
-                    yDiff = go.y_ > pY ? Number(go.y_ - pY) : Number(pY - go.y_);
-                    if (!(xDiff > go.radius_ || yDiff >  go.radius_)) {
-                        if (!(this.projProps_.multiHit_ && this.multiHitDict_[go] != null)) {
-                            return go;
-                        }
+                    if ((dx = Math.abs(go.x_ - x)) > go.radius_ ||
+                            (dy = Math.abs(go.y_ - y)) > go.radius_ ||
+                            go.dead_ ||
+                            go.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.PROJ_NOHIT_BITMASK ||
+                            map_.goDict_[go.objectId_] == null) {
+                        continue;
+                    }
+                    if (!projProps_.multiHit_ || multiHitDict_[go] == null)
+                    {
+                        return go;
                     }
                 }
             }
-            return minGO;
+            return hit;
         }
 
         override public function draw(graphicsData:Vector.<IGraphicsData>, camera:Camera, time:int) : void
         {
-
             var texture:BitmapData = this.texture_;
             var r:Number = this.props_.rotation_ == 0?Number(0):Number(time / this.props_.rotation_);
             this.staticVector3D_.x = x_;

@@ -84,7 +84,7 @@
     <property name="SearchEverywhereHistoryKey" value="hpbar&#9;null&#9;null&#10;shatters&#9;FILE&#9;file://C:/Users/hewas/Documents/GitHub/Galactic-Source-Files/Galactic-Client-src/src/kabam/rotmg/assets/EmbeddedData_ShattersCXML.dat" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../realm-client-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../client-src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -185,7 +185,7 @@
       <workItem from="1635445387053" duration="160000" />
       <workItem from="1635445665084" duration="209000" />
       <workItem from="1635445908595" duration="2041000" />
-      <workItem from="1635578252132" duration="6716000" />
+      <workItem from="1635578252132" duration="9760000" />
     </task>
     <servers />
   </component>

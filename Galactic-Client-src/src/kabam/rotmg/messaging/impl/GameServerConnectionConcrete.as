@@ -1494,6 +1494,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
         {
             gs_.map.removeObj(update.drops_[i]);
         }
+        gs_.map.calcVulnerables();
     }
 
     private function onNotification(_arg1:Notification):void {

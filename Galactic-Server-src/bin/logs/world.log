@@ -1494,3 +1494,380 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 04:17:20,276 INFO  c Conquest Oryx            Oryx is controlling population...
 04:17:20,284 INFO  c Conquest Oryx            Oryx is back to sleep.
 04:17:45,736 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:17:55,008 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Realm...
+04:18:04,684 INFO  c Conquest Moon            Population Recalculated!
+04:18:04,688 INFO  c Conquest Moon            Population respawned! 360
+04:18:08,566 INFO  c Conquest CommandManager  [Command] [Realm] <Tidan> /glands
+04:18:20,798 INFO  c Conquest Oryx            Oryx is controlling population...
+04:18:20,808 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:18:52,999 INFO  c Conquest World           Loading map for world 10(Undead Lair)...
+04:18:53,003 INFO  c Conquest RealmManager    World 10(Undead Lair) added. 7 Worlds existing.
+04:18:53,005 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Undead Lair...
+04:18:54,657 INFO  c Conquest Moon            Population Recalculated!
+04:19:04,763 INFO  c Conquest Moon            Population respawned! 360
+04:19:21,661 INFO  c Conquest Oryx            Oryx is controlling population...
+04:19:21,671 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:19:41,819 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 6 Liches will feast on your essence!
+04:19:44,713 INFO  c Conquest Moon            Population Recalculated!
+04:19:53,041 INFO  c Conquest RealmManager    World 10(Undead Lair) removed.
+04:20:04,598 INFO  c Conquest Moon            Population respawned! 360
+04:20:22,582 INFO  c Conquest Oryx            Oryx is controlling population...
+04:20:22,589 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:20:34,718 INFO  c Conquest Moon            Population Recalculated!
+04:20:50,109 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:20:56,623 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Realm...
+04:21:00,729 INFO  c Conquest CommandManager  [Command] [Realm] <Tidan> /glands
+04:21:04,615 INFO  c Conquest Moon            Population respawned! 360
+04:21:23,080 INFO  c Conquest Oryx            Oryx is controlling population...
+04:21:23,089 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:21:24,645 INFO  c Conquest Moon            Population Recalculated!
+04:22:04,566 INFO  c Conquest Moon            Population respawned! 360
+04:22:07,396 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:22:13,328 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Realm...
+04:22:14,662 INFO  c Conquest Moon            Population Recalculated!
+04:22:17,101 INFO  c Conquest CommandManager  [Command] [Realm] <Tidan> /glands
+04:22:23,660 INFO  c Conquest Oryx            Oryx is controlling population...
+04:22:23,668 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:22:47,523 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Nexus...
+04:22:50,245 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /maxop
+04:22:53,027 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give bow of coral
+04:23:01,472 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give cloth of assassination
+04:23:04,589 INFO  c Conquest Moon            Population Recalculated!
+04:23:04,592 INFO  c Conquest Moon            Population respawned! 360
+04:23:13,272 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give luner ascension
+04:23:18,945 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give infinity javalin
+04:23:23,946 INFO  c Conquest Oryx            Oryx is controlling population...
+04:23:23,953 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:23:24,055 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give infinity lavelin
+04:23:28,955 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give ancient quiver
+04:23:32,396 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give the ancient quiver
+04:23:54,642 INFO  c Conquest Moon            Population Recalculated!
+04:23:57,969 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give The Infinity Javelin
+04:24:04,741 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I HAVE CLOSED THIS REALM!
+04:24:04,744 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> YOU WILL NOT LIVE TO SEE THE LIGHT OF DAY!
+04:24:04,745 INFO  c Conquest Moon            Population respawned! 360
+04:24:04,745 INFO  c Conquest Realm           Initializing Game World 1(Realm) from map 1...
+04:24:04,750 INFO  c Conquest World           Loading map for world 1(Realm)...
+04:24:05,413 INFO  c Conquest SetPieces       Applying set pieces to world 1(Realm).
+04:24:05,585 INFO  c Conquest SetPieces       Set pieces applied.
+04:24:05,587 INFO  c Conquest Oryx            Oryx is controlling world 1(Realm)...
+04:24:05,991 INFO  c Conquest Oryx            Spawning minions...
+04:24:06,268 INFO  c Conquest Oryx            Oryx is done.
+04:24:06,270 INFO  c Conquest Oryx            Oryx is controlling world 1(Realm)...
+04:24:06,661 INFO  c Conquest Oryx            Spawning minions...
+04:24:07,037 INFO  c Conquest Oryx            Oryx is done.
+04:24:07,040 INFO  c Conquest Realm           Game World initalized.
+04:24:07,043 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Fools! There is no escape from my 3 Red Demons!
+04:24:07,045 INFO  c Conquest Oryx            Oryx is controlling population...
+04:24:07,078 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:24:44,669 INFO  c Conquest Moon            Population Recalculated!
+04:24:48,449 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give Bracer of the Guardian
+04:25:04,601 INFO  c Conquest Moon            Population respawned! 360
+04:25:05,491 INFO  c Conquest Oryx            Oryx is controlling population...
+04:25:05,498 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:25:14,041 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Realm...
+04:25:15,452 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Nexus...
+04:25:22,946 INFO  c Conquest Entity          [10/30/2021 04:25:22]User Tidan has bought Tomb of the Ancients Key for 750 Fame.
+04:25:28,156 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /give cultist hideout key
+04:25:29,817 INFO  c Conquest World           Loading map for world 11(CultistHideout)...
+04:25:29,830 INFO  c Conquest RealmManager    World 11(CultistHideout) added. 7 Worlds existing.
+04:25:29,832 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to CultistHideout...
+04:25:34,584 INFO  c Conquest Moon            Population Recalculated!
+04:25:46,021 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Cretins! I have 6 Cyclops Gods to guard me!
+04:26:04,564 INFO  c Conquest Moon            Population respawned! 360
+04:26:06,241 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 5 Liches will feast on your essence!
+04:26:06,243 INFO  c Conquest Oryx            Oryx is controlling population...
+04:26:06,250 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:26:24,656 INFO  c Conquest Moon            Population Recalculated!
+04:26:46,669 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My forest of 21 Ent Ancients is all the protection I need!
+04:26:52,218 INFO  c Conquest CommandManager  [Command] [CultistHideout] <Tidan> /god
+04:27:04,753 INFO  c Conquest Moon            Population respawned! 360
+04:27:07,084 INFO  c Conquest Oryx            Oryx is controlling population...
+04:27:07,091 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:27:08,974 INFO  c Conquest CommandManager  [Command] [CultistHideout] <Tidan> /god
+04:27:14,755 INFO  c Conquest Moon            Population Recalculated!
+04:27:47,867 INFO  c Conquest RealmManager    World 11(CultistHideout) removed.
+04:27:57,758 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:28:04,654 INFO  c Conquest Moon            Population Recalculated!
+04:28:04,656 INFO  c Conquest Moon            Population respawned! 360
+04:28:07,648 INFO  c Conquest Oryx            Oryx is controlling population...
+04:28:07,656 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:28:54,572 INFO  c Conquest Moon            Population Recalculated!
+04:29:03,390 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:29:04,757 INFO  c Conquest Moon            Population respawned! 360
+04:29:08,319 INFO  c Conquest Oryx            Oryx is controlling population...
+04:29:08,326 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:29:44,661 INFO  c Conquest Moon            Population Recalculated!
+04:29:55,331 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Realm...
+04:30:04,664 INFO  c Conquest Moon            Population respawned! 360
+04:30:09,000 INFO  c Conquest Oryx            Oryx is controlling population...
+04:30:09,006 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:30:34,759 INFO  c Conquest Moon            Population Recalculated!
+04:31:04,577 INFO  c Conquest Moon            Population respawned! 360
+04:31:05,941 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:31:09,765 INFO  c Conquest Oryx            Oryx is controlling population...
+04:31:09,774 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:31:24,682 INFO  c Conquest Moon            Population Recalculated!
+04:31:50,140 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I am invincible while my 5 Liches still stand!
+04:32:04,689 INFO  c Conquest Moon            Population respawned! 360
+04:32:10,185 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 6 powerful Cyclops Gods will smash you!
+04:32:10,187 INFO  c Conquest Oryx            Oryx is controlling population...
+04:32:10,194 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:32:14,583 INFO  c Conquest Moon            Population Recalculated!
+04:32:30,291 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Fools! There is no escape from my 3 Red Demons!
+04:33:04,729 INFO  c Conquest Moon            Population Recalculated!
+04:33:04,731 INFO  c Conquest Moon            Population respawned! 360
+04:33:10,662 INFO  c Conquest Oryx            Oryx is controlling population...
+04:33:10,668 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:33:54,768 INFO  c Conquest Moon            Population Recalculated!
+04:34:04,584 INFO  c Conquest Moon            Population respawned! 360
+04:34:11,489 INFO  c Conquest Oryx            Oryx is controlling population...
+04:34:11,495 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:34:44,607 INFO  c Conquest Moon            Population Recalculated!
+04:35:04,596 INFO  c Conquest Moon            Population respawned! 360
+04:35:12,066 INFO  c Conquest Oryx            Oryx is controlling population...
+04:35:12,071 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:35:34,679 INFO  c Conquest Moon            Population Recalculated!
+04:36:04,731 INFO  c Conquest Moon            Population respawned! 360
+04:36:12,717 INFO  c Conquest Oryx            Oryx is controlling population...
+04:36:12,723 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:36:24,699 INFO  c Conquest Moon            Population Recalculated!
+04:37:04,763 INFO  c Conquest Moon            Population respawned! 360
+04:37:13,165 INFO  c Conquest Oryx            Oryx is controlling population...
+04:37:13,173 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:37:14,713 INFO  c Conquest Moon            Population Recalculated!
+04:38:04,610 INFO  c Conquest Moon            Population Recalculated!
+04:38:04,612 INFO  c Conquest Moon            Population respawned! 360
+04:38:13,961 INFO  c Conquest Oryx            Oryx is controlling population...
+04:38:13,973 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:38:54,596 INFO  c Conquest Moon            Population Recalculated!
+04:39:04,633 INFO  c Conquest Moon            Population respawned! 360
+04:39:14,577 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Before you enter the Shatters you must defeat the Avatar of the Forgotten King!
+04:39:14,579 INFO  c Conquest Oryx            Oryx is controlling population...
+04:39:14,583 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:39:42,818 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:39:44,573 INFO  c Conquest Moon            Population Recalculated!
+04:40:00,205 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Realm...
+04:40:04,637 INFO  c Conquest Moon            Population respawned! 360
+04:40:14,978 INFO  c Conquest Oryx            Oryx is controlling population...
+04:40:14,986 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:40:16,076 INFO  c Conquest CommandManager  [Command] [Realm] <Tidan> /realm
+04:40:16,077 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Realm...
+04:40:21,706 INFO  c Conquest CommandManager  [Command] [Realm] <Tidan> /glands
+04:40:34,683 INFO  c Conquest Moon            Population Recalculated!
+04:40:35,019 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I am invincible while my 5 Liches still stand!
+04:41:04,601 INFO  c Conquest Moon            Population respawned! 360
+04:41:15,295 INFO  c Conquest Oryx            Oryx is controlling population...
+04:41:15,301 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:41:24,713 INFO  c Conquest Moon            Population Recalculated!
+04:41:35,542 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 6 powerful Cyclops Gods will smash you!
+04:42:04,600 INFO  c Conquest Moon            Population respawned! 360
+04:42:14,615 INFO  c Conquest Moon            Population Recalculated!
+04:42:15,823 INFO  c Conquest Oryx            Oryx is controlling population...
+04:42:15,828 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:43:04,583 INFO  c Conquest Moon            Population Recalculated!
+04:43:04,585 INFO  c Conquest Moon            Population respawned! 360
+04:43:16,270 INFO  c Conquest Oryx            Oryx is controlling population...
+04:43:16,276 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:43:54,644 INFO  c Conquest Moon            Population Recalculated!
+04:44:04,565 INFO  c Conquest Moon            Population respawned! 360
+04:44:16,205 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:44:17,137 INFO  c Conquest Oryx            Oryx is controlling population...
+04:44:17,143 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:44:22,936 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Realm...
+04:44:44,683 INFO  c Conquest Moon            Population Recalculated!
+04:45:04,605 INFO  c Conquest Moon            Population respawned! 360
+04:45:17,773 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Before you enter the Shatters you must defeat the Avatar of the Forgotten King!
+04:45:17,775 INFO  c Conquest Oryx            Oryx is controlling population...
+04:45:17,779 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:45:34,745 INFO  c Conquest Moon            Population Recalculated!
+04:45:37,835 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Fools! There is no escape from my 3 Red Demons!
+04:46:04,683 INFO  c Conquest Moon            Population respawned! 360
+04:46:18,243 INFO  c Conquest Oryx            Oryx is controlling population...
+04:46:18,250 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:46:24,754 INFO  c Conquest Moon            Population Recalculated!
+04:47:04,629 INFO  c Conquest Moon            Population respawned! 360
+04:47:14,779 INFO  c Conquest Moon            Population Recalculated!
+04:47:19,204 INFO  c Conquest Oryx            Oryx is controlling population...
+04:47:19,209 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:48:04,763 INFO  c Conquest Moon            Population Recalculated!
+04:48:04,766 INFO  c Conquest Moon            Population respawned! 360
+04:48:20,079 INFO  c Conquest Oryx            Oryx is controlling population...
+04:48:20,085 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:48:27,726 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:48:32,181 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /spawn 10 cube
+04:48:46,929 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:48:50,389 INFO  c Conquest Client          Reconnecting client (Tidan) @ 127.0.0.1 to Vault...
+04:48:51,045 INFO  c Conquest World           Loading map for world 12(Vault)...
+04:48:51,086 INFO  c Conquest RealmManager    World 12(Vault) added. 7 Worlds existing.
+04:48:52,701 INFO  c Conquest CommandManager  [Command] [Vault] <Tidan> /spawn 10 cube god
+04:48:54,581 INFO  c Conquest Moon            Population Recalculated!
+04:49:04,772 INFO  c Conquest Moon            Population respawned! 360
+04:49:20,998 INFO  c Conquest Oryx            Oryx is controlling population...
+04:49:21,003 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:49:44,726 INFO  c Conquest Moon            Population Recalculated!
+04:50:01,385 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Maggots! My 3 Phoenix Lord will burn you to ash!
+04:50:04,700 INFO  c Conquest Moon            Population respawned! 360
+04:50:15,425 INFO  c Conquest RealmManager    World 12(Vault) removed.
+04:50:21,575 INFO  c Conquest Oryx            Oryx is controlling population...
+04:50:21,581 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:50:34,642 INFO  c Conquest Moon            Population Recalculated!
+04:51:04,723 INFO  c Conquest Moon            Population respawned! 360
+04:51:22,336 INFO  c Conquest Oryx            Oryx is controlling population...
+04:51:22,341 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:51:24,734 INFO  c Conquest Moon            Population Recalculated!
+04:52:02,849 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 6 powerful Cyclops Gods will smash you!
+04:52:04,624 INFO  c Conquest Moon            Population respawned! 360
+04:52:14,650 INFO  c Conquest Moon            Population Recalculated!
+04:52:20,906 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:52:23,091 INFO  c Conquest Oryx            Oryx is controlling population...
+04:52:23,097 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:53:03,554 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> You have no hope against my 2 Oasis Giants!
+04:53:04,761 INFO  c Conquest Moon            Population Recalculated!
+04:53:04,763 INFO  c Conquest Moon            Population respawned! 360
+04:53:23,962 INFO  c Conquest Oryx            Oryx is controlling population...
+04:53:23,967 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:53:33,997 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:53:36,176 ERROR c Conquest FLLogicTicker   System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.networking.handlers.MoveHandler.Handle(Player player, RealmTime time, Move packet) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 19
+   at wServer.networking.handlers.MoveHandler.<>c__DisplayClass2_0.<HandlePacket>b__0(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\networking\handlers\MoveHandler.cs:line 14
+   at wServer.realm.FLLogicTicker.DoLogic(RealmTime t) in C:\Users\raphe\Desktop\Galactic-Source-Files\Galactic-Server-src\wServer\realm\FLLogicTicker.cs:line 140
+04:53:54,742 INFO  c Conquest Moon            Population Recalculated!
+04:54:04,292 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Fools! There is no escape from my 3 Red Demons!
+04:54:04,627 INFO  c Conquest Moon            Population respawned! 360
+04:54:04,851 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> I HAVE CLOSED THIS REALM!
+04:54:04,853 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> YOU WILL NOT LIVE TO SEE THE LIGHT OF DAY!
+04:54:04,854 INFO  c Conquest Realm           Initializing Game World 1(Realm) from map 1...
+04:54:04,856 INFO  c Conquest World           Loading map for world 1(Realm)...
+04:54:05,443 INFO  c Conquest SetPieces       Applying set pieces to world 1(Realm).
+04:54:05,600 INFO  c Conquest SetPieces       Set pieces applied.
+04:54:05,602 INFO  c Conquest Oryx            Oryx is controlling world 1(Realm)...
+04:54:05,968 INFO  c Conquest Oryx            Spawning minions...
+04:54:06,215 INFO  c Conquest Oryx            Oryx is done.
+04:54:06,217 INFO  c Conquest Oryx            Oryx is controlling world 1(Realm)...
+04:54:06,560 INFO  c Conquest Oryx            Spawning minions...
+04:54:06,817 INFO  c Conquest Oryx            Oryx is done.
+04:54:06,819 INFO  c Conquest Realm           Game World initalized.
+04:54:06,825 INFO  c Conquest Oryx            Oryx is controlling population...
+04:54:06,889 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:54:20,405 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:54:29,232 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /override nunbasher
+04:54:34,358 INFO  c Conquest CommandManager  [Command] [Nexus] <Tidan> /override momsmasher
+04:54:39,021 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:54:44,746 INFO  c Conquest Moon            Population Recalculated!
+04:55:04,779 INFO  c Conquest Moon            Population respawned! 360
+04:55:05,667 INFO  c Conquest Oryx            Oryx is controlling population...
+04:55:05,674 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:55:07,446 INFO  c Conquest Client          Received client @ 127.0.0.1.
+04:55:18,630 INFO  c Conquest Client          Reconnecting client (MomSmasher) @ 127.0.0.1 to Realm...
+04:55:25,309 INFO  c Conquest CommandManager  [Command] [Realm] <MomSmasher> /glands
+04:55:29,866 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> MomSmasher has achieved White Star!
+04:55:32,661 INFO  c Conquest CommandManager  [Command] [Realm] <MomSmasher> /maxop
+04:55:34,677 INFO  c Conquest Moon            Population Recalculated!
+04:55:45,003 INFO  c Conquest World           Loading map for world 13(Sprite World)...
+04:55:45,016 INFO  c Conquest RealmManager    World 13(Sprite World) added. 7 Worlds existing.
+04:55:45,017 INFO  c Conquest Client          Reconnecting client (MomSmasher) @ 127.0.0.1 to Sprite World...
+04:55:46,336 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My legion of 4 Red Demons live only to serve me!
+04:56:04,773 INFO  c Conquest Moon            Population respawned! 360
+04:56:06,661 INFO  c Conquest Oryx            Oryx is controlling population...
+04:56:06,671 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:56:08,292 INFO  c Conquest Client          Reconnecting client (MomSmasher) @ 127.0.0.1 to Nexus...
+04:56:10,651 INFO  c Conquest Client          Reconnecting client (MomSmasher) @ 127.0.0.1 to Vault...
+04:56:11,226 INFO  c Conquest World           Loading map for world 14(Vault)...
+04:56:11,312 INFO  c Conquest RealmManager    World 14(Vault) added. 8 Worlds existing.
+04:56:18,005 INFO  c Conquest CommandManager  [Command] [Vault] <MomSmasher> /claim
+04:56:24,673 INFO  c Conquest Moon            Population Recalculated!
+04:56:44,925 INFO  c Conquest RealmManager    World 13(Sprite World) removed.
+04:57:04,594 INFO  c Conquest Moon            Population respawned! 360
+04:57:07,147 INFO  c Conquest Oryx            Oryx is controlling population...
+04:57:07,157 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:57:14,603 INFO  c Conquest Moon            Population Recalculated!
+04:58:04,678 INFO  c Conquest Moon            Population respawned! 360
+04:58:04,676 INFO  c Conquest Moon            Population Recalculated!
+04:58:07,694 INFO  c Conquest Oryx            Oryx is controlling population...
+04:58:07,701 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:58:54,598 INFO  c Conquest Moon            Population Recalculated!
+04:59:04,721 INFO  c Conquest Moon            Population respawned! 360
+04:59:08,052 INFO  c Conquest Oryx            Oryx is controlling population...
+04:59:08,059 INFO  c Conquest Oryx            Oryx is back to sleep.
+04:59:44,747 INFO  c Conquest Moon            Population Recalculated!
+05:00:04,653 INFO  c Conquest Moon            Population respawned! 360
+05:00:08,450 INFO  c Conquest Oryx            Oryx is controlling population...
+05:00:08,456 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:00:34,596 INFO  c Conquest Moon            Population Recalculated!
+05:01:04,624 INFO  c Conquest Moon            Population respawned! 360
+05:01:09,174 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 5 Liches will feast on your essence!
+05:01:09,176 INFO  c Conquest Oryx            Oryx is controlling population...
+05:01:09,182 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:01:24,769 INFO  c Conquest Moon            Population Recalculated!
+05:02:04,619 INFO  c Conquest Moon            Population respawned! 360
+05:02:09,500 INFO  c Conquest Oryx            Oryx is controlling population...
+05:02:09,507 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:02:14,727 INFO  c Conquest Moon            Population Recalculated!
+05:02:49,948 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 2 Phoenix Lords will serve me forever!
+05:03:04,627 INFO  c Conquest Moon            Population Recalculated!
+05:03:04,628 INFO  c Conquest Moon            Population respawned! 360
+05:03:10,072 INFO  c Conquest Oryx            Oryx is controlling population...
+05:03:10,079 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:03:54,591 INFO  c Conquest Moon            Population Recalculated!
+05:04:04,725 INFO  c Conquest Moon            Population respawned! 360
+05:04:10,505 INFO  c Conquest Oryx            Oryx is controlling population...
+05:04:10,513 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:04:30,750 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Kill the Avatar, and you risk setting free an abomination.
+05:04:44,725 INFO  c Conquest Moon            Population Recalculated!
+05:04:57,082 INFO  c Conquest Client          Reconnecting client (MomSmasher) @ 127.0.0.1 to Nexus...
+05:04:58,158 INFO  c Conquest RealmManager    World 14(Vault) removed.
+05:05:00,606 INFO  c Conquest World           Loading map for world 15(CrystalCove)...
+05:05:00,615 INFO  c Conquest RealmManager    World 15(CrystalCove) added. 7 Worlds existing.
+05:05:00,616 INFO  c Conquest Client          Reconnecting client (MomSmasher) @ 127.0.0.1 to CrystalCove...
+05:05:04,743 INFO  c Conquest Moon            Population respawned! 360
+05:05:11,198 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Attacking the Avatar of the Forgotten King would be...unwise.
+05:05:11,200 INFO  c Conquest Oryx            Oryx is controlling population...
+05:05:11,207 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:05:34,692 INFO  c Conquest Moon            Population Recalculated!
+05:06:04,669 INFO  c Conquest Moon            Population respawned! 360
+05:06:11,901 INFO  c Conquest Oryx            Oryx is controlling population...
+05:06:11,910 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:06:24,603 INFO  c Conquest Moon            Population Recalculated!
+05:06:31,950 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Cretins! I have 4 Cyclops Gods to guard me!
+05:07:04,772 INFO  c Conquest Moon            Population respawned! 360
+05:07:07,189 INFO  c Conquest Client          Reconnecting client (MomSmasher) @ 127.0.0.1 to Nexus...
+05:07:08,128 INFO  c Conquest RealmManager    World 15(CrystalCove) removed.
+05:07:12,221 INFO  c Conquest Oryx            Oryx is controlling population...
+05:07:12,229 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:07:14,104 INFO  c Conquest Client          Reconnecting client (MomSmasher) @ 127.0.0.1 to Moon...
+05:07:14,770 INFO  c Conquest Moon            Population Recalculated!
+05:07:39,695 INFO  c Conquest CommandManager  [Command] [Moon] <MomSmasher> /spawn phantom
+05:07:43,576 INFO  c Conquest CommandManager  [Command] [Moon] <MomSmasher> /spawn ship
+05:07:49,018 INFO  c Conquest CommandManager  [Command] [Moon] <MomSmasher> /killall phantom
+05:08:04,575 INFO  c Conquest Moon            Population Recalculated!
+05:08:04,577 INFO  c Conquest Moon            Population respawned! 359
+05:08:12,690 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> Attacking the Avatar of the Forgotten King would be...unwise.
+05:08:12,692 INFO  c Conquest Oryx            Oryx is controlling population...
+05:08:12,698 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:08:45,798 INFO  c Conquest CommandManager  [Command] [Moon] <MomSmasher> /tq
+05:08:48,914 INFO  c Conquest CommandManager  [Command] [Moon] <MomSmasher> /tqa
+05:08:54,692 INFO  c Conquest Moon            Population Recalculated!
+05:09:04,630 INFO  c Conquest Moon            Population respawned! 358
+05:09:13,291 INFO  c Conquest Oryx            Oryx is controlling population...
+05:09:13,299 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:09:32,302 INFO  c Conquest World           Loading map for world 16(Spectre's Lair)...
+05:09:32,305 INFO  c Conquest RealmManager    World 16(Spectre's Lair) added. 7 Worlds existing.
+05:09:32,307 INFO  c Conquest Client          Reconnecting client (MomSmasher) @ 127.0.0.1 to Spectre's Lair...
+05:09:44,753 INFO  c Conquest Moon            Population Recalculated!
+05:09:59,882 INFO  c Conquest CommandManager  [Command] [Spectre's Lair] <MomSmasher> /night
+05:10:04,567 INFO  c Conquest Moon            Population respawned! 357
+05:10:14,049 INFO  c Conquest Oryx            Oryx is controlling population...
+05:10:14,059 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:10:34,228 INFO  c Conquest ChatManager     [Realm(1)] <Cyberious, Commander of Earth> My 2 Phoenix Lords will serve me forever!
+05:10:34,666 INFO  c Conquest Moon            Population Recalculated!
+05:10:37,097 INFO  c Conquest Client          Reconnecting client (MomSmasher) @ 127.0.0.1 to Nexus...
+05:10:38,127 INFO  c Conquest RealmManager    World 16(Spectre's Lair) removed.
+05:11:04,608 INFO  c Conquest Moon            Population respawned! 357
+05:11:14,303 INFO  c Conquest Oryx            Oryx is controlling population...
+05:11:14,312 INFO  c Conquest Oryx            Oryx is back to sleep.
+05:11:24,649 INFO  c Conquest Moon            Population Recalculated!
+05:12:04,724 INFO  c Conquest Moon            Population respawned! 357
+05:12:14,631 INFO  c Conquest Moon            Population Recalculated!
+05:12:14,855 INFO  c Conquest Oryx            Oryx is controlling population...
+05:12:14,865 INFO  c Conquest Oryx            Oryx is back to sleep.

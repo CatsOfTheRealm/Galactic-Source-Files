@@ -48,9 +48,13 @@ public class AbstractMap extends Sprite {
     protected var wasLastFrameGpu:Boolean = false;
     public var isPetYard:Boolean = false;
     public var atmosphere_:AtmosphereHandler;
+    public var vulnPlayerDict:Vector.<GameObject>;
+    public var vulnEnemyDict:Vector.<GameObject>;
     public function AbstractMap() {
         this.goDict_ = new Dictionary();
         this.map_ = new Sprite();
+        this.vulnEnemyDict = new Vector.<GameObject>();
+        this.vulnPlayerDict = new Vector.<GameObject>();
         this.squareList_ = new Vector.<Square>();
         this.squares_ = new Vector.<Square>();
         this.boDict_ = new Dictionary();
@@ -58,6 +62,9 @@ public class AbstractMap extends Sprite {
         this.signalRenderSwitch = new Signal(Boolean);
 
         super();
+    }
+    public function calcVulnerables() : void
+    {
     }
 
     public function setProps(_arg1:int, _arg2:int, _arg3:String, _arg4:int, _arg5:Boolean, _arg6:Boolean, _arg9:int):void {
