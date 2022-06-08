@@ -57,7 +57,7 @@ public class Camera {
     }
 
     public function configureCamera(_arg1:GameObject, _arg2:Boolean):void {
-        var width:Number = WebMain.sWidth + 100;
+        var width:Number = WebMain.sWidth + 120;
         var height:Number = WebMain.sHeight;
         var camera:Rectangle = Parameters.data_.centerOnPlayer ? MapRectFSCentered = new Rectangle((height / 3 - width) / 2,-height * 13 / 24,width,height) : MapRectFSNonCentered = new Rectangle((height / 3 - width) / 2,-height * 3 / 4,width,height);
         var cameraAngle:Number = Parameters.data_.cameraAngle;
