@@ -122,8 +122,8 @@ public class ToolTip extends Sprite {
     {
         var _local_3:Number;
         var _local_1:Number;
-        var _local_2:Number = (800 / stage.stageWidth);
-        var _local_4:Number = (600 / stage.stageHeight);
+        var _local_2:Number = 1;
+        var _local_4:Number = 1;
         if ((this.parent is Options))
         {
             _local_3 = ((((stage.mouseX + (stage.stageWidth / 2)) - 400) / stage.stageWidth) * 800);
