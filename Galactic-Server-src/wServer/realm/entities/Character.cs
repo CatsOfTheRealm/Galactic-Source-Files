@@ -41,8 +41,8 @@ namespace wServer.realm.entities
 
                 SetConditions();
 
-                HP = ObjectDesc.MaxHP;
-                MaximumHP = HP;
+                HP = ObjectDesc.MaxHP + ScaledHP;
+                MaximumHP = HP + ScaledHP;
             }
         }
 

@@ -15,6 +15,13 @@ namespace wServer.logic.transitions
 
         protected override bool TickCore(Entity host, RealmTime time, ref object state)
         {
+            double newhp = 0;
+            Enemy Boss = host as Enemy;
+            if (Boss.HP < Boss.MaximumHP * Threshold)
+            {
+                newhp = Boss.MaximumHP * Threshold;
+                Boss.HP = (int)newhp;
+            }
             return ((double)(host as Enemy).HP / (host as Enemy).MaximumHP) <= Threshold;
         }
     }
