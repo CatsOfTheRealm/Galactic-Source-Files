@@ -1188,21 +1188,20 @@ import kabam.rotmg.messaging.impl.incoming.Damage;
             {
                 this.hpbarBackFill_.color = 0x38ACFF;
             }
-            this.hpbarBackPath_.data.length = 0;
-            this.hpbarBackPath_.data.push(
-                    posS_[0] - 22,
-                    posS_[1] + 2,
-                    posS_[0] + 22,//right,top
-                    posS_[1] + 2,
-                    posS_[0] + 22,
-                    posS_[1] + 12,
-                    posS_[0] - 22,
-                    posS_[1] + 12);
-            graphicsData.push(this.hpbarBackFill_);
-            graphicsData.push(this.hpbarBackPath_);
-            graphicsData.push(GraphicsUtil.END_FILL);
-            if (this.hp_ > 0)
-            {
+            if (this.hp_ > 0 && this.hp_ != this.maxHP_) {
+                 this.hpbarBackPath_.data.length = 0;
+                 this.hpbarBackPath_.data.push(
+                        posS_[0] - 22,
+                        posS_[1] + 2,
+                        posS_[0] + 22,//right,top
+                        posS_[1] + 2,
+                        posS_[0] + 22,
+                        posS_[1] + 12,
+                        posS_[0] - 22,
+                        posS_[1] + 12);
+                graphicsData.push(this.hpbarBackFill_);
+                graphicsData.push(this.hpbarBackPath_);
+                graphicsData.push(GraphicsUtil.END_FILL);
                 var hp:Number = ((this.hp_ / this.maxHP_) * 2) * 20;
                 this.hpbarPath_.data.length = 0;
                 this.hpbarPath_.data.push(
@@ -1214,6 +1213,7 @@ import kabam.rotmg.messaging.impl.incoming.Damage;
                 graphicsData.push(this.hpbarPath_);
                 graphicsData.push(GraphicsUtil.END_FILL);
             }
+
             GraphicsFillExtra.setSoftwareDrawSolid(this.hpbarFill_, true);
             GraphicsFillExtra.setSoftwareDrawSolid(this.hpbarBackFill_, true);
 

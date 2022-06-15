@@ -34,12 +34,6 @@ namespace wServer.logic.behaviors.PetBehaviors
                 var tile = host.Owner.Map[(int)host.X, (int)host.Y];
                 if (tile.Region != TileRegion.PetRegion)
                 {
-                    if (!(host.Owner is PetYard))
-                    {
-                        host.Owner.LeaveWorld(host);
-                        Status = CycleStatus.Completed;
-                        return;
-                    }
                     if (tile.Region != TileRegion.Spawn)
                     {
                         host.Owner.LeaveWorld(host);

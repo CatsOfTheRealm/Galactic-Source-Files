@@ -45,7 +45,7 @@ namespace wServer.logic.behaviors.PetBehaviors
                 tile = map[x, y];
             }
             
-            if (tile == null || (tile.Region == TileRegion.None && host.Owner is PetYard))
+            if (tile == null || (tile.Region == TileRegion.None))
             {
                 host.Move(spawnPoint.X, spawnPoint.Y);
                 return;

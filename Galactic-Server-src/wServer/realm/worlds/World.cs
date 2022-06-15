@@ -66,7 +66,6 @@ namespace wServer.realm.worlds
         public bool IsLimbo { get; protected set; }
 
         public Weather Weather { get; protected set; }
-        public WeatherManager WeatherManager { get; private set; }
         public bool AllowTeleport { get; protected set; }
         public bool ShowDisplays { get; protected set; }
         public string[] ExtraXML { get; protected set; }
@@ -123,21 +122,8 @@ namespace wServer.realm.worlds
                 Music = proto.music[rnd.Next(0, proto.music.Length)];
             else
                 Music = "https://ccc.cec.cx/cd0c4ec5515aee1b033f853bcdd6906e/ipk0E1wanl4/rizuzcsozmm";
-            WeatherManager = new WeatherManager(this);
         }
-        private string Rarity()
-        {
-            if (this is Vault || this is Nexus || this is DeathArena || this is Moon || this is Realm || this is GuildHall)
-                return "Normal";
-            var rnd = RandomUtil.RandInt(1, 25);
-            if (rnd == 5)
-                return "Rare";
-            else if (rnd == 15)
-                return "Epic";
-            else if (rnd == 25)
-                return "Legendary";
-            return "Normal";
-        }
+
         private void Setup()
         {
             Players = new ConcurrentDictionary<int, Player>();
@@ -690,7 +676,6 @@ namespace wServer.realm.worlds
                 foreach (var i in Projectiles)
                     i.Value.Tick(time);
 
-                WeatherManager.Tick(time);
             }
             catch (Exception e)
             {
@@ -721,8 +706,6 @@ namespace wServer.realm.worlds
                         i.Value.Tick(time);
                 }
 
-                foreach (var i in Pets)
-                    i.Value.Tick(time);
             }
         }
 

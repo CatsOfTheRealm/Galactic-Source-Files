@@ -9,7 +9,6 @@ using wServer.networking.packets.outgoing;
 using wServer.networking.packets.outgoing.pets;
 using wServer.realm.worlds;
 using wServer.realm.worlds.logic;
-using PetYard = wServer.realm.worlds.logic.PetYard;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Xml.Linq;
@@ -609,9 +608,6 @@ namespace wServer.realm.entities
                         break;
                     case ActivateEffects.UnlockPortal:
                         AEUnlockPortal(time, item, target, eff);
-                        break;
-                    case ActivateEffects.CreatePet:
-                        AECreatePet(time, item, target, eff);
                         break;
                     case ActivateEffects.Pet:
                         AEPet(time, item, target, eff);
@@ -1252,35 +1248,7 @@ namespace wServer.realm.entities
             
            
 
-        private void AECreatePet(RealmTime time, Item item, Position target, ActivateEffect eff)
-        {
-            if (!Manager.Config.serverSettings.enablePets)
-            {
-                SendError("Cannot create pet. Pets are currently disabled.");
-                return;
-            }
-
-            var petYard = Owner as PetYard;
-            if (petYard == null)
-            {
-                SendError("server.use_in_petyard");
-                return;
-            }
-
-            var pet = Pet.Create(Manager, this, item);
-            if (pet == null)
-                return;
-
-            var sPos = petYard.GetPetSpawnPosition();
-            pet.Move(sPos.X, sPos.Y);
-            Owner.EnterWorld(pet);
-
-            Client.SendPacket(new HatchPetMessage()
-            {
-                PetName = pet.Skin,
-                PetSkin = pet.SkinId
-            });
-        }//VoidDragonEgg
+       
         private void ItemMasteryPoints(RealmTime time, Item item, Position target, ActivateEffect eff)
         {
             var acc = Manager.Database.GetAccount(AccountId);

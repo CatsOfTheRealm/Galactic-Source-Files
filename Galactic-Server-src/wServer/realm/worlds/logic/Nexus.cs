@@ -43,9 +43,6 @@ namespace wServer.realm.worlds.logic
                 if (i.Id >= 0)
                     continue;
 
-                 
-
-          
                 if (i is ArenaSolo)
                 {
                     var portal = new Portal(Manager, 0x144, null)
@@ -55,22 +52,6 @@ namespace wServer.realm.worlds.logic
                     };
 
                     var pos = GetRegionPosition(TileRegion.Store_38);
-                    if (pos == null)
-                        continue;
-
-                    monitor.AddPortal(i.Id, portal, pos);
-                    continue;
-                }
-
-                if (i is PetYard)
-                {
-                    var portal = new Portal(Manager, 0x166, null)
-                    {
-                        Name = "Pet Yard",
-                        WorldInstance = i
-                    };
-
-                    var pos = GetRegionPosition(TileRegion.Store_40);
                     if (pos == null)
                         continue;
 

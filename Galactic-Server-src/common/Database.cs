@@ -76,7 +76,7 @@ namespace common
 
         public static readonly string[] GuestNames =
         {
-            "Guest #"
+            "Set Name"
         };
 
         public DbAccount CreateGuestAccount(string uuid)
@@ -89,7 +89,7 @@ namespace common
             var acnt = new DbAccount(_db, 0)
             {
                 UUID = uuid,
-                Name = GuestNames[(uint) uuid.GetHashCode()%GuestNames.Length] + acc.AccountId,
+                Name = GuestNames[(uint) uuid.GetHashCode()%GuestNames.Length],
                 Admin = false,
                 NameChosen = false,
                 Verified = false,

@@ -12,10 +12,8 @@ using common.resources;
 using StackExchange.Redis;
 using wServer.networking.packets;
 using wServer.networking.packets.outgoing;
-using wServer.networking.packets.outgoing.pets;
 using wServer.realm.worlds;
 using wServer.realm.worlds.logic;
-using PetYard = wServer.realm.worlds.logic.PetYard;
 using wServer.realm.worlds.logic;
 
 namespace wServer.logic.loot
