@@ -48,7 +48,8 @@ public class Parameters {
 
     public static const skinTypes16:Vector.<int> = new <int>[1027, 0x0404, 1029, 1030, 10973];
     public static const itemTypes16:Vector.<int> = new <int>[5473, 5474, 5475, 5476, 10939];
-
+    public static var gameWidth:Number = 800;
+    public static var gameHeight:Number = 600;
     public static var root:DisplayObject;
     public static var data_:Object = null;
     public static var GPURenderError:Boolean = false; //todoHWAcceleration
@@ -108,6 +109,14 @@ public class Parameters {
             data_[_arg1] = _arg2;
         }
     }
+
+     public static function getViewBoundsWidth():Number {
+         return gameWidth + 400;
+      }
+
+      public static function getViewBoundsHeight():Number {
+         return gameHeight;
+      }
 
     public static function isGpuRender():Boolean {
         return !GPURenderError && data_.GPURender && !Map.forceSoftwareRender;

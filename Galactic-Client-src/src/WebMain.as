@@ -65,8 +65,8 @@ public class WebMain extends Sprite {
     protected var context:IContext;
 
     public function WebMain() {
-        MonsterDebugger.initialize(this);
-        MonsterDebugger.trace(this, "Hello World!");
+        //MonsterDebugger.initialize(this);
+        //MonsterDebugger.trace(this, "Hello World!");
             try {
                 if (stage) {
                     stage.addEventListener("resize", this.onStageResize);
@@ -86,10 +86,10 @@ public class WebMain extends Sprite {
     }
 
     public function onStageResize(_arg_1:Event):void {
-            this.scaleX = stage.stageWidth / 800;
-            this.scaleY = stage.stageHeight / 600;
-            this.x = (800 - stage.stageWidth) >> 1;
-            this.y = (600 - stage.stageHeight) >> 1;
+        this.scaleX = 1;
+        this.scaleY = 1;
+        this.x = (800 - stage.stageWidth) >> 1;
+        this.y = (600 - stage.stageHeight) >> 1;
 
 
         sWidth = stage.stageWidth;
